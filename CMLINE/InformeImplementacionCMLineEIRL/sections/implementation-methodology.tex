@@ -1,0 +1,43 @@
+\section{Metodología de Implementación}
+
+\subsection{Enfoque metodológico del proyecto}
+La implementación del ERP Odoo en \textbf{CM LINE} se desarrolla bajo un enfoque de transformación operativa, orientado a resolver la desconexión crítica entre los tres almacenes (\textbf{Arequipa, Moquegua, Puno}) y el área comercial. El proyecto se diseñó de forma incremental, priorizando la resolución de \textbf{"ventas a ciegas"} mediante la entrega progresiva de módulos funcionales, permitiendo al cliente validar la operatividad del sistema en cada etapa antes de la carga masiva de datos reales.
+
+\subsection{Metodología ágil aplicada (Scrum)}
+La ejecución del proyecto sigue la metodología \textbf{SCRUM}, organizando el trabajo en un cronograma de seis a siete sprints (ciclos cortos de desarrollo). Este método ha sido crucial para adaptar el software a requerimientos emergentes detectados durante las revisiones, como la inclusión de trazabilidad por lotes para productos de limpieza y el módulo de Compras para reposición.
+
+Las principales características de \textbf{Scrum} aplicadas al proyecto \textbf{CM LINE} son:
+
+\begin{itemize}
+    \item \textbf{Entregas parciales por módulos:} Se presentó primero la configuración de almacenes y luego el flujo de facturación para su validación.
+    \item \textbf{Retroalimentación continua (Feedback):} Ajuste inmediato de la interfaz tras la validación del cliente (ej. solicitud de interfaz ``tipo POS'' más rápida para venta de mostrador).
+    \item \textbf{Flexibilidad en el alcance:} Incorporación de nuevos requisitos funcionales (Guías de Remisión y Órdenes de Compra) sin detener el cronograma general.
+\end{itemize}
+
+\subsection{Fases de implementación}
+El proyecto se ha estructurado en 7 fases operativas para cubrir la complejidad de la gestión multi-sede y los requisitos fiscales de SUNAT:
+
+\begin{table}[h]
+\centering
+\footnotesize
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{|l|p{3.5cm}|p{6cm}|p{2.5cm}|}
+\hline
+\textbf{Fase} & \textbf{Módulo / Actividad Clave} & \textbf{Actividad Principal} & \textbf{Situación Actual} \\ \hline
+
+Fase 1 & Diagnóstico y Selección & Análisis comercial (vs. Sige, Estela, RP.net) y definición de Odoo por capacidad Multi-Almacén nativa. & \textbf{Finalizado} \\ \hline
+
+Fase 2 & Inventario Multi-Sede & Configuración de los 3 almacenes (Arequipa, Moquegua, Puno), categorías y unidades de medida (Unidad/Ciento/Millar). & \textbf{Finalizado (En validación)} \\ \hline
+
+Fase 3 & Ventas Corporativas & Configuración de cotizaciones formales, términos y condiciones en PDF y envío por correo/WhatsApp. & \textbf{Finalizado} \\ \hline
+
+Fase 4 & Facturación y Guías & Integración de Facturación Electrónica y configuración de Guías de Remisión Remitente (Pendiente Clave SOL). & \textbf{En Proceso / Bloqueado} \\ \hline
+
+Fase 5 & Compras y Abastecimiento & Implementación de Órdenes de Compra para reposición de stock (Requisito agregado en última revisión). & \textbf{En Proceso de Configuración} \\ \hline
+
+Fase 6 & Venta Directa y Trazabilidad & Desarrollo de interfaz rápida (POS) para mostrador y configuración de Lotes/Vencimientos para químicos. & \textbf{Pendiente (Próximo Sprint)} \\ \hline
+
+Fase 7 & Migración y Despliegue & Carga masiva de clientes y stock real mediante plantillas Excel, capacitación y Go-Live. & \textbf{Pendiente} \\ \hline
+
+\end{tabular}
+\end{table}
