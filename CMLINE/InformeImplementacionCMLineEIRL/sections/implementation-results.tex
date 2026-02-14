@@ -1,0 +1,68 @@
+\section{Resultados de la Implementación}
+
+La implementación del sistema ERP \textbf{Odoo 19} en \textbf{CM LINE E.I.R.L.} ha generado resultados inmediatos en la unificación operativa de las sedes de \textbf{Arequipa, Moquegua y Puno}. El sistema ha permitido transformar una gestión fragmentada y manual en un ecosistema digital centralizado, eliminando las \textbf{"ventas a ciegas"} y asegurando la consistencia de datos entre el área comercial y los tres almacenes físicos.
+
+\subsection{Mejora en la gestión de inventarios (Multi-Sede)}
+Antes de la implementación, el control de inventarios carecía de visibilidad en tiempo real entre las distintas ciudades, lo que obligaba a realizar consultas telefónicas o físicas para confirmar stock, generando costos ocultos por reubicación de mercadería.
+
+Con la implementación del módulo de \textbf{Inventario Multi-Almacén}, la empresa logró:
+\begin{itemize}
+    \item \textbf{Visibilidad de Stock Global:} Control centralizado de las existencias en los tres almacenes (Arequipa, Moquegua, Puno) en una sola pantalla.
+    \item \textbf{Gestión de Traslados Internos:} Digitalización del flujo de reabastecimiento entre sedes, permitiendo mover mercadería (ej. de "Almacén Construcción" a "Hogar") con validación de disponibilidad.
+    \item \textbf{Trazabilidad y Calidad:} Implementación de control por \textbf{lotes y fechas de vencimiento} para productos sensibles (detergentes y pañitos húmedos), asegurando la calidad del despacho.
+    \item \textbf{Uso de Tecnología:} Habilitación de campos para lectura de códigos de barras, facilitando el uso de pistolas láser para el despacho rápido.
+\end{itemize}
+
+\subsection{Optimización del proceso comercial}
+El proceso de ventas se estandarizó para soportar tanto la venta corporativa como la necesidad de agilidad en mostrador. Se eliminó la dependencia de la memoria de los vendedores para los precios complejos.
+
+Entre los principales resultados destacan:
+\begin{itemize}
+    \item \textbf{Gestión de Unidades de Medida:} Automatización de listas de precios diferenciadas por presentación (\textbf{Unidad, Ciento, Millar}) para un mismo ítem, eliminando errores de cálculo manual.
+    \item \textbf{Bloqueo de Ventas sin Stock:} El sistema ahora impide confirmar órdenes de venta si no existe disponibilidad física en el almacén de origen, eliminando el riesgo de vender productos inexistentes.
+    \item \textbf{Digitalización de Cotizaciones:} Envío directo de presupuestos formales con términos y condiciones vía correo electrónico y WhatsApp desde la plataforma.
+\end{itemize}
+
+\subsection{Digitalización de la Facturación y Guías}
+La integración fiscal fue más allá de la simple facturación, incorporando los requisitos logísticos de traslado exigidos por \textbf{SUNAT}.
+
+Los beneficios obtenidos incluyen:
+\begin{itemize}
+    \item \textbf{Emisión de Guías de Remisión Remitente:} Generación automática de la Guía de Remisión desde la orden de entrega, requisito indispensable para el traslado legal de materiales de construcción entre sedes y clientes.
+    \item \textbf{Unificación del Flujo Fiscal:} La factura se genera heredando los datos del pedido y la guía, eliminando la doble digitación y los errores de consistencia entre lo que se vende y lo que se declara.
+    \item \textbf{Validación con Clave SOL:} Integración directa para la obtención del \textbf{CDR (Constancia de Recepción)} en tiempo real.
+\end{itemize}
+
+\subsection{Indicadores de Desempeño (KPIs)}
+Para validar el éxito de la configuración, se proyectan los siguientes indicadores comparando la línea base (Diagnóstico) con la operatividad del sistema Odoo:
+
+\begin{table}[h]
+    \centering
+    \footnotesize
+    \begin{tabular}{|p{3cm}|p{3cm}|p{2.5cm}|p{2.5cm}|p{3cm}|}
+        \hline
+        \textbf{Indicador} & \textbf{Fórmula de Cálculo} & \textbf{Valor Inicial (Manual)} & \textbf{Valor Final (Odoo)} & \textbf{Impacto} \\ \hline
+        \textbf{Tiempo de Verificación de Stock} & $T = $ Tiempo promedio en confirmar disponibilidad & 15-30 min (Llamadas) & < 1 min (Tiempo Real) & \textbf{-95\% (Eficiencia)} \\ \hline
+        \textbf{Exactitud de Precios (Unidades)} & \% = (Cotiz. sin errores / Total) & 85\% (Errores manuales) & 100\% (Automático) & \textbf{Eliminación de Errores} \\ \hline
+        \textbf{Trazabilidad de Lotes} & \% = Prod. con rastreo / Total Sensible & 0\% (Control visual) & 100\% (Registro sistémico) & \textbf{Garantía de Calidad} \\ \hline
+        \textbf{Integración Doc. Transporte} & \% = Guías emitidas auto / Pedido & 0\% (Sistema externo) & 100\% (Integrado) & \textbf{Cumplimiento SUNAT} \\ \hline
+    \end{tabular}
+    \caption{Indicadores de desempeño tras la implementación.}
+\end{table}
+
+\subsection{Impacto en la eficiencia operativa}
+A nivel global, el impacto del ERP en \textbf{CM LINE} se refleja en:
+
+\begin{table}[h]
+    \centering
+    \footnotesize
+    \begin{tabular}{|p{3cm}|p{5.5cm}|p{5.5cm}|}
+        \hline
+        \textbf{Proceso} & \textbf{Situación del Diagnóstico (Manual)} & \textbf{Situación con Odoo 19 (Digital)} \\ \hline
+        \textbf{Logística Multi-Sede} & Almacenes desconectados, traslados sin registro formal. & \textbf{Gestión Centralizada:} Visibilidad total de las 3 sedes y control digital de traslados. \\ \hline
+        \textbf{Venta de Materiales} & Precios calculados manualmente según volumen (unidad/millar). & \textbf{Tarifas Inteligentes:} Ajuste automático de precio y costo según unidad de medida. \\ \hline
+        \textbf{Despacho y Traslado} & Emisión de Guías de Remisión manuales o portal externo. & \textbf{Automatización Logística:} Guía integrada al flujo de entrega y facturación. \\ \hline
+        \textbf{Reposición de Stock} & Reabastecimiento reactivo basado en conteos visuales. & \textbf{Planificación de Compras:} Uso de reportes y stock mínimo para generar OC. \\ \hline
+    \end{tabular}
+    \caption{Comparativa de procesos antes y después de la implementación.}
+\end{table}
