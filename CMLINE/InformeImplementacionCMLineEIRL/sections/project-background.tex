@@ -1,8 +1,9 @@
 \section{Antecedentes del proyecto}
-\subsection{Situación previa}
-Antes del inicio de la implementación, el diagnóstico situacional de CM LINE reveló deficiencias operativas centradas principalmente en la gestión logística y su desconexión con el área comercial. La empresa operaba bajo un esquema de "ventas a ciegas", donde los vendedores no tenían certeza de la existencia real de la mercadería al momento de cerrar un trato, lo que ocasionaba quiebres de stock y pérdida de oportunidades de venta.
 
-El problema central aquí es la incapacidad de gestionar eficientemente múltiples almacenes físicos distantes entre sí (Arequipa, Moquegua, Puno) y la falta de trazabilidad en productos sensibles como químicos de limpieza.
+\subsection{Situación previa}
+Antes del inicio de la implementación, el diagnóstico situacional de \textbf{CM LINE} reveló deficiencias operativas centradas principalmente en la gestión logística y su desconexión con el área comercial. La empresa operaba bajo un esquema de \textbf{"ventas a ciegas"}, donde los vendedores no tenían certeza de la existencia real de la mercadería al momento de cerrar un trato, lo que ocasionaba \textbf{quiebres de stock} y pérdida de oportunidades de venta.
+
+El problema central era la incapacidad de gestionar eficientemente \textbf{múltiples almacenes físicos} distantes entre sí (Arequipa, Moquegua, Puno) y la falta de trazabilidad en productos sensibles como químicos de limpieza.
 
 \begin{table}[h]
 \centering
@@ -11,33 +12,33 @@ El problema central aquí es la incapacidad de gestionar eficientemente múltipl
 \textbf{Problema Detectado (Diagnóstico)} & \textbf{Solución Tecnológica (Odoo)} \\ 
 \hline
 
-\textbf{Incertidumbre de Stock:} Dificultad para conocer la disponibilidad de productos en tiempo real al momento de la venta (“ventas a ciegas”). 
+\textbf{Incertidumbre de Stock:} Dificultad para conocer la disponibilidad de productos en tiempo real al momento de la venta. 
 & 
 \textbf{Módulo de Inventario Integrado:} Visualización de stock disponible en tiempo real con bloqueo automático de ventas sin existencias. 
 \\ \hline
 
-\textbf{Descontrol Multi-Sede:} Gestión manual o desconectada de los tres almacenes (Arequipa, Moquegua y Puno), dificultando los traslados internos. 
+\textbf{Descontrol Multi-Sede:} Gestión manual o desconectada de los tres almacenes, dificultando los traslados internos. 
 & 
-\textbf{Gestión Multi-Almacén Nativa:} Configuración centralizada de múltiples sedes con flujo automatizado de reabastecimiento y transferencias internas. 
+\textbf{Gestión Multi-Almacén Nativa:} Configuración centralizada de sedes con flujo automatizado de reabastecimiento. 
 \\ \hline
 
 \textbf{Procesos Manuales en Despacho:} Emisión de guías de remisión y facturas desconectadas de la orden de venta. 
 & 
-\textbf{Facturación y Guías Electrónicas:} Emisión automática de comprobantes y Guías de Remisión Remitente integradas con SUNAT desde la misma orden de venta. 
+\textbf{Facturación y Guías Electrónicas:} Emisión automática de comprobantes integrada con SUNAT desde la orden de venta. 
 \\ \hline
 
-\textbf{Falta de Trazabilidad:} Riesgo de vender productos vencidos o defectuosos (detergentes, pañitos) por falta de control de lotes. 
+\textbf{Falta de Trazabilidad:} Riesgo de vender productos vencidos por falta de control de lotes. 
 & 
-\textbf{Trazabilidad por Lotes:} Gestión de números de lote y fechas de caducidad para productos perecederos o químicos. 
+\textbf{Trazabilidad por Lotes:} Gestión de números de lote y fechas de caducidad para productos químicos. 
 \\ \hline
 
 \end{tabular}
 \end{table}
 
 \subsection{Contexto empresarial de la empresa}
+\textbf{CM LINE E.I.R.L.} es una empresa comercializadora con presencia regional en el sur del Perú, especializada en la distribución de \textbf{materiales de construcción} (cementos, fierros), artículos de ferretería, productos de limpieza y \textbf{Equos de Protección Personal} (EPP).
 
-CM LINE E.I.R.L. es una empresa comercializadora con presencia regional en el sur del Perú, especializada en la distribución de materiales de construcción (cementos, fierros), artículos de ferretería, productos de limpieza y Equipos de Protección Personal (EPP),
-.
-Su modelo de negocio es híbrido y exigente, combinando la venta corporativa (cotizaciones formales, volúmenes altos, crédito) con la venta de mostrador (estilo retail, rápida y directa)
+Su modelo de negocio es híbrido, combinando la \textbf{venta corporativa} (cotizaciones formales, volúmenes altos y gestión de crédito) con la \textbf{venta de mostrador} (retail), lo que exige una infraestructura tecnológica ágil que soporte tanto transacciones rápidas como flujos documentales complejos.
 
 \subsection{Problemática identificada}
+La principal problemática residía en la \textbf{fragmentación de la información}. Al no contar con un sistema centralizado, los traslados entre sedes se registraban con retraso o de forma inexacta, generando un desfase entre lo que el sistema contable indicaba y lo que realmente existía en percha. Esta falta de control afectaba no solo la rentabilidad, sino también la \textbf{confiabilidad ante el cliente}, dañando la reputación de la empresa por retrasos en las entregas.
