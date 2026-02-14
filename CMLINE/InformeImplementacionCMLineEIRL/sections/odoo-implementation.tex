@@ -14,3 +14,18 @@ El sistema fue configurado estrictamente de acuerdo con los flujos operativos de
 \end{enumerate}
 
 La integración con SUNAT se configuró para que la validación de los documentos sea inmediata, eliminando la necesidad de procesos externos y garantizando que cada venta refleje su correspondiente obligación fiscal en tiempo real. Esta funcionalidad es crítica para \textbf{CM LINE}, ya que centraliza la legalidad de los traslados de mercadería entre provincias mediante las Guías de Remisión Electrónicas integradas.
+
+\subsection{Configuración inicial}
+En esta etapa se realizó la creación del entorno de trabajo en \textbf{Odoo Online}, definiendo la base de datos principal de la empresa, la configuración inicial del idioma, moneda, zona horaria y parámetros generales del sistema. 
+
+Asimismo, se procedió a la activación de los módulos definidos en el alcance del proyecto, asegurando que el entorno se encuentre preparado para la parametrización de los procesos de inventario, ventas, compras, facturación y demás áreas operativas. Es importante destacar que, para la validación de la \textbf{Facturación Electrónica}, se configuró el entorno de pruebas utilizando las credenciales de un \textbf{usuario secundario SOL} proporcionado de forma provisional, permitiendo realizar envíos de test a SUNAT sin afectar los registros contables reales del cliente.
+
+Esta fase permitió establecer la estructura base sobre la cual se desarrolló toda la implementación funcional del ERP.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\textwidth]{imgs/configuracion-inicial.png}
+    \caption{Interfaz de configuración inicial y activación de módulos en Odoo 19.}
+    \label{fig:config_inicial}
+\end{figure}
+ 
