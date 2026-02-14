@@ -1,0 +1,45 @@
+\documentclass[12pt,a4paper]{article}
+
+% --- Paquetes Básicos ---
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{array}
+\usepackage{fancyhdr}
+
+% --- Configuración de Página ---
+\geometry{margin=2.5cm}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1em}
+
+% --- Estilo de Títulos ---
+\titleformat{\section}{\color{blue!70!black}\normalfont\Large\bfseries}{\thesection}{1em}{}
+
+% --- HEADER Y FOOTER ---
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\footnotesize Informe de Implementación – CMLINE EIRL}
+\fancyhead[R]{\footnotesize Contrato N° 978-PROINNOVATE-IMTEMD-2025}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\begin{document}
+
+% --- CARÁTULA ---
+\input{sections/caratula}
+
+\tableofcontents
+\newpage
+
+% --- SECCIONES ---
+\input{sections/introduccion}
+\newpage
+\input{sections/project-background}
+\newpage
+\input{sections/goals}
+\newpage
+\end{document}
