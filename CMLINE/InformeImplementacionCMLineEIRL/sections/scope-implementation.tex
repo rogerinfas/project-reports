@@ -17,6 +17,27 @@ El proyecto comprende la implementación y parametrización de los siguientes m�
 
 La implementación conjunta de los módulos de Inventario, Ventas, Facturación, Venta Directa y Compras permite a \textbf{CM LINE} contar con un ecosistema digital unificado que conecta sus almacenes en tiempo real con el área comercial, asegurando la trazabilidad de lotes, la agilidad en el despacho y el cumplimiento tributario.
 
+\subsection{Alcance organizacional}
+La implementación del ERP Odoo impacta transversalmente en la operación de la empresa, integrando sus tres sedes físicas (\textbf{Arequipa, Moquegua y Puno}) con la gestión central. El sistema está diseñado para cubrir las necesidades de las siguientes áreas clave:
+
+\begin{itemize}
+    \item \textbf{Gerencia General:} Acceso a reportes estratégicos para la toma de decisiones, supervisión de márgenes de ganancia y aprobación de compras para reposición de stock.
+    \item \textbf{Logística y Almacén:} Gestión operativa de los tres almacenes, control de entradas/salidas, traslados internos entre sedes y trazabilidad de productos por lotes (limpieza y químicos).
+    \item \textbf{Comercial (Ventas):} Dividida en dos frentes: fuerza de ventas corporativa (cotizaciones formales) y atención en mostrador (venta rápida), quienes requieren acceso a listas de precios y disponibilidad de stock en tiempo real.
+    \item \textbf{Facturación y Caja:} Emisión de comprobantes electrónicos (facturas/boletas) y guías de remisión remitente integradas con SUNAT.
+\end{itemize}
+
+El sistema será utilizado por distintos perfiles de usuario, configurados con roles y permisos específicos:
+
+\begin{itemize}
+    \item \textbf{Usuario Administrador:} Control total de la configuración, acceso a costos y márgenes, y gestión de usuarios.
+    \item \textbf{Usuarios de Ventas / Mostrador:} Perfil operativo diseñado con una interfaz simplificada (``amigable'') para vendedores jóvenes, enfocado en la agilidad de atención y verificación de stock sin acceso a configuración sensible.
+    \item \textbf{Usuarios de Almacén:} Perfil enfocado en la recepción de mercadería, preparación de pedidos (picking) y uso de lectores de código de barras.
+\end{itemize}
+
+\subsection{Alcance temporal}
+El proyecto se ejecuta de manera progresiva siguiendo un cronograma de seis fases (sprints), iniciando con la configuración logística de las tres sedes y el control de inventarios. Posteriormente, se integran los flujos de ventas corporativas y facturación electrónica, y culminará con la habilitación de la venta rápida de mostrador y la migración masiva de datos reales para su puesta en operación completa.
+
 \subsection{Cronograma y Estado de Implementación}
 
 A continuación, se detalla el estado actual de las fases del proyecto en \textbf{CM LINE}:
