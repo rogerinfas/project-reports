@@ -16,3 +16,32 @@ El proyecto comprende la implementación y parametrización de los siguientes m�
 \end{itemize}
 
 La implementación conjunta de los módulos de Inventario, Ventas, Facturación, Venta Directa y Compras permite a \textbf{CM LINE} contar con un ecosistema digital unificado que conecta sus almacenes en tiempo real con el área comercial, asegurando la trazabilidad de lotes, la agilidad en el despacho y el cumplimiento tributario.
+
+\subsection{Cronograma y Estado de Implementación}
+
+A continuación, se detalla el estado actual de las fases del proyecto en \textbf{CM LINE}:
+
+\begin{table}[h]
+\centering
+\small
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{|l|p{8cm}|p{6cm}|}
+\hline
+\textbf{Fase} & \textbf{Módulo / Actividad Clave} & \textbf{Estado Actual en CM LINE} \\ \hline
+
+Fase 1 & Inventario y Logística (Multi-Almacén): Configuración de las 3 sedes (Arequipa, Moquegua, Puno), categorías y unidades de medida. Traslados internos probados. & \textbf{Completado (Revisión)} (Se entregó configuración, pero falta carga masiva de datos reales) \\ \hline
+
+Fase 2 & Ventas Corporativas (Cotizaciones): Flujo de cotización formal, PDF con términos y condiciones, y envío por correo electrónico. & \textbf{Completado} (Funcional y demostrado en la última reunión) \\ \hline
+
+Fase 3 & Facturación Electrónica y Guías: Emisión de facturas y configuración de Guías de Remisión Remitente. & \textbf{En Proceso} (Configurado, pero detenido por falta de Clave SOL del cliente para pruebas reales) \\ \hline
+
+Fase 4 & Venta Directa (Tipo POS): Interfaz rápida para venta de mostrador (sin cotización previa). Es el punto crítico que exige el cliente ("Estilo Tumisoft"). & \textbf{Pendiente / Próximo Sprint} (El desarrollador indicó que esta es la siguiente entrega agendada) \\ \hline
+
+Fase 5 & Compras y Abastecimiento: Generación de Órdenes de Compra para reposición de stock. & \textbf{En Proceso} (Se solicitó al cliente un modelo de O/C para configurarlo) \\ \hline
+
+Fase 6 & Trazabilidad y Lotes: Configuración de fechas de vencimiento y números de lote para productos de limpieza/químicos. & \textbf{En Proceso} (Requisito confirmado al final de la última reunión) \\ \hline
+
+Fase 7 & Migración y Despliegue Final: Carga masiva de clientes y stock real mediante plantillas de Excel. & \textbf{En Espera} (Depende de que el cliente llene las plantillas entregadas) \\ \hline
+
+\end{tabular}
+\end{table}
