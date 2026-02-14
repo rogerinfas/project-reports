@@ -1,0 +1,18 @@
+\section{Situación Inicial (Pre-Implementación)}
+
+\subsection{Diagnóstico de procesos actuales}
+Antes del inicio del proyecto, \textbf{CM LINE} gestionaba la operatividad de sus tres sedes (\textbf{Arequipa, Moquegua y Puno}) mediante herramientas ofimáticas aisladas y procesos manuales que no permitían una visión centralizada del negocio. La empresa operaba bajo un esquema de \textbf{"ventas a ciegas"}, donde el área comercial desconocía la disponibilidad real de la mercadería al momento de cerrar un trato. La gestión de precios y unidades de medida (\textbf{Unidad, Ciento, Millar}) dependía en gran medida de la memoria de los vendedores o de listas de precios estáticas, lo que aumentaba el riesgo de errores en la cotización. Asimismo, el despacho de productos sensibles (limpieza y químicos) carecía de controles de trazabilidad por lotes, dificultando la identificación de mercadería vencida o defectuosa.
+
+\subsection{Brechas identificadas}
+El análisis técnico y operativo detectó las siguientes brechas críticas que limitaban la escalabilidad y rentabilidad de la empresa:
+
+\begin{itemize}
+    \item \textbf{Desconexión de Inventarios Multi-Sede:} Inexistencia de un sistema que consolidara el stock de los tres almacenes en tiempo real, generando costos ocultos por reubicación de mercadería y transferencias internas no planificadas.
+    \item \textbf{Fricción en la Venta de Mostrador:} El proceso de venta presencial era lento y burocrático, incapaz de atender la demanda rápida (\textbf{"cliente entra, paga y sale"}) debido a la falta de una interfaz tipo POS ágil.
+    \item \textbf{Falta de Trazabilidad y Control:} Ausencia de gestión de lotes y fechas de vencimiento para productos de limpieza, así como la falta de uso de códigos de barras para agilizar el despacho y conteo.
+    \item \textbf{Información para Toma de Decisiones:} Carencia de reportes tipo "ABC" que permitieran a la gerencia identificar qué productos tenían mayor rotación para planificar las compras y reposiciones de manera estratégica.
+    \item \textbf{Duplicidad de Tareas Fiscales:} La facturación electrónica y la emisión de Guías de Remisión se realizaban en plataformas desconectadas del control de inventario, obligando a la doble digitación de datos.
+\end{itemize}
+
+\subsection{Mapa de procesos inicial}
+El mapa de procesos previo a la implementación evidenciaba una estructura fragmentada en \textbf{"islas de información"}. El flujo comercial iniciaba con cotizaciones manuales que, al convertirse en pedido, frecuentemente chocaban con la realidad de un stock inexistente o mal ubicado. La logística de abastecimiento era reactiva, basada en conteos empíricos en lugar de puntos de reorden automáticos. Además, la falta de integración entre la venta y la facturación generaba cuellos de botella administrativos, impidiendo que la empresa pudiera ofrecer la agilidad comercial que competidores con sistemas más simples (como los de punto de venta rápido) sí ofrecían.
