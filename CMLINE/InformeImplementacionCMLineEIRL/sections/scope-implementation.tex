@@ -1,26 +1,18 @@
-\section{Alcance de la implementación}
+\section{Alcance de la Implementación}
 
-La implementación del sistema ERP Odoo en \textbf{CM LINE E.I.R.L.} abarca la digitalización de los procesos neurálgicos de la organización, estructurándose en los siguientes módulos y capacidades:
+\subsection{Alcance temático}
+El proyecto comprende la implementación y parametrización de los siguientes módulos del ERP \textbf{Odoo 19}, seleccionados estratégicamente para cubrir la operatividad logística y comercial de la empresa:
 
-\subsection{Módulos implementados}
 \begin{itemize}
-    \item \textbf{Gestión de Inventarios (Inventory):} Control total de existencias, gestión de múltiples ubicaciones físicas y trazabilidad por números de lote.
-    \item \textbf{Gestión Comercial (Sales):} Flujo completo desde la cotización hasta la orden de venta, con validación de disponibilidad de stock en tiempo real.
-    \item \textbf{Facturación Electrónica:} Integración nativa para la emisión de Facturas, Boletas y Notas de Crédito, sincronizadas automáticamente con SUNAT.
-    \item \textbf{Guías de Remisión:} Automatización de Guías de Remisión Remitente para traslados entre sedes y despachos a clientes.
+    \item \textbf{Inventario (Multi-Almacén):} El módulo de Inventario de Odoo 19 gestiona de manera integral el control de existencias, permitiendo el registro de entradas, salidas y transferencias internas. En el caso de \textbf{CM LINE}, este módulo es la columna vertebral del sistema, ya que se configurará para administrar simultáneamente las tres sedes (Arequipa, Moquegua y Puno). Su implementación incluye la gestión de trazabilidad por lotes y fechas de vencimiento (crítico para productos de limpieza y químicos), así como la habilitación de campos para lectura de códigos de barra, garantizando la exactitud del stock y eliminando las \textbf{"ventas a ciegas"}.
+
+    \item \textbf{Ventas:} El módulo de Ventas digitaliza el ciclo comercial completo, desde la creación de clientes hasta la confirmación del pedido. Para \textbf{CM LINE}, este módulo se adapta para gestionar múltiples unidades de medida (Unidad, Ciento, Millar) con listas de precios diferenciadas. Permite la generación de cotizaciones formales con términos y condiciones personalizados, el bloqueo de ventas si no hay stock disponible y el envío de documentos comerciales vía correo electrónico y WhatsApp, centralizando el historial del cliente.
+
+    \item \textbf{Facturación Electrónica y Guías de Remisión:} Este módulo permite la emisión de comprobantes fiscales validados por SUNAT. En \textbf{CM LINE}, la implementación integra la emisión de Facturas, Boletas y Notas de Crédito directamente desde la orden de venta, eliminando la doble digitación. Además, se incluye la configuración explícita de Guías de Remisión Remitente para asegurar el traslado legal de la mercadería entre almacenes y hacia el cliente final, cumpliendo con la normativa vigente.
+
+    \item \textbf{Punto de Venta / Venta Directa:} Módulo orientado a gestionar las ventas presenciales de manera ágil. En \textbf{CM LINE}, esta funcionalidad responde a la necesidad crítica de la \textbf{"venta de mostrador"}, donde el cliente requiere una atención inmediata (tipo retail/ferretería). Su objetivo es simplificar la interfaz para que los vendedores puedan despachar y emitir el comprobante rápidamente sin pasar por el flujo complejo de cotizaciones, mejorando la experiencia del cliente en tienda física.
+
+    \item \textbf{Compras:} El módulo de Compras administra el proceso de adquisición de mercadería a proveedores. En \textbf{CM LINE}, este módulo se incorpora para gestionar la reposición de stock mediante Órdenes de Compra formales, permitiendo planificar el abastecimiento de los tres almacenes basándose en reportes de rotación de inventario y asegurando que los ingresos de mercadería actualicen automáticamente las existencias.
 \end{itemize}
 
-\subsection{Cobertura Geográfica}
-El sistema centraliza las operaciones de las tres sedes principales:
-\begin{enumerate}
-    \item \textbf{Sede Arequipa:} Almacén central y administración.
-    \item \textbf{Sede Moquegua:} Punto de venta y distribución regional.
-    \item \textbf{Sede Puno:} Punto de venta y almacén satélite.
-\end{enumerate}
-
-\subsection{Capacidades Técnicas}
-\begin{itemize}
-    \item \textbf{Reglas de Reabastecimiento:} Configuración de alertas de stock mínimo para evitar quiebres.
-    \item \textbf{Trazabilidad de Químicos:} Registro obligatorio de lotes y fechas de caducidad para productos de limpieza y desinfección.
-    \item \textbf{Información Centralizada:} Reportes gerenciales en tiempo real sobre el valor del inventario y rendimiento de ventas por sede.
-\end{itemize}
+La implementación conjunta de los módulos de Inventario, Ventas, Facturación, Venta Directa y Compras permite a \textbf{CM LINE} contar con un ecosistema digital unificado que conecta sus almacenes en tiempo real con el área comercial, asegurando la trazabilidad de lotes, la agilidad en el despacho y el cumplimiento tributario.
