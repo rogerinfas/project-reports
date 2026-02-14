@@ -1,0 +1,25 @@
+# LaTeX
+*.aux
+*.log
+*.out
+*.toc
+*.pdf
+*.gz
+*.fdb_latexmk
+*.fls
+*.synctex.gz
+*.nav
+*.snm
+*.vrb
+*.bbl
+*.blg
+*.brf
+*.idx
+*.ilg
+*.ind
+*.lof
+*.lot
+*.maf
+*.mtc
+*.mtc0
+*.pyg
