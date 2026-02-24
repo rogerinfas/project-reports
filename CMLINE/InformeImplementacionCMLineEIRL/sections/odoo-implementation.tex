@@ -30,6 +30,24 @@ Esta fase permitió establecer la estructura base sobre la cual se desarrolló t
 \end{figure}
 
 \subsection{Implementación del módulo Inventario}
+El módulo de Inventario es el núcleo operativo de \textbf{CM LINE}, por lo que su configuración se centró en garantizar la visibilidad y el control del stock en tiempo real a través de las diferentes sucursales. Las principales acciones de implementación incluyeron:
+
+\begin{itemize}
+    \item \textbf{Estructura Multi-Almacén:} Se configuraron 3 almacenes físicos principales (\textbf{Arequipa, Moquegua y Puno}) con sus respectivas ubicaciones internas (zonas de recepción, almacenamiento general y despacho). Esto permite realizar transferencias internas controladas entre sedes de manera ágil.
+    \item \textbf{Categorización y Unidades de Medida:} Los artículos se agruparon en categorías lógicas (químicos, limpieza, útiles de aseo, suministros, etc.). Además, se habilitaron las múltiples unidades de medida (Unidad, Galón, Litro, Caja) para manejar conversiones exactas en las compras y ventas.
+    \item \textbf{Trazabilidad por Lotes:} Dada la naturaleza de los insumos y productos químicos de limpieza comercializados, se activó la obligación de rastreo mediante números de lote y control de caducidad, asegurando el cumplimiento de los estándares de calidad.
+    \item \textbf{Reglas de Reabastecimiento:} Se definieron puntos de pedido (stock mínimo y máximo) para los productos prioritarios, logrando un reabastecimiento semiautomatizado que genera alertas de compra cuando el inventario baja del umbral crítico.
+\end{itemize}
+
+Para evidenciar la configuración de los almacenes y el flujo de operaciones, se presenta la siguiente interfaz del tablero principal de Inventario en el sistema.
+
+\begin{figure}[htpb]
+    \centering
+    \includegraphics[width=0.9\textwidth]{imgs/modulo-inventario.png}
+    \caption{Tablero de control multidimensional del módulo de Inventario, mostrando las agrupaciones por sucursal y el estado de las transferencias en Odoo.}
+    \label{fig:modulo_inventario}
+\end{figure}
+
 
 \subsection{Implementación del módulo Compras}
 
