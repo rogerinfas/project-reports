@@ -34,6 +34,14 @@ El módulo de Inventario es el núcleo operativo de \textbf{CM LINE}, por lo que
 
 \begin{itemize}
     \item \textbf{Estructura Multi-Almacén:} Se configuraron 3 almacenes físicos principales (\textbf{Arequipa, Moquegua y Puno}) con sus respectivas ubicaciones internas (zonas de recepción, almacenamiento general y despacho). Esto permite realizar transferencias internas controladas entre sedes de manera ágil.
+
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=0.8\textwidth]{imgs/inventarios-multi-sede.png}
+        \caption{Configuración de los almacenes físicos de Arequipa, Moquegua y Puno en el sistema.}
+        \label{fig:almacenes_multi_sede}
+    \end{figure}
+
     \item \textbf{Categorización y Unidades de Medida:} Los artículos se agruparon en categorías lógicas (químicos, limpieza, útiles de aseo, suministros, etc.). Además, se habilitaron las múltiples unidades de medida (Unidad, Galón, Litro, Caja) para manejar conversiones exactas en las compras y ventas.
     \item \textbf{Trazabilidad por Lotes:} Dada la naturaleza de los insumos y productos químicos de limpieza comercializados, se activó la obligación de rastreo mediante números de lote y control de caducidad, asegurando el cumplimiento de los estándares de calidad.
     \item \textbf{Reglas de Reabastecimiento:} Se definieron puntos de pedido (stock mínimo y máximo) para los productos prioritarios, logrando un reabastecimiento semiautomatizado que genera alertas de compra cuando el inventario baja del umbral crítico.
