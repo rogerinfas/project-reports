@@ -83,18 +83,45 @@ Para evidenciar la configuración de los almacenes y el flujo de operaciones, se
 \subsection{Implementación del módulo Compras}
 La implementación del módulo de Compras permite a \textbf{CM LINE} automatizar el proceso de abastecimiento basándose en la demanda real y los niveles de stock crítico. Se configuraron flujos de aprobación para órdenes de compra, asegurando el control de costos y la correcta recepción de materiales de construcción y limpieza. La integración con el inventario garantiza que cada recepción actualice automáticamente las existencias en la sede correspondiente.
 
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{imgs/interfaz-compras.png}
+    \caption{Gestión de órdenes de compra y reabastecimiento en Odoo.}
+    \label{fig:interfaz_compras}
+\end{figure}
+
 \newpage
 \subsection{Implementación del módulo Ventas}
 El módulo de Ventas se parametrizó para gestionar el ciclo comercial B2B de la empresa. Se definieron plantillas de cotización profesional que incluyen términos y condiciones legales. El sistema permite el manejo de múltiples unidades de medida y la sincronización con el inventario para evitar la confirmación de pedidos sin respaldo físico, resolviendo el problema de las "ventas a ciegas".
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{imgs/interfaz-ventas.png}
+    \caption{Interfaz de ventas con generación de cotizaciones personalizadas.}
+    \label{fig:interfaz_ventas}
+\end{figure}
 
 \newpage
 \subsection{Implementación del módulo Punto de Venta (PoS)}
 Para la atención en mostrador, se desplegó la interfaz de Punto de Venta (PoS) de Odoo, diseñada para transacciones rápidas y ágiles. Esta herramienta permite a los vendedores procesar ventas minoristas, emitir comprobantes de pago de forma inmediata y descontar el stock en tiempo real, optimizando la experiencia del cliente en tienda física.
 
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{imgs/interfaz-pos.png}
+    \caption{Interfaz del Punto de Venta (PoS) para atención rápida en mostrador.}
+    \label{fig:interfaz_pos}
+\end{figure}
+
 \newpage
 \subsection{Implementación del módulo Facturación Electrónica}
 La facturación electrónica se integró directamente con el flujo de ventas. El sistema genera Facturas, Boletas y Notas de Crédito validadas por SUNAT mediante el uso del usuario secundario SOL. Asimismo, se habilitó la emisión de Guías de Remisión Electrónicas, fundamentales para el traslado legal de mercadería entre las sedes de Arequipa, Moquegua y Puno.
 
-\newpage
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{imgs/interfaz-facturacion.png}
+    \caption{Módulo de facturación electrónica e integración con SUNAT.}
+    \label{fig:interfaz_facturacion}
+\end{figure}
+
 \subsection{Integración entre módulos y trazabilidad del sistema}
 La principal fortaleza de la implementación radica en la interconexión de todos los módulos. Un pedido de venta activa automáticamente la reserva en inventario y prepara la guía de despacho. Este flujo garantiza la trazabilidad completa desde la orden de compra al proveedor hasta la entrega final al cliente, asegurando la integridad de los datos y la transparencia operativa en toda la organización.
