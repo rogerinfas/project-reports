@@ -114,14 +114,17 @@ Para la atención en mostrador, se desplegó la interfaz de Punto de Venta (PoS)
 
 \newpage
 \subsection{Implementación del módulo Facturación Electrónica}
-La facturación electrónica se integró directamente con el flujo de ventas. El sistema genera Facturas, Boletas y Notas de Crédito validadas por SUNAT mediante el uso del usuario secundario SOL. Asimismo, se habilitó la emisión de Guías de Remisión Electrónicas, fundamentales para el traslado legal de mercadería entre las sedes de Arequipa, Moquegua y Puno.
+La facturación electrónica en \textbf{CM LINE} representa el cierre del ciclo operativo y el cumplimiento de las obligaciones tributarias de manera automatizada. Para lograr una integración fluida con la normativa de \textbf{SUNAT}, se configuró la localización peruana en \textbf{Odoo 19}, lo que permite que el sistema actúe como una herramienta centralizada para la emisión, validación y almacenamiento de comprobantes electrónicos (PSE/OSE).
 
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.8\textwidth]{imgs/interfaz-facturacion.png}
-    \caption{Módulo de facturación electrónica e integración con SUNAT.}
-    \label{fig:interfaz_facturacion}
-\end{figure}
+Las características clave de esta implementación incluyen:
+\begin{itemize}
+    \item \textbf{Emisión Automatizada:} La generación de Facturas Electrónicas se realiza directamente desde la confirmación de la orden de venta o el despacho de almacén, eliminando la duplicidad de tareas y errores de digitación.
+    \item \textbf{Integración con Clave SOL:} Se configuró el sistema utilizando un \textbf{usuario secundario SOL} con permisos específicos para el envío de comprobantes, garantizando la seguridad de las credenciales principales del cliente y asegurando la obtención de la \textbf{CDR (Constancia de Recepción)} en tiempo real.
+    \item \textbf{Guías de Remisión Electrónicas (GRE):} Dada la naturaleza multi-sede de la empresa, se priorizó la configuración de las guías de remisión remitente. Esto permite el traslado legal y trazable de mercadería entre las sedes de \textbf{Arequipa, Moquegua y Puno}, cumpliendo con las últimas disposiciones de transporte de SUNAT.
+    \item \textbf{Sincronización Logístico-Contable:} Cada documento emitido afecta de forma inmediata y automática la contabilidad y el control de existencias, asegurando que el stock fiscal coincida con la realidad física de los almacenes.
+\end{itemize}
+
+Esta configuración no solo reduce la carga administrativa, sino que también otorga a \textbf{CM LINE} una ventaja competitiva al poder despachar materiales de construcción y artículos de limpieza de manera ágil, con toda la documentación legal generada en segundos.
 
 \subsection{Integración entre módulos y trazabilidad del sistema}
 La principal fortaleza de la implementación radica en la interconexión de todos los módulos. Un pedido de venta activa automáticamente la reserva en inventario y prepara la guía de despacho. Este flujo garantiza la trazabilidad completa desde la orden de compra al proveedor hasta la entrega final al cliente, asegurando la integridad de los datos y la transparencia operativa en toda la organización.
