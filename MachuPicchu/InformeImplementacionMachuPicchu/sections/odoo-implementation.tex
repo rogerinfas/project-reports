@@ -1,0 +1,76 @@
+\section{Implementación del Sistema Odoo 19}
+
+La implementación del sistema Odoo 19 en \textbf{Machu Picchu Exclusive Tours E.I.R.L.} se realizó bajo la modalidad \textbf{Odoo Online (SaaS)}, lo que permitió desplegar una solución centralizada en la nube capaz de soportar la operación turística sin requerir infraestructura de servidores locales ni costos elevados de mantenimiento TI.
+
+Esta modalidad garantiza la autonomía de los datos y la escalabilidad del sistema, permitiendo a la empresa gestionar su crecimiento en número de clientes y reservas sin cambios estructurales en la plataforma. Asimismo, asegura el acceso remoto seguro mediante credenciales únicas para cada perfil de usuario (\textbf{Dirección, Comercial, Operaciones, Administración}), facilitando la supervisión desde cualquier ubicación.
+
+El sistema fue configurado estrictamente de acuerdo con los flujos operativos de la agencia, priorizando tres pilares fundamentales:
+
+\begin{enumerate}
+    \item \textbf{Visión 360° del PAX:} Centralización de datos de contacto, documentación y notas en una ficha única de cliente.
+    \item \textbf{Control del flujo de reservas:} Uso de tableros Kanban para seguir cada viaje desde la cotización hasta la ejecución.
+    \item \textbf{Control de adelantos y saldos:} Registro ordenado de pagos y saldos antes de ejecutar compras no reembolsables.
+\end{enumerate}
+
+\subsection{Configuración inicial}
+
+En esta etapa se realizó la creación del entorno de trabajo en \textbf{Odoo Online}, definiendo:
+
+\begin{itemize}
+    \item La base de datos principal de la empresa.
+    \item La configuración inicial de idioma, moneda, zona horaria y parámetros generales.
+    \item La creación de usuarios, perfiles de acceso y permisos según los roles identificados.
+\end{itemize}
+
+Se activaron los módulos definidos en el alcance (CRM, Proyectos, actividades y ventas/facturación básica), asegurando que el entorno se encontrara preparado para la parametrización de procesos y la carga de datos maestros (clientes y servicios turísticos).
+
+\subsection{Implementación del Módulo CRM Turístico}
+
+En el módulo CRM se configuraron:
+
+\begin{itemize}
+    \item Fichas de contacto adaptadas al contexto turístico, permitiendo registrar información del PAX y del viaje.
+    \item Estructura para adjuntar de forma segura \textbf{fotos de pasaportes} y otros documentos relevantes.
+    \item Registro de notas internas e historial de interacciones (llamadas, acuerdos, cambios de itinerario).
+    \item Uso de etiquetas para segmentar contactos según mercados de origen, tipo de servicio o campañas.
+\end{itemize}
+
+\subsection{Implementación del Módulo de Proyectos}
+
+Se implementó un tablero Kanban específico para el control de reservas, con las etapas:
+
+\begin{enumerate}
+    \item Borrador de Cotización.
+    \item Confirmación (Adelanto).
+    \item Compra de Tickets/Hoteles.
+    \item Ejecución (Venta Final).
+\end{enumerate}
+
+Cada reserva se gestiona como un proyecto o tarea con:
+
+\begin{itemize}
+    \item Asignación de responsable interno.
+    \item Documentos adjuntos (comprobantes, reservas, vouchers).
+    \item Actividades asociadas (llamadas, correos, recordatorios) alineadas al itinerario.
+\end{itemize}
+
+\subsection{Gestión de Actividades y Alertas}
+
+Se configuró el uso de la funcionalidad estándar de \textbf{Actividades} de Odoo para:
+
+\begin{itemize}
+    \item Programar recordatorios de llamadas y correos clave (confirmación de adelantos, envío de vouchers, seguimientos).
+    \item Visualizar tareas pendientes en la \textbf{vista de calendario}, facilitando la planificación diaria.
+    \item Asegurar el seguimiento oportuno antes de hitos críticos del viaje (inicio del tour, traslados, visitas principales).
+\end{itemize}
+
+\subsection{Gestión de Cobros y Saldos}
+
+En el módulo de ventas/facturación básica se configuró:
+
+\begin{itemize}
+    \item Registro manual de \textbf{adelantos} (entre el 30\% y 50\% del valor del paquete) y saldos.
+    \item Emisión de comprobantes internos o recibos para confirmar la \textbf{recepción de fondos} al turista.
+    \item Visualización del estado de pago (Pagado / Saldo pendiente) asociado a cada reserva, como \textbf{condición previa} a la compra de boletos o servicios no reembolsables.
+\end{itemize}
+

@@ -1,0 +1,30 @@
+\section{Situación Inicial (Pre-Implementación)}
+
+\subsection{Diagnóstico de procesos actuales}
+
+Antes del inicio del proyecto, \textbf{Machu Picchu Exclusive Tours E.I.R.L.} gestionaba su operación principalmente mediante herramientas informales y canales de mensajería:
+
+\begin{itemize}
+    \item El 100\% de los clientes eran turistas extranjeros, atendidos a través de \textit{WhatsApp} y videollamadas, sin un registro estructurado en un CRM.
+    \item Las fotos de pasaportes y documentos críticos se recibían por mensajería instantánea y se eliminaban periódicamente, dificultando la construcción de una base de datos histórica.
+    \item El seguimiento de itinerarios (viajes de 2 a 20 días) se realizaba de forma manual, apoyado en archivos y conversaciones dispersas.
+    \item Los adelantos y saldos (en 2 o 3 cuotas) se controlaban de manera manual, incrementando el riesgo antes de comprar servicios no reembolsables.
+\end{itemize}
+
+\subsection{Brechas identificadas}
+
+El análisis técnico y operativo detectó las siguientes brechas críticas:
+
+\begin{itemize}
+    \item \textbf{Ausencia de CRM Turístico:} No existía una ficha única del PAX que consolidara datos de contacto, pasaporte, historial y preferencias.
+    \item \textbf{Riesgo en la gestión de datos sensibles:} Un error en nombres o números de pasaporte al momento de comprar boletos es difícil de corregir y puede afectar seriamente la experiencia del cliente.
+    \item \textbf{Control limitado de saldos:} La validación de adelantos y pagos pendientes antes de ejecutar compras no reembolsables se hacía de forma manual.
+    \item \textbf{Falta de tablero operativo:} No había una vista consolidada del estado de cada reserva (borrador, confirmada, en compra, en ejecución).
+\end{itemize}
+
+\subsection{Mapa de procesos inicial}
+
+El mapa de procesos previo a la implementación evidenciaba una estructura fragmentada en \textbf{"islas de información"}. El flujo comercial se iniciaba en conversaciones uno a uno con el turista; al avanzar hacia la confirmación y compra, gran parte del contexto se mantenía en chats y notas personales, dificultando la delegación y el control de calidad.
+
+La falta de integración entre el registro comercial, la logística de reservas y el control de pagos generaba retrabajos y aumentaba la dependencia directa de la fundadora para la correcta ejecución de cada viaje.
+
