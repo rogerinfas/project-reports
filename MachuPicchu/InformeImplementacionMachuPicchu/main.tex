@@ -1,77 +1,95 @@
-\documentclass[12pt,a4paper]{article}
-
-% --- Paquetes Básicos ---
-\usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
-\usepackage[spanish]{babel}
+\documentclass{article}
 \usepackage{graphicx}
-\usepackage{geometry}
-\usepackage{xcolor}
-\usepackage{titlesec}
-\usepackage{hyperref}
-\usepackage{array}
-\usepackage{fancyhdr}
-\usepackage{setspace}
-% Usando tipografía por defecto debido a falta de paquetes en el sistema
-
-% --- Configuración de Página ---
-\geometry{a4paper, left=2.3cm, right=2.3cm, top=3.4cm, bottom=3.4cm}
-\onehalfspacing
-\setlength{\parindent}{0pt}
-\setlength{\parskip}{1em}
-
-% --- Estilo de Títulos ---
-\titleformat{\section}{\color{blue!70!black}\normalfont\Large\bfseries}{\thesection}{1em}{}
-
-% --- HEADER Y FOOTER ---
-\pagestyle{fancy}
-\fancyhf{}
-\fancyhead[L]{\footnotesize Informe de Implementación – Machu Picchu Exclusive Tours}
-\fancyhead[R]{\footnotesize Proyecto N° 000-PROINNOVATE-IMTEMD-DEMO-2025}
-\fancyfoot[C]{\thepage}
-\renewcommand{\headrulewidth}{0.4pt}
+\usepackage{eso-pic}
+\usepackage{changepage} % Para ajustar márgenes
+\usepackage[margin=2.5cm]{geometry} % Márgenes de 1.5 cm en todos los lados
+\title{InformeImplementacionMachuPicchu}
+\author{rinfas}
+\date{March 2026}
 
 \begin{document}
 
-% --- PÁGINA DE PORTADA INNOVACIÓN (SOLO IMAGEN) ---
-\newgeometry{margin=0pt}
+% Primera página: imagen completa
+\AddToShipoutPictureBG*{%
+  \includegraphics[width=\paperwidth,height=\paperheight]{assets/caratula-innovacion.jpg}
+}
+\mbox{}
 \thispagestyle{empty}
-\noindent\includegraphics[width=\paperwidth,height=\paperheight]{assets/innovacion-portada.jpg}
 \clearpage
-\restoregeometry
 
-% --- CARÁTULA ---
-\input{sections/caratula}
+% Segunda página: carátula formal
+\begin{titlepage}
+    \centering
+    
+    % Cabecera pequeña en la esquina superior derecha
+    \hfill 
+    \begin{minipage}{0.6\textwidth}
+        \raggedleft
+        \footnotesize 
+        \textit{Informe de Implementación - MACHUPICCHU EXCLUSIVE TOURS}\\
+        \textit{Contrato: N° 776-PROINNOVATE-IMTEMD-2025}
+    \end{minipage}
 
-\tableofcontents
-\newpage
+    \vspace{1.5cm}
 
-% --- SECCIONES ---
-\input{sections/introduccion}
-\newpage
-\input{sections/project-background}
-\newpage
-\input{sections/goals}
-\newpage
-\input{sections/scope-implementation}
-\newpage
-\input{sections/implementation-methodology}
-\newpage
-\input{sections/initial-situation}
-\newpage
-\input{sections/odoo-implementation}
-\newpage
-\input{sections/implementation-results}
-\newpage
-\input{sections/training-change-management}
-\newpage
-\input{sections/conclusions}
-\newpage
-\input{sections/recommendations}
-\newpage
+    % Título principal
+    {\Large\bfseries INFORME DE IMPLEMENTACIÓN\par}
+    \vspace{0.5cm}
+    
+    % Subtítulo descriptivo
+    {\small\bfseries 
+    DIGITALIZACIÓN Y AUTOMATIZACIÓN DE PROCESOS PARA OPTIMIZAR LA GESTIÓN INTERNA, FORTALECER EL CONTROL DE CLIENTES Y POTENCIAR LA GESTIÓN DE VENTAS ENLAZADAS A PAQUETES TURÍSTICOS\par}
+    
+    \vspace{1.5cm}
+    
+    % Logo
+    \includegraphics[width=0.8\textwidth]{assets/logo-machupicchu.png}
+    
+    \vspace{1.5cm}
+
+    % Tabla de información del proyecto
+    \renewcommand{\arraystretch}{1.5}
+    \begin{tabular}{|l|p{8cm}|}
+        \hline
+        \textbf{ENTIDAD SOLICITANTE} & MACHUPICCHU EXCLUSIVE TOURS EIRL \\ \hline
+        \textbf{RUC} & 20490799584 \\ \hline
+        \textbf{CÓDIGO DE PROYECTO} & N° 776-PROINNOVATE-IMTEMD-2025\\ \hline
+        \textbf{FECHA DE INFORME} & FEBRERO 2026 \\ \hline
+    \end{tabular}
+
+    \vspace{2.5cm}
+
+    % Bloques de Firmas
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \rule{6cm}{0.5pt}\\
+        \vspace{0.2cm}
+        \textbf{JESUS ALBERTO CARI MAMANI}\\
+        \small Coordinador general del proyecto
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \rule{6cm}{0.5pt}\\
+        \vspace{0.2cm}
+        \textbf{JORGE MILTON APAZA HUANCA}\\
+        \small Consultor del proyecto
+    \end{minipage}
+
+    \vfill
+    
+    % Pie de página
+    {\large \textbf{AREQUIPA -- PERÚ}\par}
+    {\large \textbf{2026}\par}
+    \vspace{0.3cm}
+
+\end{titlepage}
+
+% Resto del documento
+\section{Introducción}
+Esta es la introduccion
+
+\subsection{SubIntroducción}
+Esta es la subintroduccion
 
 \end{document}
-
-% COMANDO PARA GENERAR LATEX
-% pdflatex -interaction=nonstopmode main.tex
-
