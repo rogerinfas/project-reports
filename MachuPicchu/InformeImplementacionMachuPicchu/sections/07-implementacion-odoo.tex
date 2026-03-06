@@ -4,6 +4,8 @@
 
 La implementación de la plataforma para Machu Picchu Exclusive Tours se realiza bajo la modalidad Odoo Online (SaaS), lo que permite desplegar una solución centralizada en la nube accesible desde cualquier ubicación. En esta etapa se procedió a la creación del entorno de trabajo, definiendo la base de datos principal, la configuración de moneda (USD y PEN), idioma y zona horaria. Se activaron los módulos de CRM, Proyectos y Ventas, asegurando que el entorno esté preparado para la parametrización de los procesos operativos de la agencia.
 
+Esta configuración inicial se enmarca dentro del alcance definido para la parametrización y configuración del sistema: se establecieron las etapas del flujo comercial (embudo de ventas) y del tablero de reservas, se revisaron las vistas estándar proporcionadas por Odoo y se preparó la estructura necesaria para la posterior carga inicial de datos maestros (clientes y catálogo de servicios turísticos), tal como se detalla en el documento de Alcance del Proyecto.
+
 \begin{figure}[h]
     \centering
     \includegraphics[width=\textwidth]{assets/odoo-configuracion-inicial.png}
@@ -71,6 +73,8 @@ Se implementó la funcionalidad de \emph{Actividades} para programar recordatori
 \subsection{Integración entre módulos y trazabilidad del sistema}
 
 La principal fortaleza de esta implementación radica en la interconexión: una oportunidad ganada en el CRM activa automáticamente el seguimiento en el tablero de Proyectos. Esta trazabilidad garantiza que los datos del pasaporte registrados inicialmente se utilicen correctamente en la compra de entradas a Machu Picchu, donde los errores de digitación pueden impedir el ingreso de los turistas debido a las estrictas regulaciones.
+\\
+Gracias a esta integración, la información deja de viajar de manera aislada entre hojas de cálculo, correos y mensajes de chat, y pasa a fluir de forma ordenada dentro de la plataforma: un contacto registrado en el CRM puede convertirse en oportunidad, luego en reserva dentro de un proyecto y, finalmente, en una operación cerrada con sus respectivos documentos adjuntos. Este encadenamiento de etapas refleja el ciclo comercial y operativo descrito para la agencia y constituye uno de los principales aportes de la implementación de Odoo en este contexto.
 
 \begin{figure}[h]
     \centering
