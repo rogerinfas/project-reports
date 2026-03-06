@@ -1,0 +1,58 @@
+\section{Alcance de implementación}
+
+El proyecto contempla la implementación y parametrización de la plataforma Odoo Online (SaaS), seleccionada por su capacidad para centralizar operaciones en la nube sin requerir infraestructura local. El alcance se centra en funcionalidades estándar para asegurar una adopción ágil y segura de los siguientes componentes.
+
+\subsection{Alcance temático}
+
+Se han seleccionado estratégicamente los módulos que cubrirán la operatividad crítica de Machu Picchu Exclusive Tours:
+
+\begin{itemize}
+    \item[a.] \textbf{CRM turístico (gestión de clientes)}: centralización de la base de datos de pasajeros (PAX). Este módulo es fundamental para el almacenamiento seguro de documentos de identidad (pasaportes), eliminando el riesgo de seguridad que supone gestionarlos por WhatsApp. Incluye el seguimiento de oportunidades mediante un embudo de ventas (pipeline) y la segmentación básica con etiquetas.
+    \item[b.] \textbf{Módulo de Proyectos (control operativo)}: configuración de un tablero visual (Kanban) para el seguimiento de la prestación del servicio. El flujo se adaptará a etapas como: Borrador de Cotización, Confirmación (Adelanto), Compra de Tickets/Hoteles y Ejecución final, permitiendo controlar itinerarios que varían de 2 a 20 días.
+    \item[c.] \textbf{Gestión de cobros y saldos (facturación básica)}: uso del módulo estándar para el registro manual de adelantos (30\% a 50\%) y saldos que el cliente paga a través de enlaces externos (Ip-App). Esto permitirá visualizar el estado de pago (Pagado/Pendiente) para habilitar la compra de boletos no reembolsables con seguridad.
+    \item[d.] \textbf{Gestión de actividades}: uso de recordatorios y alertas manuales (llamadas, correos) para el seguimiento post-cotización y la atención personalizada que caracteriza a la empresa.
+\end{itemize}
+
+\subsection{Alcance organizacional}
+
+La implementación impacta transversalmente en la estructura vertical de la empresa:
+
+\begin{itemize}
+    \item[a.] \textbf{Gerencia General}: acceso a tableros de control (dashboards) con métricas en tiempo real sobre ventas y nacionalidades.
+    \item[b.] \textbf{Ventas y Marketing}: digitalización del proceso de cotización y seguimiento sistemático de leads.
+    \item[c.] \textbf{Operaciones y Reservas}: gestión eficiente de itinerarios y almacenamiento centralizado de vouchers y reservas.
+    \item[d.] \textbf{Administración}: centralización de documentos y control de la eficiencia operativa.
+\end{itemize}
+
+El sistema será utilizado inicialmente por la gerencia y el personal operativo clave (como el apoyo familiar mencionado en las sesiones), definiendo roles de Administrador y Usuario de Ventas.
+
+\subsection{Alcance temporal}
+
+El proyecto se ejecuta de manera progresiva siguiendo un cronograma de fases (sprints).
+
+\subsection{Cronograma y estado de implementación}
+
+El proyecto se ejecutará bajo una metodología ágil para asegurar que, al no ser un desarrollo desde cero sino una configuración y adaptación de flujos, la puesta en marcha sea rápida y eficiente. A continuación se presenta el cronograma de fases:
+
+\begin{table}[h]
+    \centering
+    \begin{tabularx}{\textwidth}{|l|l|X|}
+        \hline
+        \textbf{Fase} & \textbf{Actividad clave} & \textbf{Enfoque en Odoo} \\
+        \hline
+        Fase 1 & Cimientos del sistema & Levantamiento de procesos y configuración técnica inicial de la instancia de Odoo en la nube. \\
+        \hline
+        Fase 2 & Migración de datos & Limpieza e importación de la base de datos histórica de clientes y catálogo de servicios turísticos. \\
+        \hline
+        Fase 3 & Configuración CRM y Proyectos & Parametrización de las etapas del embudo de ventas y los tableros Kanban para itinerarios. \\
+        \hline
+        Fase 4 & Automatización operativa & Configuración de plantillas de correo, mensajes de WhatsApp y registro de pagos manuales. \\
+        \hline
+        Fase 5 & Capacitación intensiva & Entrenamiento funcional del personal en el uso integral del sistema. \\
+        \hline
+        Fase 6 & Acompañamiento y cierre & Marcha blanca, ajustes finales en reportes y entrega del informe de cierre. \\
+        \hline
+    \end{tabularx}
+    \caption{Cronograma y estado de implementación del proyecto}
+\end{table}
+
