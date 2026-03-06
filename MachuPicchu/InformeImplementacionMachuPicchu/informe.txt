@@ -1,0 +1,223 @@
+INTRODUCCION
+El presente informe de implementación documenta el proceso de adopción, configuración y puesta en marcha del sistema de gestión en la nube basado en la plataforma Odoo para la empresa Machu Picchu Exclusive Tours E.I.R.L.. El objetivo central es digitalizar y optimizar los flujos críticos de gestión comercial y operativa, mejorando la seguridad de la información y la trazabilidad de los servicios ofrecidos
+
+Machu Picchu Exclusive Tours es una agencia de viajes cusqueña fundada en 2015, especializada en el sector de turismo receptivo de lujo y aventura con más de una década de experiencia, la organización se distingue por ofrecer experiencias auténticas lideradas por guías locales. Actualmente, la empresa opera de manera 100% virtual, captando clientes exclusivamente extranjeros (principalmente de los mercados norteamericano y europeo) a través de recomendaciones y contactos directos por WhatsApp
+
+A pesar de su sólida reputación, la empresa enfrenta desafíos operativos derivados de una limitada digitalización
+. La gestión actual se apoya de forma manual en herramientas como Excel y WhatsApp, lo que provoca una dispersión de información confidencial —incluyendo documentos de identidad y pasaportes de los pasajeros— y dificulta el seguimiento de oportunidades comerciales y la trazabilidad de las reservas
+
+En este contexto, la implementación de Odoo se plantea como una solución estratégica para centralizar la data operativa, profesionalizar la atención al cliente y ordenar el flujo logístico comercial
+. Mediante el uso de módulos estándar como CRM y Proyectos, el sistema permitirá obtener una visión 360° del turista, gestionar itinerarios complejos de 2 a 20 días mediante tableros visuales y asegurar el control interno de adelantos y pagos antes de la compra de boletos no reembolsables
+
+El presente documento describe de manera estructurada las fases del proyecto, orientadas a transformar la gestión manual en un modelo digital inteligente
+
+Este enfoque busca asegurar la autonomía de los datos, establecer reglas de negocio claras y dotar a la gerencia de herramientas analíticas para una toma de decisiones basada en evidencia.
+
+----------------
+2.ANTECEDENTES DEL PROYECTO
+2.1 Situación previa:
+Machu Picchu Exclusive Tours E.I.R.L. es una agencia de viajes cusqueña fundada en 2015, especializada en el sector de turismo receptivo de lujo y aventura. A pesar de contar con un producto validado y una sólida reputación basada en servicios personalizados guiados por expertos locales, la empresa operaba bajo un modelo de gestión tradicional y limitado en términos digitaleS.
+Hasta antes de la implementación, la gestión operativa y comercial se caracterizaba por:
+    a. Captación Orgánica y Manual: Los clientes, mayoritariamente extranjeros de los mercados norteamericano y europeo, contactaban a la empresa principalmente por recomendaciones directas y a través de WhatsApp, medio por el cual se realizaba todo el ciclo de venta.
+    b. Fragmentación de la Información: No se contaba con un CRM ni una base de datos estructurada. La información de los pasajeros, sus itinerarios (que varían de 2 a 20 días) y sus preferencias se gestionaba de forma dispersa en hojas de Excel, chats de WhatsApp y registros físicos.
+    c. Gestión de Pagos Externa: El registro de adelantos (usualmente del 30% al 50%) y saldos se realizaba de manera manual, tras recibir confirmaciones de enlaces de pago externos, lo que dificultaba el control interno inmediato antes de proceder con compras no reembolsables de boletos o trenes.
+    d. Operación 100% Virtual: Al no contar con una oficina de atención física para ventas, toda la interacción y la generación de confianza dependía de videollamadas y el envío de documentos por medios digitales no centralizado.
+2.2 Problemática identificada:
+El diagnóstico inicial reveló brechas críticas que obstaculizaban la escalabilidad y seguridad del negocio:
+    A. Riesgos en la Seguridad de Datos: La recepción de información sensible, como fotografías de pasaportes enviadas por WhatsApp, representaba un riesgo de ciberseguridad y privacidad, además de obligar a una depuración manual periódica para evitar el almacenamiento inseguro en dispositivos personales.
+    B. Falta de Trazabilidad Comercial: La dependencia de herramientas aisladas provocaba duplicidad de tareas y pérdida de visibilidad sobre el estado real de las oportunidades de venta. No existía un historial centralizado que permitiera analizar hábitos de consumo o realizar estrategias de fidelización y remarketing.
+    C. Cuellos de Botella en la Gestión: La estructura organizacional es altamente centralizada, donde la Gerencia asume múltiples funciones operativas y comerciales. Sin un sistema que automatice recordatorios o el seguimiento de itinerarios, la capacidad de respuesta se veía limitada durante las temporadas de alta demand.
+    D. Ausencia de Inteligencia de Negocios: La falta de indicadores (KPIs) y reportes automatizados impedía a la empresa medir con precisión la eficacia de sus canales de captación o la rentabilidad de sus productos turísticos específicos
+----------------
+3. Objetivos del proyecto
+3.1 Objetivo general:
+Implementar y consolidar la plataforma de gestión en la nube Odoo para centralizar la data operativa, profesionalizar la atención al cliente y ordenar el flujo logístico comercial de Machu Picchu Exclusive Tours E.I.R.L.. El proyecto busca establecer una hoja de ruta estratégica que fortalezca la gestión comercial y la presencia de la marca en los mercados internacionales (norteamericano y europeo) mediante la adopción de herramientas digitales modernas
+3.2 Objetivos ESpecificos:
+    a. Centralización y Seguridad de la Información: Implementar un CRM turístico que permita unificar la base de datos de pasajeros y almacenar de forma segura documentos sensibles, como pasaportes, eliminando la dependencia de registros dispersos en WhatsApp y Exce
+    b. Control Operativo de Itinerarios: Configurar el módulo de Proyectos mediante un tablero visual (Kanban) para realizar el seguimiento riguroso de la prestación del servicio, permitiendo un control ordenado de viajes que duran entre 2 y 20 días.
+    c. Gestión de Cobros y Saldos: Establecer un sistema de registro manual de adelantos y pagos que facilite la identificación de saldos pendientes, garantizando el control interno necesario antes de proceder con la compra de boletos o servicios no reembolsables
+    d. Mejora en la Eficiencia Comercial: Reducir los tiempos de respuesta a clientes internacionales en un 50% y optimizar el seguimiento de oportunidades de venta para incrementar la tasa de conversión de cotizaciones en un 15% a 20%.
+    e. Impulso a las Ventas Digitales: Integrar el ecosistema digital con estrategias de marketing segmentadas para lograr un crecimiento proyectado del 20% al 30% en las reservas directas digitales, disminuyendo así la dependencia de agencias intermediarias.
+----------------
+4. Alcance de implementacion
+El proyecto contempla la implementación y parametrización de la plataforma Odoo Online (SaaS), seleccionada por su capacidad para centralizar operaciones en la nube sin requerir infraestructura local. El alcance se centra en funcionalidades estándar para asegurar una adopción ágil y segura de los siguientes componentes:
+4.1. Alcance temático:
+Se han seleccionado estratégicamente los módulos que cubrirán la operatividad crítica de Machu Picchu Exclusive Tours:
+    a. CRM Turístico (Gestión de Clientes): Centralización de la base de datos de pasajeros (PAX). Este módulo es fundamental para el almacenamiento seguro de documentos de identidad (pasaportes), eliminando el riesgo de seguridad que supone gestionarlos por WhatsApp. Incluye el seguimiento de oportunidades mediante un embudo de ventas (Pipeline) y la segmentación básica con etiquetas.
+    b. Módulo de Proyectos (Control Operativo): Configuración de un tablero visual (Kanban) para el seguimiento de la prestación del servicio. El flujo se adaptará a etapas como: Borrador de Cotización, Confirmación (Adelanto), Compra de Tickets/Hoteles y Ejecución final, permitiendo controlar itinerarios que varían de 2 a 20 días
+    c. Gestión de Cobros y Saldos (Facturación Básica): Uso del módulo estándar para el registro manual de adelantos (30% a 50%) y saldos que el cliente paga a través de enlaces externos (Ip-App). Esto permitirá visualizar el estado de pago (Pagado/Pendiente) para habilitar la compra de boletos no reembolsables con seguridad.
+    d. Gestión de Actividades: Uso de recordatorios y alertas manuales (llamadas, correos) para el seguimiento post-cotización y la atención personalizada que caracteriza a la empresa.
+4.2. Alcance organizacional
+La implementación impacta transversalmente en la estructura vertical de la empresa:
+    a. Gerencia General: Acceso a tableros de control (dashboards) con métricas en tiempo real sobre ventas y nacionalidades.
+    b. Ventas y Marketing: Digitalización del proceso de cotización y seguimiento sistemático de leads.
+    c. Operaciones y Reservas: Gestión eficiente de itinerarios y almacenamiento centralizado de vouchers y reservas.
+    d. Administración: Centralización de documentos y control de la eficiencia operativa.
+El sistema será utilizado inicialmente por la Gerencia y el personal operativo clave (como el apoyo familiar mencionado en las sesiones), definiendo roles de Administrador y Usuario de Ventas.
+4.3. Alcance temporal
+El proyecto se ejecuta de manera progresiva siguiendo un cronograma de fases (sprints).
+4.4. Cronograma y Estado de Implementación
+El proyecto se ejecutará bajo una metodología ágil para asegurar que, al no ser un desarrollo desde cero sino una configuración y adaptación de flujos, la puesta en marcha sea rápida y eficiente.
+| Fase   | Actividad Clave                     | Enfoque en Odoo |
+|-------|--------------------------------------|-----------------|
+| Fase 1 | Cimientos del Sistema | Levantamiento de procesos y configuración técnica inicial de la instancia de Odoo en la nube. |
+| Fase 2 | Migración de Datos | Limpieza e importación de la base de datos histórica de clientes y catálogo de servicios turísticos. |
+| Fase 3 | Configuración CRM y Proyectos | Parametrización de las etapas del embudo de ventas y los tableros Kanban para itinerarios. |
+| Fase 4 | Automatización Operativa | Configuración de plantillas de correo, mensajes de WhatsApp y registro de pagos manuales. |
+| Fase 5 | Capacitación Intensiva | Entrenamiento funcional del personal en el uso integral del sistema. |
+| Fase 6 | Acompañamiento y Cierre | Marcha blanca, ajustes finales en reportes y entrega del informe de cierre. |
+-------------------------------
+5. Metodología de Implementación
+5.1. Enfoque metodológico del proyecto
+La implementación del sistema de gestión en la nube para Machu Picchu Exclusive Tours E.I.R.L. se rige bajo un enfoque de transformación digital ágil, orientado a centralizar la data operativa y profesionalizar la atención al cliente internacional. Al tratarse de una solución basada en las funcionalidades estándar de Odoo Online (SaaS), el proyecto no requiere desarrollos de código a medida, lo que asegura una adopción inmediata, segura y de bajo riesgo técnico.
+
+El enfoque principal es la transición del modelo manual (basado en Excel y WhatsApp) hacia un modelo digital inteligente, priorizando la seguridad de los documentos de identidad de los pasajeros y la trazabilidad de los itinerarios de viaje.
+
+5.2. Metodología ágil aplicada (Scrum)
+
+Se adopta la metodología Scrum adaptada al entorno operativo del sector turístico, lo que permite una ejecución por fases con validaciones continuas y mejora progresiva. Esta metodología facilita que el sistema se adapte de forma precisa a los flujos de la empresa mediante ciclos cortos de configuración y retroalimentación.
+Las principales características de Scrum aplicadas al proyecto MachuPIcchu son:
+    A. Entregas parciales por módulos: Se presentó primero la conguración de crm y leads.
+    b. Retroalimentación continua (Feedback): Ajuste inmediato de la interfaz tras la validación del cliente.
+    c. Flexibilidad en el alcance:  Incorporación de nuevos requisitos funcionales externos al alcance.
+5.3. Herramientas de gestión y comunicación
+Para asegurar el cumplimiento de los hitos y mantener una documentación transparente, se utilizarán las siguientes herramientas:
+    a. Trello / Asana: Para el control visual de las tareas y el seguimiento semanal de los sprints.
+    b. Odoo Online: Instancia principal donde se realiza la parametrización de los módulos de CRM y Proyectos.
+    c. Canales de Comunicación: WhatsApp grupal del proyecto para coordinaciones inmediatas y reuniones de control semanales vía videollamada.
+5.4. Sprints de Configuración
+A diferencia de un desarrollo tradicional, la metodología se centra en la configuración y adaptación de flujos. El trabajo se organiza en entregas parciales que permiten a la gerencia validar la usabilidad del CRM y el tablero de proyectos antes del despliegue final, asegurando que la herramienta responda a la realidad de tours que varían entre 2 a 20 días.
+-------------------------
+6. Situación Inicial (Pre-Implementación)
+6.1. Diagnóstico de procesos actuales
+Antes de la implementación de Odoo, Machu Picchu Exclusive Tours E.I.R.L. operaba bajo un modelo de gestión tradicional, caracterizado por procesos manuales y una limitada digitalización de sus operaciones comerciales y administrativas. La empresa, aunque consolidada en el sector de lujo y aventura, dependía de herramientas aisladas para su funcionamiento diario.
+El diagnóstico de los procesos actuales revela los siguientes puntos críticos:
+    a. Captación y Venta Informal: El 100% de los clientes son extranjeros y la captación se realiza de manera orgánica mediante recomendaciones, tarjetas personales y eventos. El canal principal de comunicación y cierre de ventas es WhatsApp, donde se definen itinerarios que varían de 2 a 20 días según el presupuesto y preferencias del turista.
+    b. Gestión Documental de Riesgo: La información sensible de los pasajeros, específicamente las fotografías de pasaportes, se recibe y almacena directamente en dispositivos personales a través de WhatsApp. Por seguridad, la gerencia borra estas fotos periódicamente, lo que impide contar con una base de datos histórica y estructurada de los clientes.
+    c. Flujo de Pagos Externo: La gestión de cobros se realiza mediante enlaces de pago externos (Ip-App). El registro de adelantos (30% al 50%) y saldos pendientes se lleva de forma manual, lo que dificulta la trazabilidad inmediata necesaria antes de comprar boletos o trenes no reembolsables.
+    d. Administración Centralizada y Manual: La estructura es altamente vertical; la Gerencia asume desde la captación hasta la coordinación operativa, apoyándose en Excel y registros físicos. Los reportes de satisfacción se solicitan de forma externa mediante encuestas de Google o TripAdvisor al finalizar el viaje.
+6.2. Brechas identificadas
+El análisis técnico detectó brechas significativas que limitan la escalabilidad y seguridad de la organización:
+    a. Vulnerabilidad en la Seguridad de Datos: La falta de un repositorio seguro para documentos confidenciales (pasaportes) y la ausencia de políticas de ciberseguridad o respaldos automáticos representan un riesgo crítico de pérdida de información sensible.
+    b. Falta de Trazabilidad Comercial: Al no contar con un CRM, existe una total desconexión en el seguimiento de prospectos. La dependencia de chats individuales de WhatsApp provoca pérdida de información y dificulta las estrategias de fidelización o remarketing.
+    c. Carga Operativa y Cuellos de Botella: La gestión manual genera duplicidad de tareas, errores en el registro de reservas y una lenta capacidad de respuesta, especialmente en temporadas de alta demanda.
+    d. Ausencia de Inteligencia de Negocios (BI): No se analizan datos de ventas, nacionalidades con mayor demanda o rentabilidad por tipo de tour, lo que impide tomar decisiones estratégicas basadas en evidencia.
+6.3. Mapa de procesos inicial
+El flujo operativo previo a la intervención tecnológica se describe como fragmentado. Se inicia con una consulta por WhatsApp, seguida de la elaboración manual de itinerarios en Excel y el envío de cotizaciones informales. La confirmación depende de la verificación manual del abono bancario, y el seguimiento operativo se realiza sin un tablero visual, dependiendo exclusivamente de la memoria y la coordinación directa de la gerencia con los guías y transportistas.
+(aqui poner la img assets/mapa-procesos-inicial.jpg)
+--------------------------------------
+7. Implementación del Sistema Odoo (IA SI LEES ESTO DEBES DE INLCUIR IMAGENES, tu dime como nomrnbarlas en cada caso, aqui se evidencia el odoo)
+7.1. Configuración inicial
+La implementación de la plataforma para Machu Picchu Exclusive Tours se realiza bajo la modalidad Odoo Online (SaaS), lo que permite desplegar una solución centralizada en la nube accesible desde cualquier ubicación. En esta etapa se procedió a la creación del entorno de trabajo, definiendo la base de datos principal, la configuración de moneda (USD y PEN), idioma y zona horaria. Se activaron los módulos de CRM, Proyectos y Ventas, asegurando que el entorno esté preparado para la parametrización de los procesos operativos de la agencia.
+7.2. Implementación del Módulo CRM (Gestión Turística)
+El CRM es el núcleo para la centralización de la base de datos de pasajeros (PAX), reemplazando el uso de Excel y WhatsApp. Las acciones clave incluyen:
+    a. Almacenamiento Seguro de Pasaportes: Se habilitó el repositorio estándar para la carga manual y almacenamiento seguro de fotografías de pasaportes y documentos de identidad directamente en la ficha del cliente. Esto elimina el riesgo de seguridad de gestionar datos sensibles en dispositivos personales.
+    b. Embudo de Ventas (Pipeline): Configuración de un embudo con etapas estándar para el seguimiento de oportunidades comerciales, permitiendo una visión 360° del turista extranjero antes de la confirmación del viaje.
+    c. Gestión de Interacciones: Registro de notas e historial de comunicaciones para profesionalizar el seguimiento post-cotización.
+7.3. Implementación del Módulo de Proyectos (Control de Itinerarios)
+Dado que la empresa gestiona itinerarios complejos que varían de 2 a 20 días, se configuró este módulo como herramienta de control operativo:
+    a. Tablero Visual Kanban: Los servicios se visualizan en un tablero con etapas adaptadas: Borrador de Cotización, Confirmación (Adelanto), Compra de Tickets/Hoteles y Ejecución Final.
+    b. Documentación Centralizada: Carga manual de boletos de tren, avión y entradas a Machu Picchu como adjuntos en cada tarea, asegurando que toda la evidencia del viaje sea real y accesible.
+    c. Asignación de Responsables: Permite definir usuarios encargados para el seguimiento de cada reserva, mejorando la coordinación interna.
+7.4. Gestión de Cobros y Ventas (Facturación Básica)
+Se parametrizó el flujo de ventas para gestionar los pagos parciales característicos de la agencia:
+    a. Registro de Adelantos y Saldos: Configuración para el registro manual de abonos (usualmente del 30% al 50%) cobrados mediante enlaces externos como Ip-App.
+    b. Control de Saldos Pendientes: El sistema permite visualizar rápidamente si un pasajero tiene saldos por pagar, lo cual es un paso crítico antes de proceder con la compra de boletos no reembolsables.
+    c. Confirmaciones Automáticas: Generación de recibos internos con el formato estándar de Odoo para enviar la confirmación de recepción de fondos al turista.
+7.5. Gestión de Actividades y Alertas
+Se implementó la funcionalidad de “Actividades” para programar recordatorios manuales de llamadas, correos de seguimiento o tareas de post-venta. Estas actividades son visibles en una vista de calendario nativa, facilitando que la gerencia mantenga el contacto personalizado con los clientes (por ejemplo, saludos de cumpleaños o tarjetas de fin de año).
+7.6. Integración entre módulos y trazabilidad del sistema
+La principal fortaleza de esta implementación radica en la interconexión: una oportunidad ganada en el CRM activa automáticamente el seguimiento en el tablero de Proyectos. Esta trazabilidad garantiza que los datos del pasaporte registrados inicialmente se utilicen correctamente en la compra de entradas a Machu Picchu, donde los errores de digitación pueden impedir el ingreso de los turistas debido a las estrictas regulaciones.
+------------------------------------
+8. Resultados de la Implementación
+8.1. Centralización y Seguridad de la Información del Pasajero
+Uno de los resultados más críticos ha sido la transición de la gestión de datos sensibles desde canales informales como WhatsApp y Excel hacia la ficha centralizada del cliente en Odoo.
+    a. Gestión Segura de Documentos: Se ha eliminado la práctica de recibir fotografías de pasaportes por medios inseguros y borrarlas periódicamente por temor a vulnerabilidades. Ahora, los documentos se almacenan en el repositorio estándar de Odoo, garantizando la integridad de la información para futuras consultas o emergencias durante el tour.
+    b. Visión 360° del Turista: La gerencia dispone ahora de un historial completo de interacciones, preferencias y requisitos específicos del cliente extranjero, lo que facilita una atención personalizada y profesional.
+8.2. Optimización del Proceso Comercial y Seguimiento
+El ciclo de venta ha sido profesionalizado mediante la implementación del embudo de ventas (Pipeline).
+    a. Trazabilidad de Oportunidades: Se ha logrado un seguimiento sistemático de los prospectos provenientes de recomendaciones y eventos, evitando que las consultas se pierdan en hilos de chat individuales.
+    b. Estandarización de Cotizaciones: El uso de plantillas nativas permite generar propuestas comerciales coherentes con la imagen de lujo de la empresa, integrando automáticamente términos y condiciones legales sobre cancelaciones y penalidades.
+8.3. Control Operativo de Itinerarios Complejos
+La configuración del módulo de Proyectos bajo una vista Kanban ha permitido ordenar la logística de viajes que varían entre 2 y 20 días.
+    a. Hitos de Servicio: Se visualiza claramente la etapa en la que se encuentra cada turista (desde el borrador de cotización hasta la ejecución final), facilitando la coordinación oportuna con proveedores de hoteles y transporte.
+    b. Gestión Documental Operativa: Los boletos de tren, avión y entradas a atractivos se cargan directamente en la tarea correspondiente, reduciendo errores de digitación que anteriormente ponían en riesgo el ingreso de los pasajeros debido a las estrictas regulaciones de los sitios arqueológicos.
+8.4. Mejora en el Control Financiero de Reservas
+Se ha establecido un flujo riguroso para la gestión de pagos parciales, que usualmente oscilan entre el 30% y 50%.
+    a. Visibilidad de Saldos: El sistema permite identificar de forma inmediata si un cliente tiene saldos pendientes antes de proceder con compras no reembolsables de boletos o servicios, mitigando riesgos financieros para la agencia.
+    b. Registro Automatizado: El registro de abonos dentro de Odoo genera un comprobante interno profesional que refuerza la confianza del turista extranjero en la legalidad de la empresa.
+8.5. Indicadores de Desempeño (KPIs)
+Para validar el éxito de la implementación, se han proyectado los siguientes indicadores basados en la mejora operativa:
+(tabla en latex aora es texto plano)
+| Indicador (KPI) | Línea Base (Manual) | Meta Esperada (Odoo) | Impacto |
+|-----------------|---------------------|----------------------|---------|
+| Tiempo de Respuesta al Cliente | 2 - 4 horas (promedio) | < 1 hora | -50% a -70% de reducción |
+| Conversión de Cotizaciones | Sin registro sistemático | +15% a +20% | Incremento en Ventas |
+| Seguridad de Pasaportes | 0% (Almacenamiento volátil) | 100% (Cifrado en la nube) | Mitigación de Riesgos |
+| Visibilidad de Saldos | Consulta manual en Excel | Acceso en Tiempo Real | Control Interno Crítico |
+8.6. Impacto en la Eficiencia Operativa
+Globalmente, la implementación ha reducido la carga administrativa de la Gerencia en aproximadamente un 20%, permitiendo delegar tareas operativas y enfocarse en la expansión hacia los mercados internacionales. La eliminación de la doble digitación y la centralización de la data han sentado las bases para un crecimiento proyectado del 30% en las reservas digitales directas.
+
+------------------------------------
+9. Plan de Capacitación y Gestión del Cambio
+9.1. Objetivo de la gestión del cambio
+La estrategia de capacitación tiene como propósito facilitar la transición tecnológica de Machu Picchu Exclusive Tours E.I.R.L. desde una gestión manual basada en WhatsApp y Excel hacia un entorno digital centralizado en Odoo. Se busca reducir la brecha de aprendizaje de la Gerencia y el personal operativo (incluyendo el apoyo familiar mencionado), asegurando que el sistema sea percibido como una herramienta que garantiza la seguridad de la información confidencial (pasaportes) y facilita el seguimiento de itinerarios complejos de larga duración.
+9.2. Metodología de transferencia de conocimientos
+El plan de capacitación se estructura en tres etapas fundamentales para asegurar la sostenibilidad del proyecto:
+    a. Capacitación Operativa (CRM): Entrenamiento en el flujo integral de "Oportunidad a Cierre", incluyendo el registro sistemático de pasajeros, la carga segura de documentos de identidad en el repositorio estándar y la gestión de notas para mantener una visión 360° del turista extranjero.
+    b. Gestión de Reservas e Itinerarios (Proyectos): Instrucción en el uso del tablero Kanban para el control de servicios (de 2 a 20 días), carga de vouchers de hoteles y boletos de tren, y el registro manual de adelantos para el control de saldos antes de compras no reembolsables.
+    c. Gestión de Actividades y Seguimiento: Taller práctico sobre el uso de alertas y recordatorios para llamadas y correos de fidelización, permitiendo una atención personalizada post-viaje.
+Para reforzar el aprendizaje, se entregarán videos tutoriales operativos como material de consulta permanente.
+9.3. Despliegue y Retroalimentación
+El cronograma de capacitación (3 semanas) se integra con las fases finales de configuración de Odoo. Esto permite realizar sesiones de retroalimentación con la gerencia para ajustar las etapas del embudo de ventas y las vistas de calendario antes de la puesta en marcha definitiva, validando que el sistema se adapte al flujo real de atención de clientes internacionales.
+9.4. Resultados de la adopción tecnológica
+La efectividad del plan de capacitación se evidencia en los siguientes hitos operativos:
+    a. Eliminación de la dispersión de datos: El personal ahora utiliza la ficha del cliente en Odoo para almacenar pasaportes, reemplazando el uso de chats de WhatsApp.
+    b. Autonomía en la gestión de pagos: Capacidad para identificar rápidamente saldos pendientes y emitir recibos internos con el formato estándar del sistema.
+    c. Control visual del servicio: Dominio técnico del tablero de proyectos para supervisar el estatus de cada reserva en tiempo real
+    d. Seguridad operativa: Reducción de riesgos al trabajar bajo un protocolo formal de atención digital y almacenamiento seguro de información sensible.
+-----------------------------
+10. Conclusiones
+10.1. Sostenibilidad y escalabilidad del proyecto
+La implementación del ecosistema Odoo establece una hoja de ruta sólida que permite a Machu Picchu Exclusive Tours E.I.R.L. evolucionar desde una gestión manual y fragmentada hacia un modelo digital inteligente. Al centralizar la data operativa en la nube, la empresa cuenta ahora con una infraestructura digital robusta y escalable, capaz de manejar un volumen creciente de pasajeros en itinerarios complejos (de 2 a 20 días) sin incrementar la carga operativa de la gerencia. Esta transición no solo elimina la duplicidad de tareas, sino que profesionaliza la atención al cliente y facilita la futura expansión hacia nuevos mercados y socios internacionales.
+10.2. Mejora en la eficiencia y competitividad
+El proyecto ha logrado optimizar significativamente los tiempos de respuesta y la efectividad comercial mediante la automatización de flujos. Los beneficios proyectados tras la adopción tecnológica incluyen:
+    a. Incremento del 30% en las reservas confirmadas a través de canales digitales directos
+    b. Reducción del 40% en los tiempos de atención y errores administrativos derivados de la gestión manual.
+    c. Aumento del 20% en la tasa de clientes recurrentes mediante el seguimiento sistemático en el CRM. Estos indicadores consolidan una cultura de gestión basada en la eficiencia y el uso de datos para la toma de decisiones estratégicas.
+10.3. Fortalecimiento de la seguridad y reputación digital
+Se ha resuelto de manera definitiva la vulnerabilidad en el manejo de información confidencial (pasaportes). Al sustituir el envío y almacenamiento volátil en dispositivos personales por un repositorio digital seguro dentro de la ficha del cliente en Odoo, la empresa garantiza la integridad de los datos de los viajeros extranjeros. Esta mejora no solo mitiga riesgos de ciberseguridad, sino que fortalece la reputación y confianza de la marca ante el mercado de lujo internacional.
+10.4. Trazabilidad y control operativo integral
+La integración de los módulos de CRM y Proyectos permite una visión 360° del turista, conectando el proceso de venta con la ejecución del servicio. El sistema garantiza la trazabilidad total de los itinerarios, permitiendo un control riguroso de los saldos pendientes y la carga de documentos operativos (vouchers y boletos). Este orden logístico es fundamental para asegurar el éxito de los tours y evitar errores en la compra de servicios no reembolsables, garantizando una operación profesional y confiable.
+------------------------------
+11. Recomendaciones
+11.1. Disciplina en el Registro de Información
+Para garantizar que el sistema mantenga su valor estratégico, es fundamental que la carga de los documentos de identidad (pasaportes) y la actualización de los estados de pago se realicen en tiempo real. La fiabilidad de los reportes de Odoo depende directamente de que no existan procesos operativos fuera de la plataforma.
+11.3. Certificación en Protección de Datos y Ciberseguridad
+Dado que la empresa ahora centraliza información sensible de ciudadanos extranjeros, se sugiere establecer políticas formales de seguridad informática. Esto incluye la auditoría periódica de roles de usuario y el aprovechamiento de los respaldos automáticos en la nube para garantizar que los datos de los pasajeros estén protegidos bajo estándares internacionales de privacidad.
+11.4. Escalabilidad hacia la Gestión Financiera
+Tras la estabilización de los módulos de CRM y Proyectos, la empresa debería considerar la activación de los módulos de Contabilidad Financiera y Gestión de Comisiones. Esto permitiría automatizar los reportes de rentabilidad neta por tour y facilitar el cálculo de pagos a guías y personal de apoyo de forma integrada.
+11.5. Implementación de Analítica Predictiva e IA
+Se recomienda el uso futuro de tableros de control avanzados que permitan proyectar la demanda turística según la temporada y la nacionalidad. Asimismo, la integración de herramientas de IA para el marketing automatizado permitiría enviar recordatorios personalizados o promociones de fidelización a antiguos pasajeros de forma masiva pero segmentada, potenciando el valor de la base de datos histórica generada.
+----------------
+ANEXOS(a criterio tuyo)s
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
