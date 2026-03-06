@@ -1,4 +1,0 @@
-Sprint,Fechas,Objetivo del Sprint,Tareas principales,Entregables
-1: Core & CRM,19 Ene - 01 Feb,Establecer la base de datos y visión 360° del PAX.,"Configuración de instancia, usuarios y permisos. Importación de base de datos de clientes. Configuración de fichas para adjuntos (Pasaportes).+4",Instancia activa y CRM con repositorio de documentos configurado.
-2: Operaciones,02 Feb - 15 Feb,Digitalizar el flujo logístico y de reservas.,"Configuración de Tablero Kanban de Proyectos con etapas: Borrador, Confirmación, Compra y Ejecución. Parametrización de actividades y alertas de calendario.+2",Módulo de Proyectos operativo con flujo de estados configurado.
-3: Finanzas & QA,16 Feb - 28 Feb,"Control de saldos, capacitación y cierre.",Configuración de facturación manual para registro de adelantos. Talleres de capacitación y entrega de videos tutoriales. Pruebas de flujo completo.+3,Usuarios capacitados e informe final de cierre.+1
