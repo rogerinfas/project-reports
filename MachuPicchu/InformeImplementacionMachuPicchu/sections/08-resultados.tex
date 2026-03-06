@@ -1,64 +1,49 @@
 \section{Resultados de la implementación}
 
-\subsection{Centralización y seguridad de la información del pasajero}
+A la fecha de elaboración de este informe, el proyecto se encuentra en la fase de cierre de implementación y marcha blanca de la plataforma Odoo. Esto significa que los módulos configurados ya están disponibles para uso operativo, pero aún no se cuenta con una base de datos histórica suficiente como para acreditar cambios consolidados en los indicadores de negocio. En consecuencia, los resultados presentados en esta sección son principalmente cualitativos y se enfocan en los logros de configuración y en las metas de desempeño definidas en el Plan de Implementación.
 
-Uno de los resultados más críticos ha sido la transición de la gestión de datos sensibles desde canales informales como WhatsApp y Excel hacia la ficha centralizada del cliente en Odoo.
+\subsection{Resultados inmediatos de configuración}
 
-\begin{itemize}
-    \item[a.] \textbf{Gestión segura de documentos}: se ha eliminado la práctica de recibir fotografías de pasaportes por medios inseguros y borrarlas periódicamente por temor a vulnerabilidades. Ahora, los documentos se almacenan en el repositorio estándar de Odoo, garantizando la integridad de la información para futuras consultas o emergencias durante el tour.
-    \item[b.] \textbf{Visión 360° del turista}: la gerencia dispone ahora de un historial completo de interacciones, preferencias y requisitos específicos del cliente extranjero, lo que facilita una atención personalizada y profesional.
-\end{itemize}
-
-\subsection{Optimización del proceso comercial y seguimiento}
-
-El ciclo de venta ha sido profesionalizado mediante la implementación del embudo de ventas (pipeline).
+Entre los principales resultados alcanzados al término de la etapa de implementación se encuentran:
 
 \begin{itemize}
-    \item[a.] \textbf{Trazabilidad de oportunidades}: se ha logrado un seguimiento sistemático de los prospectos provenientes de recomendaciones y eventos, evitando que las consultas se pierdan en hilos de chat individuales.
-    \item[b.] \textbf{Estandarización de cotizaciones}: el uso de plantillas nativas permite generar propuestas comerciales coherentes con la imagen de lujo de la empresa, integrando automáticamente términos y condiciones legales sobre cancelaciones y penalidades.
+    \item[a.] \textbf{Instancia Odoo operativa}: despliegue de la instancia Odoo Online con los módulos de CRM, Proyectos y Ventas habilitados para Machu Picchu Exclusive Tours.
+    \item[b.] \textbf{Flujos de registro y seguimiento configurados}: parametrización de los flujos para el registro de clientes, el seguimiento de oportunidades, el control de itinerarios (mediante tableros Kanban) y el registro manual de pagos parciales.
+    \item[c.] \textbf{Estructura de datos y seguridad}: definición de campos clave para el sector turístico (pasaportes, nacionalidad, duración del tour, etc.) y configuración de perfiles de usuario y permisos de acceso acordes a los roles definidos en el proyecto.
+    \item[d.] \textbf{Actividades y alertas}: habilitación de actividades y recordatorios dentro del CRM para apoyar el seguimiento post-cotización y las acciones de fidelización.
 \end{itemize}
 
-\subsection{Control operativo de itinerarios complejos}
+Estos elementos sientan las bases para que, en la fase de operación y monitoreo, se puedan medir de manera objetiva los impactos comerciales y operativos previstos.
 
-La configuración del módulo de Proyectos bajo una vista Kanban ha permitido ordenar la logística de viajes que varían entre 2 y 20 días.
+\subsection{Resultados preliminares}
 
-\begin{itemize}
-    \item[a.] \textbf{Hitos de servicio}: se visualiza claramente la etapa en la que se encuentra cada turista (desde el borrador de cotización hasta la ejecución final), facilitando la coordinación oportuna con proveedores de hoteles y transporte.
-    \item[b.] \textbf{Gestión documental operativa}: los boletos de tren, avión y entradas a atractivos se cargan directamente en la tarea correspondiente, reduciendo errores de digitación que anteriormente ponían en riesgo el ingreso de los pasajeros debido a las estrictas regulaciones de los sitios arqueológicos.
-\end{itemize}
+Durante la marcha blanca se han observado cambios iniciales en la forma de trabajo de la gerencia y del personal involucrado, principalmente relacionados con el uso de una ficha única de cliente y la visualización de los servicios en tableros Kanban. Sin embargo, estos cambios aún se encuentran en consolidación y no es posible, en esta etapa, atribuir mejoras cuantitativas directas en ventas, tiempos de respuesta o reducción de errores administrativos.
 
-\subsection{Mejora en el control financiero de reservas}
+Los resultados cuantitativos se evaluarán en la etapa de monitoreo y ajustes finales, conforme al cronograma definido en el Plan de Implementación.
 
-Se ha establecido un flujo riguroso para la gestión de pagos parciales, que usualmente oscilan entre el 30\% y 50\%.
+\subsection{Indicadores y metas de desempeño (KPIs)}
 
-\begin{itemize}
-    \item[a.] \textbf{Visibilidad de saldos}: el sistema permite identificar de forma inmediata si un cliente tiene saldos pendientes antes de proceder con compras no reembolsables de boletos o servicios, mitigando riesgos financieros para la agencia.
-    \item[b.] \textbf{Registro automatizado}: el registro de abonos dentro de Odoo genera un comprobante interno profesional que refuerza la confianza del turista extranjero en la legalidad de la empresa.
-\end{itemize}
-
-\subsection{Indicadores de desempeño (KPIs)}
-
-Para validar el éxito de la implementación, se han proyectado los siguientes indicadores basados en la mejora operativa:
+En coherencia con el Plan de Implementación, se han definido los siguientes indicadores clave de desempeño y sus metas esperadas. Estos KPIs constituyen la base para el seguimiento posterior a la implementación, más que resultados ya alcanzados:
 
 \begin{table}[h]
     \centering
     \begin{tabularx}{\textwidth}{|l|l|l|X|}
         \hline
-        \textbf{Indicador (KPI)} & \textbf{Línea base (manual)} & \textbf{Meta esperada (Odoo)} & \textbf{Impacto} \\
+        \textbf{Indicador (KPI)} & \textbf{Línea base (manual)} & \textbf{Meta esperada (Odoo)} & \textbf{Impacto esperado} \\
         \hline
-        Tiempo de respuesta al cliente & 2--4 horas (promedio) & $<$ 1 hora & -50\% a -70\% de reducción \\
+        Tiempo de respuesta al cliente & 2--4 horas (promedio) & $<$ 1 hora & Reducción estimada de -50\% a -70\% \\
         \hline
-        Conversión de cotizaciones & Sin registro sistemático & +15\% a +20\% & Incremento en ventas \\
+        Conversión de cotizaciones & Sin registro sistemático & +15\% a +20\% & Incremento proyectado en ventas \\
         \hline
-        Seguridad de pasaportes & 0\% (almacenamiento volátil) & 100\% (cifrado en la nube) & Mitigación de riesgos \\
+        Seguridad de pasaportes & 0\% (almacenamiento volátil) & 100\% (cifrado en la nube) & Mitigación de riesgos de pérdida o filtración de datos \\
         \hline
-        Visibilidad de saldos & Consulta manual en Excel & Acceso en tiempo real & Control interno crítico \\
+        Visibilidad de saldos & Consulta manual en Excel & Acceso en tiempo real & Mejora esperada en el control interno de reservas y pagos \\
         \hline
     \end{tabularx}
-    \caption{Indicadores clave de desempeño tras la implementación}
+    \caption{Indicadores y metas de desempeño definidos para la fase post-implementación}
 \end{table}
 
-\subsection{Impacto en la eficiencia operativa}
+\subsection{Impacto esperado en la eficiencia operativa}
 
-Globalmente, la implementación ha reducido la carga administrativa de la gerencia en aproximadamente un 20\%, permitiendo delegar tareas operativas y enfocarse en la expansión hacia los mercados internacionales. La eliminación de la doble digitación y la centralización de la data han sentado las bases para un crecimiento proyectado del 30\% en las reservas digitales directas.
+De acuerdo con las metas cuantitativas establecidas en el Plan de Implementación, se espera que, una vez consolidada la adopción de Odoo, la empresa logre reducciones significativas en la carga administrativa de la gerencia y en los errores derivados de la gestión manual, así como un incremento en las reservas digitales directas. La verificación de estas proyecciones requerirá un periodo adicional de operación y monitoreo, por lo que los resultados descritos en este informe deben entenderse como expectativas fundadas y no como logros ya comprobados.
 
