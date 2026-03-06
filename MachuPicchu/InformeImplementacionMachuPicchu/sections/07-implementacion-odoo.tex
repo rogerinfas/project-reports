@@ -5,7 +5,8 @@
 La implementación de la plataforma para Machu Picchu Exclusive Tours se realiza bajo la modalidad Odoo Online (SaaS), lo que permite desplegar una solución centralizada en la nube accesible desde cualquier ubicación. En esta etapa se procedió a la creación del entorno de trabajo, definiendo la base de datos principal, la configuración de moneda (USD y PEN), idioma y zona horaria. Se activaron los módulos de CRM, Proyectos y Ventas, asegurando que el entorno esté preparado para la parametrización de los procesos operativos de la agencia.
 
 Esta configuración inicial se enmarca dentro del alcance definido para la parametrización y configuración del sistema: se establecieron las etapas del flujo comercial (embudo de ventas) y del tablero de reservas, se revisaron las vistas estándar proporcionadas por Odoo y se preparó la estructura necesaria para la posterior carga inicial de datos maestros (clientes y catálogo de servicios turísticos), tal como se detalla en el documento de Alcance del Proyecto.
-
+\\
+\\
 \begin{figure}[h]
     \centering
     \includegraphics[width=\textwidth]{assets/odoo-configuracion-inicial.png}
@@ -86,11 +87,36 @@ Se implementó la funcionalidad de \emph{Actividades} para programar recordatori
 
 La principal fortaleza de esta implementación radica en la interconexión: una oportunidad ganada en el CRM activa automáticamente el seguimiento en el tablero de Proyectos. Esta trazabilidad garantiza que los datos del pasaporte registrados inicialmente se utilicen correctamente en la compra de entradas a Machu Picchu, donde los errores de digitación pueden impedir el ingreso de los turistas debido a las estrictas regulaciones.
 \\
+\\
 Gracias a esta integración, la información deja de viajar de manera aislada entre hojas de cálculo, correos y mensajes de chat, y pasa a fluir de forma ordenada dentro de la plataforma: un contacto registrado en el CRM puede convertirse en oportunidad, luego en reserva dentro de un proyecto y, finalmente, en una operación cerrada con sus respectivos documentos adjuntos. Este encadenamiento de etapas refleja el ciclo comercial y operativo descrito para la agencia y constituye uno de los principales aportes de la implementación de Odoo en este contexto.
 
 \begin{figure}[h]
     \centering
     \includegraphics[width=\textwidth]{assets/odoo-trazabilidad-crm-proyectos.png}
     \caption{Trazabilidad entre CRM y Proyectos dentro de Odoo}
+\end{figure}
+
+\subsection{Mapa de procesos actual (con Odoo)}
+
+A continuación se describe el flujo operativo resultante tras la implementación de Odoo, que reemplaza el proceso fragmentado descrito en la sección de situación inicial:
+
+\textbf{Captación y primer contacto.} El cliente extranjero llega por recomendación, WhatsApp o redes sociales. El contacto se registra en el CRM como lead o contacto; si hay consulta concreta, se crea una oportunidad y se asigna una etapa en el embudo de ventas.
+
+\textbf{Cotización.} Desde el CRM se trabaja la oportunidad: se revisa la ficha del cliente (datos, pasaporte si ya fue enviado), se arma el itinerario y se genera la cotización formal desde Odoo. La propuesta comercial queda vinculada al contacto y a la oportunidad.
+
+\textbf{Confirmación y adelanto.} Cuando el cliente acepta, la oportunidad pasa a estado ganada y en el módulo de Proyectos se crea el proyecto o tarea del tour. Se registra en Ventas el adelanto (30\% a 50\%) que el cliente paga mediante enlace externo (Ip-App). El sistema muestra el estado Pagado o Saldo pendiente.
+
+\textbf{Compra de tickets y servicios.} Con el adelanto registrado, en el tablero Kanban la reserva avanza a la etapa de compra de tickets y hoteles. Se utilizan los datos del pasaporte ya cargados en la ficha del cliente para comprar entradas, tren, etc. Los comprobantes se adjuntan a la tarea.
+
+\textbf{Ejecución del tour.} La reserva pasa a la etapa de ejecución final. Toda la documentación (vouchers, boletos, entradas) permanece centralizada en la tarea. Los recordatorios y actividades de seguimiento se gestionan desde el CRM y se visualizan en el calendario de actividades.
+
+\textbf{Cierre y seguimiento.} Al finalizar el viaje, la operación se cierra en el tablero. La ficha del cliente en el CRM conserva el historial completo para futuras reservas o acciones de fidelización.
+
+En síntesis, el flujo pasa de ser disperso (Excel, WhatsApp, memoria) a estar centralizado en Odoo, con trazabilidad entre CRM y Proyectos y sin depender de registros paralelos para el control oficial de la operación.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{assets/mapa-procesos-actual.png}
+    \caption{Mapa de procesos actual de Machu Picchu Exclusive Tours con Odoo}
 \end{figure}
 
