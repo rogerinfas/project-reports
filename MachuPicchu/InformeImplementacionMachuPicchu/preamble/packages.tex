@@ -2,13 +2,30 @@
 \usepackage[T1]{fontenc}
 \usepackage[spanish]{babel}
 
+% Tamaño de letra 12pt (en documentclass) y espaciado 1,5
+\usepackage{setspace}
+\onehalfspacing
+
 \usepackage{graphicx}
 \usepackage{eso-pic}
 \usepackage{changepage} % Para ajustar márgenes
 \usepackage[margin=2.5cm]{geometry} % Márgenes de 2.5 cm en todos los lados
+
+% Indentación completa de párrafos en subsecciones (todas las líneas, no solo la primera)
+\newenvironment{indentedsubsection}{%
+  \begin{adjustwidth}{1cm}{0cm}%
+  \setlength{\parindent}{0pt}%
+}{%
+  \end{adjustwidth}%
+}
 \usepackage{array}
 \usepackage{tabularx}
 
 % Hipervínculos (índice clicable)
 \usepackage[hidelinks]{hyperref}
+
+% Títulos y subtítulos del mismo tamaño que el texto
+\usepackage{titlesec}
+\titleformat{\section}{\normalsize\bfseries}{\thesection. }{0.5em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{\thesubsection. }{0.5em}{}
 
