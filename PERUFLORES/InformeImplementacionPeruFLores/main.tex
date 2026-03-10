@@ -1,0 +1,95 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{eso-pic}
+\usepackage{changepage} % Para ajustar márgenes
+\usepackage[margin=2.5cm]{geometry} % Márgenes de 1.5 cm en todos los lados
+\title{InformeImplementacionMachuPicchu}
+\author{rinfas}
+\date{March 2026}
+
+\begin{document}
+
+% Primera página: imagen completa
+\AddToShipoutPictureBG*{%
+  \includegraphics[width=\paperwidth,height=\paperheight]{assets/caratula-innovacion.jpg}
+}
+\mbox{}
+\thispagestyle{empty}
+\clearpage
+
+% Segunda página: carátula formal
+\begin{titlepage}
+    \centering
+    
+    % Cabecera pequeña en la esquina superior derecha
+    \hfill 
+    \begin{minipage}{0.6\textwidth}
+        \raggedleft
+        \footnotesize 
+        \textit{Informe de Implementación - PERU FLORES}\\
+        \textit{Contrato: N° XXX-PROINNOVATE-IMTEMD-2025}
+    \end{minipage}
+
+    \vspace{1.5cm}
+
+    % Título principal
+    {\Large\bfseries INFORME DE IMPLEMENTACIÓN\par}
+    \vspace{0.5cm}
+    
+    % Subtítulo descriptivo
+    {\small\bfseries 
+    DIGITALIZACIÓN Y AUTOMATIZACIÓN BLA BLA BLA BLA BLA BLA BLA BLA BLA\par}
+    
+    \vspace{1.5cm}
+    
+    % Logo
+    \includegraphics[width=0.5\textwidth]{assets/logo-peruflores.png}
+    
+    \vspace{1.5cm}
+
+    % Tabla de información del proyecto
+    \renewcommand{\arraystretch}{1.5}
+    \begin{tabular}{|l|p{8cm}|}
+        \hline
+        \textbf{ENTIDAD SOLICITANTE} & Peru Flores Travel Agency Tours EIRL \\ \hline
+        \textbf{RUC} & 20564164128 \\ \hline
+        \textbf{CÓDIGO DE PROYECTO} & N° xxx-PROINNOVATE-IMTEMD-2025\\ \hline
+        \textbf{FECHA DE INFORME} & XXX AL XXX \\ \hline
+    \end{tabular}
+
+    \vspace{2.5cm}
+
+    % Bloques de Firmas
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \rule{6cm}{0.5pt}\\
+        \vspace{0.2cm}
+        \textbf{SILVERIA FLORES SUVILETA}\\
+        \small Coordinador general del proyecto
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \rule{6cm}{0.5pt}\\
+        \vspace{0.2cm}
+        \textbf{ROGER INFA SANCHEZ}\\
+        \small Consultor del proyecto
+    \end{minipage}
+
+    \vfill
+    
+    % Pie de página
+    {\large \textbf{AREQUIPA -- PERÚ}\par}
+    {\large \textbf{2026}\par}
+    \vspace{0.3cm}
+
+\end{titlepage}
+
+% Resto del documento
+\section{Introducción}
+Esta es la introduccion
+
+\subsection{SubIntroducción}
+Esta es la subintroduccion
+
+\end{document}
