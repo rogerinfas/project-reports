@@ -1,0 +1,21 @@
+graph LR
+    A[Cliente] -->|Solicita Cotización| B(Ventas / Mostrador)
+    B -->|Consulta Stock| C{¿Hay Stock?}
+    C -->|No sabe / Llama| D[Almacenes AQP/MOQ/PUN]
+    D -.->|Respuesta demorada| B
+    B -->|Genera Venta a Ciegas| E[Facturación Manual]
+    E -->|Emite Comprobante| F[Portal SUNAT]
+    B -->|Orden Despacho| D
+    D -->|Despacho sin control| G[Entrega al Cliente]
+    D -->|Falta stock| H[Compras Reactivas]
+    H -->|Orden Manual| I[Proveedor]
+    
+    classDef client fill:#f1f5f9,stroke:#475569,stroke-width:2px,color:#1e293b
+    classDef sales fill:#dbeafe,stroke:#2563eb,stroke-width:2px,color:#1e3a8a
+    classDef warehouse fill:#ffedd5,stroke:#ea580c,stroke-width:2px,color:#9a3412
+    classDef external fill:#e2e8f0,stroke:#64748b,stroke-width:2px,color:#0f172a
+    
+    class A,G client
+    class B,C sales
+    class D,H warehouse
+    class E,F,I external
