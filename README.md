@@ -16,6 +16,11 @@ Repositorio de informes técnicos generados con **LaTeX** para distintos proyect
 - **PERUFLORES/**
   - `InformeImplementacionPeruFLores/`  
     Documento LaTeX con carátula y contenido específico para el proyecto PERU FLORES.
+- **TESIS_ROGER_INFA_SANCHEZ/**
+  - `main.tex`: documento principal de tesis.
+  - `chapters/`: capítulos principales (planteamiento, revisión, etc.).
+  - `backmatter/`: referencias y anexos.
+  - `imgs/`: recursos gráficos (logo e imágenes).
 
 Además, el repositorio incluye archivos auxiliares generados por LaTeX (`*.aux`, `*.log`, `*.out`, `*.toc`, etc.), que normalmente se pueden limpiar con las reglas del `Makefile`.
 
