@@ -1,0 +1,110 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{setspace}
+\usepackage{ragged2e}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage[hidelinks]{hyperref}
+\usepackage{bookmark}
+\usepackage{enumitem}
+\usepackage{float}
+
+% Márgenes para tesis
+\geometry{top=2.5cm, bottom=2.5cm, left=3cm, right=3cm}
+
+% Cabecera y pie de página
+\setlength{\headheight}{15pt}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{Universidad La Salle Arequipa}
+\fancyhead[R]{Escuela Profesional de Ingeniería de Software}
+\fancyfoot[C]{\thepage}
+
+\begin{document}
+
+% --- PORTADA ---
+\begin{titlepage}
+    \begin{center}
+        \begin{flushleft}
+            \includegraphics[width=6cm]{imgs/logo.png}
+        \end{flushleft}
+        
+        \vspace{2.5cm}
+        \textbf{\large ESCUELA PROFESIONAL DE INGENIERÍA DE SOFTWARE}
+        
+        \vspace{2cm}
+        \textbf{\normalsize MODELO PARA REDUCIR LOS TIEMPOS DE USUARIOS DE TRANSPORTE PÚBLICO EMPLEANDO TECNOLOGÍAS MÓVILES Y DE SISTEMA DE POSICIONAMIENTO GLOBAL}
+        
+        \vspace{2.5cm}
+        \textbf{Roger Euclides Infa Sanchez}
+        
+        \vspace{0.7cm}
+        Bachiller en Ingeniería de Software
+        
+        \vfill
+        \textbf{AREQUIPA – PERÚ}\\
+        2026
+    \end{center}
+\end{titlepage}
+
+% --- SECCIONES PRELIMINARES (Sin numeración) ---
+\pagenumbering{gobble} 
+
+%\newpage
+%\begin{center} \textbf{\Large Dedicatoria} \end{center} 
+%\newpage
+%\begin{center} \textbf{\Large Agradecimientos} \end{center}
+%\newpage
+
+% --- ÍNDICE GENERAL ---
+\renewcommand{\contentsname}{\centering \Large Índice General}
+\tableofcontents 
+\newpage
+
+% --- CONFIGURACIÓN PARA CAPÍTULOS CON NÚMEROS NORMALES ---
+\pagenumbering{arabic} % Cambia numeración a 1, 2, 3...
+\setcounter{page}{1}   % El Capítulo I será la página 1
+
+% CAPÍTULO I
+\newpage
+\section*{\centering \Large CAPÍTULO I \\ PLANTEAMIENTO DE LA INVESTIGACIÓN}
+\addcontentsline{toc}{section}{PLANTEAMIENTO DE LA INVESTIGACIÓN}
+\input{chapters/01-planteamiento}
+
+% CAPÍTULO II
+\newpage
+\section*{\centering \Large CAPÍTULO II \\ REVISIÓN Y FUNDAMENTACIÓN TEÓRICA}
+\addcontentsline{toc}{section}{REVISIÓN Y FUNDAMENTACIÓN TEÓRICA}
+\input{chapters/02-revision}
+
+% CAPÍTULO III
+\newpage
+\section*{\centering \Large CAPÍTULO III \\ MÉTODO DE INVESTIGACIÓN}
+\addcontentsline{toc}{section}{MÉTODO DE INVESTIGACIÓN}
+% \input{metodo}
+
+% CAPÍTULO IV
+\newpage
+\section*{\centering \Large CAPÍTULO IV \\ RESULTADOS Y DISCUSIÓN}
+\addcontentsline{toc}{section}{RESULTADOS Y DISCUSIÓN}
+% \input{resultados}
+
+% SECCIONES FINALES
+\newpage
+\section*{\centering \Large Conclusiones}
+\addcontentsline{toc}{section}{Conclusiones}
+
+\newpage
+\section*{\centering \Large Referencias}
+\addcontentsline{toc}{section}{Referencias}
+\input{backmatter/referencias}
+
+\newpage
+\section*{\centering \Large Anexos}
+\addcontentsline{toc}{section}{Anexos}
+\input{backmatter/anexos}
+
+\end{document}
