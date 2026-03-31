@@ -1,0 +1,115 @@
+\documentclass[12pt]{article}
+
+\input{preamble/packages}
+\input{preamble/metadata}
+
+\begin{document}
+
+\input{frontmatter/titlepage}
+
+\tableofcontents
+\newpage
+
+\input{sections/01-introduccion}
+\newpage
+\input{sections/02-acceso-al-sistema}
+\newpage
+\input{sections/03-modulos-del-sistema}
+
+\end{document}
+\documentclass[12pt]{article}
+
+% ------------------ PAQUETES ------------------
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+
+% ------------------ ENCABEZADO ------------------
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{Manual de Usuario - Odoo}
+\fancyhead[R]{\leftmark}
+\fancyfoot[C]{\thepage}
+
+% ------------------ PORTADA ------------------
+\title{
+    \begin{center}
+        \includegraphics[width=0.35\textwidth]{logo.png} \\[1.5cm]
+
+        {\Huge \textbf{MANUAL DE USUARIO}} \\[0.7cm]
+
+        {\Large \textbf{Nombre del Proyecto}} \\[1cm]
+
+        \rule{\textwidth}{0.5pt} \\[0.5cm]
+
+        {\large \textbf{Empresa Cliente:}} \\ 
+        {\Large Nombre de la Empresa} \\[1cm]
+
+        {\large \textbf{Consultores:}} \\ 
+        {\large Consultor 1} \\ 
+        {\large Consultor 2} \\[1cm]
+
+        {\large \textbf{Fecha:}} \\ 
+        \today
+    \end{center}
+}
+
+\author{} % vacío
+\date{}   % vacío
+
+% ------------------ DOCUMENTO ------------------
+\begin{document}
+
+\maketitle
+\thispagestyle{empty}
+
+\newpage
+\tableofcontents
+\newpage
+
+% ==================================================
+\section{Introducción}
+Este manual describe el uso del sistema implementado en Odoo SaaS, orientado a las operaciones del negocio.
+
+% ==================================================
+\newpage
+\section{Acceso al Sistema}
+
+\subsection{Ingreso al sistema}
+\begin{itemize}
+    \item URL del sistema: \href{https://tuempresa.odoo.com}{tuempresa.odoo.com}
+    \item Usuario: usuario@empresa.com
+    \item Contraseña: ********
+\end{itemize}
+
+\subsection{Pantalla inicial}
+Descripción breve del dashboard o vista inicial del sistema.
+
+% ==================================================
+\newpage
+\section{Módulos del Sistema}
+
+\subsection{Ventas}
+\subsubsection{Crear Cotización}
+\begin{enumerate}
+    \item Ingresar al módulo Ventas
+    \item Clic en \textbf{Nuevo}
+    \item Seleccionar cliente
+    \item Agregar productos o servicios
+    \item Guardar
+\end{enumerate}
+
+\subsubsection{Confirmar Venta}
+Proceso para confirmar una cotización.
+
+\subsection{Facturación}
+\subsubsection{Generar Factura}
+Pasos para generar una factura desde ventas.
+
+% Puedes duplicar bloques según módulos:
+% CRM, Inventario, Compras, etc.
+
+\end{document}
