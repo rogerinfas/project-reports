@@ -1,9 +1,63 @@
 \subsection*{Sujetos/unidades de estudio}
+Las unidades de estudio del proyecto son los usuarios del transporte público urbano de Arequipa y los actores operativos vinculados al servicio (conductores y entidades de gestión). El análisis se enfoca en la interacción usuario--ruta--tiempo, considerando como variable principal el tiempo de espera y desplazamiento reportado por el usuario antes y después del uso del prototipo móvil con apoyo de datos GPS.
+
+Asimismo, se consideran como unidades técnicas del estudio los registros de ubicación y eventos operativos del sistema (tiempo estimado de llegada, ruta sugerida, confirmación de viaje), dado que constituyen la base empírica para evaluar la reducción de tiempos.
 
 \subsection*{Universo, Población y Muestra}
+\textbf{Universo.} El universo corresponde a la totalidad de usuarios potenciales del transporte público urbano en la ciudad de Arequipa.
+
+\textbf{Población.} La población de interés está conformada por usuarios que realizan desplazamientos frecuentes en rutas urbanas y que cuentan con acceso a dispositivo móvil con conectividad.
+
+\textbf{Muestra.} Se plantea una muestra no probabilística intencional para la fase piloto, integrada por usuarios disponibles en corredores urbanos priorizados. Esta decisión metodológica es coherente con el carácter aplicado del proyecto y con el objetivo de validar funcionalmente el modelo en un entorno controlado antes de una eventual expansión.
 
 \subsection*{Técnicas/instrumentos para la recolección de los datos}
+Se utilizarán técnicas mixtas, orientadas a la medición operativa del problema:
+\begin{itemize}
+    \item \textbf{Observación operativa:} registro del flujo real de desplazamiento y tiempos de espera en rutas seleccionadas.
+    \item \textbf{Análisis de registros digitales:} captura de datos GPS y eventos del prototipo (hora de consulta, ruta sugerida, tiempo estimado de llegada, tiempo efectivo de viaje).
+    \item \textbf{Registro comparativo pretest--postest:} instrumento tipo ficha para contrastar tiempos antes y después de aplicar el modelo.
+    \item \textbf{Revisión documental técnica:} consulta de fuentes especializadas sobre optimización de rutas, GPS y movilidad urbana.
+\end{itemize}
+
+En términos instrumentales, se emplean: aplicación móvil prototipo, base de datos de eventos, fichas de registro de tiempos y matriz de trazabilidad de incidencias.
 
 \subsection*{Método de validación}
+\textbf{A. Justificación de la metodología de desarrollo.}
+
+Se adopta una metodología \textbf{ágil por iteraciones (enfoque Scrum adaptado)} debido a que el proyecto requiere construir y validar incrementos funcionales en ciclos cortos, con retroalimentación continua de usuarios y ajuste permanente de requisitos. Esta elección es pertinente porque:
+\begin{itemize}
+    \item reduce riesgo técnico al validar tempranamente componentes críticos (captura GPS, cálculo de tiempos, interfaz móvil);
+    \item permite priorizar valor de negocio en cada ciclo (reducción de tiempos y mejor experiencia de usuario);
+    \item facilita ajustes rápidos ante hallazgos de campo en la prueba piloto.
+\end{itemize}
+
+\textbf{B. Diagrama de la metodología adecuada al proyecto.}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.98\textwidth]{assets/flujo-metodologico-adaptado-proyecto.png}
+\caption{Diagrama del flujo metodológico adaptado al proyecto}
+\end{figure}
+
+\textbf{C. Especificación de ciclos o iteraciones.}
+
+\begin{itemize}
+    \item \textbf{Iteración 1 (Investigación y requisitos):} objetivo, levantar necesidades y variables críticas; entregable, backlog priorizado y criterios de aceptación iniciales.
+    \item \textbf{Iteración 2 (Diseño):} objetivo, definir arquitectura y experiencia de usuario; entregable, prototipo navegable y diseño de flujo de datos.
+    \item \textbf{Iteración 3 (Desarrollo núcleo):} objetivo, implementar captura GPS y lógica de estimación; entregable, primer incremento funcional del motor de cálculo.
+    \item \textbf{Iteración 4 (Integración y pruebas):} objetivo, integrar app, servicios y almacenamiento; entregable, versión integrada con pruebas internas aprobadas.
+    \item \textbf{Iteración 5 (Piloto y optimización):} objetivo, validar en entorno real y corregir hallazgos; entregable, versión estabilizada con métricas comparativas pre/post.
+\end{itemize}
+
+Antes de cerrar cada iteración se valida cumplimiento de criterios de aceptación: funcionalidad operativa, consistencia de datos, usabilidad mínima y trazabilidad de resultados.
 
 \subsection*{Técnicas estadísticas para el análisis de los datos}
+El análisis se realizará con estadística descriptiva y comparación de medidas:
+\begin{itemize}
+    \item media, mediana y desviación estándar de tiempos de espera y viaje;
+    \item comparación porcentual pretest--postest para estimar reducción de tiempos;
+    \item tablas y gráficos de tendencia por ruta/periodo;
+    \item análisis de variación por franja horaria para identificar condiciones de mayor impacto.
+\end{itemize}
+
+En la fase piloto, la interpretación se orienta a evidencia de mejora operativa y factibilidad de escalamiento del modelo.
