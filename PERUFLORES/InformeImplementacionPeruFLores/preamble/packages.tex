@@ -1,0 +1,30 @@
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+
+% Tamaño de letra 12pt (en documentclass) y espaciado 1,5
+\usepackage{setspace}
+\onehalfspacing
+
+\usepackage{graphicx}
+\usepackage{eso-pic}
+\usepackage{changepage}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage[hidelinks]{hyperref}
+\usepackage{titlesec}
+\titleformat{\section}{\normalsize\bfseries}{\thesection. }{0.5em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{\thesubsection. }{0.5em}{}
+
+% Sangría/tabulación de contenido tipo informe de referencia.
+\newenvironment{indentedsubsection}{%
+  \begin{adjustwidth}{1cm}{0cm}%
+  \setlength{\parindent}{0pt}%
+}{%
+  \end{adjustwidth}%
+}
+
+% Cada sección principal inicia en una página nueva.
+\let\oldsection\section
+\renewcommand{\section}{\clearpage\oldsection}
