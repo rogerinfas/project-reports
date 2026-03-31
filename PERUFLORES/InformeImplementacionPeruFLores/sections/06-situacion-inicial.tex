@@ -1,0 +1,49 @@
+\section{Situación inicial (pre-implementación)}
+
+\subsection{Diagnóstico de procesos actuales}
+\begin{indentedsubsection}
+Antes de la implementación de Odoo, Perú Flores Travel Agency Tours Operador E.I.R.L. operaba bajo un modelo de gestión tradicional, caracterizado por procesos netamente manuales y una digitalización empírica de sus operaciones comerciales. Aunque la agencia está consolidada en el sector de turismo receptivo (atendiendo principalmente al mercado brasileño y extranjero), dependía de herramientas aisladas para su funcionamiento diario.
+
+El diagnóstico de los procesos actuales revela los siguientes puntos críticos:
+
+\begin{itemize}
+    \item \textbf{Captación y venta informal:} el contacto inicial y la negociación con los turistas internacionales se realiza casi de manera exclusiva a través de WhatsApp.
+    \item \textbf{Gestión documental física:} la base de datos de los pasajeros se gestiona anotando los registros en cuadernos físicos, para luego intentar transcribirlos esporádicamente a la computadora.
+    \item \textbf{Armado de paquetes y cálculos manuales:} la creación de cotizaciones depende de reutilizar plantillas antiguas de Excel (creadas durante la pandemia) y documentos de Word. La gerencia invierte un tiempo excesivo copiando, pegando, cambiando fechas y, sobre todo, realizando cálculos manuales repetitivos, como dividir el costo del transporte (ej. 40 soles) y del guía (ej. 50 soles) entre la cantidad de pasajeros, y sumar ingresos fijos como el Boleto Turístico (BTG).
+    \item \textbf{Flujo de pagos descentralizado:} la gestión de cobros depende de depósitos internacionales por Western Union o transferencias bancarias directas. El control de los adelantos (pagos ``a cuenta'') y los saldos pendientes se lleva de manera totalmente manual y mental.
+\end{itemize}
+\end{indentedsubsection}
+
+\subsection{Brechas identificadas}
+\begin{indentedsubsection}
+El análisis técnico detectó brechas significativas que limitan la escalabilidad del negocio y generan una sobrecarga operativa extrema en la gerencia:
+
+\begin{itemize}
+    \item \textbf{A. Cuellos de botella en cotizaciones:} la dependencia de sumar y dividir costos manualmente para cada cliente nuevo ralentiza drásticamente la capacidad de respuesta. Si el cliente solicita un cambio en el paquete, la gerencia debe volver a calcular todo desde cero.
+    \item \textbf{B. Fragmentación y vulnerabilidad de la información:} al depender de cuadernos físicos y múltiples archivos dispersos de Word y Excel, existe un alto riesgo de pérdida de información. No hay un historial centralizado que permita buscar rápidamente a un cliente o saber qué servicios se le cotizaron en el pasado.
+    \item \textbf{C. Falta de trazabilidad en cobros:} el registro de lo que un turista depositó por Western Union frente a lo que aún debe (saldo) carece de una herramienta centralizada, lo que expone a la agencia a posibles desbalances en sus cuentas.
+    \item \textbf{D. Ausencia de retroalimentación sistematizada (Feedback):} aunque la agencia brinda un buen servicio, no cuenta con un sistema automatizado propio para enviar encuestas a los turistas al finalizar el viaje. La gerencia depende de terceros o de su hija para enviar formularios, perdiendo oportunidades valiosas de generar un ``boca a boca'' digital.
+\end{itemize}
+\end{indentedsubsection}
+
+\subsection{Mapa de procesos inicial (Pre-intervención tecnológica)}
+\begin{indentedsubsection}
+El flujo operativo previo a la intervención de Odoo se describe como fragmentado y altamente dependiente de la memoria de la Gerencia General. A continuación, se detalla el recorrido habitual:
+\end{indentedsubsection}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.95\textwidth]{assets/mapa-procesos-inicial-peruflores.png}
+    \caption{Mapa de procesos inicial (pre-intervención tecnológica) de Perú Flores}
+\end{figure}
+
+\begin{indentedsubsection}
+\begin{itemize}
+    \item \textbf{Primer contacto:} el turista escribe por WhatsApp solicitando información para un viaje (ej. paquete a Cusco, Arequipa o Puno).
+    \item \textbf{Elaboración manual del itinerario:} la gerencia busca un documento de Word antiguo, copia el texto, pega en un archivo nuevo y digita las nuevas fechas y nombres a mano.
+    \item \textbf{Cálculo de tarifas:} abre un Excel, busca los costos individuales (hoteles, trenes, ingresos) y prorratea manualmente los costos compartidos (guía y movilidad) según el número de pasajeros.
+    \item \textbf{Envío y re-negociación:} se envía la cotización informal al cliente. Si el cliente rechaza o pide ajustes (``muy caro, auméntame esto''), la gerencia repite los pasos 2 y 3 desde cero.
+    \item \textbf{Verificación de abonos:} el cliente deposita por Western Union. La gerencia anota manualmente el adelanto recibido y calcula mentalmente o en papel el saldo pendiente.
+    \item \textbf{Cierre de servicio (Sin trazabilidad):} el tour se ejecuta. Al finalizar, no existe un envío automático de encuestas de satisfacción, perdiendo el registro de la experiencia del pasajero para futuras recomendaciones.
+\end{itemize}
+\end{indentedsubsection}

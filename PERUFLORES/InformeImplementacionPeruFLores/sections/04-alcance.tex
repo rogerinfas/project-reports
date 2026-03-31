@@ -1,0 +1,51 @@
+\section{Alcance de implementación}
+\begin{indentedsubsection}
+El proyecto contempla la implementación y parametrización de la plataforma Odoo Online (SaaS), seleccionada por su capacidad para centralizar operaciones en la nube sin requerir infraestructura local. El alcance se centra estrictamente en funcionalidades nativas (Out-of-the-box) para asegurar una adopción ágil, segura y que resuelva de manera inmediata la carga operativa manual de la gerencia.
+\end{indentedsubsection}
+
+\subsection{Alcance temático}
+\begin{indentedsubsection}
+Se han seleccionado estratégicamente los módulos que cubrirán la operatividad crítica de Perú Flores Travel Agency, erradicando la dependencia de cuadernos, sumas manuales y archivos aislados:
+
+\begin{itemize}
+    \item \textbf{a. Módulo CRM (Gestión Turística y de Proveedores):} centralización de la base de datos de pasajeros (PAX) y proveedores (guías, transporte, hoteles), reemplazando el uso de libretas físicas. Se configurará un embudo de ventas (pipeline) con etapas claras (Nuevo, Calificado, Propuesta, Ganado) para dar seguimiento visual a cada prospecto internacional.
+    \item \textbf{b. Módulo de Ventas (Cotizador Automatizado y PDFs):} configuración de un cotizador digital alimentado por un catálogo de servicios tarifados. Este módulo permitirá simular porcentajes de ganancia dinámicos (ej. 15\%, 20\%, 30\%) según el perfil del turista y calculará automáticamente los costos. Además, habilitará la generación inmediata de cotizaciones formales en formato PDF, con la capacidad de ocultar el desglose del IGV por ítem para evitar duplicidades visuales, tal como lo requiere la agencia.
+    \item \textbf{c. Gestión de Cobros y Pagos Fraccionados:} parametrización para el registro manual de adelantos (pagos ``a cuenta'') y el control exacto de los ``saldos pendientes'', adaptándose a la realidad de la empresa que recibe pagos parciales y variables mediante Western Union o depósitos.
+    \item \textbf{d. Módulo de Encuestas (Feedback Post-Servicio):} diseño y automatización de formularios digitales de retroalimentación. Se enviarán a los turistas al finalizar su itinerario para medir la calidad del servicio de la agencia y los proveedores, consolidando testimonios que potencien el ``boca a boca'' digital.
+\end{itemize}
+
+Quedan expresamente excluidos de este alcance los desarrollos de código a medida, la facturación electrónica local (SUNAT), y cualquier tipo de alteración o migración de la página web actual de la agencia.
+\end{indentedsubsection}
+
+\subsection{Alcance organizacional}
+\begin{indentedsubsection}
+La implementación impacta directamente en la eficiencia de la estructura de la empresa:
+
+\begin{itemize}
+    \item \textbf{a. Gerencia General:} obtendrá acceso a una herramienta de cotización rápida y un control visual de todas las oportunidades comerciales en curso.
+    \item \textbf{b. Apoyo Operativo:} habilitación de accesos colaborativos (para el equipo de apoyo familiar) que permitan trabajar en paralelo en la elaboración de cotizaciones sin cruzar información.
+    \item \textbf{c. Migración de Datos:} se realizará de forma estructurada mediante plantillas de Excel proveídas por el consultor. La importación se limitará estrictamente a la data maestra actual: catálogo de servicios tarifados, base de proveedores y contactos.
+\end{itemize}
+\end{indentedsubsection}
+
+\subsection{Alcance temporal}
+\begin{indentedsubsection}
+El proyecto se ejecutará de manera progresiva bajo una ruta crítica estimada de 6 meses, cofinanciado por ProInnóvate. Esta ventana de tiempo garantiza la configuración precisa del software y el espacio necesario para que la gerencia asimile la nueva herramienta de trabajo.
+\end{indentedsubsection}
+
+\subsection{Cronograma y estado de implementación}
+\begin{indentedsubsection}
+Para asegurar que la transición tecnológica no paralice la operación diaria de la agencia, el despliegue se organiza mediante las siguientes fases ágiles:
+\end{indentedsubsection}
+
+\renewcommand{\arraystretch}{1.4}
+\begin{tabularx}{\textwidth}{|>{\raggedright\arraybackslash}p{2.1cm}|>{\raggedright\arraybackslash}p{3.2cm}|X|}
+    \hline
+    \textbf{Fase} & \textbf{Actividad clave} & \textbf{Enfoque en Odoo} \\ \hline
+    Fase 1 & Cimientos del sistema & Creación de la base de datos en Odoo Cloud, configuración bimonetaria (Dólares) y habilitación de usuarios. \\ \hline
+    Fase 2 & Migración de datos & Limpieza e importación, mediante Excel, de la base de clientes, proveedores y tarifas base de hoteles y servicios. \\ \hline
+    Fase 3 & Configuración CRM y Ventas & Parametrización de las etapas del embudo de ventas, configuración de la simulación de ganancias (márgenes variables) y diseño del PDF de cotización. \\ \hline
+    Fase 4 & Pagos y Encuestas & Configuración del registro de pagos a cuenta y saldos pendientes. Diseño del formulario de retroalimentación post-servicio. \\ \hline
+    Fase 5 & Capacitación (``Aprender haciendo'') & Sesiones prácticas, aplicadas a la creación real de cotizaciones de paquetes turísticos, asegurando la autonomía de la gerencia. \\ \hline
+    Fase 6 & Acompañamiento y Cierre & Marcha blanca, ajustes finales en los formatos de impresión PDF y firma del documento de cierre. \\ \hline
+\end{tabularx}

@@ -16,3 +16,15 @@
 \usepackage{titlesec}
 \titleformat{\section}{\normalsize\bfseries}{\thesection. }{0.5em}{}
 \titleformat{\subsection}{\normalsize\bfseries}{\thesubsection. }{0.5em}{}
+
+% Sangría/tabulación de contenido tipo informe de referencia.
+\newenvironment{indentedsubsection}{%
+  \begin{adjustwidth}{1cm}{0cm}%
+  \setlength{\parindent}{0pt}%
+}{%
+  \end{adjustwidth}%
+}
+
+% Cada sección principal inicia en una página nueva.
+\let\oldsection\section
+\renewcommand{\section}{\clearpage\oldsection}
