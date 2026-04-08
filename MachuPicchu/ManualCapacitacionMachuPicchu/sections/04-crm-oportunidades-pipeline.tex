@@ -1,39 +1,137 @@
 \section{CRM: oportunidades y embudo de ventas}
 
-El \textbf{CRM} concentra el seguimiento comercial: cada trato con un prospecto o grupo se maneja como \textbf{oportunidad} y se visualiza en el \textbf{embudo} (\textbf{Pipeline} / vista Kanban por etapas).
+En este módulo, cada venta potencial se controla como \textbf{oportunidad} dentro del \textbf{Pipeline}. En este manual, cada paso indica: \textbf{(1) dónde hacer clic} y \textbf{(2) qué debe aparecer} para confirmar que va correctamente.
 
 \subsection{Abrir el CRM}
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.95\textwidth]{assets/odoo-pantalla-principal-crm-resaltado.png}
+    \caption{Pantalla de aplicaciones de Odoo con \textbf{CRM} resaltado para el ingreso al módulo.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.95\textwidth]{assets/odoo-crm-vista-principal-pipeline-real.png}
+    \caption{Vista principal del \textbf{Pipeline} CRM con las etapas operativas de Machu Picchu Exclusive Tours.}
+\end{figure}
+
 \begin{enumerate}
-    \item En \textbf{Aplicaciones}, pulse \textbf{CRM}.
-    \item Verá el menú lateral típico: \textbf{Oportunidades}, \textbf{Pipeline}, \textbf{Actividades}, \textbf{Informes}, etc. La vista principal suele ser el \textbf{Pipeline} (tarjetas por columnas = etapas).
+    \item Desde la pantalla principal de Odoo, haga clic en la aplicación \textbf{CRM}.
+    \item Debe abrirse la vista \textbf{Pipeline} (tablero Kanban). Si no abre en Kanban, cambie a ese modo con el icono de tablero en la parte superior.
+    \item Verifique que visualiza columnas del flujo comercial: \textbf{Nuevo Prospecto}, \textbf{Propuesta Enviada}, \textbf{Confirmado (Adelanto)} y \textbf{Pagado Total / Ejecución}.
+    \item Revise el buscador superior y confirme el filtro activo (por ejemplo \textbf{Mi flujo}), para trabajar solo con sus oportunidades.
 \end{enumerate}
 
 \subsection{Crear una oportunidad nueva}
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.95\textwidth]{assets/odoo-crm-crear-oportunidad-boton-nuevo-y-mas.png}
+    \caption{Dos formas de crear oportunidad en CRM: botón \textbf{Nuevo} y botón \textbf{+} en una etapa del Pipeline.}
+\end{figure}
+
 \begin{enumerate}
-    \item Pulse \textbf{Nuevo} (o \textbf{Crear} según la versión) en la vista de oportunidades, o use el \textbf{+} en una columna del embudo para crear la tarjeta ya en esa etapa.
-    \item Complete el \textbf{Nombre} de la oportunidad (por ejemplo: ``Viaje Cusco -- familia Pérez -- abril'').
-    \item En \textbf{Cliente}, busque y seleccione el \textbf{contacto} ya creado en el capítulo anterior, o cree uno rápido si el formulario lo permite con \textbf{Crear y editar}.
-    \item Indique \textbf{Ingreso esperado} o montos si su flujo los usa en la oportunidad.
-    \item Pulse \textbf{Guardar}.
+    \item Puede iniciar la creación de dos maneras:
+    \begin{itemize}
+        \item Haciendo clic en \textbf{Nuevo} (arriba a la izquierda del Pipeline).
+        \item Haciendo clic en el botón \textbf{+} de la etapa donde desea crear la oportunidad.
+    \end{itemize}
+    \item Debe aparecer la tarjeta/formulario de creación de oportunidad, como se muestra en la captura siguiente.
+    \item En ese formulario, complete los campos principales:
+    \begin{itemize}
+        \item \textbf{Nombre de la oportunidad} (obligatorio): ejemplo ``CRM -- Viaje Cusco -- Familia Pérez -- Abril''.
+        \item \textbf{Contacto} (obligatorio): cliente o prospecto asociado.
+        \item \textbf{Correo electrónico} y \textbf{Teléfono} (si aparecen en su vista): para seguimiento comercial inmediato.
+        \item \textbf{Ingreso esperado / Monto deseable} (opcional): valor estimado que espera obtener de ese cliente.
+    \end{itemize}
+    \item Si el \textbf{Contacto} aún no existe, use \textbf{Crear y editar} y registre los datos mínimos.
+    \item Complete \textbf{Fecha prevista de cierre} cuando aplique a su proceso comercial.
+    \item En el formulario pequeño (creación rápida), haga clic en \textbf{Agregar}.
+    \item Confirmación esperada: la oportunidad debe quedar visible como tarjeta en \textbf{Nuevo Prospecto} (o en la columna donde la creó).
 \end{enumerate}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4\textwidth]{assets/odoo-crm-formulario-nueva-oportunidad-campos.png}
+    \caption{Formulario de nueva oportunidad: campos de contacto, nombre, correo, teléfono y monto esperado (opcional).}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4\textwidth]{assets/odoo-crm-formulario-nueva-oportunidad-boton-agregar.png}
+    \caption{Después de completar el formulario rápido, pulse \textbf{Agregar} para crear la oportunidad en la columna seleccionada.}
+\end{figure}
 
 \subsection{Mover la oportunidad en el embudo}
 
 \begin{enumerate}
-    \item En la vista \textbf{Kanban} (tablero), arrastre la tarjeta de una columna a otra (por ejemplo: \textbf{Nuevo}, luego \textbf{Calificado}, \textbf{Propuesta}, \textbf{Ganado}), según las \textbf{etapas} que tenga su instancia.
-    \item También puede abrir la oportunidad y cambiar la \textbf{Etapa} desde el formulario si su pantalla lo muestra.
+    \item Si no puede arrastrar la tarjeta en Kanban, haga clic sobre la \textbf{card} de la oportunidad que desea mover.
+    \item Se abrirá la ficha completa de la oportunidad (vista detalle), como en la imagen.
+    \item En la parte superior de esa ficha, el botón \textbf{Nuevo} aparece bloqueado para esta vista de edición de una oportunidad ya creada.
+    \item A la derecha de la cabecera verá los indicadores \textbf{Reuniones} y \textbf{Cotizaciones}; esos números muestran cuántos registros tiene la oportunidad (si recién se creó, normalmente estarán en \textbf{0}).
+    \item Debajo verá botones operativos como \textbf{Nueva cotización}, \textbf{Ganado}, \textbf{Enriquecer} y \textbf{Perdido}, según la gestión comercial que corresponda.
+    \item En esa misma franja superior está el \textbf{pipeline} de etapas. Haga clic directamente en la etapa destino (\textbf{Nuevo Prospecto}, \textbf{Propuesta Enviada}, \textbf{Confirmado (Adelanto)} o \textbf{Pagado Total / Ejecución}).
+    \item Al cambiar de etapa (por ejemplo a \textbf{Propuesta Enviada}), debe verse el cambio en la línea de etapas.
+    \item Además, en la bitácora/chatter de la derecha debe registrarse automáticamente el movimiento de etapa como historial de la oportunidad.
+    \item Confirmación esperada: etapa resaltada + registro de cambio en bitácora para trazabilidad interna.
 \end{enumerate}
 
-\subsection{Desde la oportunidad: cotización y seguimiento}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.95\textwidth]{assets/odoo-crm-detalle-oportunidad-vista-completa.png}
+    \caption{Vista detalle de la oportunidad: cabecera con reuniones/cotizaciones y botones de gestión comercial.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.95\textwidth]{assets/odoo-crm-cambio-etapa-desde-ficha.png}
+    \caption{Pipeline en la ficha de oportunidad: haga clic en la etapa para mover el estado del cliente.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.95\textwidth]{assets/odoo-crm-cambio-a-propuesta-enviada-y-bitacora.png}
+    \caption{Cambio a \textbf{Propuesta Enviada}: la etapa se actualiza en la línea superior y el movimiento queda registrado en la bitácora.}
+\end{figure}
+
+\subsection{Desde la oportunidad: cotización}
+
+\noindent\textbf{Alcance de esta sección:} aquí se muestra el flujo \textbf{básico} de cotización desde CRM (crear y cargar el producto principal). La gestión \textbf{detallada} de cotizaciones se desarrolla en el capítulo de \textbf{Ventas}.
 
 \begin{enumerate}
-    \item Abra la oportunidad con un clic en la tarjeta o en el nombre en vista lista.
-    \item Use el chatter para \textbf{Registrar una nota} o \textbf{Enviar mensaje} al equipo.
-    \item Si aparece \textbf{Nueva cotización} o botón equivalente (\textbf{Cotización}, \textbf{Nuevo presupuesto}), úselo para generar el documento de ventas vinculado al cliente (véase el capítulo de Ventas).
+    \item Desde la ficha de la oportunidad, haga clic en el botón \textbf{Nueva cotización} (resaltado en la captura).
+    \item Se abrirá la pantalla del documento de cotización en estado inicial (\textbf{Cotización}).
+    \item Verifique que la cotización herede el cliente de la oportunidad y que la lista de precios esté en \textbf{Default (USD)}; en esta implementación los importes se gestionan por defecto en \textbf{dólares estadounidenses (USD)}.
+    \item Para cargar el tour que venderá al cliente, haga clic en \textbf{Agregar un producto}.
+    \item Busque y seleccione el tour/servicio correspondiente (en Odoo se registra como \textbf{producto}).
+    \item En este caso, seleccione el paquete precargado \textbf{Pack Camino Inca Clásico}.
+    \item Revise que se cargue la línea del producto con su precio en \textbf{USD} y valide \textbf{Subtotal} y \textbf{Total} en dólares.
+    \item Si necesita ajustar \textbf{cantidad} o \textbf{precio unitario}, haga doble clic sobre el número que desea cambiar y edítelo directamente en la misma línea del producto.
+    \item No olvide guardar: haga clic en el icono de \textbf{nube} para registrar todos los cambios realizados.
+    \item Guarde la cotización y continúe con el flujo comercial según corresponda. Para configuración completa, validaciones y operación a detalle, continúe con el capítulo de \textbf{Ventas}.
 \end{enumerate}
 
-\subsection{Lista de oportunidades}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.95\textwidth]{assets/odoo-crm-boton-nueva-cotizacion.png}
+    \caption{Ficha de oportunidad en CRM: botón \textbf{Nueva cotización} para iniciar el documento comercial.}
+\end{figure}
 
-En el menú \textbf{Oportunidades} puede cambiar a vista \textbf{Lista} o \textbf{Gráfico} con los iconos junto al buscador. Use \textbf{Filtros} y \textbf{Agrupar por} para encontrar tratos por etapa, vendedor o fecha.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.95\textwidth]{assets/odoo-cotizacion-vista-y-agregar-producto.png}
+    \caption{Vista de cotización en USD: use \textbf{Agregar un producto} para cargar el tour (producto) que se ofrecerá al cliente.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.95\textwidth]{assets/odoo-cotizacion-pack-camino-inca-clasico-precio-usd.png}
+    \caption{Cotización con el paquete \textbf{Pack Camino Inca Clásico} cargado y montos mostrados en USD (dólares).}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.95\textwidth]{assets/odoo-cotizacion-recordatorio-guardar-nube.png}
+    \caption{Recordatorio de guardado: pulse el icono de nube para no perder cambios en la cotización.}
+\end{figure}
