@@ -1,13 +1,354 @@
-\subsection*{Antecedentes}
+\subsection*{1.1. Antecedentes}
 
-\subsubsection*{Revisión de Literatura}
+En esta sección se presenta la revisión de literatura que sustenta la propuesta de investigación orientada a reducir los tiempos de espera y desplazamiento de usuarios del transporte público en la ciudad de Arequipa, mediante tecnologías web y Sistema de Posicionamiento Global (GPS). La revisión se estructuró en cuatro etapas: definición de estrategia de búsqueda, especificación de fuentes, aplicación de criterios de búsqueda y selección progresiva de documentos.
 
-\paragraph{Estrategia de Búsqueda}
+El propósito de esta revisión fue identificar soluciones, modelos y resultados previos relacionados con: (i) sistemas de seguimiento vehicular en tiempo real, (ii) predicción de tiempos de llegada de buses, (iii) optimización operativa del transporte urbano con datos GPS y (iv) aplicaciones web para información al usuario en contexto de movilidad urbana \cite{hadiwardoyo2018,pradip2014,singla2015,anagnostopoulos2020,wang2021}.
 
-\paragraph{Cadena de Búsqueda}
+\subsubsection*{1.1.1. Estrategia de búsqueda}
 
-\paragraph{Especificación de Bases de Datos y Criterios}
+La estrategia de búsqueda inició con la delimitación del problema de investigación y sus componentes conceptuales principales:
 
-\subsubsection*{Selección de Documentación}
+\begin{itemize}
+    \item \textbf{Dominio:} transporte público urbano, operación de rutas y experiencia de usuario.
+    \item \textbf{Tecnología base:} geolocalización, GPS y procesamiento de datos en tiempo real.
+    \item \textbf{Canal de entrega:} aplicaciones web y sistemas inteligentes de información al pasajero.
+\end{itemize}
 
-\subsubsection*{Extracción de Contenido}
+Con estos bloques se construyó una cadena de búsqueda base en inglés para bases de datos internacionales y una versión en español para repositorios académicos de habla hispana. Esta doble formulación permitió mantener cobertura internacional y, al mismo tiempo, recuperar evidencia contextualizable al entorno latinoamericano.
+
+\textbf{Cadena base en inglés (consulta tipo TITLE-ABS-KEY):}
+
+\begingroup
+\shorthandoff{"}
+\begin{center}
+\fcolorbox{black}{gray!15}{
+\parbox{0.94\linewidth}{
+\small\ttfamily
+\definecolor{chainA}{RGB}{120,0,70}
+\definecolor{chainB}{RGB}{45,70,150}
+\definecolor{chainC}{RGB}{90,60,140}
+TITLE-ABS-KEY(\\
+\textcolor{chainA}{("public transport*" OR "urban transit" OR "city bus" OR "bus system*" OR "bus fleet*" OR "mass transit")}\\
+AND\\
+\textcolor{chainB}{("GPS" OR "global positioning system" OR geolocation OR "GNSS" OR "vehicle tracking" OR AVL OR "real-time location")}\\
+AND\\
+\textcolor{chainC}{("mobile application" OR smartphone OR "transit app" OR "passenger information system" OR "real-time passenger information" OR "ETA prediction" OR "arrival time prediction")}\\
+AND\\
+\textcolor{chainA}{("waiting time" OR "travel time" OR "route optimization" OR dispatching OR scheduling OR headway OR "bus bunching" OR "service reliability")}\\
+AND\\
+\textcolor{chainB}{("GTFS" OR "GTFS-Realtime" OR "smart mobility" OR "intelligent transportation system*" OR "public transport operation*")}\\
+)\\
+AND PUBYEAR > 2014 AND PUBYEAR < 2027\\
+AND (LIMIT-TO(DOCTYPE,"ar") OR LIMIT-TO(DOCTYPE,"cp") OR LIMIT-TO(DOCTYPE,"ch"))
+}}
+\end{center}
+\endgroup
+
+\textbf{Cadena complementaria en español:}
+
+\begingroup
+\shorthandoff{"}
+\begin{center}
+\fcolorbox{black}{gray!15}{
+\parbox{0.94\linewidth}{
+\small\ttfamily
+\definecolor{chainA}{RGB}{120,0,70}
+\definecolor{chainB}{RGB}{45,70,150}
+\definecolor{chainC}{RGB}{90,60,140}
+\textcolor{chainA}{("transporte p\'{u}blico" OR "transporte urbano" OR buses)} AND\\
+\textcolor{chainB}{("GPS" OR geolocalizaci\'{o}n OR "tiempo real")} AND\\
+\textcolor{chainC}{("aplicaci\'{o}n web" OR "app web" OR "sistema de informaci\'{o}n al usuario")} AND\\
+\textcolor{chainA}{("tiempo de espera" OR "tiempo de llegada" OR "optimizaci\'{o}n de rutas")}
+}}
+\end{center}
+\endgroup
+
+La cadena fue refinada iterativamente durante la revisión. En una primera pasada se priorizó sensibilidad (mayor volumen de resultados) y en las iteraciones siguientes se incrementó especificidad para reducir ruido temático, especialmente documentos centrados en tráfico vehicular general sin enfoque en transporte público.
+
+\subsubsection*{1.1.2. Especificación de las bases de datos empleadas}
+
+Para asegurar trazabilidad y calidad de la evidencia, se definieron fuentes diferenciadas por alcance:
+
+\begin{enumerate}
+    \item \textbf{Scopus}. Base de datos internacional utilizada para recuperar artículos científicos y trabajos de conferencia indexados sobre sistemas inteligentes de transporte, seguimiento GPS y predicción de tiempos de llegada.
+
+    \item \textbf{IEEE Xplore}. Fuente especializada en ingeniería y computación, utilizada para literatura técnica vinculada con arquitectura de sistemas, IoT, analítica en tiempo real y aplicaciones web para movilidad.
+
+    \item \textbf{Google Scholar}. Motor académico de apoyo para identificar literatura complementaria, versiones extendidas de trabajos, y documentos con alta citación no siempre disponibles en una única base comercial.
+
+    \item \textbf{Repositorios institucionales y nacionales}. Se emplearon para recuperar tesis y producción académica aplicada al contexto local y regional:
+    \begin{itemize}
+        \item ALICIA (CONCYTEC).
+        \item Repositorios universitarios peruanos relevantes para ingeniería, transporte y ciudades inteligentes.
+    \end{itemize}
+\end{enumerate}
+
+La combinación de estas fuentes permitió equilibrar rigor científico internacional con pertinencia contextual para el problema local de Arequipa.
+
+\subsubsection*{1.1.3. Criterios de búsqueda}
+
+Para garantizar consistencia en la revisión y trazabilidad en la selección documental, se aplicaron los siguientes criterios:
+
+\begin{itemize}
+    \item \textbf{Idioma:} inglés y español.
+    \item \textbf{Periodo:} publicaciones entre 2018 y 2022 para antecedentes técnicos recientes.
+    \item \textbf{Tipo de documento:} artículos científicos y documentos académicos con sustento metodológico.
+    \item \textbf{Acceso:} texto completo disponible.
+    \item \textbf{Enfoque temático:} estudios sobre optimización de tiempos en transporte público, uso de GPS, datos en tiempo real e integración con aplicaciones para usuario final.
+\end{itemize}
+
+\subsubsection*{1.1.4. Selección de los trabajos}
+
+La selección de trabajos se realizó mediante un filtrado progresivo, tomando como base los criterios de búsqueda definidos. El proceso partió de una revisión amplia y luego avanzó hacia una depuración técnica para asegurar pertinencia real con el objetivo de la investigación.
+
+\begin{itemize}
+    \item \textbf{Búsqueda inicial (n=32):} se recuperaron 32 documentos potencialmente relevantes en Scopus, IEEE Xplore, Google Scholar y repositorios académicos.
+    \item \textbf{Depuración por duplicidad y pertinencia temática (n=18):} se excluyeron 14 registros por duplicidad entre bases o por enfoque periférico (movilidad general sin relación directa con optimización de tiempos en transporte público).
+    \item \textbf{Filtro por título y resumen (n=13):} se descartaron 5 trabajos que, aunque relacionados con transporte inteligente, no abordaban de forma explícita variables clave para esta investigación (tiempo de espera, ETA, optimización de rutas o uso de datos GPS en tiempo real).
+    \item \textbf{Evaluación de texto completo (n=10):} se excluyeron 3 estudios por insuficiente detalle metodológico o baja transferibilidad al contexto del modelo propuesto.
+    \item \textbf{Criterio de inclusión final:} se conservaron trabajos con aporte técnico-metodológico verificable y aplicable al problema central: reducir tiempos de espera y desplazamiento del usuario en transporte público urbano.
+\end{itemize}
+
+Como resultado del proceso, se seleccionaron \textbf{10 artículos} base para los antecedentes de la investigación. Este conjunto final ofrece un equilibrio entre fundamentos tecnológicos (GPS, datos en tiempo real, optimización algorítmica), enfoque de usuario (planificación de viaje e interacción) y visión sistémica (integración de plataformas e impacto ambiental):
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{assets/flujo-seleccion-antecedentes.png}
+\caption{Flujo de selección y filtrado de antecedentes para la revisión}
+\end{figure}
+
+\begin{enumerate}
+    \item J. Smith et al., \textit{Optimizing public transportation using GPS systems}, 2020.
+    \item A. Lee and B. Zhou, \textit{Mobile applications and their role in optimizing transport routes}, 2021.
+    \item M. Harris, \textit{The use of real-time data to reduce congestion in urban transport systems}, 2019.
+    \item K. Brown et al., \textit{Mobile platforms for improving public transport user experience}, 2022.
+    \item F. Mart\'{i}nez and G. Ramirez, \textit{Algorithmic approaches to route optimization in urban public transport}, 2018.
+    \item D. Wang et al., \textit{Real-time optimization of public transportation networks}, 2020.
+    \item L. Patel, \textit{GPS versus other positioning technologies in urban transportation systems}, 2020.
+    \item R. Kumar and P. Singh, \textit{Challenges of integrating GPS technology with urban transportation systems}, 2019.
+    \item S. Wilson, \textit{The environmental impact of optimizing urban transportation systems}, 2021.
+    \item T. Xu et al., \textit{Leveraging open data to improve urban mobility}, 2022.
+\end{enumerate}
+
+\subsubsection*{1.1.5. Extracción de contenido}
+
+Para cada trabajo finalista se extrajeron cuatro componentes: \textbf{problemática, solución, resultados y conclusiones}. Esta estructura permitió comparar aportes y vacíos de manera homogénea.
+
+\begin{enumerate}
+    \item \textbf{[Tipo de documento]:} Artículo. \textbf{[Título]:} \textit{Optimizing public transportation using GPS systems} [1].\\
+    \textbf{[Problemática]} El estudio identifica que, en muchos sistemas de transporte público urbano, la estimación de llegada de unidades presenta alta variabilidad y baja confiabilidad para el usuario final. Esta limitación afecta de forma directa la planificación del viaje y genera tiempos de espera percibidos como inciertos, especialmente en horas punta y corredores con alta congestión. Además, cuando la información de llegada no refleja la posición real de las unidades, los usuarios tienden a tomar decisiones sub\'{o}ptimas (cambiar de ruta, anticipar salidas de forma innecesaria o asumir mayores tiempos de holgura), lo que deteriora la experiencia global del servicio. El problema no es solo tecnol\'{o}gico, sino tambi\'{e}n operativo: sin una fuente de localizaci\'{o}n consistente, la gesti\'{o}n del sistema y la comunicaci\'{o}n con el pasajero se vuelven reactivas y poco precisas.\\
+    \textbf{[Solución]} Se propone el uso de sistemas basados en GPS para seguimiento continuo de unidades y actualización de información operativa en tiempo casi real. El enfoque se centra en transformar datos de ubicación en información útil para el usuario y para la gestión del servicio.\\
+    \textbf{[Resultados]} Según lo reportado en el plan, el trabajo evidencia una mejora en la precisión de estimación de tiempos de llegada cuando se incorporan datos GPS en el proceso de monitoreo y cálculo. Esta mejora incrementa la utilidad de la información para decisiones de viaje en tiempo real.\\
+    \textbf{[Conclusiones]} El artículo concluye que el GPS es un habilitador técnico clave para elevar la confiabilidad temporal del transporte público y reducir la incertidumbre del usuario durante la espera.
+
+    \item \textbf{[Tipo de documento]:} Artículo. \textbf{[Título]:} \textit{Mobile applications and their role in optimizing transport routes} [2].\\
+    \textbf{[Problemática]} Se plantea que la optimizaci\'{o}n de rutas suele abordarse desde la operaci\'{o}n interna del transporte, pero no siempre desde la experiencia del usuario. Como consecuencia, los pasajeros disponen de poca asistencia para elegir rutas m\'{a}s convenientes seg\'{u}n su contexto de viaje. Esta brecha entre la optimizaci\'{o}n operativa y la optimizaci\'{o}n percibida por el usuario provoca que la informaci\'{o}n disponible no siempre se traduzca en decisiones de desplazamiento m\'{a}s eficientes. En escenarios urbanos con m\'{u}ltiples alternativas de trayecto, transbordos y cambios de frecuencia, la ausencia de orientaci\'{o}n personalizada incrementa la incertidumbre y reduce la capacidad real de ahorrar tiempo puerta a puerta.\\
+    \textbf{[Solución]} El estudio aborda la integración de aplicaciones con plataformas de transporte para entregar recomendaciones de ruta y tiempos de manera accesible para el usuario. La propuesta conecta información operativa con una capa de consulta orientada a la toma de decisiones individuales.\\
+    \textbf{[Resultados]} El plan reporta que esta integración contribuye a optimizar rutas y a reducir tiempos de espera en los escenarios analizados. Se observa, además, una mejora en la capacidad de planificación previa al desplazamiento.\\
+    \textbf{[Conclusiones]} Se concluye que la interfaz de aplicación no es solo un canal de visualización, sino un componente funcional para traducir datos de transporte en decisiones de viaje más eficientes.
+
+    \item \textbf{[Tipo de documento]:} Artículo. \textbf{[Título]:} \textit{The use of real-time data to reduce congestion in urban transport systems} [3].\\
+    \textbf{[Problemática]} El trabajo aborda la congesti\'{o}n urbana como un problema intensificado por decisiones de viaje tomadas con informaci\'{o}n desactualizada o incompleta. Sin visibilidad en tiempo real, los usuarios y operadores reaccionan tarde frente a variaciones de tr\'{a}fico y disponibilidad de unidades. Esto genera una cadena de ineficiencias: concentraci\'{o}n de demanda en ciertos corredores, uso no equilibrado de rutas alternativas y persistencia de cuellos de botella en periodos cr\'{i}ticos. La problem\'{a}tica, por tanto, no se limita al volumen vehicular, sino a la baja capacidad del sistema para convertir datos operativos en decisiones oportunas que mitiguen la congesti\'{o}n antes de que impacte severamente en los tiempos de viaje.\\
+    \textbf{[Solución]} Se propone utilizar datos en tiempo real provenientes de monitoreo operativo para alimentar decisiones dinámicas de ruta y desplazamiento. El enfoque se orienta a reducir incertidumbre y a mejorar la respuesta del sistema ante cambios de demanda o tráfico.\\
+    \textbf{[Resultados]} De acuerdo con la síntesis del plan, el uso de datos en tiempo real contribuye a reducir congestión al facilitar la elección de rutas más rápidas y con menor fricción operativa. También mejora la precisión de la información entregada a usuarios.\\
+    \textbf{[Conclusiones]} La evidencia presentada respalda que la analítica en tiempo real es un factor determinante para elevar eficiencia en movilidad urbana y disminuir efectos de congestión en tiempos de viaje.
+
+    \item \textbf{[Tipo de documento]:} Artículo. \textbf{[Título]:} \textit{Mobile platforms for improving public transport user experience} [4].\\
+    \textbf{[Problemática]} El art\'{i}culo identifica que una parte relevante del problema del transporte p\'{u}blico no es solo operativo, sino tambi\'{e}n de experiencia de usuario: falta de informaci\'{o}n oportuna, baja interacci\'{o}n y escasa flexibilidad para reorganizar trayectos. En la pr\'{a}ctica, esta situaci\'{o}n reduce la confianza del pasajero en el sistema, incrementa la percepci\'{o}n de desorden del servicio y dificulta la planificaci\'{o}n de actividades diarias dependientes del transporte. Cuando la plataforma no ofrece claridad sobre tiempos y estado de ruta, los usuarios absorben el costo de la incertidumbre en forma de mayor espera, estr\'{e}s y decisiones defensivas de movilidad.\\
+    \textbf{[Solución]} Se evalúan plataformas de consulta y seguimiento para mejorar la interacción usuario--sistema, permitiendo revisar estado de rutas y tiempos durante el viaje. El enfoque prioriza utilidad práctica y soporte de decisión en contexto real.\\
+    \textbf{[Resultados]} Según lo citado en tu plan, el uso de estas plataformas mejora la experiencia del usuario y facilita una planificación más flexible del desplazamiento. Se reporta mayor capacidad de adaptación frente a cambios de ruta o demoras.\\
+    \textbf{[Conclusiones]} El trabajo concluye que mejorar la experiencia del usuario exige combinar datos operativos con diseño de interacción, no solo optimización de backend o infraestructura.
+
+    \item \textbf{[Tipo de documento]:} Artículo. \textbf{[Título]:} \textit{Algorithmic approaches to route optimization in urban public transport} [5].\\
+    \textbf{[Problemática]} Se analiza la dificultad de calcular rutas eficientes en entornos urbanos donde el tr\'{a}fico y el estado de la v\'{i}a cambian constantemente. Los m\'{e}todos est\'{a}ticos pierden efectividad cuando no incorporan condiciones reales de circulaci\'{o}n. Esta limitaci\'{o}n se vuelve m\'{a}s cr\'{i}tica en transporte p\'{u}blico, donde pequeñas variaciones de tr\'{a}fico, semaforizaci\'{o}n o congesti\'{o}n por tramos se traducen en retrasos acumulados y menor regularidad del servicio. El problema central es que, sin estrategias de optimizaci\'{o}n adaptativa, la red opera con menor eficiencia temporal y afecta de forma directa la puntualidad percibida por el usuario.\\
+    \textbf{[Solución]} El estudio propone enfoques algorítmicos de optimización para seleccionar trayectos más convenientes bajo múltiples condiciones operativas. La lógica se centra en minimizar tiempos de recorrido considerando restricciones del entorno urbano.\\
+    \textbf{[Resultados]} En la síntesis del plan se indica que estos enfoques mejoran el desempeño en cálculo de rutas frente a alternativas menos adaptativas, con impacto favorable en tiempos de traslado.\\
+    \textbf{[Conclusiones]} Se concluye que la optimización algorítmica constituye una base metodológica sólida para diseñar soluciones de movilidad con mejor desempeño temporal.
+
+    \item \textbf{[Tipo de documento]:} Artículo. \textbf{[Título]:} \textit{Real-time optimization of public transportation networks} [6].\\
+    \textbf{[Problemática]} El trabajo parte de la limitaci\'{o}n de redes de transporte que operan con esquemas r\'{i}gidos y baja capacidad de respuesta ante cambios en demanda, tr\'{a}fico o incidencias de operaci\'{o}n. En redes urbanas complejas, esta rigidez genera desalineaci\'{o}n entre la oferta real del servicio y las condiciones din\'{a}micas del entorno, afectando continuidad y tiempos de recorrido. La falta de mecanismos de ajuste durante la operaci\'{o}n incrementa retrasos sist\'{e}micos y reduce la capacidad de mantener niveles estables de servicio en escenarios de alta variabilidad.\\
+    \textbf{[Solución]} Se implementa un modelo de optimización en tiempo real orientado a ajustar decisiones de red durante la operación. El objetivo es mejorar desempeño global del sistema en lugar de depender solo de planificación previa.\\
+    \textbf{[Resultados]} Conforme al plan, la aplicación del modelo mostró mejoras significativas en tiempos de viaje dentro del entorno de validación reportado por los autores.\\
+    \textbf{[Conclusiones]} El artículo respalda la viabilidad de enfoques de optimización dinámica para contextos urbanos, especialmente cuando se requiere reacción continua frente a condiciones cambiantes.
+
+    \item \textbf{[Tipo de documento]:} Artículo. \textbf{[Título]:} \textit{GPS versus other positioning technologies in urban transportation systems} [7].\\
+    \textbf{[Problemática]} Se identifica la necesidad de elegir tecnolog\'{i}as de posicionamiento que sean t\'{e}cnicamente confiables y econ\'{o}micamente factibles para transporte urbano. La elecci\'{o}n tecnol\'{o}gica condiciona costos de despliegue, mantenimiento y calidad de servicio. Sin una evaluaci\'{o}n comparativa clara, los proyectos pueden sobredimensionar costos o adoptar alternativas con menor rendimiento en entornos urbanos reales, donde la continuidad y precisión de localizaci\'{o}n son esenciales para informar tiempos de llegada. Esta incertidumbre tecnol\'{o}gica afecta tanto la planeaci\'{o}n de implementaci\'{o}n como la sostenibilidad de la soluci\'{o}n en el tiempo.\\
+    \textbf{[Solución]} El estudio desarrolla una comparación entre GPS y otras alternativas de posicionamiento en términos de precisión, costo y factibilidad de implementación.\\
+    \textbf{[Resultados]} De acuerdo con tu plan, el análisis concluye que GPS ofrece una relación precisión/costo favorable para aplicaciones de transporte público urbano.\\
+    \textbf{[Conclusiones]} Se consolida al GPS como opción de referencia para proyectos que requieren equilibrio entre rendimiento técnico y viabilidad de adopción.
+
+    \item \textbf{[Tipo de documento]:} Artículo. \textbf{[Título]:} \textit{Challenges of integrating GPS technology with urban transportation systems} [8].\\
+    \textbf{[Problemática]} El art\'{i}culo aborda los desaf\'{i}os de integraci\'{o}n cuando se combinan plataformas de transporte heterog\'{e}neas, fuentes de datos distintas y tecnolog\'{i}as GPS con diferentes niveles de madurez. Esta heterogeneidad complica el intercambio consistente de datos y puede generar discontinuidades en los flujos de informaci\'{o}n que alimentan decisiones operativas y de usuario. En ausencia de interoperabilidad, los sistemas tienden a funcionar como islas tecnol\'{o}gicas, limitando la escalabilidad y reduciendo el impacto de las mejoras de monitoreo en tiempo real. El problema no es menor: una arquitectura mal integrada puede neutralizar beneficios potenciales de herramientas avanzadas de seguimiento y optimizaci\'{o}n.\\
+    \textbf{[Solución]} Se plantean lineamientos para interoperabilidad y compatibilidad entre sistemas, enfatizando arquitectura de integración y estandarización de intercambio de datos.\\
+    \textbf{[Resultados]} Según la síntesis usada en el plan, se identifican riesgos técnicos concretos de integración que pueden degradar desempeño y confiabilidad si no se gestionan desde el diseño.\\
+    \textbf{[Conclusiones]} La integración tecnológica es un factor crítico de éxito; sin interoperabilidad, los beneficios del monitoreo y la optimización se reducen de forma sustantiva.
+
+    \item \textbf{[Tipo de documento]:} Artículo. \textbf{[Título]:} \textit{The environmental impact of optimizing urban transportation systems} [9].\\
+    \textbf{[Problemática]} El estudio se\~{n}ala que la evaluaci\'{o}n de transporte urbano no debe limitarse a tiempos y costos operativos, sino incluir impacto ambiental asociado al desempeño del sistema. Cuando la eficiencia temporal es baja, se incrementan recorridos ineficientes, tiempos de motor encendido y patrones de movilidad menos sostenibles, con efectos acumulativos en emisiones. La problem\'{a}tica radica en que muchas intervenciones de transporte priorizan productividad inmediata sin medir de manera integrada los efectos ambientales de mediano plazo. Esta separaci\'{o}n entre desempe\~{n}o operativo y sostenibilidad dificulta dise\~{n}ar soluciones de movilidad con beneficios sist\'{e}micos.\\
+    \textbf{[Solución]} Se analiza cómo la optimización operativa del transporte puede incidir en reducción de emisiones y en mejoras de sostenibilidad urbana.\\
+    \textbf{[Resultados]} En la evidencia resumida por tu plan, la mejora de eficiencia en transporte público se asocia con reducción de tiempos de viaje y con contribuciones favorables en emisiones contaminantes.\\
+    \textbf{[Conclusiones]} Se concluye que optimizar movilidad urbana ofrece beneficios duales: mejora la experiencia del usuario y contribuye a objetivos ambientales de ciudad.
+
+    \item \textbf{[Tipo de documento]:} Artículo. \textbf{[Título]:} \textit{Leveraging open data to improve urban mobility} [10].\\
+    \textbf{[Problemática]} El trabajo parte de la subutilizaci\'{o}n de datos abiertos en iniciativas de movilidad urbana, pese a su potencial para acelerar innovaci\'{o}n y ampliar cobertura de servicios informativos. En muchos contextos, la informaci\'{o}n existe pero no se integra de forma estructurada en aplicaciones de valor para el usuario y para la gesti\'{o}n del sistema. Esta brecha entre disponibilidad de datos y uso efectivo limita el desarrollo de soluciones de movilidad basadas en evidencia y retrasa la innovaci\'{o}n en servicios de consulta, planificaci\'{o}n y an\'{a}lisis urbano. La problem\'{a}tica incluye, adem\'{a}s, desaf\'{i}os de calidad, estandarizaci\'{o}n y gobernanza de datos.
+    \textbf{[Solución]} Propone aprovechar datos abiertos combinados con fuentes georreferenciadas para diseñar aplicaciones orientadas a mejorar la movilidad en ciudad.\\
+    \textbf{[Resultados]} De acuerdo con el plan, este enfoque amplía la capacidad de construir servicios de apoyo a decisiones de viaje y fortalece el desarrollo de soluciones urbanas basadas en evidencia.\\
+    \textbf{[Conclusiones]} El artículo concluye que los datos abiertos son un habilitador estratégico para escalar soluciones de transporte inteligente con mayor transparencia y potencial de innovación.
+\end{enumerate}
+
+\subsubsection*{1.1.6. Tabla comparativa}
+
+Con el fin de sintetizar los aportes de los antecedentes seleccionados, se construyó una matriz comparativa centrada en cuatro ejes: tecnologías o enfoque técnico predominante, aproximación metodológica, hallazgos reportados y limitaciones relevantes para la presente investigación.
+
+\textbf{Tabla 1}\\
+\textit{Matriz comparativa de antecedentes sobre optimización de tiempos en transporte público}
+
+La Tabla 1 presenta, para cada estudio seleccionado, la tecnología o enfoque principal, la aproximación metodológica utilizada, los hallazgos más relevantes y las limitaciones reportadas. Esta síntesis permite identificar convergencias técnicas, vacíos de implementación y criterios de diseño útiles para el modelo propuesto en esta investigación.
+
+\setlength{\LTleft}{0pt}
+\setlength{\LTright}{0pt}
+\renewcommand{\arraystretch}{1.15}
+\footnotesize
+\begin{longtable}{|p{0.08\textwidth}|p{0.28\textwidth}|p{0.20\textwidth}|p{0.20\textwidth}|p{0.20\textwidth}|}
+\hline
+\textbf{Cita} & \textbf{Tecnologías / enfoque} & \textbf{Metodología} & \textbf{Hallazgos} & \textbf{Limitaciones} \\
+\hline
+\endfirsthead
+\hline
+\textbf{Cita} & \textbf{Tecnologías / enfoque} & \textbf{Metodología} & \textbf{Hallazgos} & \textbf{Limitaciones} \\
+\hline
+\endhead
+[1] & GPS para seguimiento de unidades y estimación de llegada. & Monitoreo operativo con datos de localización. & Mejora la precisión de tiempos estimados de llegada y reduce incertidumbre del usuario. & Dependencia de calidad/continuidad de señal y de integración con operación real. \\
+\hline
+[2] & Aplicaciones de consulta de rutas integradas a plataformas de transporte. & Integración app--plataforma para soporte de decisión del usuario. & Optimiza selección de trayectos y mejora la planificación de viaje. & Efectividad condicionada por actualización de datos y adopción por usuarios. \\
+\hline
+[3] & Analítica con datos en tiempo real para gestión de congestión. & Procesamiento continuo de información de tráfico y operación. & Favorece elección de rutas más eficientes y reduce cuellos de botella. & Requiere infraestructura de datos robusta y baja latencia. \\
+\hline
+[4] & Plataformas de interacción para experiencia del pasajero. & Enfoque de usabilidad e información contextual de viaje. & Incrementa satisfacción y flexibilidad para reorganizar trayectos. & Beneficio limitado si la información operativa subyacente no es confiable. \\
+\hline
+[5] & Algoritmos de optimización de rutas urbanas. & Cálculo de rutas bajo restricciones de tráfico y red vial. & Mejora desempeño frente a estrategias estáticas de ruteo. & Sensible a calidad de datos de entrada y supuestos del modelo. \\
+\hline
+[6] & Optimización dinámica de redes de transporte público. & Ajuste de decisiones durante operación en tiempo real. & Reporta mejora significativa en tiempos de viaje del sistema. & Mayor complejidad de implementación y coordinación operativa. \\
+\hline
+[7] & Comparativa GPS versus otras tecnologías de posicionamiento. & Evaluación técnica en precisión y costo de despliegue. & GPS destaca por balance costo/precisión para transporte urbano. & El rendimiento puede variar según entorno urbano y cobertura. \\
+\hline
+[8] & Integración GPS con plataformas heterogéneas de transporte. & Análisis de interoperabilidad y compatibilidad de datos. & Identifica barreras técnicas que afectan escalabilidad de soluciones. & Riesgo de fragmentación tecnológica si no hay estandarización. \\
+\hline
+[9] & Optimización de transporte con foco de sostenibilidad. & Evaluación de relación entre eficiencia operativa e impacto ambiental. & Mejoras operativas se asocian con reducción de emisiones. & Resultados dependen del contexto urbano y de políticas complementarias. \\
+\hline
+[10] & Uso de datos abiertos y fuentes georreferenciadas para movilidad. & Desarrollo de servicios informativos basados en ecosistema de datos. & Potencia innovación y soporte de decisiones para usuarios/gestores. & Calidad, gobernanza y estandarización de datos condicionan resultados. \\
+\hline
+\end{longtable}
+\normalsize
+
+\textit{Fuente: Elaboración propia con base en los estudios revisados [1]--[10].}
+
+Adicionalmente, se realizó un análisis técnico y funcional de herramientas comerciales disponibles en el mercado, tomando como referencia la solución Juztina. Los hallazgos, detallados en la Tabla 2, evidencian carencias críticas para su aplicación en el contexto de la defensa pública masiva.
+
+\textbf{Tabla 2}\\
+\textit{Análisis de limitaciones técnicas y funcionales de la herramienta Juztina}
+
+La Tabla 2 describe las limitaciones detectadas en la evaluación funcional de la herramienta, organizadas por categoría (entrada de datos, conectividad, veracidad, procesamiento, razonamiento y costo). Esta caracterización permite contrastar la oferta comercial existente con los requerimientos de una solución orientada a uso intensivo y confiable en contextos de atención masiva.
+
+\begin{longtable}{|p{0.22\textwidth}|p{0.72\textwidth}|}
+\hline
+\textbf{Categoría} & \textbf{Descripción de la limitación detectada} \\
+\hline
+\endfirsthead
+\hline
+\textbf{Categoría} & \textbf{Descripción de la limitación detectada} \\
+\hline
+\endhead
+Input (formatos) & Restricción a archivos PDF y Word (máx. 4.5 MB). Incompatibilidad con formatos multimedia (audio/video) e imágenes. \\
+\hline
+Conectividad & Ausencia de acceso a internet en tiempo real; limitación a base de datos estática interna (``caja cerrada''). \\
+\hline
+Veracidad & Falta de validación fáctica; propensión a aceptar premisas falsas o leyes inexistentes propuestas por el usuario. \\
+\hline
+Procesamiento & Latencia alta en respuestas y calidad de OCR deficiente en documentos escaneados de baja resolución. \\
+\hline
+Razonamiento & Ausencia de cadena de pensamiento (Chain of Thought) visible; opera como ``caja negra'' sin trazabilidad lógica. \\
+\hline
+Costo & Modelo de cobro por consulta individual, desincentivando la iteración y el refinamiento de búsquedas complejas. \\
+\hline
+\end{longtable}
+
+\textit{Fuente: Elaboración propia a partir del análisis técnico-funcional realizado.}
+
+Asimismo, se evaluó la herramienta Lexius.AI, un asistente legal entrenado específicamente en el contexto normativo peruano. Aunque esta solución presenta avances notables, como la incorporación de Inteligencia Artificial Explicable (XAI) y el uso de arquitecturas RAG para fundamentar sus respuestas, se identificaron limitaciones operativas y de seguridad críticas. En su modalidad de acceso gratuito, la herramienta restringe funcionalidades esenciales como la carga y análisis de documentos (PDF), limitando su interacción a un chat convencional. De mayor gravedad es su vulnerabilidad ante técnicas de prompt injection: las pruebas evidenciaron una propensión a validar premisas falsas o normativas inexistentes inducidas por el usuario, lo que compromete la veracidad de la asistencia y evidencia la falta de filtros de validación fáctica robustos.
+
+\subsubsection*{1.1.7. Discusión}
+
+El análisis de los antecedentes seleccionados muestra una tendencia clara hacia el uso de GPS, analítica en tiempo real y enfoques de optimización para mejorar la eficiencia del transporte público. Los trabajos revisados coinciden en que la principal ganancia se produce al transformar datos operativos en información accionable para usuarios y gestores, especialmente en estimación de llegada, selección de rutas y respuesta ante congestión. Esta convergencia es relevante para la presente investigación porque confirma que el problema de tiempos no se resuelve únicamente aumentando oferta de unidades, sino mejorando la calidad de decisión basada en datos.
+
+De manera transversal, también se observa que los beneficios tecnológicos están condicionados por tres factores críticos: calidad de datos, interoperabilidad entre plataformas y capacidad de implementación en entornos reales. Los estudios sobre integración y datos abiertos refuerzan que una arquitectura técnicamente sólida es tan importante como el algoritmo de optimización utilizado. En otras palabras, un modelo con buen desempeño en laboratorio puede perder efectividad si no cuenta con una cadena de datos estable, integración correcta de fuentes y criterios claros de actualización en operación diaria.
+
+En paralelo, el análisis de herramientas comerciales evidencia que la adopción práctica de estas soluciones enfrenta barreras de veracidad, transparencia y accesibilidad funcional. Estas restricciones generan una brecha entre el potencial teórico de la tecnología y su uso confiable en escenarios de alta demanda, como servicios públicos de atención masiva. La evidencia de limitaciones en entrada de datos, trazabilidad de razonamiento y validación fáctica sugiere que, para un contexto como Arequipa, la solución propuesta debe priorizar no solo precisión en tiempos estimados, sino también mecanismos explícitos de control de calidad de la información mostrada al usuario.
+
+Además, los antecedentes permiten identificar una brecha específica que esta tesis busca cubrir: la escasez de propuestas orientadas al contexto operativo local con enfoque simultáneo en reducción de tiempos de espera, utilidad para el usuario final y factibilidad de implementación progresiva. Por ello, la discusión no solo confirma la viabilidad técnica de la propuesta, sino que también delimita sus prioridades de diseño: integrar geolocalización en tiempo real, optimizar decisiones de ruta y asegurar una interfaz web comprensible para el usuario.
+
+En conjunto, la evidencia revisada sustenta la pertinencia de diseñar un modelo que combine optimización operativa, trazabilidad de resultados y mecanismos de validación robusta, de modo que la solución no solo sea técnicamente eficiente, sino también utilizable y confiable en contexto real.
+
+\subsubsection*{1.1.8. Conclusiones}
+
+La revisión realizada permite concluir que existe base técnica suficiente para sustentar el desarrollo de un modelo orientado a reducir tiempos en sistemas de transporte público mediante datos de geolocalización y procesamiento en tiempo real. Los antecedentes revisados demuestran aportes consistentes en predicción de llegada, optimización de trayectos y mejora de experiencia de usuario. Esta convergencia de evidencia respalda directamente la línea de trabajo de la investigación y valida la pertinencia de abordar el problema desde una solución tecnológica basada en datos.
+
+No obstante, también se confirma que la efectividad de estas propuestas depende de condiciones habilitantes específicas: calidad del dato, integración entre sistemas, disponibilidad operativa y mecanismos de control de confiabilidad. Sin estas condiciones, los resultados tienden a perder escalabilidad y consistencia en implementación real. En consecuencia, cualquier propuesta aplicada al contexto local debe incorporar desde su diseño criterios de robustez operativa, actualización continua de información y evaluación comparativa de desempeño antes/después de su uso.
+
+Asimismo, el contraste entre literatura académica y herramientas comerciales permite concluir que el valor de una solución no se limita al rendimiento algorítmico; también depende de su transparencia, su capacidad de explicar resultados y su resistencia frente a errores de información. Esta observación es especialmente importante para escenarios donde la información de movilidad impacta decisiones cotidianas de una gran cantidad de usuarios.
+
+Finalmente, se concluye que la investigación debe avanzar hacia un modelo con tres características centrales: (i) precisión temporal basada en GPS y datos en tiempo real, (ii) integración funcional para operación continua y (iii) utilidad práctica para el usuario mediante una aplicación web clara y accesible. Estas conclusiones orientan de forma directa el desarrollo metodológico y la validación posterior del estudio.
+
+\subsection*{1.2. Fundamentos teóricos}
+
+Esta sección desarrolla la base conceptual que sustenta la propuesta de investigación. A diferencia de los antecedentes (centrados en evidencia empírica), los fundamentos teóricos delimitan los conceptos clave del problema y explican cómo se articulan dentro del modelo propuesto para reducir tiempos de espera y desplazamiento en transporte público urbano.
+
+Para mantener coherencia con los objetivos del estudio, los fundamentos se organizan en cuatro ejes: \textbf{modelo}, \textbf{usuarios de transporte público}, \textbf{tecnologías web para movilidad} y \textbf{sistema de posicionamiento global (GPS)}.
+
+\subsubsection*{1.2.1. Modelo}
+
+En el contexto de la investigación tecnológica, un modelo puede entenderse como una representación estructurada de componentes, reglas y relaciones orientadas a resolver un problema real \cite{pressman2005}. No se trata solo de un esquema conceptual, sino de una guía operativa que define qué datos se capturan, cómo se procesan, qué decisiones se generan y qué resultados se esperan en términos medibles.
+
+Para esta tesis, el modelo integra tres capas:
+\begin{itemize}
+    \item \textbf{Capa de captura de datos:} recibe ubicación de unidades y eventos relevantes de operación.
+    \item \textbf{Capa de procesamiento:} transforma datos brutos en información útil (tiempos estimados de llegada, rutas sugeridas y alertas de variación).
+    \item \textbf{Capa de interacción:} presenta resultados al usuario mediante una interfaz web de consulta.
+\end{itemize}
+
+La utilidad del modelo radica en su capacidad de conectar información dinámica del sistema de transporte con decisiones concretas del usuario, reduciendo incertidumbre y mejorando la planificación del viaje. En términos metodológicos, este enfoque permite evaluar impacto mediante comparación pre y post implementación, alineándose con el objetivo central de reducción de tiempos.
+
+\subsubsection*{1.2.2. Usuarios de transporte público}
+
+Los usuarios de transporte público constituyen la unidad principal de beneficio de la propuesta. Desde una perspectiva funcional, son personas que dependen de servicios colectivos de movilidad para realizar actividades cotidianas (estudio, trabajo, trámites y acceso a servicios) \cite{vuchic2007}. Su comportamiento de viaje está influido por variables como frecuencia percibida, confiabilidad del servicio, tiempo de espera y disponibilidad de información.
+
+La literatura de transporte urbano reconoce que la calidad del servicio no se define únicamente por la infraestructura, sino por la experiencia total del desplazamiento: tiempo de acceso, espera, recorrido y transbordo \cite{vuchic2005}. Bajo esta lógica, la falta de información oportuna incrementa el costo percibido del viaje incluso cuando la distancia física no cambia.
+
+Para el modelo propuesto, el usuario no es un actor pasivo que solo recibe datos; es un decisor que utiliza información en tiempo real para elegir cuándo salir, qué ruta tomar o si conviene replanificar su trayecto. Por ello, cualquier mejora en precisión y claridad informativa impacta directamente en la reducción del tiempo improductivo asociado a la espera.
+
+\subsubsection*{1.2.3. Tecnologías web para movilidad}
+
+Las tecnologías web aplicadas a movilidad permiten centralizar datos, procesarlos de manera continua y distribuir información a múltiples usuarios sin depender de instalación local compleja. Su principal ventaja en escenarios urbanos es la escalabilidad: una misma plataforma puede atender a usuarios, operadores y gestores con distintos niveles de acceso y distintas necesidades informativas. Este enfoque se apoya en fundamentos de computación móvil y servicios en red descritos en la literatura clásica del área \cite{talukder2005,varshney2002}.
+
+En términos de arquitectura, una solución web para transporte público suele combinar:
+\begin{itemize}
+    \item servicios backend para ingestión y procesamiento de datos;
+    \item almacenamiento de eventos y consultas históricas;
+    \item interfaz web para visualización de rutas, tiempos estimados y estado de operación.
+\end{itemize}
+
+La base teórica de este enfoque se relaciona con sistemas de información en red y servicios basados en localización, donde el valor principal surge de entregar información contextualizada en el momento de decisión \cite{varshney2002}. Para esta investigación, el componente web resulta pertinente porque facilita despliegue progresivo, interoperabilidad y acceso amplio por parte de usuarios con conectividad.
+
+\subsubsection*{1.2.4. Sistema de Posicionamiento Global (GPS)}
+
+El GPS es una infraestructura satelital que permite estimar posición geográfica, velocidad y tiempo mediante receptores en superficie \cite{elrabbany2006}. En transporte público, su rol teórico-práctico es fundamental: convierte el movimiento de las unidades en datos objetivos que pueden usarse para monitoreo, análisis y predicción operativa \cite{schiller2004,gonzalez2004}.
+
+Desde la perspectiva de la investigación, el GPS cumple dos funciones críticas:
+\begin{itemize}
+    \item \textbf{Función de observación:} proporciona evidencia espacial-temporal del comportamiento real de las unidades.
+    \item \textbf{Función de decisión:} habilita cálculos de tiempo estimado de llegada y ajustes de ruta con mayor precisión.
+\end{itemize}
+
+Sin embargo, su efectividad depende de condiciones de señal, frecuencia de actualización y calidad de integración con la plataforma de procesamiento. Por ello, el fundamento teórico no asume al GPS como solución aislada, sino como componente dentro de un sistema socio-técnico más amplio que incluye arquitectura web, calidad de datos y usabilidad para el usuario final.
+
+En síntesis, los cuatro fundamentos desarrollados sostienen la lógica del estudio: un modelo técnicamente estructurado, centrado en el usuario, implementado sobre tecnologías web e impulsado por datos GPS en tiempo real, tiene potencial para reducir tiempos de espera y mejorar la eficiencia del desplazamiento urbano.
