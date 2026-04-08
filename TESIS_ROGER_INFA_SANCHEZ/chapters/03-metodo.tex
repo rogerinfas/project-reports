@@ -1,63 +1,130 @@
+\subsection*{Plan de gestión del proyecto}
+\subsubsection*{Alcance}
+
+La investigación adopta un enfoque tecnológico aplicado con implementación incremental mediante \textbf{Scrum}. Esta decisión responde a la necesidad de construir una solución funcional, validarla con evidencia de uso y ajustar el producto de forma iterativa hasta alcanzar una versión estable orientada a reducir tiempos de espera en transporte público urbano.
+
+El alcance del proyecto comprende: (i) diseño metodológico, (ii) levantamiento de requerimientos, (iii) implementación de la propuesta web con integración GPS, (iv) validación mediante métricas operativas y (v) análisis de resultados para sustentar conclusiones. No se contempla una implementación masiva a escala ciudad; la validación se desarrolla en entorno piloto controlado.
+
+\subsubsection*{Metodología de desarrollo (Scrum)}
+
+Scrum se selecciona por tres razones principales: (i) permite trabajar con entregables cortos y verificables, (ii) facilita priorización por valor en cada ciclo, y (iii) mantiene una retroalimentación continua entre diseño, desarrollo y validación de resultados.
+
 \subsection*{Sujetos/unidades de estudio}
-Las unidades de estudio del proyecto son los usuarios del transporte público urbano de Arequipa y los actores operativos vinculados al servicio (conductores y entidades de gestión). El análisis se enfoca en la interacción usuario--ruta--tiempo, considerando como variable principal el tiempo de espera y desplazamiento reportado por el usuario antes y después del uso del prototipo móvil con apoyo de datos GPS.
 
-Asimismo, se consideran como unidades técnicas del estudio los registros de ubicación y eventos operativos del sistema (tiempo estimado de llegada, ruta sugerida, confirmación de viaje), dado que constituyen la base empírica para evaluar la reducción de tiempos.
+Las unidades de estudio son los usuarios del transporte público urbano de Arequipa y los actores operativos vinculados al servicio (conductores y entidades de gestión). El análisis se centra en la interacción usuario--ruta--tiempo, considerando como variable principal el tiempo de espera y desplazamiento antes y después del uso del sistema web con apoyo de datos GPS.
 
-\subsection*{Universo, Población y Muestra}
-\textbf{Universo.} El universo corresponde a la totalidad de usuarios potenciales del transporte público urbano en la ciudad de Arequipa.
+Como unidades técnicas se consideran los registros de ubicación y eventos operativos (hora de consulta, tiempo estimado de llegada, ruta sugerida, confirmación de viaje y tiempo efectivo de desplazamiento), por constituir la base empírica de la validación.
 
-\textbf{Población.} La población de interés está conformada por usuarios que realizan desplazamientos frecuentes en rutas urbanas y que cuentan con acceso a dispositivo móvil con conectividad.
+\subsection*{Universo, población y muestra}
 
-\textbf{Muestra.} Se plantea una muestra no probabilística intencional para la fase piloto, integrada por usuarios disponibles en corredores urbanos priorizados. Esta decisión metodológica es coherente con el carácter aplicado del proyecto y con el objetivo de validar funcionalmente el modelo en un entorno controlado antes de una eventual expansión.
+\textbf{Universo.} Corresponde al total de usuarios potenciales del transporte público urbano de la ciudad de Arequipa.
 
-\subsection*{Técnicas/instrumentos para la recolección de los datos}
-Se utilizarán técnicas mixtas, orientadas a la medición operativa del problema:
+\textbf{Población.} Usuarios con desplazamientos frecuentes en rutas urbanas y acceso a un dispositivo con navegador web y conectividad.
+
+\textbf{Muestra.} Se emplea muestra no probabilística intencional para piloto controlado, conformada por usuarios disponibles en corredores priorizados. Esta decisión es consistente con el carácter aplicado del estudio y con la lógica de validación progresiva del enfoque Scrum.
+
+\subsection*{Marco de trabajo Scrum}
+
+\textbf{A. Roles definidos}
 \begin{itemize}
-    \item \textbf{Observación operativa:} registro del flujo real de desplazamiento y tiempos de espera en rutas seleccionadas.
-    \item \textbf{Análisis de registros digitales:} captura de datos GPS y eventos del prototipo (hora de consulta, ruta sugerida, tiempo estimado de llegada, tiempo efectivo de viaje).
-    \item \textbf{Registro comparativo pretest--postest:} instrumento tipo ficha para contrastar tiempos antes y después de aplicar el modelo.
-    \item \textbf{Revisión documental técnica:} consulta de fuentes especializadas sobre optimización de rutas, GPS y movilidad urbana.
+    \item \textbf{Product Owner (investigador):} prioriza el Product Backlog según impacto en reducción de tiempos y valor para el usuario.
+    \item \textbf{Scrum Master (investigador/asesor):} asegura cumplimiento del marco Scrum, elimina bloqueos y protege el flujo del Sprint.
+    \item \textbf{Equipo de desarrollo:} implementa funcionalidades, integra componentes y ejecuta pruebas técnicas/funcionales.
 \end{itemize}
 
-En términos instrumentales, se emplean: aplicación móvil prototipo, base de datos de eventos, fichas de registro de tiempos y matriz de trazabilidad de incidencias.
-
-\subsection*{Método de validación}
-\textbf{A. Justificación de la metodología de desarrollo.}
-
-Se adopta una metodología \textbf{ágil por iteraciones (enfoque Scrum adaptado)} debido a que el proyecto requiere construir y validar incrementos funcionales en ciclos cortos, con retroalimentación continua de usuarios y ajuste permanente de requisitos. Esta elección es pertinente porque:
+\textbf{B. Artefactos}
 \begin{itemize}
-    \item reduce riesgo técnico al validar tempranamente componentes críticos (captura GPS, cálculo de tiempos, interfaz móvil);
-    \item permite priorizar valor de negocio en cada ciclo (reducción de tiempos y mejor experiencia de usuario);
-    \item facilita ajustes rápidos ante hallazgos de campo en la prueba piloto.
+    \item \textbf{Product Backlog:} lista priorizada de historias de usuario y requerimientos técnicos.
+    \item \textbf{Sprint Backlog:} tareas comprometidas para cada iteración.
+    \item \textbf{Incremento:} versión funcional verificable al cierre de cada Sprint.
 \end{itemize}
 
-\textbf{B. Diagrama de la metodología adecuada al proyecto.}
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.98\textwidth]{assets/flujo-metodologico-adaptado-proyecto.png}
-\caption{Diagrama del flujo metodológico adaptado al proyecto}
-\end{figure}
-
-\textbf{C. Especificación de ciclos o iteraciones.}
-
+\textbf{C. Eventos}
 \begin{itemize}
-    \item \textbf{Iteración 1 (Investigación y requisitos):} objetivo, levantar necesidades y variables críticas; entregable, backlog priorizado y criterios de aceptación iniciales.
-    \item \textbf{Iteración 2 (Diseño):} objetivo, definir arquitectura y experiencia de usuario; entregable, prototipo navegable y diseño de flujo de datos.
-    \item \textbf{Iteración 3 (Desarrollo núcleo):} objetivo, implementar captura GPS y lógica de estimación; entregable, primer incremento funcional del motor de cálculo.
-    \item \textbf{Iteración 4 (Integración y pruebas):} objetivo, integrar app, servicios y almacenamiento; entregable, versión integrada con pruebas internas aprobadas.
-    \item \textbf{Iteración 5 (Piloto y optimización):} objetivo, validar en entorno real y corregir hallazgos; entregable, versión estabilizada con métricas comparativas pre/post.
+    \item \textbf{Sprint Planning:} definición de objetivo y alcance del Sprint.
+    \item \textbf{Daily Scrum:} seguimiento diario de avances y bloqueos.
+    \item \textbf{Sprint Review:} demostración del incremento y validación con criterios de aceptación.
+    \item \textbf{Sprint Retrospective:} identificación de mejoras para el siguiente ciclo.
 \end{itemize}
 
-Antes de cerrar cada iteración se valida cumplimiento de criterios de aceptación: funcionalidad operativa, consistencia de datos, usabilidad mínima y trazabilidad de resultados.
+\subsubsection*{Plan de trabajo y cronograma (marzo - julio 2026)}
 
-\subsection*{Técnicas estadísticas para el análisis de los datos}
-El análisis se realizará con estadística descriptiva y comparación de medidas:
+El cronograma se organiza en bloques semanales y quincenales, respetando las fechas establecidas para el proyecto:
+
+\begin{longtable}{|p{0.45\textwidth}|p{0.22\textwidth}|p{0.22\textwidth}|}
+\hline
+\textbf{Actividad} & \textbf{Fecha de inicio} & \textbf{Fecha de finalización} \\
+\hline
+\endfirsthead
+\hline
+\textbf{Actividad} & \textbf{Fecha de inicio} & \textbf{Fecha de finalización} \\
+\hline
+\endhead
+Diseño metodológico & 23/03/2026 & 29/03/2026 \\
+\hline
+Requerimientos y diseño de la propuesta & 30/03/2026 & 05/04/2026 \\
+\hline
+Implementación de la propuesta & 06/04/2026 & 12/04/2026 \\
+\hline
+Validación y recopilación de datos (métricas e instrumentos) & 13/04/2026 & 19/04/2026 \\
+\hline
+Análisis e interpretación de datos (estadística) & 20/04/2026 & 26/04/2026 \\
+\hline
+Presentación de resultados y discusión & 27/04/2026 & 03/05/2026 \\
+\hline
+Formulación de conclusiones y recomendaciones & 04/05/2026 & 10/05/2026 \\
+\hline
+Aspectos formales (redacción, APA/referencias) & 11/05/2026 & 24/05/2026 \\
+\hline
+Preparación para la presentación (material gráfico y oratoria) & 25/05/2026 & 05/07/2026 \\
+\hline
+\end{longtable}
+
+\textbf{Alineación del cronograma en 10 Sprints}
+\begin{itemize}
+    \item \textbf{Sprint 1 (23/03--29/03).} \textbf{Actividades:} (1) diseño metodológico del estudio; (2) definición de criterios de validación. \textbf{Entregables:} (1) plan metodológico validado; (2) matriz de criterios e indicadores.
+    \item \textbf{Sprint 2 (30/03--05/04).} \textbf{Actividades:} (1) levantamiento de requerimientos; (2) priorización del backlog del producto. \textbf{Entregables:} (1) documento de requerimientos; (2) Product Backlog priorizado.
+    \item \textbf{Sprint 3 (06/04--12/04).} \textbf{Actividades:} (1) diseño técnico de arquitectura web; (2) diseño de flujo de datos GPS. \textbf{Entregables:} (1) diagrama de arquitectura; (2) especificación de flujo de datos.
+    \item \textbf{Sprint 4 (13/04--19/04).} \textbf{Actividades:} (1) desarrollo del módulo de captura/consulta; (2) integración inicial con lógica de tiempos. \textbf{Entregables:} (1) incremento funcional v1; (2) módulo de estimación de llegada operativo.
+    \item \textbf{Sprint 5 (20/04--26/04).} \textbf{Actividades:} (1) pruebas funcionales internas; (2) ajustes de estabilidad del sistema. \textbf{Entregables:} (1) reporte de pruebas internas; (2) incremento funcional v2 estabilizado.
+    \item \textbf{Sprint 6 (27/04--03/05).} \textbf{Actividades:} (1) validación en entorno piloto; (2) recopilación de métricas pretest--postest. \textbf{Entregables:} (1) base de datos de validación; (2) registro comparativo de tiempos.
+    \item \textbf{Sprint 7 (04/05--10/05).} \textbf{Actividades:} (1) análisis estadístico de resultados; (2) elaboración de tablas y gráficos. \textbf{Entregables:} (1) informe estadístico; (2) anexos gráficos de resultados.
+    \item \textbf{Sprint 8 (11/05--24/05).} \textbf{Actividades:} (1) redacción de resultados y discusión; (2) formulación de conclusiones y recomendaciones. \textbf{Entregables:} (1) capítulo de resultados y discusión; (2) capítulo de conclusiones y recomendaciones.
+    \item \textbf{Sprint 9 (25/05--14/06).} \textbf{Actividades:} (1) normalización formal del documento (APA y referencias); (2) corrección integral de estilo académico. \textbf{Entregables:} (1) tesis final normalizada; (2) versión lista para revisión final.
+    \item \textbf{Sprint 10 (15/06--05/07).} \textbf{Actividades:} (1) elaboración de material de sustentación; (2) preparación de oratoria y simulacros. \textbf{Entregables:} (1) presentación final; (2) guion y checklist de defensa.
+\end{itemize}
+
+\subsection*{Diseño de investigación y recolección de datos}
+
+Se aplican técnicas mixtas con foco en evidencia empírica del problema:
+\begin{itemize}
+    \item \textbf{Observación operativa:} registro de tiempos de espera en paraderos y tiempos de desplazamiento.
+    \item \textbf{Análisis de registros digitales:} datos GPS y eventos del sistema web.
+    \item \textbf{Instrumento pretest--postest:} ficha comparativa de tiempos antes/después de usar la propuesta.
+    \item \textbf{Revisión documental técnica:} soporte de decisiones de diseño y validación.
+\end{itemize}
+
+Instrumentos principales: prototipo web, base de datos de eventos, fichas de registro temporal y matriz de trazabilidad de incidencias.
+
+\subsection*{Criterios de validación por Sprint}
+
+Al cierre de cada Sprint se verifican criterios de aceptación mínimos:
+\begin{itemize}
+    \item funcionalidad operativa del incremento;
+    \item consistencia de datos capturados;
+    \item estabilidad básica de la solución web;
+    \item utilidad para la toma de decisión del usuario;
+    \item trazabilidad entre requerimiento, implementación y evidencia de validación.
+\end{itemize}
+
+\subsection*{Técnicas estadísticas para análisis de datos}
+
+El análisis de resultados se realiza mediante estadística descriptiva y comparación de medidas:
 \begin{itemize}
     \item media, mediana y desviación estándar de tiempos de espera y viaje;
-    \item comparación porcentual pretest--postest para estimar reducción de tiempos;
-    \item tablas y gráficos de tendencia por ruta/periodo;
-    \item análisis de variación por franja horaria para identificar condiciones de mayor impacto.
+    \item variación porcentual pretest--postest para estimar reducción de tiempos;
+    \item tablas y gráficos de tendencia por ruta y franja horaria;
+    \item interpretación de variaciones para identificar condiciones de mayor impacto.
 \end{itemize}
 
-En la fase piloto, la interpretación se orienta a evidencia de mejora operativa y factibilidad de escalamiento del modelo.
+La fase final integra resultados cuantitativos y evaluación funcional para determinar factibilidad de escalamiento de la propuesta.
