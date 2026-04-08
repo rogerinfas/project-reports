@@ -1,11 +1,65 @@
 \section{Ventas, cotizaciones y creación de tours}
 
 \noindent\textbf{Orden del flujo:} primero se crea la \textbf{cotización}; cuando el cliente acepta, recién se confirma como \textbf{venta/pedido}. Este capítulo se desarrollará en ese mismo orden.
+\noindent\textbf{Formas de crear cotización:} existen dos rutas operativas: (1) desde \textbf{CRM} y (2) desde \textbf{Ventas}. Para mantener continuidad con el proceso actual, se desarrolla primero la ruta desde \textbf{CRM}.
 
 \subsection{Cotizaciones}
-\subsubsection{Creación de cotización}
+\subsubsection{Creación de cotización desde CRM}
+
+\begin{enumerate}
+    \item Desde la oportunidad en CRM, abra la cotización generada.
+    \item En la barra superior verá las acciones principales:
+    \begin{itemize}
+        \item \textbf{Enviar}: envía la cotización al cliente por correo.
+        \item \textbf{Imprimir}: genera/descarga la versión PDF para compartirla.
+        \item \textbf{Confirmar}: convierte la cotización en orden de venta cuando el cliente acepta.
+        \item \textbf{Vista previa}: permite revisar cómo verá el cliente el documento antes de enviar.
+        \item \textbf{Cancelar}: anula la cotización cuando ya no corresponde continuar con ese documento.
+    \end{itemize}
+    \item Use cada botón según la etapa comercial en la que se encuentre la negociación.
+    \item En la parte derecha verá la línea de estado del documento:
+    \begin{itemize}
+        \item \textbf{Cotización}: estado inicial, documento en preparación o edición.
+        \item \textbf{Cotización enviada}: indica que ya fue enviada al cliente para revisión.
+        \item \textbf{Orden de venta}: se activa cuando la cotización es aceptada/confirmada y pasa a venta formal.
+    \end{itemize}
+    \item Esta línea permite controlar rápidamente en qué fase comercial está cada documento sin abrir reportes adicionales.
+\end{enumerate}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.95\textwidth]{assets/odoo-cotizacion-botones-acciones-principales.png}
+    \caption{Cotización creada desde CRM: acciones principales \textbf{Enviar}, \textbf{Imprimir}, \textbf{Confirmar}, \textbf{Vista previa} y \textbf{Cancelar}.}
+\end{figure}
+
+\subsubsection{Creación de cotización desde Ventas}
 \subsubsection{Edición y validación}
 \subsubsection{Envío al cliente}
+
+\begin{enumerate}
+    \item En esta etapa, el objetivo principal es \textbf{enviar la cotización por correo} al cliente.
+    \item Verifique primero que el cliente esté registrado con un \textbf{correo electrónico válido} en su ficha de contacto.
+    \item En la cotización, pulse el botón \textbf{Enviar}.
+    \item Se abrirá un \textbf{modal de correo} con contenido cargado automáticamente.
+    \item El asunto y el cuerpo del mensaje se basan en una plantilla y son \textbf{totalmente personalizables} antes del envío.
+    \item Si el tour/producto tiene un PDF de itinerario configurado, este se adjunta automáticamente en el correo (la configuración se verá en la sección de creación de tours).
+    \item El cuerpo del correo está automatizado para adaptarse al \textbf{idioma del cliente} cuando ese idioma está definido en su contacto.
+    \item Revise destinatario, asunto, contenido y adjuntos; luego pulse nuevamente \textbf{Enviar}.
+    \item Confirmación esperada tras el envío: el estado cambia de \textbf{Cotización} a \textbf{Cotización enviada} y en la bitácora de la derecha aparece el registro del mensaje/correo enviado.
+    \item Pulse \textbf{Confirmar} únicamente cuando el cliente ya haya realizado el \textbf{adelanto}; recién en ese momento la cotización debe pasar a \textbf{Orden de venta}.
+\end{enumerate}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.95\textwidth]{assets/odoo-cotizacion-modal-envio-correo.png}
+    \caption{Modal de envío por correo: plantilla editable, adjuntos automáticos e información lista para enviar al cliente.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.95\textwidth]{assets/odoo-cotizacion-enviada-estado-y-bitacora.png}
+    \caption{Después de enviar: estado \textbf{Cotización enviada} y confirmación registrada en la bitácora/chatter.}
+\end{figure}
 
 \subsection{Ventas}
 \subsubsection{Confirmación de cotización a pedido}
