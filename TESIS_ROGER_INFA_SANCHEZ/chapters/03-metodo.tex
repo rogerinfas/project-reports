@@ -6,3 +6,317 @@ De igual modo, se establecen las estrategias metodológicas que permitieron orga
 
 Finalmente, se presenta el diseño metodológico que sustenta la investigación y que guía la formulación de una alternativa técnicamente viable para el contexto analizado.
 
+\subsection*{Metodología establecida}
+
+En esta investigación se emplea \textbf{Scrum} como marco de trabajo ágil para organizar el desarrollo de la propuesta web en ciclos cortos, con entregables parciales y validaciones continuas. Su incorporación en este capítulo tiene un propósito metodológico y operativo: precisar cómo se planifica, ejecuta y controla el trabajo durante la construcción de la solución.
+
+Se utiliza Scrum porque permite priorizar funcionalidades de alto valor, reducir riesgos mediante iteraciones y mantener trazabilidad entre requerimientos, implementación y resultados observables. Este enfoque es pertinente para el estudio, dado que la propuesta requiere ajustes progresivos a partir de la evidencia recolectada en cada etapa.
+
+No obstante, el marco se aplica en una \textbf{modalidad adaptada a un solo investigador-desarrollador}, por lo que se recortan formalidades propias de equipos numerosos. En esta adaptación, una misma persona asume funciones de priorización, ejecución técnica y seguimiento, manteniendo la disciplina de planificación por Sprint, revisión de avances y evaluación de entregables. De esta manera, se conserva la lógica central de Scrum, pero ajustada a la escala real del proyecto.
+
+\subsection*{Adaptación del marco Scrum al contexto unipersonal}
+
+Scrum fue concebido originalmente para equipos multidisciplinarios de entre tres y nueve integrantes, donde los roles de Product Owner, Scrum Master y Equipo de Desarrollo recaen en personas distintas. En el presente trabajo, la realidad es diferente: el proyecto es conducido íntegramente por un solo investigador que, a su vez, diseña, implementa, prueba y documenta cada componente de la solución. Esto obliga a replantear ciertos elementos del marco sin perder su esencia iterativa e incremental.
+
+La adaptación se fundamenta en tres decisiones concretas:
+
+\begin{enumerate}
+    \item \textbf{Unificación de roles.} El investigador concentra las responsabilidades de priorización (Product Owner), facilitación del proceso (Scrum Master) y ejecución técnica (Equipo de Desarrollo). Para evitar que esta concentración genere sesgos, cada Sprint se cierra con una autoevaluación documentada que contrasta lo planificado con lo efectivamente entregado.
+
+    \item \textbf{Simplificación de ceremonias.} Las reuniones diarias (Daily Scrum) se sustituyen por un registro breve de avance al inicio de cada jornada de trabajo. El Sprint Planning se mantiene como actividad formal al comienzo de cada iteración, y la Sprint Review se realiza mediante la verificación del entregable contra los criterios de aceptación previamente definidos. La Retrospectiva se incorpora como una nota reflexiva al cierre de cada Sprint, orientada a identificar mejoras para la siguiente iteración.
+
+    \item \textbf{Duración y alcance de los Sprints.} Se definen iteraciones semanales de siete días, con excepción de ciertas semanas donde la naturaleza de las actividades requiere un período extendido. Cada Sprint produce al menos un entregable verificable, ya sea un artefacto de documentación, un módulo funcional o una evidencia de validación.
+\end{enumerate}
+
+Esta adaptación no es arbitraria: responde al principio ágil de que los procesos deben servir al proyecto y no al revés. Al tratarse de una investigación tecnológica aplicada con un único responsable, resulta más productivo conservar la disciplina de entregas incrementales y la trazabilidad por Sprint que replicar ceremonias pensadas para la coordinación de múltiples personas.
+
+En la práctica, el flujo de trabajo adaptado opera de la siguiente manera: al inicio de cada Sprint se revisa el backlog general del proyecto, se seleccionan las actividades comprometidas para esa iteración y se establecen los entregables esperados. Durante la semana se ejecuta el trabajo técnico y de redacción. Al cierre, se verifica que cada entregable cumpla con los criterios mínimos de aceptación y se registra el avance real. Si algún entregable no alcanza el nivel esperado, se replanifica para la siguiente iteración sin acumular deuda técnica.
+
+\subsection*{Justificación de la elección de Scrum}
+
+La selección de Scrum frente a otras metodologías se sustenta en las características propias de este proyecto:
+
+\begin{itemize}
+    \item \textbf{Incertidumbre técnica moderada.} El desarrollo involucra tecnologías web, integración con datos GPS y consultas espaciales, lo que implica decisiones de diseño que pueden variar conforme se avanza. Un enfoque iterativo permite incorporar hallazgos técnicos sin rehacer el plan completo.
+
+    \item \textbf{Necesidad de entregables tempranos.} La investigación requiere evidencia funcional progresiva: no basta con entregar todo al final. Scrum garantiza que al cierre de cada Sprint exista un producto parcial verificable.
+
+    \item \textbf{Documentación como parte del incremento.} A diferencia de enfoques puramente técnicos, aquí cada Sprint produce también avances de redacción académica. Scrum facilita esta dualidad al no restringir el tipo de entregable a código ejecutable.
+
+    \item \textbf{Compatibilidad con el cronograma académico.} Las fechas del proyecto están acotadas entre marzo y junio de 2026. Sprints semanales permiten distribuir el trabajo de forma realista dentro de ese período, sin depender de fases largas que dificulten el seguimiento.
+\end{itemize}
+
+Se descartaron metodologías tradicionales como cascada (Waterfall) por su rigidez ante cambios de alcance, y metodologías como Kanban por carecer de la estructura de iteraciones con entregables comprometidos que el proyecto necesita para mantener ritmo y trazabilidad.
+
+\subsection*{Cronograma de trabajo: planificación por Sprints}
+
+A continuación se presenta el cronograma completo del proyecto, organizado en iteraciones semanales. Cada Sprint define sus actividades principales y los entregables base comprometidos, tanto de implementación técnica como de avance documental.
+
+\subsubsection*{Sprint 0 --- Semana del 23/03/2026: Diseño metodológico}
+
+El punto de partida del proyecto consiste en establecer las bases metodológicas sobre las cuales se sustentará todo el trabajo posterior. En esta iteración inicial se analizan las metodologías disponibles ---tradicionales, iterativas, evolutivas y ágiles--- para seleccionar y justificar formalmente la más adecuada al contexto de la investigación.
+
+\textbf{Actividades:}
+\begin{itemize}
+    \item Análisis comparativo de metodologías tradicionales, iterativas, evolutivas y ágiles.
+    \item Selección y justificación formal de la metodología para la propuesta.
+\end{itemize}
+
+\textbf{Entregables:}
+\begin{itemize}
+    \item Excel de programación de metodología y planeación de Sprints al 100\%.
+    \item Capítulo de marco metodológico redactado.
+\end{itemize}
+
+\subsubsection*{Sprint 1 --- Semana del 30/03/2026: Especificación del diseño y modelado de dominio}
+
+Una vez definida la metodología, se inicia la especificación técnica de la propuesta. Esta iteración se centra en el modelado del dominio bajo los principios de Clean Architecture, identificando las entidades fundamentales del sistema ---Bus, Ruta, Paradero--- junto con sus Value Objects y Agregados. Paralelamente, se redactan las primeras Historias de Usuario en formato estándar.
+
+\textbf{Actividades:}
+\begin{itemize}
+    \item Definición de estrategias de diseño bajo Clean Architecture.
+    \item Modelado del dominio: identificación de Entidades, Value Objects y Agregados (Bus, Ruta, Paradero).
+    \item Definición de reglas de negocio y lógica de dominio para el monitoreo.
+    \item Redacción de Historias de Usuario iniciales en formato estándar (Como/Quiero/Para).
+\end{itemize}
+
+\textbf{Entregables:}
+\begin{itemize}
+    \item Sección de especificación del diseño (propuesta) redactada al 40\%.
+    \item Sección de Historias de Usuario redactada al 50\%.
+    \item Diagrama de clases de dominio (Entidades y Value Objects) al 70\%.
+\end{itemize}
+
+\subsubsection*{Sprint 2 --- Semana del 06/04/2026: Arquitectura, herramientas y requisitos}
+
+Con el dominio modelado, esta iteración aborda el diseño arquitectónico de la solución: diagramas de capas, comunicación entre módulos y definición de contratos de interfaces para la capa de infraestructura. Además, se formalizan los requisitos funcionales y no funcionales que guiarán la implementación.
+
+\textbf{Actividades:}
+\begin{itemize}
+    \item Diseño de diagramas de capas y comunicación entre módulos.
+    \item Definición de contratos de interfaces (Interfaces/Portales) para la capa de infraestructura.
+    \item Redacción de requisitos funcionales (RF) y no funcionales (RNF) detallados.
+\end{itemize}
+
+\textbf{Entregables:}
+\begin{itemize}
+    \item Sección de arquitectura y herramientas redactada al 70\%.
+    \item Sección de requisitos del sistema redactada al 80\%.
+    \item Diagrama de secuencia de un caso de uso principal al 100\%.
+    \item Listado de herramientas tecnológicas justificadas en el documento al 100\%.
+\end{itemize}
+
+\subsubsection*{Sprint 3 --- Semana del 13/04/2026: Diseño de base de datos y setup del entorno}
+
+Esta iteración marca la transición del diseño a la implementación. Se elabora el Diagrama Entidad-Relación principal y se inicializa el entorno de desarrollo con NestJS y Next.js, organizando la estructura de carpetas según Clean Architecture. Se configura el ecosistema de herramientas de desarrollo y los contenedores base.
+
+\textbf{Actividades:}
+\begin{itemize}
+    \item Elaboración del Diagrama Entidad-Relación (E-R) principal.
+    \item Inicialización de NestJS y Next.js con estructura de carpetas para Clean Architecture.
+    \item Configuración de variables de entorno, ESLint, Prettier y contenedores base.
+    \item Instalación de dependencias core (TypeORM, PostGIS types, Class-validator).
+\end{itemize}
+
+\textbf{Entregables:}
+\begin{itemize}
+    \item Sección de modelo de datos (Diagrama E-R) redactada al 80\%.
+    \item Repositorios de código inicializados al 20\% (estructura de carpetas por capas).
+    \item Sección de entorno de implementación redactada al 40\%.
+    \item Archivo de configuración Docker Compose básico (DB + App) al 100\%.
+\end{itemize}
+
+\subsubsection*{Sprint 4 --- Semana del 20/04/2026: Implementación de persistencia y datos espaciales}
+
+Con el entorno configurado, se procede a la implementación de la capa de persistencia. Se configura PostgreSQL con la extensión PostGIS para el manejo de datos geoespaciales, se crean las migraciones iniciales y se mapean las entidades del diagrama E-R a modelos de infraestructura. Esta iteración es crítica porque establece la base sobre la que operarán todas las consultas espaciales del sistema.
+
+\textbf{Actividades:}
+\begin{itemize}
+    \item Configuración de PostgreSQL + PostGIS.
+    \item Configuración de TypeORM, DataSources y migraciones iniciales.
+    \item Mapeo de las entidades principales del E-R a modelos de infraestructura.
+    \item Creación de los esquemas espaciales para el manejo de rutas y paraderos.
+\end{itemize}
+
+\textbf{Entregables:}
+\begin{itemize}
+    \item Sección de modelo de datos y persistencia redactada al 60\%.
+    \item Script con soporte espacial y configuración de extensiones al 100\%.
+    \item Entidades de infraestructura (TypeORM Models) implementadas al 100\%.
+    \item Diccionario de datos inicial en el documento al 50\%.
+\end{itemize}
+
+\subsubsection*{Sprint 5 --- Semana del 27/04/2026: Lógica de negocio y API REST}
+
+Esta iteración se concentra en la capa de aplicación: se implementan los Casos de Uso para las operaciones principales (CRUD de rutas y buses), los repositorios de infraestructura con su respectiva implementación de interfaz, y los controladores en NestJS con sus DTOs de entrada y salida. Se establece también un manejo centralizado de errores mediante un Global Exception Filter.
+
+\textbf{Actividades:}
+\begin{itemize}
+    \item Implementación de Casos de Uso (capa de Aplicación) para CRUD de rutas y buses.
+    \item Desarrollo de Repositorios (Infraestructura) y su implementación de interfaz.
+    \item Creación de Controladores en NestJS y definición de DTOs para entrada/salida de datos.
+    \item Configuración de un Global Exception Filter para manejo de errores.
+\end{itemize}
+
+\textbf{Entregables:}
+\begin{itemize}
+    \item Sección de implementación de la propuesta redactada al 40\%.
+    \item Endpoints de API documentados (Swagger) al 50\%.
+    \item Mappers de datos (Dominio a Infraestructura y viceversa) implementados al 100\%.
+    \item DTOs de validación de entrada de datos al 100\%.
+\end{itemize}
+
+\subsubsection*{Sprint 6 --- Semana del 04/05/2026: Integración de mapas y componentes geográficos}
+
+El frontend cobra protagonismo en esta iteración. Se configura la API de Google Maps en Next.js, se crean los servicios de consumo de la API del backend y se implementan los componentes de renderizado para datos espaciales: puntos para la ubicación de buses y líneas para las rutas. El objetivo es lograr una primera visualización funcional de los datos geoespaciales sobre el mapa.
+
+\textbf{Actividades:}
+\begin{itemize}
+    \item Configuración de Google Maps API en Next.js.
+    \item Creación de servicios de frontend para el consumo de API (Axios/Fetch).
+    \item Implementación de componentes de renderizado para datos espaciales (Point para buses, LineString para rutas).
+    \item Manejo de estados globales o locales para la visualización de datos en el mapa.
+\end{itemize}
+
+\textbf{Entregables:}
+\begin{itemize}
+    \item Sección de implementación de componentes geográficos redactada al 50\%.
+    \item Módulo de conexión Frontend-Backend funcional al 70\%.
+    \item Componente de mapa base en React/Next.js integrado al 100\%.
+    \item Capturas de pantalla del mapa renderizando puntos de prueba para el documento.
+\end{itemize}
+
+\subsubsection*{Sprint 7 --- Semana del 11/05/2026: Refinamiento de arquitectura y pruebas de integración}
+
+Antes de avanzar con nuevas funcionalidades, esta iteración se dedica a consolidar lo construido. Se revisa la inyección de dependencias, se ejecutan pruebas de integración entre las capas del sistema y se optimizan las consultas espaciales en PostGIS para mejorar el rendimiento del mapa. También se realizan ajustes de interfaz de usuario y navegación.
+
+\textbf{Actividades:}
+\begin{itemize}
+    \item Revisión de la inyección de dependencias y desacoplamiento entre capas.
+    \item Pruebas de integración básicas entre las capas de Dominio, Aplicación e Infraestructura.
+    \item Optimización de consultas espaciales (PostGIS) para mejorar el rendimiento del mapa.
+    \item Ajustes finales de interfaz de usuario y navegación básica entre vistas.
+\end{itemize}
+
+\textbf{Entregables:}
+\begin{itemize}
+    \item Sección de implementación de la propuesta redactada al 70\%.
+    \item Sección de entorno de implementación redactada al 85\%.
+    \item Video demostrativo de la integración PostGIS + Backend + Mapa al 90\%.
+    \item Esquema final de la inyección de dependencias (Providers) en el documento al 100\%.
+\end{itemize}
+
+\subsubsection*{Sprint 8 --- Semana del 25/05/2026: Ubicación dinámica de buses}
+
+Con la arquitectura estabilizada, se implementa una de las funcionalidades centrales del sistema: la ubicación en tiempo real de los buses. Se agregan campos de latitud y longitud a la entidad Bus, se desarrolla el módulo de ubicaciones asociado a las rutas y se simula el movimiento de buses mediante actualización periódica de coordenadas. Esta iteración produce el primer flujo de datos dinámicos del sistema.
+
+\textbf{Actividades:}
+\begin{itemize}
+    \item Implementación de campos de ubicación (latitud, longitud) en buses.
+    \item Desarrollo de módulo de ubicaciones en base a las rutas.
+    \item Simulación de movimiento de buses mediante actualización de coordenadas.
+    \item Pruebas de endpoint de ubicación.
+\end{itemize}
+
+\textbf{Entregables:}
+\begin{itemize}
+    \item Endpoint de ubicación funcional.
+    \item Datos dinámicos simulados.
+    \item Evidencia funcional (capturas o video).
+\end{itemize}
+
+\subsubsection*{Sprint 9 --- Semana del 01/06/2026: Visualización de buses en tiempo real}
+
+Esta iteración conecta el backend con el frontend para lograr la visualización dinámica de los buses sobre el mapa. Se consume el endpoint de ubicación desde el frontend, se renderizan los buses como marcadores en el mapa y se implementa un mecanismo de actualización periódica (polling) para reflejar el movimiento en tiempo real. Se valida que la sincronización entre backend y frontend sea consistente.
+
+\textbf{Actividades:}
+\begin{itemize}
+    \item Consumo de endpoint de ubicación en frontend.
+    \item Renderizado de buses en mapa.
+    \item Implementación de actualización periódica de datos (polling).
+    \item Validación de sincronización backend-frontend.
+\end{itemize}
+
+\textbf{Entregables:}
+\begin{itemize}
+    \item Buses visibles en mapa en tiempo real.
+    \item Evidencia funcional (capturas o video).
+\end{itemize}
+
+\subsubsection*{Sprint 10 --- Semana del 08/06/2026: Detección de paradero cercano}
+
+En esta iteración se implementa la funcionalidad de detección del paradero más cercano al usuario. Se obtiene la ubicación del usuario desde el navegador, se calcula la distancia hacia los paraderos disponibles y se identifica el más próximo. La visualización del paradero seleccionado se integra en la interfaz del mapa, cerrando así el flujo principal de interacción usuario-sistema.
+
+\textbf{Actividades:}
+\begin{itemize}
+    \item Implementación de cálculo de distancia entre usuario y paraderos.
+    \item Obtención de ubicación del usuario desde frontend.
+    \item Identificación del paradero más cercano.
+    \item Visualización del paradero en interfaz.
+\end{itemize}
+
+\textbf{Entregables:}
+\begin{itemize}
+    \item Funcionalidad de detección de paradero cercano.
+    \item Evidencia funcional.
+\end{itemize}
+
+\subsubsection*{Sprint 11 --- Semana del 15/06/2026: Pruebas finales y validación integral}
+
+La iteración final se dedica exclusivamente a la verificación y validación del sistema completo. Se ejecutan pruebas funcionales sobre todos los módulos, se valida el cumplimiento de cada requisito funcional definido en el Sprint 2, se corrigen los errores detectados y se realizan los ajustes finales de interfaz. El producto de esta iteración es el sistema funcionando en su versión definitiva, acompañado del documento de pruebas que se incorpora como capítulo dentro del informe de tesis.
+
+\textbf{Actividades:}
+\begin{itemize}
+    \item Ejecución de pruebas funcionales completas.
+    \item Validación del cumplimiento de requisitos funcionales.
+    \item Corrección de errores detectados.
+    \item Ajustes finales de interfaz.
+\end{itemize}
+
+\textbf{Entregables:}
+\begin{itemize}
+    \item Sistema completo funcional.
+    \item Documento de pruebas (casos + resultados), incorporado como capítulo dentro del informe de tesis.
+    \item Video final del sistema.
+\end{itemize}
+
+\subsection*{Resumen del cronograma}
+
+La siguiente tabla sintetiza la distribución temporal del proyecto:
+
+\begin{longtable}{|p{0.08\textwidth}|p{0.18\textwidth}|p{0.64\textwidth}|}
+\hline
+\textbf{Sprint} & \textbf{Semana} & \textbf{Foco principal} \\
+\hline
+\endfirsthead
+\hline
+\textbf{Sprint} & \textbf{Semana} & \textbf{Foco principal} \\
+\hline
+\endhead
+0 & 23/03/2026 & Diseño metodológico y planeación de Sprints \\
+\hline
+1 & 30/03/2026 & Especificación del diseño y modelado de dominio \\
+\hline
+2 & 06/04/2026 & Arquitectura, herramientas y requisitos \\
+\hline
+3 & 13/04/2026 & Diseño de base de datos y setup del entorno \\
+\hline
+4 & 20/04/2026 & Implementación de persistencia y datos espaciales \\
+\hline
+5 & 27/04/2026 & Lógica de negocio y API REST \\
+\hline
+6 & 04/05/2026 & Integración de mapas y componentes geográficos \\
+\hline
+7 & 11/05/2026 & Refinamiento de arquitectura y pruebas de integración \\
+\hline
+8 & 25/05/2026 & Ubicación dinámica de buses \\
+\hline
+9 & 01/06/2026 & Visualización de buses en tiempo real \\
+\hline
+10 & 08/06/2026 & Detección de paradero cercano \\
+\hline
+11 & 15/06/2026 & Pruebas finales y validación integral \\
+\hline
+\end{longtable}
+
+El cronograma abarca un total de doce iteraciones (Sprint 0 a Sprint 11) distribuidas entre marzo y junio de 2026. Las primeras iteraciones se orientan al diseño y planificación, las intermedias a la implementación progresiva de la solución, y las finales a la integración, validación y documentación de resultados. Esta distribución responde a la lógica incremental de Scrum adaptado, donde cada semana produce avances verificables que alimentan tanto el producto técnico como el documento de investigación.
