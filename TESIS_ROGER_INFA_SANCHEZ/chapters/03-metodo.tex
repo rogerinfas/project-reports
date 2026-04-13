@@ -58,7 +58,9 @@ Se descartaron metodologías tradicionales como cascada (Waterfall) por su rigid
 
 A continuación se presenta el cronograma completo del proyecto, organizado en iteraciones semanales. Cada Sprint define sus actividades principales y los entregables base comprometidos, tanto de implementación técnica como de avance documental.
 
-\subsubsection{Sprint 0 --- Semana del 23/03/2026: Diseño metodológico}
+\subsubsection{Sprint 0: Diseño metodológico}
+
+\textbf{Semana:} 23/03/2026
 
 El punto de partida del proyecto consiste en establecer las bases metodológicas sobre las cuales se sustentará todo el trabajo posterior. En esta iteración inicial se analizan las metodologías disponibles ---tradicionales, iterativas, evolutivas y ágiles--- para seleccionar y justificar formalmente la más adecuada al contexto de la investigación.
 
@@ -74,7 +76,9 @@ El punto de partida del proyecto consiste en establecer las bases metodológicas
     \item Capítulo de marco metodológico redactado.
 \end{itemize}
 
-\subsubsection{Sprint 1 --- Semana del 30/03/2026: Especificación del diseño y modelado de dominio}
+\subsubsection{Sprint 1: Especificación del diseño y modelado de dominio}
+
+\textbf{Semana:} 30/03/2026
 
 Una vez definida la metodología, se inicia la especificación técnica de la propuesta. Esta iteración se centra en el modelado del dominio bajo los principios de Clean Architecture, identificando las entidades fundamentales del sistema ---Bus, Ruta, Paradero--- junto con sus Value Objects y Agregados. Paralelamente, se redactan las primeras Historias de Usuario en formato estándar.
 
@@ -93,7 +97,9 @@ Una vez definida la metodología, se inicia la especificación técnica de la pr
     \item Diagrama de clases de dominio (Entidades y Value Objects) al 70\%.
 \end{itemize}
 
-\subsubsection{Sprint 2 --- Semana del 06/04/2026: Arquitectura, herramientas y requisitos}
+\subsubsection{Sprint 2: Arquitectura, herramientas y requisitos}
+
+\textbf{Semana:} 06/04/2026
 
 Con el dominio modelado, esta iteración aborda el diseño arquitectónico de la solución: diagramas de capas, comunicación entre módulos y definición de contratos de interfaces para la capa de infraestructura. Además, se formalizan los requisitos funcionales y no funcionales que guiarán la implementación.
 
@@ -112,7 +118,9 @@ Con el dominio modelado, esta iteración aborda el diseño arquitectónico de la
     \item Listado de herramientas tecnológicas justificadas en el documento al 100\%.
 \end{itemize}
 
-\subsubsection{Sprint 3 --- Semana del 13/04/2026: Diseño de base de datos y setup del entorno}
+\subsubsection{Sprint 3: Diseño de base de datos y setup del entorno}
+
+\textbf{Semana:} 13/04/2026
 
 Esta iteración marca la transición del diseño a la implementación. Se elabora el Diagrama Entidad-Relación principal y se inicializa el entorno de desarrollo con NestJS y Next.js, organizando la estructura de carpetas según Clean Architecture. Se configura el ecosistema de herramientas de desarrollo y los contenedores base.
 
@@ -132,7 +140,9 @@ Esta iteración marca la transición del diseño a la implementación. Se elabor
     \item Archivo de configuración Docker Compose básico (DB + App) al 100\%.
 \end{itemize}
 
-\subsubsection{Sprint 4 --- Semana del 20/04/2026: Implementación de persistencia y datos espaciales}
+\subsubsection{Sprint 4: Implementación de persistencia y datos espaciales}
+
+\textbf{Semana:} 20/04/2026
 
 Con el entorno configurado, se procede a la implementación de la capa de persistencia. Se configura PostgreSQL con la extensión PostGIS para el manejo de datos geoespaciales, se crean las migraciones iniciales y se mapean las entidades del diagrama E-R a modelos de infraestructura. Esta iteración es crítica porque establece la base sobre la que operarán todas las consultas espaciales del sistema.
 
@@ -152,7 +162,9 @@ Con el entorno configurado, se procede a la implementación de la capa de persis
     \item Diccionario de datos inicial en el documento al 50\%.
 \end{itemize}
 
-\subsubsection{Sprint 5 --- Semana del 27/04/2026: Lógica de negocio y API REST}
+\subsubsection{Sprint 5: Lógica de negocio y API REST}
+
+\textbf{Semana:} 27/04/2026
 
 Esta iteración se concentra en la capa de aplicación: se implementan los Casos de Uso para las operaciones principales (CRUD de rutas y buses), los repositorios de infraestructura con su respectiva implementación de interfaz, y los controladores en NestJS con sus DTOs de entrada y salida. Se establece también un manejo centralizado de errores mediante un Global Exception Filter.
 
@@ -172,7 +184,9 @@ Esta iteración se concentra en la capa de aplicación: se implementan los Casos
     \item DTOs de validación de entrada de datos al 100\%.
 \end{itemize}
 
-\subsubsection{Sprint 6 --- Semana del 04/05/2026: Integración de mapas y componentes geográficos}
+\subsubsection{Sprint 6: Integración de mapas y componentes geográficos}
+
+\textbf{Semana:} 04/05/2026
 
 El frontend cobra protagonismo en esta iteración. Se configura la API de Google Maps en Next.js, se crean los servicios de consumo de la API del backend y se implementan los componentes de renderizado para datos espaciales: puntos para la ubicación de buses y líneas para las rutas. El objetivo es lograr una primera visualización funcional de los datos geoespaciales sobre el mapa.
 
@@ -192,7 +206,9 @@ El frontend cobra protagonismo en esta iteración. Se configura la API de Google
     \item Capturas de pantalla del mapa renderizando puntos de prueba para el documento.
 \end{itemize}
 
-\subsubsection{Sprint 7 --- Semana del 11/05/2026: Refinamiento de arquitectura y pruebas de integración}
+\subsubsection{Sprint 7: Refinamiento de arquitectura y pruebas de integración}
+
+\textbf{Semana:} 11/05/2026
 
 Antes de avanzar con nuevas funcionalidades, esta iteración se dedica a consolidar lo construido. Se revisa la inyección de dependencias, se ejecutan pruebas de integración entre las capas del sistema y se optimizan las consultas espaciales en PostGIS para mejorar el rendimiento del mapa. También se realizan ajustes de interfaz de usuario y navegación.
 
@@ -212,7 +228,9 @@ Antes de avanzar con nuevas funcionalidades, esta iteración se dedica a consoli
     \item Esquema final de la inyección de dependencias (Providers) en el documento al 100\%.
 \end{itemize}
 
-\subsubsection{Sprint 8 --- Semana del 25/05/2026: Ubicación dinámica de buses}
+\subsubsection{Sprint 8: Ubicación dinámica de buses}
+
+\textbf{Semana:} 25/05/2026
 
 Con la arquitectura estabilizada, se implementa una de las funcionalidades centrales del sistema: la ubicación en tiempo real de los buses. Se agregan campos de latitud y longitud a la entidad Bus, se desarrolla el módulo de ubicaciones asociado a las rutas y se simula el movimiento de buses mediante actualización periódica de coordenadas. Esta iteración produce el primer flujo de datos dinámicos del sistema.
 
@@ -231,7 +249,9 @@ Con la arquitectura estabilizada, se implementa una de las funcionalidades centr
     \item Evidencia funcional (capturas o video).
 \end{itemize}
 
-\subsubsection{Sprint 9 --- Semana del 01/06/2026: Visualización de buses en tiempo real}
+\subsubsection{Sprint 9: Visualización de buses en tiempo real}
+
+\textbf{Semana:} 01/06/2026
 
 Esta iteración conecta el backend con el frontend para lograr la visualización dinámica de los buses sobre el mapa. Se consume el endpoint de ubicación desde el frontend, se renderizan los buses como marcadores en el mapa y se implementa un mecanismo de actualización periódica (polling) para reflejar el movimiento en tiempo real. Se valida que la sincronización entre backend y frontend sea consistente.
 
@@ -249,7 +269,9 @@ Esta iteración conecta el backend con el frontend para lograr la visualización
     \item Evidencia funcional (capturas o video).
 \end{itemize}
 
-\subsubsection{Sprint 10 --- Semana del 08/06/2026: Detección de paradero cercano}
+\subsubsection{Sprint 10: Detección de paradero cercano}
+
+\textbf{Semana:} 08/06/2026
 
 En esta iteración se implementa la funcionalidad de detección del paradero más cercano al usuario. Se obtiene la ubicación del usuario desde el navegador, se calcula la distancia hacia los paraderos disponibles y se identifica el más próximo. La visualización del paradero seleccionado se integra en la interfaz del mapa, cerrando así el flujo principal de interacción usuario-sistema.
 
@@ -267,7 +289,9 @@ En esta iteración se implementa la funcionalidad de detección del paradero má
     \item Evidencia funcional.
 \end{itemize}
 
-\subsubsection{Sprint 11 --- Semana del 15/06/2026: Pruebas finales y validación integral}
+\subsubsection{Sprint 11: Pruebas finales y validación integral}
+
+\textbf{Semana:} 15/06/2026
 
 La iteración final se dedica exclusivamente a la verificación y validación del sistema completo. Se ejecutan pruebas funcionales sobre todos los módulos, se valida el cumplimiento de cada requisito funcional definido en el Sprint 2, se corrigen los errores detectados y se realizan los ajustes finales de interfaz. El producto de esta iteración es el sistema funcionando en su versión definitiva, acompañado del documento de pruebas que se incorpora como capítulo dentro del informe de tesis.
 
