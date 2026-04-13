@@ -69,43 +69,56 @@
 % --- CONFIGURACIÓN PARA CAPÍTULOS CON NÚMEROS NORMALES ---
 \pagenumbering{arabic} % Cambia numeración a 1, 2, 3...
 \setcounter{page}{1}   % El Capítulo I será la página 1
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
 
 % CAPÍTULO I
 \newpage
+\refstepcounter{section}
 \section*{\centering \Large CAPÍTULO I \\ PLANTEAMIENTO DE LA INVESTIGACIÓN}
+\phantomsection
 \addcontentsline{toc}{section}{PLANTEAMIENTO DE LA INVESTIGACIÓN}
 \input{chapters/01-planteamiento}
 
 % CAPÍTULO II
 \newpage
+\refstepcounter{section}
 \section*{\centering \Large CAPÍTULO II \\ REVISIÓN Y FUNDAMENTACIÓN TEÓRICA}
+\phantomsection
 \addcontentsline{toc}{section}{REVISIÓN Y FUNDAMENTACIÓN TEÓRICA}
 \input{chapters/02-revision}
 
 % CAPÍTULO III
 \newpage
+\refstepcounter{section}
 \section*{\centering \Large CAPÍTULO III \\ MÉTODO DE INVESTIGACIÓN}
+\phantomsection
 \addcontentsline{toc}{section}{MÉTODO DE INVESTIGACIÓN}
 \input{chapters/03-metodo}
 
 % CAPÍTULO IV
 \newpage
+\refstepcounter{section}
 \section*{\centering \Large CAPÍTULO IV \\ RESULTADOS Y DISCUSIÓN}
+\phantomsection
 \addcontentsline{toc}{section}{RESULTADOS Y DISCUSIÓN}
 % \input{resultados}
 
 % SECCIONES FINALES
 \newpage
 \section*{\centering \Large Conclusiones}
+\phantomsection
 \addcontentsline{toc}{section}{Conclusiones}
 
 \newpage
 \section*{\centering \Large Referencias}
+\phantomsection
 \addcontentsline{toc}{section}{Referencias}
 \input{backmatter/referencias}
 
 \newpage
 \section*{\centering \Large Anexos}
+\phantomsection
 \addcontentsline{toc}{section}{Anexos}
 \input{backmatter/anexos}
 
