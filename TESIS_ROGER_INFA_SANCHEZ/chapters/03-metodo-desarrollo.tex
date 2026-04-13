@@ -1,1 +1,15 @@
 \subsection{Desarrollo de metodología}
+
+En esta sección se describe la ejecución metodológica del proyecto en su fase operativa, detallando cómo se aplicó el enfoque Scrum adaptado durante la construcción progresiva de la propuesta tecnológica. El propósito es evidenciar, de manera ordenada, la relación entre planificación, desarrollo técnico y validación de resultados en cada iteración.
+
+\subsubsection{Análisis}
+
+La fase de análisis se orientó a comprender, con criterio técnico y funcional, la problemática de los usuarios de transporte público urbano en relación con los tiempos de espera, la incertidumbre sobre la ubicación de las unidades y la limitada disponibilidad de información oportuna para la toma de decisiones de viaje. A partir de esta revisión inicial, se definió que la propuesta debía priorizar el acceso web, la visualización geográfica y la consulta en tiempo cercano al real como capacidades mínimas del sistema.
+
+En este marco, se levantaron y organizaron los requerimientos funcionales y no funcionales que guiarían el desarrollo por iteraciones. Entre los funcionales se consideraron como principales: registro y consulta de rutas y buses, obtención de ubicación de unidades, visualización cartográfica y detección de paradero cercano. Entre los no funcionales se priorizaron aspectos de rendimiento, mantenibilidad, trazabilidad y consistencia de datos, debido a que la solución integra backend, frontend y procesamiento espacial en una sola arquitectura.
+
+El análisis también incluyó la evaluación de alternativas de diseño y de herramientas tecnológicas, concluyéndose que una arquitectura basada en Clean Architecture, junto con NestJS, Next.js y PostgreSQL/PostGIS, ofrecía el mejor equilibrio entre desacoplamiento, escalabilidad y facilidad de validación progresiva. Esta decisión permitió alinear la estructura técnica con la lógica de Scrum adaptado, facilitando que cada Sprint produzca incrementos verificables sin comprometer la coherencia global del sistema.
+
+Asimismo, se identificaron riesgos relevantes para la ejecución: calidad variable de datos de ubicación, latencia en la sincronización entre capas, posibles errores de integración y sobrecarga de tareas al tratarse de una ejecución unipersonal. Para mitigar estos riesgos, se establecieron criterios de aceptación por iteración, validaciones funcionales continuas y una estrategia de refinamiento incremental del backlog, de modo que los ajustes se realicen oportunamente y con evidencia documentada.
+
+Como resultado del análisis, se obtuvo una línea base metodológica y técnica compuesta por: backlog inicial priorizado, definición de criterios de éxito, estructura de arquitectura por capas y plan de implementación por Sprints. Estos productos constituyeron el insumo formal para iniciar el desarrollo controlado de la propuesta y garantizar la trazabilidad entre problema, solución implementada y resultados esperados.
