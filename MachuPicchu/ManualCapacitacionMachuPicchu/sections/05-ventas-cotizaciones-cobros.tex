@@ -1,36 +1,91 @@
-\section{Ventas: cotizaciones, pedidos y cobros}
+\section{Ventas, cotizaciones y creación de tours}
 
-Los presupuestos al turista se gestionan en la aplicación \textbf{Ventas} (cotizaciones y, cuando corresponda, confirmación como pedido). Todo en \textbf{USD} y \textbf{sin impuestos} en la presentación acordada.
+\noindent\textbf{Orden del flujo:} primero se crea la \textbf{cotización}; cuando el cliente acepta, recién se confirma como \textbf{venta/pedido}. Este capítulo se desarrollará en ese mismo orden.
+\noindent\textbf{Formas de crear cotización:} existen dos rutas operativas: (1) desde \textbf{CRM} y (2) desde \textbf{Ventas}. Para mantener continuidad con el proceso actual, se desarrolla primero la ruta desde \textbf{CRM}.
 
-\subsection{Abrir Ventas y crear una cotización}
-
-\begin{enumerate}
-    \item Pulse la aplicación \textbf{Ventas}.
-    \item En el menú, seleccione \textbf{Cotizaciones} (o \textbf{Pedidos} si ya trabaja sobre confirmados).
-    \item Pulse \textbf{Nuevo}.
-    \item Elija el \textbf{Cliente} (contacto ya registrado). Si no existe, puede crearlo desde el desplegable con \textbf{Crear} o \textbf{Crear y editar}.
-    \item Verifique la \textbf{Lista de precios} y \textbf{Moneda} si aparecen: deben reflejar \textbf{USD}.
-    \item En la pestaña o tabla de líneas, use \textbf{Agregar un producto}, \textbf{Agregar una sección} o \textbf{Agregar una nota} según necesite (servicios turísticos parametrizados como productos).
-    \item Revise subtotales; confirme que los importes se muestren \textbf{sin impuestos} según su configuración.
-    \item Pulse \textbf{Guardar}.
-\end{enumerate}
-
-\subsection{Enviar la cotización al cliente}
+\subsection{Cotizaciones}
+\subsubsection{Creación de cotización desde CRM}
 
 \begin{enumerate}
-    \item Con la cotización abierta, pulse \textbf{Enviar por correo} (o \textbf{Enviar presupuesto}) si desea que Odoo genere el correo con el PDF adjunto.
-    \item Revise el destinatario y el texto; pulse \textbf{Enviar}.
-    \item Alternativamente, use \textbf{Imprimir} o descargue el PDF para enviarlo por el canal que prefiera (WhatsApp, etc.).
+    \item Desde la oportunidad en CRM, abra la cotización generada.
+    \item En la barra superior verá las acciones principales:
+    \begin{itemize}
+        \item \textbf{Enviar}: envía la cotización al cliente por correo.
+        \item \textbf{Imprimir}: genera/descarga la versión PDF para compartirla.
+        \item \textbf{Confirmar}: convierte la cotización en orden de venta cuando el cliente acepta.
+        \item \textbf{Vista previa}: permite revisar cómo verá el cliente el documento antes de enviar.
+        \item \textbf{Cancelar}: anula la cotización cuando ya no corresponde continuar con ese documento.
+    \end{itemize}
+    \item Use cada botón según la etapa comercial en la que se encuentre la negociación.
+    \item En la parte derecha verá la línea de estado del documento:
+    \begin{itemize}
+        \item \textbf{Cotización}: estado inicial, documento en preparación o edición.
+        \item \textbf{Cotización enviada}: indica que ya fue enviada al cliente para revisión.
+        \item \textbf{Orden de venta}: se activa cuando la cotización es aceptada/confirmada y pasa a venta formal.
+    \end{itemize}
+    \item Esta línea permite controlar rápidamente en qué fase comercial está cada documento sin abrir reportes adicionales.
 \end{enumerate}
 
-\subsection{Confirmar pedido y registrar cobros parciales}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.95\textwidth]{assets/odoo-cotizacion-botones-acciones-principales.png}
+    \caption{Cotización creada desde CRM: acciones principales \textbf{Enviar}, \textbf{Imprimir}, \textbf{Confirmar}, \textbf{Vista previa} y \textbf{Cancelar}.}
+\end{figure}
+
+\subsubsection{Creación de cotización desde Ventas}
+\begin{enumerate}
+    \item Desde la pantalla principal de Odoo, haga clic en la aplicación \textbf{Ventas} (resaltada en rojo en la imagen).
+    \item Al ingresar, se abrirá la vista de \textbf{Cotizaciones} en el módulo de Ventas.
+    \item En esa vista, ubique y pulse el botón \textbf{Nuevo} (también resaltado) para crear una cotización.
+    \item Al hacer clic en \textbf{Nuevo}, se abrirá el formulario de \textbf{nueva cotización}.
+    \item En esta pantalla, los botones \textbf{Enviar}, \textbf{Imprimir}, \textbf{Confirmar}, \textbf{Vista previa} y la línea de estado (\textbf{Cotización}, \textbf{Cotización enviada}, \textbf{Orden de venta}) funcionan igual que en la cotización creada desde \textbf{CRM}.
+    \item Desde este punto en adelante, continúe con los mismos pasos operativos explicados en \textbf{Creación de cotización desde CRM} (carga de productos, envío al cliente y confirmación según adelanto).
+\end{enumerate}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.95\textwidth]{assets/odoo-ventas-app-acceso-desde-principal.png}
+    \caption{Pantalla principal de Odoo: acceso a la aplicación \textbf{Ventas} para iniciar la creación de cotizaciones desde el módulo comercial.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.95\textwidth]{assets/odoo-ventas-lista-cotizaciones-boton-nuevo.png}
+    \caption{Vista de \textbf{Cotizaciones} en Ventas con el botón \textbf{Nuevo} resaltado para crear una cotización.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.95\textwidth]{assets/odoo-ventas-formulario-nueva-cotizacion.png}
+    \caption{Formulario de \textbf{nueva cotización} que se abre al pulsar \textbf{Nuevo} en el módulo de Ventas.}
+\end{figure}
+\subsubsection{Envío al cliente}
 
 \begin{enumerate}
-    \item Cuando el cliente acepte, pulse \textbf{Confirmar pedido} (o \textbf{Confirmar}) para convertir la cotización en pedido de venta, según el flujo configurado.
-    \item Para registrar \textbf{adelantos} o pagos parciales, use la lógica configurada en su instancia: botones como \textbf{Registrar pago}, \textbf{Crear factura}, \textbf{Pago} o pestañas de \textbf{Pagos} según lo que muestre Odoo. Anote el monto en \textbf{USD}, referencia y fecha.
-    \item Antes de comprar boletos no reembolsables, verifique en el pedido el \textbf{saldo pendiente} o el estado de facturación/pago que su pantalla indique.
+    \item En esta etapa, el objetivo principal es \textbf{enviar la cotización por correo} al cliente.
+    \item Verifique primero que el cliente esté registrado con un \textbf{correo electrónico válido} en su ficha de contacto.
+    \item En la cotización, pulse el botón \textbf{Enviar}.
+    \item Se abrirá un \textbf{modal de correo} con contenido cargado automáticamente.
+    \item El asunto y el cuerpo del mensaje se basan en una plantilla y son \textbf{totalmente personalizables} antes del envío.
+    \item Si el tour/producto tiene un PDF de itinerario configurado, este se adjunta automáticamente en el correo (la configuración se verá en la sección de creación de tours).
+    \item El cuerpo del correo está automatizado para adaptarse al \textbf{idioma del cliente} cuando ese idioma está definido en su contacto.
+    \item Revise destinatario, asunto, contenido y adjuntos; luego pulse nuevamente \textbf{Enviar}.
+    \item Confirmación esperada tras el envío: el estado cambia de \textbf{Cotización} a \textbf{Cotización enviada} y en la bitácora de la derecha aparece el registro del mensaje/correo enviado.
+    \item Pulse \textbf{Confirmar} únicamente cuando el cliente ya haya realizado el \textbf{adelanto}; recién en ese momento la cotización debe pasar a \textbf{Orden de venta}.
 \end{enumerate}
 
-\subsection{Lista de cotizaciones y pedidos}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.95\textwidth]{assets/odoo-cotizacion-modal-envio-correo.png}
+    \caption{Modal de envío por correo: plantilla editable, adjuntos automáticos e información lista para enviar al cliente.}
+\end{figure}
 
-Use \textbf{Cotizaciones} y \textbf{Pedidos} en el menú lateral, la \textbf{búsqueda} y \textbf{Filtros} (por ejemplo \textbf{Mis cotizaciones}, \textbf{Estado}) para localizar un documento rápidamente.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.95\textwidth]{assets/odoo-cotizacion-enviada-estado-y-bitacora.png}
+    \caption{Después de enviar: estado \textbf{Cotización enviada} y confirmación registrada en la bitácora/chatter.}
+\end{figure}
+
+\subsection{Creación de tours}
+\subsubsection{Configuración de producto turístico}
+\subsubsection{Precios y moneda}

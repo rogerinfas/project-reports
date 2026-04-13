@@ -1,10 +1,10 @@
-\subsection*{1.1. Antecedentes}
+\subsection{Antecedentes}
 
 En esta sección se presenta la revisión de literatura que sustenta la propuesta de investigación orientada a reducir los tiempos de espera y desplazamiento de usuarios del transporte público en la ciudad de Arequipa, mediante tecnologías web y Sistema de Posicionamiento Global (GPS). La revisión se estructuró en cuatro etapas: definición de estrategia de búsqueda, especificación de fuentes, aplicación de criterios de búsqueda y selección progresiva de documentos.
 
 El propósito de esta revisión fue identificar soluciones, modelos y resultados previos relacionados con: (i) sistemas de seguimiento vehicular en tiempo real, (ii) predicción de tiempos de llegada de buses, (iii) optimización operativa del transporte urbano con datos GPS y (iv) aplicaciones web para información al usuario en contexto de movilidad urbana \cite{hadiwardoyo2018,pradip2014,singla2015,anagnostopoulos2020,wang2021}.
 
-\subsubsection*{1.1.1. Estrategia de búsqueda}
+\subsubsection{Estrategia de búsqueda}
 
 La estrategia de búsqueda inició con la delimitación del problema de investigación y sus componentes conceptuales principales:
 
@@ -65,7 +65,7 @@ AND (LIMIT-TO(DOCTYPE,"ar") OR LIMIT-TO(DOCTYPE,"cp") OR LIMIT-TO(DOCTYPE,"ch"))
 
 La cadena fue refinada iterativamente durante la revisión. En una primera pasada se priorizó sensibilidad (mayor volumen de resultados) y en las iteraciones siguientes se incrementó especificidad para reducir ruido temático, especialmente documentos centrados en tráfico vehicular general sin enfoque en transporte público.
 
-\subsubsection*{1.1.2. Especificación de las bases de datos empleadas}
+\subsubsection{Especificación de las bases de datos empleadas}
 
 Para asegurar trazabilidad y calidad de la evidencia, se definieron fuentes diferenciadas por alcance:
 
@@ -85,7 +85,7 @@ Para asegurar trazabilidad y calidad de la evidencia, se definieron fuentes dife
 
 La combinación de estas fuentes permitió equilibrar rigor científico internacional con pertinencia contextual para el problema local de Arequipa.
 
-\subsubsection*{1.1.3. Criterios de búsqueda}
+\subsubsection{Criterios de búsqueda}
 
 Para garantizar consistencia en la revisión y trazabilidad en la selección documental, se aplicaron los siguientes criterios:
 
@@ -97,7 +97,7 @@ Para garantizar consistencia en la revisión y trazabilidad en la selección doc
     \item \textbf{Enfoque temático:} estudios sobre optimización de tiempos en transporte público, uso de GPS, datos en tiempo real e integración con aplicaciones para usuario final.
 \end{itemize}
 
-\subsubsection*{1.1.4. Selección de los trabajos}
+\subsubsection{Selección de los trabajos}
 
 La selección de trabajos se realizó mediante un filtrado progresivo, tomando como base los criterios de búsqueda definidos. El proceso partió de una revisión amplia y luego avanzó hacia una depuración técnica para asegurar pertinencia real con el objetivo de la investigación.
 
@@ -130,7 +130,7 @@ Como resultado del proceso, se seleccionaron \textbf{10 artículos} base para lo
     \item T. Xu et al., \textit{Leveraging open data to improve urban mobility}, 2022.
 \end{enumerate}
 
-\subsubsection*{1.1.5. Extracción de contenido}
+\subsubsection{Extracción de contenido}
 
 Para cada trabajo finalista se extrajeron cuatro componentes: \textbf{problemática, solución, resultados y conclusiones}. Esta estructura permitió comparar aportes y vacíos de manera homogénea.
 
@@ -196,7 +196,7 @@ Para cada trabajo finalista se extrajeron cuatro componentes: \textbf{problemát
     \textbf{[Conclusiones]} El artículo concluye que los datos abiertos son un habilitador estratégico para escalar soluciones de transporte inteligente con mayor transparencia y potencial de innovación.
 \end{enumerate}
 
-\subsubsection*{1.1.6. Tabla comparativa}
+\subsubsection{Tabla comparativa}
 
 Con el fin de sintetizar los aportes de los antecedentes seleccionados, se construyó una matriz comparativa centrada en cuatro ejes: tecnologías o enfoque técnico predominante, aproximación metodológica, hallazgos reportados y limitaciones relevantes para la presente investigación.
 
@@ -277,7 +277,7 @@ Costo & Modelo de cobro por consulta individual, desincentivando la iteración y
 
 Asimismo, se evaluó la herramienta Lexius.AI, un asistente legal entrenado específicamente en el contexto normativo peruano. Aunque esta solución presenta avances notables, como la incorporación de Inteligencia Artificial Explicable (XAI) y el uso de arquitecturas RAG para fundamentar sus respuestas, se identificaron limitaciones operativas y de seguridad críticas. En su modalidad de acceso gratuito, la herramienta restringe funcionalidades esenciales como la carga y análisis de documentos (PDF), limitando su interacción a un chat convencional. De mayor gravedad es su vulnerabilidad ante técnicas de prompt injection: las pruebas evidenciaron una propensión a validar premisas falsas o normativas inexistentes inducidas por el usuario, lo que compromete la veracidad de la asistencia y evidencia la falta de filtros de validación fáctica robustos.
 
-\subsubsection*{1.1.7. Discusión}
+\subsubsection{Discusión}
 
 El análisis de los antecedentes seleccionados muestra una tendencia clara hacia el uso de GPS, analítica en tiempo real y enfoques de optimización para mejorar la eficiencia del transporte público. Los trabajos revisados coinciden en que la principal ganancia se produce al transformar datos operativos en información accionable para usuarios y gestores, especialmente en estimación de llegada, selección de rutas y respuesta ante congestión. Esta convergencia es relevante para la presente investigación porque confirma que el problema de tiempos no se resuelve únicamente aumentando oferta de unidades, sino mejorando la calidad de decisión basada en datos.
 
@@ -289,7 +289,7 @@ Además, los antecedentes permiten identificar una brecha específica que esta t
 
 En conjunto, la evidencia revisada sustenta la pertinencia de diseñar un modelo que combine optimización operativa, trazabilidad de resultados y mecanismos de validación robusta, de modo que la solución no solo sea técnicamente eficiente, sino también utilizable y confiable en contexto real.
 
-\subsubsection*{1.1.8. Conclusiones}
+\subsubsection{Conclusiones}
 
 La revisión realizada permite concluir que existe base técnica suficiente para sustentar el desarrollo de un modelo orientado a reducir tiempos en sistemas de transporte público mediante datos de geolocalización y procesamiento en tiempo real. Los antecedentes revisados demuestran aportes consistentes en predicción de llegada, optimización de trayectos y mejora de experiencia de usuario. Esta convergencia de evidencia respalda directamente la línea de trabajo de la investigación y valida la pertinencia de abordar el problema desde una solución tecnológica basada en datos.
 
@@ -299,13 +299,13 @@ Asimismo, el contraste entre literatura académica y herramientas comerciales pe
 
 Finalmente, se concluye que la investigación debe avanzar hacia un modelo con tres características centrales: (i) precisión temporal basada en GPS y datos en tiempo real, (ii) integración funcional para operación continua y (iii) utilidad práctica para el usuario mediante una aplicación web clara y accesible. Estas conclusiones orientan de forma directa el desarrollo metodológico y la validación posterior del estudio.
 
-\subsection*{1.2. Fundamentos teóricos}
+\subsection{Fundamentos teóricos}
 
 Esta sección desarrolla la base conceptual que sustenta la propuesta de investigación. A diferencia de los antecedentes (centrados en evidencia empírica), los fundamentos teóricos delimitan los conceptos clave del problema y explican cómo se articulan dentro del modelo propuesto para reducir tiempos de espera y desplazamiento en transporte público urbano.
 
 Para mantener coherencia con los objetivos del estudio, los fundamentos se organizan en cuatro ejes: \textbf{modelo}, \textbf{usuarios de transporte público}, \textbf{tecnologías web para movilidad} y \textbf{sistema de posicionamiento global (GPS)}.
 
-\subsubsection*{1.2.1. Modelo}
+\subsubsection{Modelo}
 
 En el contexto de la investigación tecnológica, un modelo puede entenderse como una representación estructurada de componentes, reglas y relaciones orientadas a resolver un problema real \cite{pressman2005}. No se trata solo de un esquema conceptual, sino de una guía operativa que define qué datos se capturan, cómo se procesan, qué decisiones se generan y qué resultados se esperan en términos medibles.
 
@@ -318,7 +318,7 @@ Para esta tesis, el modelo integra tres capas:
 
 La utilidad del modelo radica en su capacidad de conectar información dinámica del sistema de transporte con decisiones concretas del usuario, reduciendo incertidumbre y mejorando la planificación del viaje. En términos metodológicos, este enfoque permite evaluar impacto mediante comparación pre y post implementación, alineándose con el objetivo central de reducción de tiempos.
 
-\subsubsection*{1.2.2. Usuarios de transporte público}
+\subsubsection{Usuarios de transporte público}
 
 Los usuarios de transporte público constituyen la unidad principal de beneficio de la propuesta. Desde una perspectiva funcional, son personas que dependen de servicios colectivos de movilidad para realizar actividades cotidianas (estudio, trabajo, trámites y acceso a servicios) \cite{vuchic2007}. Su comportamiento de viaje está influido por variables como frecuencia percibida, confiabilidad del servicio, tiempo de espera y disponibilidad de información.
 
@@ -326,7 +326,7 @@ La literatura de transporte urbano reconoce que la calidad del servicio no se de
 
 Para el modelo propuesto, el usuario no es un actor pasivo que solo recibe datos; es un decisor que utiliza información en tiempo real para elegir cuándo salir, qué ruta tomar o si conviene replanificar su trayecto. Por ello, cualquier mejora en precisión y claridad informativa impacta directamente en la reducción del tiempo improductivo asociado a la espera.
 
-\subsubsection*{1.2.3. Tecnologías web para movilidad}
+\subsubsection{Tecnologías web para movilidad}
 
 Las tecnologías web aplicadas a movilidad permiten centralizar datos, procesarlos de manera continua y distribuir información a múltiples usuarios sin depender de instalación local compleja. Su principal ventaja en escenarios urbanos es la escalabilidad: una misma plataforma puede atender a usuarios, operadores y gestores con distintos niveles de acceso y distintas necesidades informativas. Este enfoque se apoya en fundamentos de computación móvil y servicios en red descritos en la literatura clásica del área \cite{talukder2005,varshney2002}.
 
@@ -339,7 +339,7 @@ En términos de arquitectura, una solución web para transporte público suele c
 
 La base teórica de este enfoque se relaciona con sistemas de información en red y servicios basados en localización, donde el valor principal surge de entregar información contextualizada en el momento de decisión \cite{varshney2002}. Para esta investigación, el componente web resulta pertinente porque facilita despliegue progresivo, interoperabilidad y acceso amplio por parte de usuarios con conectividad.
 
-\subsubsection*{1.2.4. Sistema de Posicionamiento Global (GPS)}
+\subsubsection{Sistema de Posicionamiento Global (GPS)}
 
 El GPS es una infraestructura satelital que permite estimar posición geográfica, velocidad y tiempo mediante receptores en superficie \cite{elrabbany2006}. En transporte público, su rol teórico-práctico es fundamental: convierte el movimiento de las unidades en datos objetivos que pueden usarse para monitoreo, análisis y predicción operativa \cite{schiller2004,gonzalez2004}.
 
