@@ -1,68 +1,701 @@
 \subsection{Desarrollo de metodología}
 
-En esta sección se describe la ejecución metodológica del proyecto en su fase operativa, detallando cómo se aplicó el enfoque Scrum adaptado durante la construcción progresiva de la propuesta tecnológica. El propósito es evidenciar, de manera ordenada, la relación entre planificación, desarrollo técnico y validación de resultados en cada iteración.
+En esta sección se desarrolla la ejecución operativa de las iteraciones iniciales del proyecto (Sprint 1, Sprint 2 y Sprint 3), alineadas al enfoque Scrum adaptado y a los objetivos de la investigación. Se describen actividades realizadas, entregables comprometidos y artefactos técnicos producidos para consolidar la base de la solución propuesta.
 
-\subsubsection{Análisis de requisitos}
+\subsubsection{Semana 30/03/2026 -- Iteración/Sprint 1}
 
-En esta etapa se identificó la problemática central del estudio y se delimitaron las necesidades funcionales y técnicas del sistema. El objetivo fue establecer una base clara para iniciar el desarrollo por Sprints.
+\textbf{Objetivo del Sprint:} establecer la base conceptual y de diseño de la propuesta, definiendo la estructura de arquitectura, el dominio de negocio y los primeros artefactos de análisis funcional.
 
+\textbf{Actividades desarrolladas:}
 \begin{itemize}
-    \item Identificación de stakeholders.
-    \item Levantamiento de información del problema.
-    \item Definición de requerimientos funcionales.
-    \item Definición de requerimientos no funcionales.
-    \item Elaboración de historias de usuario.
-    \item Definición de criterios de aceptación.
-    \item Priorización inicial en el Product Backlog.
+    \item Especificación del diseño: definición de estrategias bajo Clean Architecture.
+    \item Modelado del dominio: identificación de Entidades, Value Objects y Agregados (Bus, Ruta, Paradero).
+    \item Definición de reglas de negocio y lógica de dominio para el monitoreo.
+    \item Redacción de historias de usuario iniciales en formato estándar (Como/Quiero/Para).
 \end{itemize}
 
-\subsubsection{Diseño del sistema}
+\textbf{Especificación del diseño (propuesta):}
 
-La fase de diseño permitió transformar los requerimientos en una solución técnicamente estructurada, manteniendo coherencia con el enfoque de Clean Architecture y el modelado orientado al dominio.
-
+La propuesta adopta \textbf{Clean Architecture} para desacoplar reglas de negocio de frameworks, base de datos e interfaces externas. La solución se organiza en cuatro capas:
 \begin{itemize}
-    \item Definición de la arquitectura del sistema.
-    \item Modelado del dominio (DDD).
-    \item Identificación de entidades y agregados.
-    \item Diseño de casos de uso (capa de aplicación).
-    \item Diseño de base de datos.
-    \item Definición de interfaces y contratos (API).
-    \item Diseño de la estructura del frontend.
+    \item \textbf{Dominio:} entidades, value objects, agregados y reglas de negocio puras.
+    \item \textbf{Aplicación:} casos de uso, puertos de entrada/salida y coordinación de flujo.
+    \item \textbf{Infraestructura:} persistencia, adaptadores externos, mensajería y geodatos.
+    \item \textbf{Presentación:} API REST y cliente web para visualización en mapas.
 \end{itemize}
 
-\subsubsection{Planificación de iteraciones (Sprints)}
+Como estrategia de diseño, se aplican principios SOLID, inyección de dependencias e inversión de control. Esto permite que el núcleo del sistema (dominio) sea testeable y evolutivo sin dependencia directa de tecnologías de implementación.
 
-Esta fase organizó el trabajo incremental de acuerdo con Scrum adaptado, estableciendo objetivos semanales concretos y entregables verificables por iteración.
-
+\textbf{Modelado de dominio (entidades, value objects y agregados):}
 \begin{itemize}
-    \item Organización del Product Backlog.
-    \item Selección de historias de usuario por Sprint.
-    \item Descomposición en tareas técnicas.
-    \item Estimación de esfuerzo.
-    \item Definición de entregables por iteración.
+    \item \textbf{Agregado Ruta:} entidad raíz \texttt{Route}, asociada a su geometría \texttt{LineString} y a la secuencia de paraderos mediante \texttt{RouteStop}.
+    \item \textbf{Agregado Bus:} entidad raíz \texttt{Bus}, con estado operativo y trazabilidad de asignación.
+    \item \textbf{Agregado Paradero:} entidad \texttt{Stop}, con ubicación geoespacial \texttt{Point} y metadatos de referencia.
+    \item \textbf{Value Objects:} \texttt{PlateNumber}, \texttt{RouteCode}, \texttt{GeoPoint}, \texttt{GeoLineString}, \texttt{BusStatus}, \texttt{DNI}, \texttt{Speed}, \texttt{Heading}.
 \end{itemize}
 
-\subsubsection{Implementación y construcción incremental}
+\textbf{Reglas de negocio iniciales para monitoreo:}
+\begin{enumerate}
+    \item Un bus solo puede tener una asignación activa por turno.
+    \item Una asignación requiere bus, conductor y ruta válidos.
+    \item Solo buses en estado \texttt{activo} publican ubicación en tiempo real.
+    \item Cada registro de ubicación debe incluir marca temporal válida.
+    \item La placa del bus, el DNI del conductor y el código SIT de ruta son únicos.
+    \item El cálculo de ETA usa historial de tráfico por segmento de ruta y condición de hora punta.
+\end{enumerate}
 
-En esta etapa se desarrollaron los componentes funcionales del sistema, integrando backend, frontend y persistencia espacial de datos de forma progresiva.
+\textbf{Historias de usuario iniciales (formato estructurado):}
 
+Sí, las historias de usuario se documentan en formato \textbf{Como/Quiero/Para}, incorporando identificador, escenario y criterio de aceptación para mejorar trazabilidad y validación.
+
+\textbf{Plantilla base utilizada}
 \begin{itemize}
-    \item Desarrollo de la lógica de negocio.
-    \item Implementación de casos de uso.
-    \item Desarrollo de APIs.
-    \item Implementación de persistencia de datos.
-    \item Desarrollo de la interfaz de usuario.
-    \item Integración entre frontend y backend.
-    \item Aplicación de principios SOLID y buenas prácticas.
+    \item \textbf{ID:} HU-XXX
+    \item \textbf{Como} [rol]
+    \item \textbf{Quiero/Necesito} [funcionalidad]
+    \item \textbf{Para} [razón o resultado]
+    \item \textbf{Escenarios y criterios:} En caso que [contexto], cuando [evento], el sistema [resultado esperado].
 \end{itemize}
 
-\subsubsection{Validación y control de calidad}
+\textbf{Backlog inicial ampliado de historias de usuario}
+\begin{longtable}{|p{0.11\textwidth}|p{0.17\textwidth}|p{0.31\textwidth}|p{0.31\textwidth}|}
+\hline
+\textbf{ID} & \textbf{Rol} & \textbf{Necesito / Quiero} & \textbf{Para} \\
+\hline
+\endfirsthead
+\hline
+\textbf{ID} & \textbf{Rol} & \textbf{Necesito / Quiero} & \textbf{Para} \\
+\hline
+\endhead
+HU-001 & Usuario del transporte & Ver en el mapa los buses activos por ruta. & Estimar mejor mi hora de salida y reducir espera en paradero. \\
+\hline
+HU-002 & Usuario del transporte & Identificar el paradero más cercano a mi ubicación actual. & Reducir tiempo de búsqueda y caminata innecesaria. \\
+\hline
+HU-003 & Usuario del transporte & Consultar una ruta específica con su trazo y paraderos ordenados. & Planificar mi desplazamiento con anticipación. \\
+\hline
+HU-004 & Usuario del transporte & Visualizar el ETA del próximo bus al paradero seleccionado. & Tomar decisiones de viaje con menor incertidumbre. \\
+\hline
+HU-005 & Operador & Registrar asignación bus-conductor-ruta por turno. & Mantener control operativo diario de la flota. \\
+\hline
+HU-006 & Operador & Actualizar ubicación GPS del bus en tiempo real. & Mejorar precisión de monitoreo y de ETA. \\
+\hline
+HU-007 & Operador & Consultar el estado operativo del bus (activo/mantenimiento/fuera de servicio). & Evitar publicar unidades no disponibles. \\
+\hline
+HU-008 & Administrador & Registrar y editar rutas SIT con color y geometría. & Mantener actualizado el catálogo operativo. \\
+\hline
+HU-009 & Administrador & Registrar y editar paraderos con referencia geográfica. & Mejorar precisión de puntos de abordaje y descenso. \\
+\hline
+HU-010 & Administrador & Registrar y actualizar datos de conductores y buses. & Asegurar trazabilidad de operación por unidad y chofer. \\
+\hline
+HU-011 & Administrador & Consultar historial de tráfico por ruta, tramo y franja horaria. & Alimentar la estimación de tiempos de arribo. \\
+\hline
+HU-012 & Investigador & Exportar métricas de espera antes y después del uso del sistema. & Evaluar el impacto del modelo propuesto en la tesis. \\
+\hline
+\end{longtable}
 
-La fase de validación aseguró que cada incremento cumpla con los criterios de aceptación definidos y que el sistema mantenga estabilidad funcional al cierre de cada Sprint.
+\textbf{Matriz de criterios de aceptación (ejemplos)}
+\begin{longtable}{|p{0.10\textwidth}|p{0.19\textwidth}|p{0.28\textwidth}|p{0.16\textwidth}|p{0.19\textwidth}|}
+\hline
+\textbf{ID} & \textbf{Escenario} & \textbf{Contexto} & \textbf{Evento} & \textbf{Resultado esperado} \\
+\hline
+\endfirsthead
+\hline
+\textbf{ID} & \textbf{Escenario} & \textbf{Contexto} & \textbf{Evento} & \textbf{Resultado esperado} \\
+\hline
+\endhead
+HU-001 & Visualizar buses activos & En caso que el usuario seleccione una ruta válida con unidades activas. & Cuando actualice el mapa. & El sistema muestra marcadores de buses con su última ubicación y hora de actualización. \\
+\hline
+HU-002 & Paradero más cercano & En caso que el usuario permita geolocalización del navegador. & Cuando solicite ``paradero cercano''. & El sistema calcula distancia y resalta el paradero más próximo. \\
+\hline
+HU-004 & ETA en paradero & En caso que existan datos de tráfico e historial para la ruta. & Cuando seleccione un paradero. & El sistema muestra ETA estimado del siguiente bus y rango de confianza. \\
+\hline
+HU-005 & Asignación de turno & En caso que bus, conductor y ruta existan y estén disponibles. & Cuando el operador registre el turno. & El sistema crea una asignación válida sin duplicidad de bus activo en el mismo horario. \\
+\hline
+HU-006 & Actualización GPS & En caso que el bus esté en estado activo. & Cuando llegue un nuevo paquete de ubicación. & El sistema actualiza \texttt{Live\_Tracking} con punto, timestamp, velocidad y rumbo. \\
+\hline
+HU-011 & Consulta de tráfico histórico & En caso que el administrador seleccione ruta, segmento y rango de fechas. & Cuando ejecute la consulta. & El sistema devuelve velocidad promedio, condición de hora punta y serie temporal. \\
+\hline
+\end{longtable}
 
+\textbf{Entregables base del Sprint 1:}
 \begin{itemize}
-    \item Pruebas funcionales por iteración.
-    \item Verificación de criterios de aceptación.
-    \item Registro y corrección de incidencias.
-    \item Ajustes finales de estabilidad y usabilidad.
+    \item Sección ``Especificación del Diseño (Propuesta)'' redactada al 40\%.
+    \item Sección ``Historias de Usuario'' redactada al 50\%.
+    \item Diagrama de clases de dominio (Entidades y Value Objects) al 70\%: elaborado e incorporado.
+\end{itemize}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{assets/diagrama-clases-dominio-transporte.png}
+\caption{Diagrama de clases del dominio para la solución propuesta}
+\end{figure}
+
+\subsubsection{Semana 06/04/2026 -- Iteración/Sprint 2}
+
+\textbf{Objetivo del Sprint:} definir formalmente la arquitectura de la solución, su vista física de infraestructura y los requisitos funcionales y no funcionales que guiarán la implementación.
+
+\textbf{Actividades desarrolladas:}
+\begin{itemize}
+    \item Diseño de herramientas de la propuesta: diagramas de capas y comunicación entre módulos.
+    \item Definición de diagrama de vista física para la capa de infraestructura.
+    \item Redacción de requisitos funcionales (RF, mínimo 10) y no funcionales (RNF, mínimo 5) detallados.
+\end{itemize}
+
+\textbf{Arquitectura y herramientas (diagramas de capas y comunicación):}
+
+El flujo principal definido es el siguiente:
+\begin{enumerate}
+    \item Cliente web (Next.js) consume endpoints de API REST.
+    \item Controladores (NestJS) reciben solicitudes y delegan en casos de uso.
+    \item Casos de uso interactúan con interfaces de repositorio (puertos).
+    \item Adaptadores de infraestructura implementan los puertos con TypeORM/PostgreSQL + PostGIS.
+    \item Módulo de tracking alimenta el estado de ubicación actual.
+    \item Módulo de analítica consulta historial de tráfico para estimar ETA.
+\end{enumerate}
+
+\textbf{Diagrama de capas:} \textbf{(vacio por ahora)}.
+
+\textbf{Diagrama de vista física (infraestructura):}
+\begin{itemize}
+    \item Contenedor \texttt{frontend}: aplicación web Next.js.
+    \item Contenedor \texttt{backend}: API NestJS con lógica de aplicación.
+    \item Contenedor \texttt{db}: PostgreSQL + PostGIS.
+    \item Contenedor \texttt{redis}: soporte opcional para tracking en tiempo real.
+    \item Integración CI/CD para pruebas y despliegue inicial: \textbf{(vacio por ahora)}.
+\end{itemize}
+
+\textbf{Diagrama de vista física:} \textbf{(vacio por ahora)}.
+
+\textbf{Requisitos funcionales (RF):}
+\textit{Los requisitos funcionales se documentan con plantilla tipo ficha.}
+
+\textbf{RF-0001}
+\begin{longtable}{|p{0.28\textwidth}|p{0.66\textwidth}|}
+\hline
+Código & RF-0001 \\
+\hline
+Nombre & Registrar rutas SIT \\
+\hline
+Atributo de calidad & Funcionalidad \\
+\hline
+Versión & 01.00 \\
+\hline
+Autor & Roger Infa Sanchez \\
+\hline
+Descripción & El sistema permite registrar rutas con código SIT, nombre, color y geometría de tipo LineString. \\
+\hline
+Importancia & Vital \\
+\hline
+Estado & Pendiente \\
+\hline
+\end{longtable}
+
+\textbf{RF-0002}
+\begin{longtable}{|p{0.28\textwidth}|p{0.66\textwidth}|}
+\hline
+Código & RF-0002 \\
+\hline
+Nombre & Registrar paraderos \\
+\hline
+Atributo de calidad & Funcionalidad \\
+\hline
+Versión & 01.00 \\
+\hline
+Autor & Roger Infa Sanchez \\
+\hline
+Descripción & El sistema permite registrar paraderos con nombre, ubicación Point y referencia textual. \\
+\hline
+Importancia & Vital \\
+\hline
+Estado & Pendiente \\
+\hline
+\end{longtable}
+
+\textbf{RF-0003}
+\begin{longtable}{|p{0.28\textwidth}|p{0.66\textwidth}|}
+\hline
+Código & RF-0003 \\
+\hline
+Nombre & Asociar paraderos a rutas \\
+\hline
+Atributo de calidad & Funcionalidad \\
+\hline
+Versión & 01.00 \\
+\hline
+Autor & Roger Infa Sanchez \\
+\hline
+Descripción & El sistema asocia paraderos a una ruta mediante Route\_Stops, manteniendo orden secuencial. \\
+\hline
+Importancia & Vital \\
+\hline
+Estado & Pendiente \\
+\hline
+\end{longtable}
+
+\textbf{RF-0004}
+\begin{longtable}{|p{0.28\textwidth}|p{0.66\textwidth}|}
+\hline
+Código & RF-0004 \\
+\hline
+Nombre & Registrar buses \\
+\hline
+Atributo de calidad & Funcionalidad \\
+\hline
+Versión & 01.00 \\
+\hline
+Autor & Roger Infa Sanchez \\
+\hline
+Descripción & El sistema registra buses con placa única, modelo, capacidad y estado operativo. \\
+\hline
+Importancia & Vital \\
+\hline
+Estado & Pendiente \\
+\hline
+\end{longtable}
+
+\textbf{RF-0005}
+\begin{longtable}{|p{0.28\textwidth}|p{0.66\textwidth}|}
+\hline
+Código & RF-0005 \\
+\hline
+Nombre & Registrar conductores \\
+\hline
+Atributo de calidad & Funcionalidad \\
+\hline
+Versión & 01.00 \\
+\hline
+Autor & Roger Infa Sanchez \\
+\hline
+Descripción & El sistema registra conductores con nombre, DNI único y teléfono de contacto. \\
+\hline
+Importancia & Vital \\
+\hline
+Estado & Pendiente \\
+\hline
+\end{longtable}
+
+\textbf{RF-0006}
+\begin{longtable}{|p{0.28\textwidth}|p{0.66\textwidth}|}
+\hline
+Código & RF-0006 \\
+\hline
+Nombre & Gestionar asignaciones de turno \\
+\hline
+Atributo de calidad & Funcionalidad \\
+\hline
+Versión & 01.00 \\
+\hline
+Autor & Roger Infa Sanchez \\
+\hline
+Descripción & El sistema crea asignaciones bus-conductor-ruta por fecha de turno sin duplicidad activa. \\
+\hline
+Importancia & Vital \\
+\hline
+Estado & Pendiente \\
+\hline
+\end{longtable}
+
+\textbf{RF-0007}
+\begin{longtable}{|p{0.28\textwidth}|p{0.66\textwidth}|}
+\hline
+Código & RF-0007 \\
+\hline
+Nombre & Actualizar ubicación en tiempo real \\
+\hline
+Atributo de calidad & Funcionalidad \\
+\hline
+Versión & 01.00 \\
+\hline
+Autor & Roger Infa Sanchez \\
+\hline
+Descripción & El sistema registra en Live\_Tracking la última ubicación, velocidad, rumbo y timestamp del bus activo. \\
+\hline
+Importancia & Vital \\
+\hline
+Estado & Pendiente \\
+\hline
+\end{longtable}
+
+\textbf{RF-0008}
+\begin{longtable}{|p{0.28\textwidth}|p{0.66\textwidth}|}
+\hline
+Código & RF-0008 \\
+\hline
+Nombre & Consultar buses por ruta \\
+\hline
+Atributo de calidad & Funcionalidad \\
+\hline
+Versión & 01.00 \\
+\hline
+Autor & Roger Infa Sanchez \\
+\hline
+Descripción & El sistema muestra en mapa los buses activos filtrados por ruta seleccionada. \\
+\hline
+Importancia & Vital \\
+\hline
+Estado & Pendiente \\
+\hline
+\end{longtable}
+
+\textbf{RF-0009}
+\begin{longtable}{|p{0.28\textwidth}|p{0.66\textwidth}|}
+\hline
+Código & RF-0009 \\
+\hline
+Nombre & Detectar paradero más cercano \\
+\hline
+Atributo de calidad & Funcionalidad \\
+\hline
+Versión & 01.00 \\
+\hline
+Autor & Roger Infa Sanchez \\
+\hline
+Descripción & El sistema calcula distancia entre ubicación del usuario y paraderos para identificar el más cercano. \\
+\hline
+Importancia & Vital \\
+\hline
+Estado & Pendiente \\
+\hline
+\end{longtable}
+
+\textbf{RF-0010}
+\begin{longtable}{|p{0.28\textwidth}|p{0.66\textwidth}|}
+\hline
+Código & RF-0010 \\
+\hline
+Nombre & Estimar tiempo de arribo (ETA) \\
+\hline
+Atributo de calidad & Funcionalidad \\
+\hline
+Versión & 01.00 \\
+\hline
+Autor & Roger Infa Sanchez \\
+\hline
+Descripción & El sistema calcula ETA usando historial de tráfico por segmento de ruta y condición de hora punta. \\
+\hline
+Importancia & Vital \\
+\hline
+Estado & Pendiente \\
+\hline
+\end{longtable}
+
+\textbf{RF-0011}
+\begin{longtable}{|p{0.28\textwidth}|p{0.66\textwidth}|}
+\hline
+Código & RF-0011 \\
+\hline
+Nombre & Consultar historial de tráfico \\
+\hline
+Atributo de calidad & Funcionalidad \\
+\hline
+Versión & 01.00 \\
+\hline
+Autor & Roger Infa Sanchez \\
+\hline
+Descripción & El sistema consulta tráfico por ruta, segmento y franja horaria para soporte de decisión. \\
+\hline
+Importancia & Opcional \\
+\hline
+Estado & Pendiente \\
+\hline
+\end{longtable}
+
+\textbf{RF-0012}
+\begin{longtable}{|p{0.28\textwidth}|p{0.66\textwidth}|}
+\hline
+Código & RF-0012 \\
+\hline
+Nombre & Gestionar estado operativo del bus \\
+\hline
+Atributo de calidad & Funcionalidad \\
+\hline
+Versión & 01.00 \\
+\hline
+Autor & Roger Infa Sanchez \\
+\hline
+Descripción & El sistema permite cambiar estado del bus entre activo, mantenimiento y fuera de servicio. \\
+\hline
+Importancia & Vital \\
+\hline
+Estado & Pendiente \\
+\hline
+\end{longtable}
+
+\textbf{Requisitos no funcionales (RNF):}
+\textit{Los requisitos no funcionales también se registran con la misma plantilla tipo ficha.}
+
+\textbf{RNF-0001}
+\begin{longtable}{|p{0.28\textwidth}|p{0.66\textwidth}|}
+\hline
+Código & RNF-0001 \\
+\hline
+Nombre & Disponibilidad del sistema \\
+\hline
+Atributo de calidad & Disponibilidad \\
+\hline
+Versión & 01.00 \\
+\hline
+Autor & Roger Infa Sanchez \\
+\hline
+Descripción & El sistema debe mantener disponibilidad mínima de 99\% en horario operativo definido. \\
+\hline
+Importancia & Vital \\
+\hline
+Estado & Pendiente \\
+\hline
+\end{longtable}
+
+\textbf{RNF-0002}
+\begin{longtable}{|p{0.28\textwidth}|p{0.66\textwidth}|}
+\hline
+Código & RNF-0002 \\
+\hline
+Nombre & Rendimiento de consultas API \\
+\hline
+Atributo de calidad & Rendimiento \\
+\hline
+Versión & 01.00 \\
+\hline
+Autor & Roger Infa Sanchez \\
+\hline
+Descripción & El tiempo de respuesta promedio de consultas estándar debe ser menor a 2 segundos. \\
+\hline
+Importancia & Vital \\
+\hline
+Estado & Pendiente \\
+\hline
+\end{longtable}
+
+\textbf{RNF-0003}
+\begin{longtable}{|p{0.28\textwidth}|p{0.66\textwidth}|}
+\hline
+Código & RNF-0003 \\
+\hline
+Nombre & Escalabilidad del backend \\
+\hline
+Atributo de calidad & Escalabilidad \\
+\hline
+Versión & 01.00 \\
+\hline
+Autor & Roger Infa Sanchez \\
+\hline
+Descripción & La arquitectura permite escalamiento horizontal para atender crecimiento de usuarios concurrentes. \\
+\hline
+Importancia & Vital \\
+\hline
+Estado & Pendiente \\
+\hline
+\end{longtable}
+
+\textbf{RNF-0004}
+\begin{longtable}{|p{0.28\textwidth}|p{0.66\textwidth}|}
+\hline
+Código & RNF-0004 \\
+\hline
+Nombre & Seguridad de acceso y datos \\
+\hline
+Atributo de calidad & Seguridad \\
+\hline
+Versión & 01.00 \\
+\hline
+Autor & Roger Infa Sanchez \\
+\hline
+Descripción & El sistema debe validar entradas y aplicar control de acceso por roles en endpoints protegidos. \\
+\hline
+Importancia & Vital \\
+\hline
+Estado & Pendiente \\
+\hline
+\end{longtable}
+
+\textbf{RNF-0005}
+\begin{longtable}{|p{0.28\textwidth}|p{0.66\textwidth}|}
+\hline
+Código & RNF-0005 \\
+\hline
+Nombre & Trazabilidad operativa \\
+\hline
+Atributo de calidad & Auditabilidad \\
+\hline
+Versión & 01.00 \\
+\hline
+Autor & Roger Infa Sanchez \\
+\hline
+Descripción & El sistema registra eventos críticos: asignaciones, cambios de estado y actualizaciones de tracking. \\
+\hline
+Importancia & Opcional \\
+\hline
+Estado & Pendiente \\
+\hline
+\end{longtable}
+
+\textbf{RNF-0006}
+\begin{longtable}{|p{0.28\textwidth}|p{0.66\textwidth}|}
+\hline
+Código & RNF-0006 \\
+\hline
+Nombre & Compatibilidad de interfaz \\
+\hline
+Atributo de calidad & Usabilidad \\
+\hline
+Versión & 01.00 \\
+\hline
+Autor & Roger Infa Sanchez \\
+\hline
+Descripción & La interfaz web debe ser responsiva y compatible con navegadores modernos de escritorio y móvil. \\
+\hline
+Importancia & Vital \\
+\hline
+Estado & Pendiente \\
+\hline
+\end{longtable}
+
+\textbf{Diagrama de secuencia (caso de uso principal):}
+
+Caso de uso seleccionado: ``Consultar buses en tiempo real por ruta''.
+\begin{enumerate}
+    \item Usuario selecciona una ruta en la interfaz web.
+    \item Frontend solicita al backend buses activos y última ubicación por ruta.
+    \item API valida parámetros de consulta.
+    \item Caso de uso consulta asignaciones activas y datos de \texttt{Live\_Tracking}.
+    \item Infraestructura devuelve datos georreferenciados.
+    \item Frontend renderiza marcadores y estado de actualización.
+\end{enumerate}
+
+\textbf{Diagrama de secuencia (artefacto gráfico):} \textbf{(vacio por ahora)}.
+
+\textbf{Listado de herramientas tecnológicas justificadas:}
+\begin{itemize}
+    \item \textbf{NestJS:} framework backend modular para API robusta y mantenible.
+    \item \textbf{Next.js:} framework frontend para interfaz web moderna y eficiente.
+    \item \textbf{PostgreSQL:} motor relacional para consistencia transaccional.
+    \item \textbf{PostGIS:} extensión espacial para consultas geográficas (Point/LineString).
+    \item \textbf{TypeORM:} mapeo objeto-relacional con soporte de migraciones.
+    \item \textbf{Class-validator:} validación declarativa de DTOs en capa de entrada.
+    \item \textbf{Redis (opcional):} almacenamiento de baja latencia para tracking en vivo.
+    \item \textbf{Docker y Docker Compose:} estandarización de entorno y despliegue local.
+    \item \textbf{ESLint + Prettier:} calidad de código y formato uniforme.
+    \item \textbf{GitHub Actions (CI/CD):} ejecución de pruebas y verificación automática.
+\end{itemize}
+
+\textbf{Entregables base del Sprint 2:}
+\begin{itemize}
+    \item Sección ``Arquitectura y Herramientas'' redactada al 70\%.
+    \item Sección ``Requisitos del Sistema'' redactada al 80\%.
+    \item Diagrama de secuencia de un caso de uso principal al 100\%: \textbf{(vacio por ahora)}.
+    \item Listado de herramientas tecnológicas justificadas en el documento al 100\%.
+\end{itemize}
+
+\subsubsection{Semana 13/04/2026 -- Iteración/Sprint 3}
+
+\textbf{Objetivo del Sprint:} consolidar el modelo de datos principal, preparar el entorno de implementación y establecer una base ejecutable con estructura Clean Architecture.
+
+\textbf{Actividades desarrolladas:}
+\begin{itemize}
+    \item Diseño de base de datos: elaboración del Diagrama Entidad-Relación (E-R) principal.
+    \item Setup del entorno: inicialización de NestJS y Next.js con estructura de carpetas para Clean Architecture.
+    \item Configuración de variables de entorno, ESLint, Prettier, CI/CD y contenedores base.
+    \item Instalación y configuración de dependencias core (TypeORM, PostGIS types, Class-validator).
+\end{itemize}
+
+\textbf{Modelo de datos (Diagrama E-R principal):}
+
+\textbf{1. Entidades principales}
+\begin{itemize}
+    \item \textbf{Routes}
+    \begin{itemize}
+        \item \texttt{id}: UUID (PK)
+        \item \texttt{nombre}: String
+        \item \texttt{codigo\_sit}: String (Unique)
+        \item \texttt{color}: String (Hexadecimal)
+        \item \texttt{geometria}: LineString
+    \end{itemize}
+    \item \textbf{Stops}
+    \begin{itemize}
+        \item \texttt{id}: UUID (PK)
+        \item \texttt{nombre}: String
+        \item \texttt{ubicacion}: Point
+        \item \texttt{referencia}: Text
+    \end{itemize}
+    \item \textbf{Buses}
+    \begin{itemize}
+        \item \texttt{id}: UUID (PK)
+        \item \texttt{placa}: String (Unique)
+        \item \texttt{modelo}: String
+        \item \texttt{capacidad}: Integer
+        \item \texttt{estado}: Enum (\texttt{activo}, \texttt{mantenimiento}, \texttt{fuera\_de\_servicio})
+    \end{itemize}
+    \item \textbf{Drivers}
+    \begin{itemize}
+        \item \texttt{id}: UUID (PK)
+        \item \texttt{nombre}: String
+        \item \texttt{dni}: String (Unique)
+        \item \texttt{telefono}: String
+    \end{itemize}
+\end{itemize}
+
+\textbf{2. Entidades de relación y tiempo real}
+\begin{itemize}
+    \item \textbf{Assignments}
+    \begin{itemize}
+        \item \texttt{id}: UUID (PK)
+        \item \texttt{bus\_id}: FK $\rightarrow$ Buses
+        \item \texttt{driver\_id}: FK $\rightarrow$ Drivers
+        \item \texttt{route\_id}: FK $\rightarrow$ Routes
+        \item \texttt{fecha\_turno}: DateTime
+    \end{itemize}
+    \item \textbf{Live\_Tracking}
+    \begin{itemize}
+        \item \texttt{bus\_id}: FK $\rightarrow$ Buses (PK)
+        \item \texttt{ultima\_ubicacion}: Point
+        \item \texttt{ultima\_actualizacion}: Timestamp
+        \item \texttt{velocidad\_actual}: Float
+        \item \texttt{rumbo}: Float
+    \end{itemize}
+\end{itemize}
+
+\textbf{3. Entidades para tiempos y tráfico}
+\begin{itemize}
+    \item \textbf{Traffic\_History}
+    \begin{itemize}
+        \item \texttt{id}: BigInt (PK)
+        \item \texttt{route\_id}: FK $\rightarrow$ Routes
+        \item \texttt{segmento\_ruta}: Integer
+        \item \texttt{velocidad\_promedio}: Float
+        \item \texttt{hora\_punta}: Boolean
+        \item \texttt{timestamp}: DateTime
+    \end{itemize}
+\end{itemize}
+
+\textbf{Relaciones lógicas principales}
+\begin{itemize}
+    \item Una \texttt{Route} tiene muchos \texttt{Stops} (N:M) mediante tabla intermedia \texttt{Route\_Stops} con orden secuencial.
+    \item Una \texttt{Route} tiene muchos \texttt{Buses} activos (1:N).
+    \item Un \texttt{Bus} tiene una sola ubicación en tiempo real (1:1) en \texttt{Live\_Tracking}.
+\end{itemize}
+
+\textbf{Diagrama E-R (artefacto gráfico):} \textbf{(vacio por ahora)}.
+
+\textbf{Setup del entorno y estructura de repositorios:}
+\begin{itemize}
+    \item Inicialización de repositorio backend con NestJS: \textbf{(vacio por ahora)}.
+    \item Inicialización de repositorio frontend con Next.js: \textbf{(vacio por ahora)}.
+    \item Estructura por capas (dominio, aplicación, infraestructura, presentación): \textbf{(vacio por ahora)}.
+\end{itemize}
+
+\textbf{Configuración técnica base:}
+\begin{itemize}
+    \item Variables de entorno (\texttt{.env}): \textbf{(vacio por ahora)}.
+    \item Configuración ESLint y Prettier: \textbf{(vacio por ahora)}.
+    \item Configuración CI/CD: \textbf{(vacio por ahora)}.
+    \item Contenedores base con Docker Compose (DB + App): \textbf{(vacio por ahora)}.
+    \item Dependencias core (TypeORM, PostGIS types, Class-validator): \textbf{(vacio por ahora)}.
+\end{itemize}
+
+\textbf{Entregables base del Sprint 3:}
+\begin{itemize}
+    \item Sección ``Modelo de Datos (Diagrama E-R)'' redactada al 80\%.
+    \item Repositorios de código inicializados al 20\% (estructura de carpetas por capas): \textbf{(vacio por ahora)}.
+    \item Sección ``Entorno de Implementación'' redactada al 40\%.
+    \item Archivo de configuración Docker Compose básico (DB + App) al 100\%: \textbf{(vacio por ahora)}.
 \end{itemize}
