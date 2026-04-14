@@ -180,18 +180,18 @@ El flujo principal definido es el siguiente:
     \item Contenedor \texttt{frontend}: aplicación web Next.js.
     \item Contenedor \texttt{backend}: API NestJS con lógica de aplicación.
     \item Contenedor \texttt{db}: PostgreSQL + PostGIS.
-    \item Contenedor \texttt{redis}: soporte opcional para tracking en tiempo real.
-    \item Integración CI/CD para pruebas y despliegue inicial: \textbf{(vacio por ahora)}.
+    %\item Contenedor \texttt{redis}: soporte opcional para tracking en tiempo real.
+    %\item Integración CI/CD para pruebas y despliegue inicial: \textbf{(vacio por ahora)}.
 \end{itemize}
 
 \textbf{Diagrama de vista física}
+La vista física muestra una arquitectura desplegada sobre servidores Linux VPS con contenedores Docker para frontend (Next.js), backend (NestJS) y base de datos PostgreSQL. Asimismo, se observa que los clientes acceden al sistema desde navegadores web en equipos de escritorio y dispositivos móviles (Windows, Android y Apple), consumiendo los servicios de la API para consulta y monitoreo de información de transporte en tiempo real.
+
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.95\textwidth]{assets/diagrama-vista-fisica-despliegue-vps.png}
 \caption{Vista física de despliegue de la solución propuesta}
 \end{figure}
-
-La vista física muestra una arquitectura desplegada sobre servidores Linux VPS con contenedores Docker para frontend (Next.js), backend (NestJS) y base de datos PostgreSQL. Asimismo, se observa que los clientes acceden al sistema desde navegadores web en equipos de escritorio y dispositivos móviles (Windows, Android y Apple), consumiendo los servicios de la API para consulta y monitoreo de información de transporte en tiempo real.
 
 \textbf{Requisitos funcionales (RF):}
 \textit{Los requisitos funcionales se documentan con plantilla tipo ficha.}
