@@ -2,17 +2,26 @@
 
 En esta sección se desarrolla la ejecución operativa de las iteraciones iniciales del proyecto (Sprint 1, Sprint 2 y Sprint 3), alineadas al enfoque Scrum adaptado y a los objetivos de la investigación. Se describen actividades realizadas, entregables comprometidos y artefactos técnicos producidos para consolidar la base de la solución propuesta.
 
+\clearpage
 \subsubsection{Semana 30/03/2026 -- Iteración/Sprint 1}
 
-\textbf{Objetivo del Sprint:} establecer la base conceptual y de diseño de la propuesta, definiendo la estructura de arquitectura, el dominio de negocio y los primeros artefactos de análisis funcional.
-
-\textbf{Actividades desarrolladas:}
-\begin{itemize}
-    \item Especificación del diseño: definición de estrategias bajo Clean Architecture.
-    \item Modelado del dominio: identificación de Entidades, Value Objects y Agregados (Bus, Ruta, Paradero).
-    \item Definición de reglas de negocio y lógica de dominio para el monitoreo.
-    \item Redacción de historias de usuario iniciales en formato estándar (Como/Quiero/Para).
-\end{itemize}
+\begin{longtable}{|p{0.32\textwidth}|p{0.62\textwidth}|}
+\hline
+\textbf{Dato del Sprint} & \textbf{Detalle} \\
+\hline
+Semana & 30/03/2026 \\
+\hline
+Iteración / Sprint & Sprint 1 \\
+\hline
+Objetivo & Establecer la base conceptual y de diseño de la propuesta, definiendo arquitectura, dominio de negocio y artefactos de análisis funcional. \\
+\hline
+Entregables (avance) & \begin{enumerate}[leftmargin=*,nosep]
+    \item Especificación del Diseño: 40\% (En desarrollo).
+    \item Historias de Usuario: 50\% (En desarrollo).
+    \item Diagrama de clases de dominio: 70\% (Elaborado e incorporado).
+\end{enumerate} \\
+\hline
+\end{longtable}
 
 \textbf{Especificación del diseño (propuesta):}
 
@@ -117,29 +126,37 @@ HU-011 & Consulta de tráfico histórico & En caso que el administrador seleccio
 \hline
 \end{longtable}
 
-\textbf{Entregables base del Sprint 1:}
-\begin{itemize}
-    \item Sección ``Especificación del Diseño (Propuesta)'' redactada al 40\%.
-    \item Sección ``Historias de Usuario'' redactada al 50\%.
-    \item Diagrama de clases de dominio (Entidades y Value Objects) al 70\%: elaborado e incorporado.
-\end{itemize}
+\textbf{Diagrama de clases del dominio}
+\\
+El diagrama de clases representa la estructura conceptual del sistema para el monitoreo de transporte público, identificando las entidades principales (\texttt{Bus}, \texttt{Ruta}, \texttt{Paradero}, \texttt{Conductor} y \texttt{SeguimientoEnVivo}), sus atributos y sus relaciones de dominio. Este artefacto permite visualizar cómo se organiza la información operativa y geoespacial, sirviendo como base para el diseño de casos de uso, persistencia de datos y reglas de negocio en las siguientes iteraciones.
 
 \begin{figure}[H]
-\centering
-\includegraphics[width=\textwidth]{assets/diagrama-clases-dominio-transporte.png}
-\caption{Diagrama de clases del dominio para la solución propuesta}
+    \centering
+    \includegraphics[width=\textwidth]{assets/diagrama-clases-dominio-transporte.png}
+    \caption{Diagrama de clases del dominio para la solución propuesta}
 \end{figure}
 
+\clearpage
 \subsubsection{Semana 06/04/2026 -- Iteración/Sprint 2}
 
-\textbf{Objetivo del Sprint:} definir formalmente la arquitectura de la solución, su vista física de infraestructura y los requisitos funcionales y no funcionales que guiarán la implementación.
-
-\textbf{Actividades desarrolladas:}
-\begin{itemize}
-    \item Diseño de herramientas de la propuesta: diagramas de capas y comunicación entre módulos.
-    \item Definición de diagrama de vista física para la capa de infraestructura.
-    \item Redacción de requisitos funcionales (RF, mínimo 10) y no funcionales (RNF, mínimo 5) detallados.
-\end{itemize}
+\begin{longtable}{|p{0.32\textwidth}|p{0.62\textwidth}|}
+\hline
+\textbf{Dato del Sprint} & \textbf{Detalle} \\
+\hline
+Semana & 06/04/2026 \\
+\hline
+Iteración / Sprint & Sprint 2 \\
+\hline
+Objetivo & Definir formalmente la arquitectura de la solución, su vista física de infraestructura y los requisitos funcionales y no funcionales para la implementación. \\
+\hline
+Entregables (avance) & \begin{enumerate}[leftmargin=*,nosep]
+    \item Arquitectura y Herramientas: 70\% (En desarrollo).
+    \item Requisitos del Sistema: 80\% (En desarrollo).
+    \item Diagrama de secuencia: 100\% (\textbf{(vacio por ahora)}).
+    \item Listado de herramientas tecnológicas: 100\% (Completado).
+\end{enumerate} \\
+\hline
+\end{longtable}
 
 \textbf{Arquitectura y herramientas (diagramas de capas y comunicación):}
 
@@ -578,25 +595,27 @@ Caso de uso seleccionado: ``Consultar buses en tiempo real por ruta''.
     \item \textbf{GitHub Actions (CI/CD):} ejecución de pruebas y verificación automática.
 \end{itemize}
 
-\textbf{Entregables base del Sprint 2:}
-\begin{itemize}
-    \item Sección ``Arquitectura y Herramientas'' redactada al 70\%.
-    \item Sección ``Requisitos del Sistema'' redactada al 80\%.
-    \item Diagrama de secuencia de un caso de uso principal al 100\%: \textbf{(vacio por ahora)}.
-    \item Listado de herramientas tecnológicas justificadas en el documento al 100\%.
-\end{itemize}
-
+\clearpage
 \subsubsection{Semana 13/04/2026 -- Iteración/Sprint 3}
 
-\textbf{Objetivo del Sprint:} consolidar el modelo de datos principal, preparar el entorno de implementación y establecer una base ejecutable con estructura Clean Architecture.
-
-\textbf{Actividades desarrolladas:}
-\begin{itemize}
-    \item Diseño de base de datos: elaboración del Diagrama Entidad-Relación (E-R) principal.
-    \item Setup del entorno: inicialización de NestJS y Next.js con estructura de carpetas para Clean Architecture.
-    \item Configuración de variables de entorno, ESLint, Prettier, CI/CD y contenedores base.
-    \item Instalación y configuración de dependencias core (TypeORM, PostGIS types, Class-validator).
-\end{itemize}
+\begin{longtable}{|p{0.32\textwidth}|p{0.62\textwidth}|}
+\hline
+\textbf{Dato del Sprint} & \textbf{Detalle} \\
+\hline
+Semana & 13/04/2026 \\
+\hline
+Iteración / Sprint & Sprint 3 \\
+\hline
+Objetivo & Consolidar el modelo de datos principal, preparar el entorno de implementación y establecer una base ejecutable con estructura Clean Architecture. \\
+\hline
+Entregables (avance) & \begin{enumerate}[leftmargin=*,nosep]
+    \item Modelo de Datos (Diagrama E-R): 80\% (En desarrollo).
+    \item Repositorios inicializados por capas: 20\% (\textbf{(vacio por ahora)}).
+    \item Entorno de Implementación: 40\% (En desarrollo).
+    \item Docker Compose básico (DB + App): 100\% (\textbf{(vacio por ahora)}).
+\end{enumerate} \\
+\hline
+\end{longtable}
 
 \textbf{Modelo de datos (Diagrama E-R principal):}
 
@@ -692,10 +711,3 @@ Caso de uso seleccionado: ``Consultar buses en tiempo real por ruta''.
     \item Dependencias core (TypeORM, PostGIS types, Class-validator): \textbf{(vacio por ahora)}.
 \end{itemize}
 
-\textbf{Entregables base del Sprint 3:}
-\begin{itemize}
-    \item Sección ``Modelo de Datos (Diagrama E-R)'' redactada al 80\%.
-    \item Repositorios de código inicializados al 20\% (estructura de carpetas por capas): \textbf{(vacio por ahora)}.
-    \item Sección ``Entorno de Implementación'' redactada al 40\%.
-    \item Archivo de configuración Docker Compose básico (DB + App) al 100\%: \textbf{(vacio por ahora)}.
-\end{itemize}
