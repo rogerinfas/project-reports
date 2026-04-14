@@ -165,7 +165,7 @@ El flujo principal definido es el siguiente:
     \item Cliente web (Next.js) consume endpoints de API REST.
     \item Controladores (NestJS) reciben solicitudes y delegan en casos de uso.
     \item Casos de uso interactúan con interfaces de repositorio (puertos).
-    \item Adaptadores de infraestructura implementan los puertos con TypeORM/PostgreSQL + PostGIS.
+    \item Adaptadores de infraestructura implementan los puertos con Prisma/PostgreSQL + PostGIS.
     \item Módulo de tracking alimenta el estado de ubicación actual.
     \item Módulo de analítica consulta historial de tráfico para estimar ETA.
 \end{enumerate}
@@ -594,7 +594,7 @@ El diagrama de secuencia describe la interacción entre usuario, interfaz web, A
     \item \textbf{Next.js:} framework frontend para interfaz web moderna y eficiente.
     \item \textbf{PostgreSQL:} motor relacional para consistencia transaccional.
     \item \textbf{PostGIS:} extensión espacial para consultas geográficas (Point/LineString).
-    \item \textbf{TypeORM:} mapeo objeto-relacional con soporte de migraciones.
+    \item \textbf{Prisma:} mapeo objeto-relacional con soporte de migraciones.
     \item \textbf{Class-validator:} validación declarativa de DTOs en capa de entrada.
     \item \textbf{Redis (opcional):} almacenamiento de baja latencia para tracking en vivo.
     \item \textbf{Docker y Docker Compose:} estandarización de entorno y despliegue local.
@@ -716,6 +716,6 @@ Entregables (avance) & \begin{enumerate}[leftmargin=*,nosep]
     \item Configuración ESLint y Prettier: \textbf{(vacio por ahora)}.
     \item Configuración CI/CD: \textbf{(vacio por ahora)}.
     \item Contenedores base con Docker Compose (DB + App): \textbf{(vacio por ahora)}.
-    \item Dependencias core (TypeORM, PostGIS types, Class-validator): \textbf{(vacio por ahora)}.
+    \item Dependencias core (Prisma, PostGIS types, Class-validator): \textbf{(vacio por ahora)}.
 \end{itemize}
 
