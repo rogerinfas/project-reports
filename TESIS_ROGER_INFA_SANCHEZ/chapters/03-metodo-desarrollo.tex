@@ -169,8 +169,11 @@ El flujo principal definido es el siguiente:
     \item Módulo de tracking alimenta el estado de ubicación actual.
     \item Módulo de analítica consulta historial de tráfico para estimar ETA.
 \end{enumerate}
-
-\textbf{Diagrama de capas:} \textbf{(vacio por ahora)}.
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{assets/diagrama-vista-por-capas-clean-architecture.png}
+\caption{Diagrama de vista por capas basado en Clean Architecture}
+\end{figure}
 
 \textbf{Diagrama de vista física (infraestructura):}
 \begin{itemize}
@@ -181,7 +184,14 @@ El flujo principal definido es el siguiente:
     \item Integración CI/CD para pruebas y despliegue inicial: \textbf{(vacio por ahora)}.
 \end{itemize}
 
-\textbf{Diagrama de vista física:} \textbf{(vacio por ahora)}.
+\textbf{Diagrama de vista física}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\textwidth]{assets/diagrama-vista-fisica-despliegue-vps.png}
+\caption{Vista física de despliegue de la solución propuesta}
+\end{figure}
+
+La vista física muestra una arquitectura desplegada sobre servidores Linux VPS con contenedores Docker para frontend (Next.js), backend (NestJS) y base de datos PostgreSQL. Asimismo, se observa que los clientes acceden al sistema desde navegadores web en equipos de escritorio y dispositivos móviles (Windows, Android y Apple), consumiendo los servicios de la API para consulta y monitoreo de información de transporte en tiempo real.
 
 \textbf{Requisitos funcionales (RF):}
 \textit{Los requisitos funcionales se documentan con plantilla tipo ficha.}
@@ -569,17 +579,14 @@ Estado & Pendiente \\
 
 \textbf{Diagrama de secuencia (caso de uso principal):}
 
-Caso de uso seleccionado: ``Consultar buses en tiempo real por ruta''.
-\begin{enumerate}
-    \item Usuario selecciona una ruta en la interfaz web.
-    \item Frontend solicita al backend buses activos y última ubicación por ruta.
-    \item API valida parámetros de consulta.
-    \item Caso de uso consulta asignaciones activas y datos de \texttt{Live\_Tracking}.
-    \item Infraestructura devuelve datos georreferenciados.
-    \item Frontend renderiza marcadores y estado de actualización.
-\end{enumerate}
+El diagrama de secuencia describe la interacción entre usuario, interfaz web, API y capa de persistencia para recuperar la información de buses activos por ruta. El flujo inicia con la solicitud desde el frontend, continúa con la validación en backend y la consulta a datos de asignaciones y \texttt{Live\_Tracking}, y culmina con la respuesta estructurada que permite renderizar la visualización en tiempo real.
 
-\textbf{Diagrama de secuencia (artefacto gráfico):} \textbf{(vacio por ahora)}.
+\textbf{Diagrama de secuencia (artefacto gráfico)}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.98\textwidth]{assets/diagrama-secuencia-consulta-buses-tiempo-real.png}
+\caption{Diagrama de secuencia del caso de uso ``Consultar buses en tiempo real por ruta''}
+\end{figure}
 
 \textbf{Listado de herramientas tecnológicas justificadas:}
 \begin{itemize}
@@ -592,6 +599,7 @@ Caso de uso seleccionado: ``Consultar buses en tiempo real por ruta''.
     \item \textbf{Redis (opcional):} almacenamiento de baja latencia para tracking en vivo.
     \item \textbf{Docker y Docker Compose:} estandarización de entorno y despliegue local.
     \item \textbf{ESLint + Prettier:} calidad de código y formato uniforme.
+    \item \textbf{Husky:} automatización de hooks de Git para validación de calidad de código y cumplimiento de convención de mensajes de commit (Conventional Commits).
     \item \textbf{GitHub Actions (CI/CD):} ejecución de pruebas y verificación automática.
 \end{itemize}
 
