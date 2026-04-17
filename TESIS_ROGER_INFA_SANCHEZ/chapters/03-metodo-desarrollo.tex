@@ -5,7 +5,7 @@ En esta sección se desarrolla la ejecución operativa de las iteraciones inicia
 \clearpage
 \subsubsection{Sprint 1}
 
-\textbf{Especificación del diseño (propuesta):}
+\paragraph{Especificación del diseño (propuesta)}
 
 La propuesta adopta \textbf{Clean Architecture} para desacoplar reglas de negocio de frameworks, base de datos e interfaces externas. La solución se organiza en cuatro capas:
 \begin{itemize}
@@ -17,7 +17,7 @@ La propuesta adopta \textbf{Clean Architecture} para desacoplar reglas de negoci
 
 Como estrategia de diseño, se aplican principios SOLID, inyección de dependencias e inversión de control. Esto permite que el núcleo del sistema (dominio) sea testeable y evolutivo sin dependencia directa de tecnologías de implementación.
 
-\textbf{Modelado de dominio (entidades, value objects y agregados):}
+\paragraph{Modelado de dominio (entidades, value objects y agregados)}
 \begin{itemize}
     \item \textbf{Agregado Ruta:} entidad raíz \texttt{Route}, asociada a su geometría \texttt{LineString} y a la secuencia de paraderos mediante \texttt{RouteStop}.
     \item \textbf{Agregado Bus:} entidad raíz \texttt{Bus}, con estado operativo y trazabilidad de asignación.
@@ -25,7 +25,7 @@ Como estrategia de diseño, se aplican principios SOLID, inyección de dependenc
     \item \textbf{Value Objects:} \texttt{PlateNumber}, \texttt{RouteCode}, \texttt{GeoPoint}, \texttt{GeoLineString}, \texttt{BusStatus}, \texttt{DNI}, \texttt{Speed}, \texttt{Heading}.
 \end{itemize}
 
-\textbf{Reglas de negocio iniciales para monitoreo:}
+\paragraph{Reglas de negocio iniciales para monitoreo}
 \begin{enumerate}
     \item Un bus solo puede tener una asignación activa por turno.
     \item Una asignación requiere bus, conductor y ruta válidos.
@@ -35,11 +35,11 @@ Como estrategia de diseño, se aplican principios SOLID, inyección de dependenc
     \item El cálculo de ETA usa historial de tráfico por segmento de ruta y condición de hora punta.
 \end{enumerate}
 
-\textbf{Historias de usuario iniciales (formato estructurado):}
+\paragraph{Historias de usuario iniciales (formato estructurado)}
 
 Sí, las historias de usuario se documentan en formato \textbf{Como/Quiero/Para}, incorporando identificador, escenario y criterio de aceptación para mejorar trazabilidad y validación.
 
-\textbf{Plantilla base utilizada}
+\paragraph{Plantilla base utilizada}
 \begin{itemize}
     \item \textbf{ID:} HU-XXX
     \item \textbf{Como} [rol]
@@ -48,7 +48,7 @@ Sí, las historias de usuario se documentan en formato \textbf{Como/Quiero/Para}
     \item \textbf{Escenarios y criterios:} En caso que [contexto], cuando [evento], el sistema [resultado esperado].
 \end{itemize}
 
-\textbf{Backlog inicial ampliado de historias de usuario}
+\paragraph{Backlog inicial ampliado de historias de usuario}
 \begin{longtable}{|p{0.11\textwidth}|p{0.17\textwidth}|p{0.31\textwidth}|p{0.31\textwidth}|}
 \caption{Backlog inicial ampliado de historias de usuario\\Hecho por Roger Infa Sanchez} \\
 \hline
@@ -85,7 +85,7 @@ HU-012 & Investigador & Exportar métricas de espera antes y después del uso de
 \hline
 \end{longtable}
 
-\textbf{Matriz de criterios de aceptación (ejemplos)}
+\paragraph{Matriz de criterios de aceptación (ejemplos)}
 \begin{longtable}{|p{0.10\textwidth}|p{0.19\textwidth}|p{0.28\textwidth}|p{0.16\textwidth}|p{0.19\textwidth}|}
 \caption{Matriz de criterios de aceptación de historias de usuario\\Hecho por Roger Infa Sanchez} \\
 \hline
@@ -110,8 +110,7 @@ HU-011 & Consulta de tráfico histórico & En caso que el administrador seleccio
 \hline
 \end{longtable}
 
-\textbf{Modelo de datos de dominio}
-\\
+\paragraph{Modelo de datos de dominio}
 El modelo de datos representa la estructura conceptual del sistema para el monitoreo de transporte público, identificando las entidades principales (\texttt{Bus}, \texttt{Ruta}, \texttt{Paradero}, \texttt{Conductor} y \texttt{SeguimientoEnVivo}), sus atributos y sus relaciones de dominio. Este artefacto permite visualizar cómo se organiza la información operativa y geoespacial, sirviendo como base para el diseño de casos de uso, persistencia de datos y reglas de negocio en las siguientes iteraciones.
 
 \begin{figure}[H]
@@ -123,7 +122,7 @@ El modelo de datos representa la estructura conceptual del sistema para el monit
 \clearpage
 \subsubsection{Sprint 2}
 
-\textbf{Arquitectura y herramientas (diagramas de capas y comunicación):}
+\paragraph{Arquitectura y herramientas (diagramas de capas y comunicación)}
 
 El flujo principal definido es el siguiente:
 \begin{enumerate}
@@ -140,7 +139,7 @@ El flujo principal definido es el siguiente:
 \figcaptionwithauthor{Diagrama de vista por capas basado en Clean Architecture}
 \end{figure}
 
-\textbf{Diagrama de vista física (infraestructura):}
+\paragraph{Diagrama de vista física (infraestructura)}
 \begin{itemize}
     \item Contenedor \texttt{frontend}: aplicación web Next.js.
     \item Contenedor \texttt{backend}: API NestJS con lógica de aplicación.
@@ -149,7 +148,7 @@ El flujo principal definido es el siguiente:
     %\item Integración CI/CD para pruebas y despliegue inicial: \textbf{(vacio por ahora)}.
 \end{itemize}
 
-\textbf{Diagrama de vista física}
+\paragraph{Diagrama de vista física}
 La vista física muestra una arquitectura desplegada sobre servidores Linux VPS con contenedores Docker para frontend (Next.js), backend (NestJS) y base de datos PostgreSQL. Asimismo, se observa que los clientes acceden al sistema desde navegadores web en equipos de escritorio y dispositivos móviles (Windows, Android y Apple), consumiendo los servicios de la API para consulta y monitoreo de información de transporte en tiempo real.
 
 \begin{figure}[H]
@@ -158,7 +157,7 @@ La vista física muestra una arquitectura desplegada sobre servidores Linux VPS 
 \figcaptionwithauthor{Vista física de despliegue de la solución propuesta}
 \end{figure}
 
-\textbf{Requisitos funcionales (RF):}
+\paragraph{Requisitos funcionales (RF)}
 \textit{Los requisitos funcionales se documentan con plantilla tipo ficha.}
 
 \textbf{RF-0001}
@@ -425,7 +424,7 @@ Estado & Pendiente \\
 \hline
 \end{longtable}
 
-\textbf{Requisitos no funcionales (RNF):}
+\paragraph{Requisitos no funcionales (RNF)}
 \textit{Los requisitos no funcionales también se registran con la misma plantilla tipo ficha.}
 
 \textbf{RNF-0001}
@@ -560,18 +559,18 @@ Estado & Pendiente \\
 \hline
 \end{longtable}
 
-\textbf{Diagrama de secuencia (caso de uso principal):}
+\paragraph{Diagrama de secuencia (caso de uso principal)}
 
 El diagrama de secuencia describe la interacción entre usuario, interfaz web, API y capa de persistencia para recuperar la información de buses activos por ruta. El flujo inicia con la solicitud desde el frontend, continúa con la validación en backend y la consulta a datos de asignaciones y \texttt{Live\_Tracking}, y culmina con la respuesta estructurada que permite renderizar la visualización en tiempo real.
 
-\textbf{Diagrama de secuencia (artefacto gráfico)}
+\paragraph{Diagrama de secuencia (artefacto gráfico)}
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.98\textwidth]{assets/diagrama-secuencia-consulta-buses-tiempo-real.png}
 \caption{Diagrama de secuencia del caso de uso ``Consultar buses en tiempo real por ruta''}
 \end{figure}
 
-\textbf{Listado de herramientas tecnológicas justificadas:}
+\paragraph{Listado de herramientas tecnológicas justificadas}
 \begin{itemize}
     \item \textbf{NestJS:} framework backend modular para API robusta y mantenible.
     \item \textbf{Next.js:} framework frontend para interfaz web moderna y eficiente.
@@ -589,9 +588,9 @@ El diagrama de secuencia describe la interacción entre usuario, interfaz web, A
 \clearpage
 \subsubsection{Sprint 3}
 
-\textbf{Modelo de datos (Diagrama E-R principal):}
+\paragraph{Modelo de datos (Diagrama E-R principal)}
 
-\textbf{1. Entidades principales}
+\paragraph{1. Entidades principales}
 \begin{itemize}
     \item \textbf{Routes}
     \begin{itemize}
@@ -625,7 +624,7 @@ El diagrama de secuencia describe la interacción entre usuario, interfaz web, A
     \end{itemize}
 \end{itemize}
 
-\textbf{2. Entidades de relación y tiempo real}
+\paragraph{2. Entidades de relación y tiempo real}
 \begin{itemize}
     \item \textbf{Assignments}
     \begin{itemize}
@@ -645,7 +644,7 @@ El diagrama de secuencia describe la interacción entre usuario, interfaz web, A
     \end{itemize}
 \end{itemize}
 
-\textbf{3. Entidades para tiempos y tráfico}
+\paragraph{3. Entidades para tiempos y tráfico}
 \begin{itemize}
     \item \textbf{Traffic\_History}
     \begin{itemize}
@@ -658,23 +657,23 @@ El diagrama de secuencia describe la interacción entre usuario, interfaz web, A
     \end{itemize}
 \end{itemize}
 
-\textbf{Relaciones lógicas principales}
+\paragraph{Relaciones lógicas principales}
 \begin{itemize}
     \item Una \texttt{Route} tiene muchos \texttt{Stops} (N:M) mediante tabla intermedia \texttt{Route\_Stops} con orden secuencial.
     \item Una \texttt{Route} tiene muchos \texttt{Buses} activos (1:N).
     \item Un \texttt{Bus} tiene una sola ubicación en tiempo real (1:1) en \texttt{Live\_Tracking}.
 \end{itemize}
 
-\textbf{Diagrama E-R (artefacto gráfico):} \textbf{(vacio por ahora)}.
+\paragraph{Diagrama E-R (artefacto gráfico)} \textbf{(vacio por ahora)}.
 
-\textbf{Setup del entorno y estructura de repositorios:}
+\paragraph{Setup del entorno y estructura de repositorios}
 \begin{itemize}
     \item Inicialización de repositorio backend con NestJS: repositorio publicado en \url{https://github.com/rogerinfas/admin-api-gps-based-transit-optimization}.
     \item Inicialización de repositorio frontend con Next.js: repositorio publicado en \url{https://github.com/rogerinfas/api-gps-based-transit-optimization}.
     \item Estructura por capas (dominio, aplicación, infraestructura, presentación): \textbf{(vacio por ahora)}.
 \end{itemize}
 
-\textbf{Configuración técnica base:}
+\paragraph{Configuración técnica base}
 \begin{itemize}
     \item Variables de entorno (\texttt{.env}): \textbf{(vacio por ahora)}.
     \item Configuración ESLint y Prettier: \textbf{(vacio por ahora)}.
