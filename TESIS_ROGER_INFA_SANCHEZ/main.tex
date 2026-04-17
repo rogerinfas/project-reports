@@ -7,7 +7,7 @@
 \usepackage{ragged2e}
 \usepackage{titlesec}
 \usepackage{fancyhdr}
-\usepackage[hidelinks]{hyperref}
+\usepackage[hidelinks,bookmarksdepth=4]{hyperref}
 \usepackage{bookmark}
 \usepackage{enumitem}
 \usepackage{float}
@@ -31,6 +31,10 @@
 \fancyhead[L]{Universidad La Salle Arequipa}
 \fancyhead[R]{Escuela Profesional de Ingeniería de Software}
 \fancyfoot[C]{\thepage}
+
+% Profundidad de numeración e índice (debe estar antes de \tableofcontents)
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{4}
 
 \begin{document}
 
@@ -76,8 +80,6 @@
 % --- CONFIGURACIÓN PARA CAPÍTULOS CON NÚMEROS NORMALES ---
 \pagenumbering{arabic} % Cambia numeración a 1, 2, 3...
 \setcounter{page}{1}   % El Capítulo I será la página 1
-\setcounter{secnumdepth}{3}
-\setcounter{tocdepth}{3}
 
 % CAPÍTULO I
 \newpage
