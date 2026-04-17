@@ -13,6 +13,13 @@
 \usepackage{float}
 \usepackage[table]{xcolor}
 \usepackage{longtable}
+\usepackage{caption}
+
+% Leyenda para figuras: título + autor en segunda línea
+\newcommand{\figcaptionwithauthor}[1]{%
+  \caption{#1}%
+  \caption*{Autor: Roger Infa Sanchez}%
+}
 
 % Márgenes para tesis
 \geometry{top=2.5cm, bottom=2.5cm, left=3cm, right=3cm}
@@ -91,9 +98,9 @@
 % CAPÍTULO III
 \newpage
 \refstepcounter{section}
-\section*{\centering \Large CAPÍTULO III \\ MÉTODO DE INVESTIGACIÓN}
+\section*{\centering \Large CAPÍTULO III \\ DESARROLLO DE LA METODOLOGÍA}
 \phantomsection
-\addcontentsline{toc}{section}{MÉTODO DE INVESTIGACIÓN}
+\addcontentsline{toc}{section}{DESARROLLO DE LA METODOLOGÍA}
 \input{chapters/03-metodo}
 
 % CAPÍTULO IV
