@@ -1,0 +1,92 @@
+\documentclass[11pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage{parskip}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{fancyhdr}
+\usepackage[table]{xcolor}
+
+\geometry{a4paper, top=2.3cm, bottom=2.3cm, left=2.1cm, right=2.1cm}
+\setstretch{1.1}
+\setlength{\headheight}{52pt}
+\setlength{\headsep}{16pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\includegraphics[height=1.05cm]{assets/logo-machu-picchu.png}}
+\fancyhead[C]{\small\itshape Informe de Lecciones Aprendidas\\Contrato: 776-PROINNOVATE-IMTEMD-2025}
+\fancyhead[R]{\small p\'ag. \thepage}
+\renewcommand{\headrulewidth}{0.6pt}
+
+\begin{document}
+
+\begin{center}
+    {\Large \textbf{LECCIONES APRENDIDAS}}\\[0.25cm]
+    {\Large \textbf{DIGITALIZACI\'ON COMERCIAL MEDIANTE LA IMPLEMENTACI\'ON DE ODOO 19 (CRM, CONTACTOS Y VENTAS)}}\\[0.25cm]
+    {\large \textbf{776-PROINNOVATE-IMTEMD-2025}}
+\end{center}
+
+\textbf{Objetivo General del proyecto:}\\
+Optimizar la gestión comercial y la seguridad de la información de Machu Picchu Exclusive Tours E.I.R.L. mediante la implementación de los módulos de CRM, Contactos y Ventas de Odoo 19, permitiendo la centralización de datos de pasajeros, el almacenamiento seguro de pasaportes y el control estricto de adelantos y saldos.
+
+\textbf{Resultados obtenidos:}
+\begin{itemize}
+    \item \textbf{Centralización de Identidad (Contactos):} Se logró el almacenamiento cifrado del 100\% de las fotos de pasaportes en el sistema, eliminando la práctica riesgosa de guardarlos en dispositivos personales.
+    \item \textbf{Eficiencia Comercial (CRM):} Reducción del tiempo de respuesta a turistas extranjeros de 4 horas a menos de 1 hora gracias al uso de plantillas de cotización profesional.
+    \item \textbf{Seguridad Financiera (Ventas):} Implementación del registro manual de adelantos (30\% al 50\%), asegurando que no se compren boletos no reembolsables sin respaldo de fondos verificado en el sistema.
+\end{itemize}
+
+\textbf{Lecciones Aprendidas}\\
+Tras la ejecución del proyecto centrado en el ciclo comercial de la agencia, se presenta la reflexión estructurada basada en el formato de rondas de evaluación, identificando los éxitos y desafíos en la adopción de los módulos comerciales.
+
+\definecolor{RoundGray}{RGB}{235,235,235}
+\definecolor{HeaderGray}{RGB}{245,245,245}
+\begin{longtable}{|p{3.8cm}|p{3.8cm}|p{3.8cm}|p{3.8cm}|}
+\hline
+\rowcolor{RoundGray}\multicolumn{4}{|l|}{\textbf{Primera Ronda}} \\ \hline
+\rowcolor{HeaderGray}\textbf{¿Qué salió bien?} & \textbf{¿Por qué se hizo bien?} & \textbf{¿Tuvieron todo lo necesario?} & \textbf{¿El plan del proyecto se llevó según lo ejecutado?} \\ \hline
+Repositorio seguro de pasaportes. &
+Se identificó como la mayor vulnerabilidad de seguridad; la gerencia priorizó migrar los datos de WhatsApp al CRM. &
+Sí, se utilizó el repositorio estándar de Odoo en la nube, eliminando la necesidad de almacenamiento físico. &
+Sí, el hito de ``Seguridad de la Información'' fue el eje central desde la fase de diagnóstico. \\ \hline
+Estandarización de Ventas. &
+Se configuraron listas de precios y plantillas de cotización que reflejan la exclusividad de la marca. &
+Se contó con los itinerarios históricos de Jessica para alimentar el catálogo de servicios. &
+Sí, se cumplió con la migración de datos maestros y la configuración del embudo (Pipeline). \\ \hline
+Control de abonos parciales. &
+Se estableció una regla de negocio clara en el módulo de Ventas para verificar saldos antes de la logística. &
+Se integró la lógica de pagos del 30\% al 50\% que la empresa ya manejaba de forma manual. &
+Sí, se ajustó el alcance para asegurar que el registro de cobros fuera simple y manual. \\ \hline
+
+\rowcolor{RoundGray}\multicolumn{4}{|l|}{\textbf{Segunda Ronda}} \\ \hline
+\rowcolor{HeaderGray}\textbf{¿Qué salió mal?} & \textbf{¿Qué se tenía que hacer, para que al hacerlo saliera bien?} & \textbf{¿El entorno del proyecto fue colaborativo?} & \textbf{¿Las partes involucradas participaron eficazmente?} \\ \hline
+Resistencia inicial al flujo ``Cotización-Venta''. &
+Se debió enfatizar desde el inicio que la rigidez del sistema es lo que otorga la trazabilidad necesaria para los reportes. &
+Sí, al ser una estructura de una sola persona (dueña), la comunicación con el consultor fue directa y fluida. &
+La Gerencia (Jessica) participó activamente, validando cada campo de la ficha del contacto para los PAX. \\ \hline
+Duplicidad de datos en WhatsApp. &
+Establecer una política de ``cierre inmediato'' en el CRM apenas se recibe el lead por redes sociales para evitar que la data quede en el aire. &
+Sí, se habilitó el acceso móvil para que la dueña pudiera registrar contactos en tiempo real durante sus eventos. &
+La participación fue eficaz, adaptando el sistema para que no fuera tedioso frente a la rapidez que exige el cliente. \\ \hline
+
+\rowcolor{RoundGray}\multicolumn{4}{|l|}{\textbf{Tercera Ronda}} \\ \hline
+\rowcolor{HeaderGray}\textbf{¿Qué condiciones fuera del control del equipo afectaron al proyecto?} & \textbf{¿Estuvieron identificados los riesgos?} & \textbf{¿Qué acciones se tomaron o se deberían haber tomado?} & \textbf{¿Los cambios del proyecto fueron viables y se ajustaron al alcance?} \\ \hline
+Desconfianza del turista al enviar datos digitales. &
+Sí, se identificó que el cliente de lujo es reacio a compartir documentos sensibles por temor a estafas. &
+Se utilizó la formalidad de Odoo (correos institucionales) para generar confianza, explicando que el sistema es un ERP seguro. &
+Los cambios fueron viables; se mantuvo el estándar de Odoo para asegurar una implementación ágil y sin costos extras. \\ \hline
+Factores externos (clima/huelgas) en Ventas. &
+Sí, estos eventos obligan a cambios bruscos en las cotizaciones ya cerradas. &
+Se capacitó en el uso de ``Notas Internas'' en la ficha del cliente para registrar cambios de emergencia sin perder el historial. &
+Sí, el sistema permitió flexibilidad para modificar pedidos de venta confirmados ante contingencias. \\ \hline
+\end{longtable}
+
+La principal lección aprendida es que en una agencia de servicios de lujo, la tecnología no sustituye la calidez del trato (WhatsApp), sino que la blindiza. La centralización en los módulos de CRM y Contactos ha permitido que la gerencia deje de ser un repositorio humano de datos y pase a ser un supervisor de información estratégica. Se recomienda mantener el rigor en la carga de pasaportes al sistema para garantizar la continuidad del negocio y la protección legal de los datos del pasajero.
+
+\end{document}
