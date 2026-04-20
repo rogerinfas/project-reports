@@ -1,10 +1,113 @@
 \section{Resultados Obtenidos}
 
-\subsection{Optimizacion de procesos}
+\subsection{Optimización de Procesos}
 
-\subsection{IMpacto  de la productividad}
+Con la implementación del ERP Odoo 19, Machu Picchu Exclusive Tours ha logrado estructurar
+un flujo operativo completamente integrado que centraliza la captación, la organización
+logística y el control financiero dentro de un mismo ecosistema digital. A diferencia del
+modelo anterior, basado en la gestión dispersa por WhatsApp y Excel, el nuevo flujo permite
+una trazabilidad continua desde el primer contacto con el turista extranjero hasta la
+ejecución final del itinerario.
 
-\subsection{Adopcion del sistema}
+El proceso inicia en el Módulo CRM, donde se registran sistemáticamente los leads
+provenientes de recomendaciones y eventos, capturando de forma segura los datos y
+fotografías de los pasaportes en el repositorio estándar del sistema. Una vez confirmada la
+oportunidad, el flujo se traslada al Módulo de Proyectos, donde mediante un tablero visual
+Kanban se gestionan las etapas de cada viaje, permitiendo un control ordenado de itinerarios
+que varían entre 2 a 20 días.
 
-\subsection{Plan de capacitacion}
+Finalmente, el sistema integra la gestión de cobros mediante el registro manual de adelantos
+(30\% a 50\%) y saldos, lo que otorga a la gerencia la seguridad necesaria para autorizar la
+compra de boletos de tren o avión no reembolsables, eliminando la incertidumbre financiera
+previa.
 
+\textbf{Mejoras cualitativas}
+\begin{itemize}
+    \item \textbf{Integración total:} se logró unificar en una sola plataforma las operaciones de ventas, almacenamiento de documentos confidenciales y control operativo de reservas.
+    \item \textbf{Seguridad de la información:} se eliminó la dependencia de dispositivos personales para el manejo de pasaportes, sustituyéndolo por un repositorio digital seguro y centralizado.
+    \item \textbf{Estandarización operativa:} se estableció un flujo continuo y rastreable que asegura que cada tour, sin importar su duración, cumpla con todas las validaciones documentales y de pago requeridas.
+    \item \textbf{Reducción de la carga manual:} se minimizó la duplicidad de tareas y la necesidad de consultas informales para verificar la disponibilidad de itinerarios o el estatus de un pago.
+\end{itemize}
+
+\subsection{Impacto de la Productividad}
+
+La adopción del ERP ha permitido mejorar la eficiencia operativa de la empresa, especialmente
+en las áreas de ventas y control logístico de itinerarios. La digitalización de la base de
+datos de pasajeros y la integración de las etapas de reserva han generado una mayor precisión
+en la operación diaria, eliminando la dependencia de herramientas externas e inseguras.
+
+Para validar estos resultados, se establecieron indicadores comparando la situación inicial
+(diagnóstico) con el estado actual tras la implementación de los módulos de CRM y Proyectos:
+
+\begin{table}[htbp]
+\centering
+\renewcommand{\arraystretch}{1.25}
+\begin{tabular}{|p{2.8cm}|p{3.8cm}|p{2.8cm}|p{3.3cm}|}
+\hline
+\textbf{Indicador} & \textbf{Fórmula de cálculo} & \textbf{Valor inicial (manual)} & \textbf{Valor final (Odoo 19)} \\ \hline
+Tiempo de respuesta (cotización) & $\frac{\sum \mathrm{Tiempo\ de\ cotizacion}}{N^\circ \mathrm{cotizaciones}}$ & 4 horas & $< 1$ hora \\ \hline
+Seguridad de pasaportes & $\frac{\mathrm{Docs\ en\ repositorio\ Odoo}}{\mathrm{Total\ docs\ recibidos}} \times 100$ & 0\% (WhatsApp) & 100\% (cifrado) \\ \hline
+Exactitud de itinerarios & $\frac{\mathrm{Servicios\ con\ trazabilidad}}{\mathrm{Total\ tours}} \times 100$ & 40\% (disperso) & 100\% (Kanban) \\ \hline
+Conversión de ventas & $\frac{\mathrm{Oportunidades\ ganadas}}{\mathrm{Total\ leads}} \times 100$ & Base manual & +20\% \\ \hline
+Control de saldos & $\frac{\mathrm{Reservas\ con\ pago\ verificado}}{\mathrm{Total\ reservas}} \times 100$ & 15\% (Excel) & 100\% (Ventas) \\ \hline
+\end{tabular}
+\caption{Indicadores de productividad: situación inicial vs estado con Odoo 19.}
+\end{table}
+
+Para la obtención de estos valores, se aplicaron métodos de observación directa y análisis
+de los registros del sistema Odoo durante la operación diaria:
+
+\begin{itemize}
+    \item \textbf{Para el tiempo de cotización:} la mejora se sustenta en el uso del CRM y plantillas estandarizadas. Al contar con paquetes turísticos precargados, el sistema genera la propuesta de itinerario (de 2 a 20 días) automáticamente, eliminando la redacción manual en cada chat.
+    \item \textbf{Para la seguridad de datos:} el indicador se validó mediante la eliminación de la práctica de borrado de fotos en celulares personales. La mejora radica en que el 100\% de los pasaportes ahora residen en la ficha centralizada del cliente dentro de Odoo, cumpliendo con estándares de privacidad.
+    \item \textbf{Para el control de saldos:} la reducción de riesgos financieros se evidencia en que el sistema bloquea internamente la confirmación de servicios si no se registra el adelanto manual (30\% al 50\%), asegurando que no se compren boletos no reembolsables sin respaldo de fondos.
+\end{itemize}
+
+\subsection{Adopción del Sistema}
+
+La adopción del sistema Odoo 19 en Machu Picchu Exclusive Tours E.I.R.L. se desarrolló de
+manera progresiva, permitiendo una transición ordenada desde una gestión basada netamente en
+herramientas informales hacia un entorno corporativo digital. El cambio más significativo se
+observó en la mentalidad operativa: se pasó de un enfoque empírico y reactivo a un modelo
+estructurado donde la información centralizada en el ERP es la única fuente de verdad para la
+toma de decisiones.
+
+Entre los principales resultados de la adopción tecnológica destacan:
+
+\begin{itemize}
+    \item \textbf{Institucionalización del Repositorio de Pasaportes:} el personal ha adoptado la disciplina de cargar las fotografías de los documentos de identidad directamente en la ficha del cliente de Odoo. Esto ha permitido eliminar la práctica de almacenar y borrar fotos de pasaportes en dispositivos personales por temor a brechas de seguridad, garantizando que la información crítica para la compra de boletos esté siempre disponible y protegida.
+    \item \textbf{Gestión Visual de Itinerarios:} la gerencia y el equipo operativo utilizan ahora de forma activa el tablero Kanban para supervisar el estatus de los viajes que duran entre 2 a 20 días. Esta adopción ha sustituido el seguimiento basado en la memoria y en hilos de chat dispersos por una visibilidad total de las etapas de "Confirmación", "Compra de Tickets" y "Ejecución".
+    \item \textbf{Autonomía en el Control Financiero:} se ha logrado una alta adopción en el registro manual de adelantos (30\% a 50\%) y saldos dentro del sistema. El equipo ha internalizado la restricción de seguridad de no confirmar servicios externos ni comprar boletos no reembolsables sin antes verificar el estatus de pago en el módulo de Ventas.
+    \item \textbf{Profesionalización de la Comunicación:} la adopción de plantillas estandarizadas para cotizaciones y respuestas ha permitido mantener una imagen de lujo coherente ante el turista extranjero, reduciendo la informalidad del trato directo por WhatsApp sin perder la calidez del servicio personalizado.
+    \item \textbf{Reducción del Uso de Herramientas Externas:} se ha evidenciado una disminución drástica en el uso de hojas de Excel auxiliares y registros físicos, concentrando toda la trazabilidad logística y comercial en la nube (SaaS).
+\end{itemize}
+
+\subsection{Plan de Capacitación}
+
+El plan de capacitación se ejecutó con base en los procedimientos documentados en el
+\textbf{Manual de Capacitación} y estuvo orientado a la operación diaria real de Machu Picchu
+Exclusive Tours en Odoo 19. Dado que la gestión de la empresa es centralizada, la
+transferencia funcional se enfocó en asegurar que la gerencia pueda ejecutar de manera
+autónoma todo el flujo comercial y operativo desde una sola plataforma.
+
+En coherencia con el manual, los bloques trabajados fueron los siguientes:
+
+\begin{table}[htbp]
+\centering
+\renewcommand{\arraystretch}{1.25}
+\begin{tabular}{|p{3.4cm}|p{8.0cm}|p{1.7cm}|}
+\hline
+\textbf{Área / Perfil} & \textbf{Tema impartido} & \textbf{Horas estimadas} \\ \hline
+Gerencia General (Dueña) & Acceso a Odoo Online, validación de credenciales, configuración base de uso (USD/sin impuestos) y buenas prácticas de seguridad de la información. & 2 \\ \hline
+Gerencia General (Dueña) & Gestión de clientes y contactos: registro de PAX, edición de fichas, consulta de historial comercial y carga de documentos de identidad. & 3 \\ \hline
+Gerencia General (Dueña) & CRM y embudo comercial: creación y seguimiento de oportunidades, cambio de etapas, bitácora y transición hacia cotizaciones. & 3 \\ \hline
+Gerencia General (Dueña) & Ventas y cotizaciones: emisión desde CRM y Ventas, envío al cliente, confirmación por adelanto, configuración de tours y documentos en cotización. & 4 \\ \hline
+Gerencia General (Dueña) & Encuestas y cierre operativo: aplicación de encuestas, lectura de resultados y buenas prácticas de navegación, guardado y trazabilidad. & 2 \\ \hline
+\end{tabular}
+\caption{Plan de capacitación alineado al Manual de Capacitación implementado.}
+\end{table}
+
+Como soporte de continuidad, además del manual escrito se dejó material audiovisual de apoyo
+para reforzar la aplicación práctica de los procedimientos. Este esquema permite que la
+empresa mantenga la operación estandarizada y reduzca la dependencia de registros dispersos en
+canales externos.
