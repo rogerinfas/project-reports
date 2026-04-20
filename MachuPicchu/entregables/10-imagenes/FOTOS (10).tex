@@ -1,0 +1,124 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage{geometry}
+\usepackage{array}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{colortbl}
+\usepackage{longtable}
+\usepackage{ragged2e}
+
+\geometry{margin=2cm}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{4pt}
+\renewcommand{\arraystretch}{1.25}
+
+\newcommand{\fotobloque}[1]{%
+  \IfFileExists{assets/#1}{%
+    \includegraphics[width=0.28\textwidth,height=5.2cm,keepaspectratio]{assets/#1}%
+  }{%
+    \fcolorbox{black}{gray!10}{%
+      \parbox[c][5.2cm][c]{0.28\textwidth}{\centering\small Subir imagen\\\texttt{assets/#1}}%
+    }%
+  }%
+}
+
+\begin{document}
+
+\begin{center}
+{\Large\textbf{FOTOS (10)}}\\[2mm]
+\textit{Machu Picchu Exclusive Tours E.I.R.L.}\\
+\textit{Módulos: CRM, Ventas y Contactos}
+\end{center}
+
+\vspace{3mm}
+
+\rowcolors{2}{gray!4}{white}
+\begin{longtable}{|>{\centering\arraybackslash}m{0.30\textwidth}|>{\RaggedRight\arraybackslash}m{0.24\textwidth}|>{\RaggedRight\arraybackslash}m{0.40\textwidth}|}
+\hline
+\rowcolor{gray!20}
+\textbf{FOTO} & \textbf{ETIQUETAS} & \textbf{DESCRIPCIÓN (100 palabras)}\\
+\hline
+\endfirsthead
+\hline
+\rowcolor{gray!20}
+\textbf{FOTO} & \textbf{ETIQUETAS} & \textbf{DESCRIPCIÓN (100 palabras)}\\
+\hline
+\endhead
+
+\texttt{CRM\_PIPELINE}
+&
+\#CRM, \#EmbudoDeVentas, \#Leads, \#Oportunidades, \#Seguimiento
+&
+Vista del pipeline del módulo CRM con las etapas comerciales de la agencia. Esta captura evidencia la gestión ordenada de leads internacionales desde el primer contacto hasta el cierre. Permite identificar prioridades, oportunidades con mayor probabilidad de conversión y próximas acciones. Su uso continuo mejora la trazabilidad del proceso comercial y reduce la dependencia de conversaciones aisladas en WhatsApp.
+\\ \hline
+
+\texttt{CRM\_OPORTUNIDAD}
+&
+\#CRM, \#Oportunidad, \#DetalleComercial, \#Cliente, \#Trazabilidad
+&
+Pantalla de detalle de una oportunidad comercial en CRM. Aquí se centraliza información clave como datos del cliente, requerimientos del tour, actividades pendientes y notas internas. La ficha permite documentar decisiones y cambios durante la negociación sin perder historial. Esto incrementa la calidad de atención y facilita la continuidad operativa cuando se requiere retomar una cotización.
+\\ \hline
+
+\texttt{CRM\_ACTIVIDADES}
+&
+\#CRM, \#Actividades, \#Llamadas, \#Recordatorios, \#PostVenta
+&
+Registro de actividades programadas dentro del CRM para seguimiento comercial y postventa. Se visualizan tareas como llamadas, mensajes y recordatorios, asegurando contacto oportuno con el turista. Este flujo evita omisiones, estandariza la atención y fortalece la relación con el cliente. También permite planificar acciones de fidelización de forma más profesional.
+\\ \hline
+
+\texttt{CONTACTO\_PAX}
+&
+\#Contactos, \#PAX, \#DatosCliente, \#Perfil, \#Centralizacion
+&
+Ficha del pasajero en el módulo Contactos con datos personales, información de viaje y referencias de comunicación. Esta vista consolida la base de clientes en una sola fuente de verdad, eliminando registros dispersos en archivos externos. La estandarización de campos mejora la calidad del dato y facilita búsquedas futuras para nuevas ventas y atención personalizada.
+\\ \hline
+
+\texttt{CONTACTO\_DOCS}
+&
+\#Contactos, \#Pasaportes, \#Documentos, \#Seguridad, \#Privacidad
+&
+Sección de documentos adjuntos en la ficha del contacto, utilizada para almacenar pasaportes y otros archivos sensibles. Esta práctica reemplaza el envío y almacenamiento en dispositivos personales, reduciendo riesgos de ciberseguridad. La centralización de documentos permite acceso controlado, trazabilidad y respaldo para la operación de reservas y emisión de servicios.
+\\ \hline
+
+\texttt{CONTACTO\_FILTROS}
+&
+\#Contactos, \#Filtros, \#Segmentacion, \#BaseDeDatos, \#CRM
+&
+Vista de listado de contactos con filtros y criterios de segmentación. Esta funcionalidad facilita ubicar perfiles por nacionalidad, estado comercial o tipo de servicio solicitado. La organización de la base de datos permite campañas de seguimiento más efectivas y una mejor toma de decisiones comerciales basada en información estructurada.
+\\ \hline
+
+\texttt{VENTA\_COTIZACION}
+&
+\#Ventas, \#Cotizacion, \#Presupuesto, \#Servicios, \#Tour
+&
+Pantalla de cotización en el módulo Ventas con detalle de servicios ofertados para el itinerario. Incluye conceptos, cantidades y condiciones comerciales para construir propuestas claras y profesionales. Su uso estandariza la elaboración de ofertas, reduce tiempos de respuesta y mejora la presentación al cliente internacional.
+\\ \hline
+
+\texttt{VENTA\_CONFIRMACION}
+&
+\#Ventas, \#Pedido, \#Confirmacion, \#Reserva, \#Control
+&
+Documento de pedido de venta confirmado, que formaliza la reserva y sirve como referencia para la ejecución del servicio. Esta etapa aporta control administrativo y evita ambigüedades en acuerdos comerciales. La confirmación digital dentro del sistema mejora el seguimiento interno y la coordinación de actividades asociadas al viaje.
+\\ \hline
+
+\texttt{VENTA\_ORDENES}
+&
+\#Ventas, \#OrdenesDeVenta, \#Listado, \#Seguimiento, \#Estado
+&
+Vista de listado de órdenes de venta en el módulo de Ventas. Esta pantalla permite consultar rápidamente el estado de cada operación comercial, identificar documentos pendientes y dar seguimiento a las confirmaciones realizadas. Su uso mejora el control diario de la cartera de ventas y reduce tiempos de búsqueda de información para la gestión operativa.
+\\ \hline
+
+\texttt{VENTA\_PRODUCTOS}
+&
+\#Ventas, \#Productos, \#Catalogo, \#Tarifas, \#ServiciosTuristicos
+&
+Pantalla de productos y servicios turísticos usados en cotizaciones y pedidos de venta. Aquí se administran nombres, precios y configuraciones comerciales para estandarizar las propuestas enviadas al cliente. Este catálogo centralizado facilita la construcción de cotizaciones consistentes, mejora la productividad del equipo y fortalece la calidad de la atención comercial.
+\\ \hline
+
+\end{longtable}
+
+\end{document}
