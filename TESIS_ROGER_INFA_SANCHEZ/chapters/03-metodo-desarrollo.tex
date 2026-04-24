@@ -1,9 +1,9 @@
 \subsection{Desarrollo de la metodología}
 
-En esta sección se desarrolla la ejecución operativa de las iteraciones iniciales del proyecto (Sprint 1, Sprint 2 y Sprint 3), alineadas al enfoque Scrum adaptado y a los objetivos de la investigación. Se describen actividades realizadas, entregables comprometidos y artefactos técnicos producidos para consolidar la base de la solución propuesta.
+En esta sección se presenta el desarrollo de la metodología con estructura de documento de software por procesos: \textbf{Planificación}, \textbf{Análisis de requerimientos}, \textbf{Diseño}, \textbf{Implementación}, \textbf{Pruebas} y \textbf{Mantenimiento}. El contenido se organiza de forma progresiva y se mantiene abierto para incorporar evidencias y resultados conforme avance la investigación.
 
 \clearpage
-\subsubsection{Sprint 1}
+\subsubsection{Planificación}
 
 \paragraph{Especificación del diseño (propuesta)}
 
@@ -35,71 +35,13 @@ Como estrategia de diseño, se aplican principios SOLID, inyección de dependenc
     \item El cálculo de ETA usa historial de tráfico por segmento de ruta y condición de hora punta.
 \end{enumerate}
 
-\paragraph{Transcripción de entrevista con operador (insumo para historias de usuario)}
+\paragraph{Levantamiento de información con operador}
 
-Como evidencia cualitativa para el levantamiento de necesidades, se registró una entrevista con un operador de la empresa de transporte vinculada al contexto del estudio. A continuación, se presenta la transcripción literal (síntesis fiel del audio), incluyendo metadatos de la grabación.
+Como evidencia cualitativa para el levantamiento de necesidades, se registró una entrevista con un operador de la empresa de transporte vinculada al contexto del estudio.
 
-\textit{Metadatos:} fecha 12 de abril de 2026; entrevistado \textbf{Raúl Laura Anncasi} (operador de flota); entrevistador Roger Infa Sánchez (investigador); empresa \textbf{Empresa de Transportes Characato -- Sabandia C-8 S.A.} (Characato--Sabandia C-8 S.A.); RUC 20602815201; duración aproximada 18 minutos.
+\textit{Metadatos:} fecha 12 de abril de 2026; entrevistado \textbf{Raúl Laura Anncasi} (operador de flota); entrevistador Roger Infa Sánchez (investigador); empresa \textbf{Empresa de Transportes Characato -- Sabandia C-8 S.A.} (Characato--Sabandia C-8 S.A.); duración aproximada 18 minutos.
 
-\vspace{0.5em}
-\noindent\textbf{Investigador:} Gracias por su tiempo. Para el estudio necesito entender cómo trabaja usted día a día y qué información le falta para coordinar las unidades.
-
-\vspace{0.35em}
-\noindent\textbf{Raúl Laura Anncasi:} Con gusto. Yo soy quien asigna qué bus sale con qué chofer y en qué ruta, según el turno. El problema es que muchas veces el usuario en paradero no sabe si el bus ya viene o si se quedó atrás, y nosotros tampoco tenemos una pantalla única donde ver en vivo dónde está cada unidad. Eso justifica que el sistema permita \textbf{ver en el mapa los buses activos por ruta}: si yo puedo filtrar por línea y ver los puntos, reduzco llamadas y malentendidos (relacionado con HU-001).
-
-\vspace{0.35em}
-\noindent\textbf{Investigador:} ¿Qué pasa cuando un pasajero no conoce bien el paradero?
-
-\vspace{0.35em}
-\noindent\textbf{Raúl Laura Anncasi:} Pasa mucho. La gente pregunta ``¿cuál es el más cercano?'' porque en la calle hay varios puntos. Si la aplicación puede usar el GPS del celular y decir cuál es el \textbf{paradero más cercano}, eso baja la incertidumbre (relacionado con HU-002).
-
-\vspace{0.35em}
-\noindent\textbf{Investigador:} ¿Y si el usuario quiere planificar antes de salir de casa?
-
-\vspace{0.35em}
-\noindent\textbf{Raúl Laura Anncasi:} Claro. Muchos quieren ver la \textbf{ruta completa}, el trazo y el orden de paraderos, no solo el nombre. Por eso tiene sentido poder \textbf{consultar una ruta con su trazo y paraderos ordenados} (relacionado con HU-003).
-
-\vspace{0.35em}
-\noindent\textbf{Investigador:} ¿Qué información esperan en el paradero?
-
-\vspace{0.35em}
-\noindent\textbf{Raúl Laura Anncasi:} Lo mínimo es saber cuánto falta para el próximo bus. Hoy eso es muy subjetivo: depende de radio o de la experiencia del cobrador. Si el sistema puede mostrar un \textbf{ETA} en el paradero seleccionado, el usuario deja de adivinar (relacionado con HU-004).
-
-\vspace{0.35em}
-\noindent\textbf{Investigador:} Desde operación, ¿qué necesitan ustedes registrar?
-
-\vspace{0.35em}
-\noindent\textbf{Raúl Laura Anncasi:} Necesito registrar \textbf{asignación bus--conductor--ruta por turno}. Si no queda registrado, después no sabemos quién manejaba qué unidad si hay un incidente (relacionado con HU-005). También necesitamos que solo los buses en \textbf{servicio activo} estén publicando ubicación; si está en mantenimiento, no debe aparecer como disponible en el mapa (relacionado con HU-007).
-
-\vspace{0.35em}
-\noindent\textbf{Investigador:} ¿Cómo llega la ubicación al sistema?
-
-\vspace{0.35em}
-\noindent\textbf{Raúl Laura Anncasi:} Tiene que haber un flujo para \textbf{actualizar la ubicación GPS en tiempo real} cuando el bus está en ruta. Si eso no es estable, todo lo demás falla: mapa, ETA, todo (relacionado con HU-006).
-
-\vspace{0.35em}
-\noindent\textbf{Investigador:} ¿Y del lado administrativo?
-
-\vspace{0.35em}
-\noindent\textbf{Raúl Laura Anncasi:} Las rutas cambian de color en plano, se corrigen trazos, se agregan paraderos. Necesitamos \textbf{registrar y editar rutas} con su geometría, y \textbf{paraderos} con ubicación bien puesta. Igual con \textbf{buses y conductores}: datos base tienen que estar limpios o el monitoreo se ensucia (relacionado con HU-008, HU-009 y HU-010).
-
-\vspace{0.35em}
-\noindent\textbf{Investigador:} ¿Hay algo más que consideren para mejorar tiempos?
-
-\vspace{0.35em}
-\noindent\textbf{Raúl Laura Anncasi:} Sí. Si más adelante podemos mirar \textbf{historial de tráfico por tramo y franja}, eso ayuda a explicar por qué un día el bus tarda más; también sirve para comparar antes y después en la investigación (relacionado con HU-011 y HU-012).
-
-\vspace{0.35em}
-\noindent\textbf{Investigador:} ¿Algo que deba quedar explícito como criterio de calidad?
-
-\vspace{0.35em}
-\noindent\textbf{Raúl Laura Anncasi:} Que lo que se muestre al usuario sea \textbf{consistente} con lo que operamos. Si el mapa dice que el bus está en un punto, tiene que ser verificable; si no, perdemos confianza. Por eso las historias deben venir con criterios de aceptación claros.
-
-\vspace{0.35em}
-\noindent\textbf{Investigador:} ¿Autoriza usar esta entrevista como insumo para el levantamiento de requerimientos?
-
-\vspace{0.35em}
-\noindent\textbf{Raúl Laura Anncasi:} Sí, autorizo, siempre que no se publiquen datos personales innecesarios de los choferes más allá de lo operativo.
+La transcripción completa de la entrevista se incluye en \textbf{Anexos}, para mantener la fluidez del capítulo metodológico y preservar la evidencia primaria de forma íntegra.
 
 \paragraph{Historias de usuario iniciales (formato estructurado)}
 
@@ -186,7 +128,7 @@ El modelo de datos representa la estructura conceptual del sistema para el monit
 \end{figure}
 
 \clearpage
-\subsubsection{Sprint 2}
+\subsubsection{Análisis de requerimientos}
 
 \paragraph{Arquitectura y herramientas (diagramas de capas y comunicación)}
 
@@ -652,7 +594,7 @@ El diagrama de secuencia describe la interacción entre usuario, interfaz web, A
 \end{itemize}
 
 \clearpage
-\subsubsection{Sprint 3}
+\subsubsection{Diseño}
 
 \paragraph{Modelo de datos (Diagrama E-R principal)}
 
@@ -754,5 +696,38 @@ El diagrama E-R muestra la estructura de datos relacional y espacial de la propu
     \item Configuración CI/CD: \textbf{(vacío por ahora)}.
     \item Contenedores base con Docker Compose (DB + App): \textbf{(vacío por ahora)}.
     \item Dependencias core (Prisma, tipos PostGIS, Class-validator): \textbf{(vacío por ahora)}.
+\end{itemize}
+
+\subsubsection{Implementación}
+
+En esta fase se documentará la construcción incremental de los módulos del sistema (backend, frontend e integración de datos geoespaciales), con énfasis en trazabilidad entre requisitos, casos de uso y componentes desarrollados.
+
+\begin{itemize}
+    \item Implementación de casos de uso priorizados: \textbf{(vacío por ahora)}.
+    \item Implementación de controladores, DTOs y validaciones: \textbf{(vacío por ahora)}.
+    \item Implementación de interfaces de usuario para consulta de rutas y buses: \textbf{(vacío por ahora)}.
+    \item Evidencias de integración frontend-backend: \textbf{(vacío por ahora)}.
+\end{itemize}
+
+\subsubsection{Pruebas}
+
+En esta fase se registrarán las pruebas funcionales y técnicas aplicadas a la solución, así como los resultados obtenidos para verificar el cumplimiento de los requisitos definidos.
+
+\begin{itemize}
+    \item Plan de pruebas por módulo: \textbf{(vacío por ahora)}.
+    \item Casos de prueba y criterios de aceptación ejecutados: \textbf{(vacío por ahora)}.
+    \item Evidencias de resultados (capturas, tablas y métricas): \textbf{(vacío por ahora)}.
+    \item Registro de incidencias y acciones correctivas: \textbf{(vacío por ahora)}.
+\end{itemize}
+
+\subsubsection{Mantenimiento}
+
+Esta sección documentará las actividades de ajuste, mejora y sostenibilidad de la solución, incluyendo control de cambios, correcciones y recomendaciones para evolución futura.
+
+\begin{itemize}
+    \item Registro de mejoras posteriores a pruebas: \textbf{(vacío por ahora)}.
+    \item Control de versiones y cambios relevantes: \textbf{(vacío por ahora)}.
+    \item Recomendaciones de evolución tecnológica: \textbf{(vacío por ahora)}.
+    \item Consideraciones de operación continua: \textbf{(vacío por ahora)}.
 \end{itemize}
 

@@ -1,2 +1,70 @@
 % Anexos de la tesis.
 % Incluye tablas, instrumentos, evidencias u otros materiales de soporte.
+
+\section*{ANEXOS}
+\addcontentsline{toc}{section}{ANEXOS}
+
+\subsection*{Anexo A: Transcripción de entrevista con operador}
+\addcontentsline{toc}{subsection}{Anexo A: Transcripción de entrevista con operador}
+
+\textit{Metadatos:} fecha 12 de abril de 2026; entrevistado \textbf{Raúl Laura Anncasi} (operador de flota); entrevistador Roger Infa Sánchez (investigador); empresa \textbf{Empresa de Transportes Characato -- Sabandia C-8 S.A.}; duración aproximada 18 minutos.
+
+\vspace{0.5em}
+\noindent\textbf{Investigador:} Gracias por su tiempo. Para el estudio necesito entender cómo trabaja usted día a día y qué información le falta para coordinar las unidades.
+
+\vspace{0.35em}
+\noindent\textbf{Raúl Laura Anncasi:} Con gusto. Yo soy quien asigna qué bus sale con qué chofer y en qué ruta, según el turno. El problema es que muchas veces el usuario en paradero no sabe si el bus ya viene o si se quedó atrás, y nosotros tampoco tenemos una pantalla única donde ver en vivo dónde está cada unidad. Eso justifica que el sistema permita \textbf{ver en el mapa los buses activos por ruta}: si yo puedo filtrar por línea y ver los puntos, reduzco llamadas y malentendidos (relacionado con HU-001).
+
+\vspace{0.35em}
+\noindent\textbf{Investigador:} ¿Qué pasa cuando un pasajero no conoce bien el paradero?
+
+\vspace{0.35em}
+\noindent\textbf{Raúl Laura Anncasi:} Pasa mucho. La gente pregunta ``¿cuál es el más cercano?'' porque en la calle hay varios puntos. Si la aplicación puede usar el GPS del celular y decir cuál es el \textbf{paradero más cercano}, eso baja la incertidumbre (relacionado con HU-002).
+
+\vspace{0.35em}
+\noindent\textbf{Investigador:} ¿Y si el usuario quiere planificar antes de salir de casa?
+
+\vspace{0.35em}
+\noindent\textbf{Raúl Laura Anncasi:} Claro. Muchos quieren ver la \textbf{ruta completa}, el trazo y el orden de paraderos, no solo el nombre. Por eso tiene sentido poder \textbf{consultar una ruta con su trazo y paraderos ordenados} (relacionado con HU-003).
+
+\vspace{0.35em}
+\noindent\textbf{Investigador:} ¿Qué información esperan en el paradero?
+
+\vspace{0.35em}
+\noindent\textbf{Raúl Laura Anncasi:} Lo mínimo es saber cuánto falta para el próximo bus. Hoy eso es muy subjetivo: depende de radio o de la experiencia del cobrador. Si el sistema puede mostrar un \textbf{ETA} en el paradero seleccionado, el usuario deja de adivinar (relacionado con HU-004).
+
+\vspace{0.35em}
+\noindent\textbf{Investigador:} Desde operación, ¿qué necesitan ustedes registrar?
+
+\vspace{0.35em}
+\noindent\textbf{Raúl Laura Anncasi:} Necesito registrar \textbf{asignación bus--conductor--ruta por turno}. Si no queda registrado, después no sabemos quién manejaba qué unidad si hay un incidente (relacionado con HU-005). También necesitamos que solo los buses en \textbf{servicio activo} estén publicando ubicación; si está en mantenimiento, no debe aparecer como disponible en el mapa (relacionado con HU-007).
+
+\vspace{0.35em}
+\noindent\textbf{Investigador:} ¿Cómo llega la ubicación al sistema?
+
+\vspace{0.35em}
+\noindent\textbf{Raúl Laura Anncasi:} Tiene que haber un flujo para \textbf{actualizar la ubicación GPS en tiempo real} cuando el bus está en ruta. Si eso no es estable, todo lo demás falla: mapa, ETA, todo (relacionado con HU-006).
+
+\vspace{0.35em}
+\noindent\textbf{Investigador:} ¿Y del lado administrativo?
+
+\vspace{0.35em}
+\noindent\textbf{Raúl Laura Anncasi:} Las rutas cambian de color en plano, se corrigen trazos, se agregan paraderos. Necesitamos \textbf{registrar y editar rutas} con su geometría, y \textbf{paraderos} con ubicación bien puesta. Igual con \textbf{buses y conductores}: datos base tienen que estar limpios o el monitoreo se ensucia (relacionado con HU-008, HU-009 y HU-010).
+
+\vspace{0.35em}
+\noindent\textbf{Investigador:} ¿Hay algo más que consideren para mejorar tiempos?
+
+\vspace{0.35em}
+\noindent\textbf{Raúl Laura Anncasi:} Sí. Si más adelante podemos mirar \textbf{historial de tráfico por tramo y franja}, eso ayuda a explicar por qué un día el bus tarda más; también sirve para comparar antes y después en la investigación (relacionado con HU-011 y HU-012).
+
+\vspace{0.35em}
+\noindent\textbf{Investigador:} ¿Algo que deba quedar explícito como criterio de calidad?
+
+\vspace{0.35em}
+\noindent\textbf{Raúl Laura Anncasi:} Que lo que se muestre al usuario sea \textbf{consistente} con lo que operamos. Si el mapa dice que el bus está en un punto, tiene que ser verificable; si no, perdemos confianza. Por eso las historias deben venir con criterios de aceptación claros.
+
+\vspace{0.35em}
+\noindent\textbf{Investigador:} ¿Autoriza usar esta entrevista como insumo para el levantamiento de requerimientos?
+
+\vspace{0.35em}
+\noindent\textbf{Raúl Laura Anncasi:} Sí, autorizo, siempre que no se publiquen datos personales innecesarios de los choferes más allá de lo operativo.
