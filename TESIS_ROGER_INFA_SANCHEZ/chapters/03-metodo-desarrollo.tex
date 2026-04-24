@@ -682,6 +682,95 @@ El diagrama E-R muestra la estructura de datos relacional y espacial de la propu
 \caption*{Autor: Roger Infa Sanchez. Elaborado con la herramienta ERD Designer.}
 \end{figure}
 
+\paragraph{Diccionario de datos de entidades}
+Como complemento del diagrama E-R, se presenta el diccionario de datos inicial con campos, tipo de dato y restricciones principales de cada entidad del sistema.
+
+\begin{longtable}{|p{0.25\textwidth}|p{0.25\textwidth}|p{0.16\textwidth}|p{0.31\textwidth}|}
+\caption{Diccionario de datos de entidades principales\\Hecho por Roger Infa Sanchez} \\
+\hline
+\textbf{Entidad} & \textbf{Campo} & \textbf{Tipo} & \textbf{Restricciones / descripción} \\
+\hline
+\endfirsthead
+\hline
+\textbf{Entidad} & \textbf{Campo} & \textbf{Tipo} & \textbf{Restricciones / descripción} \\
+\hline
+\endhead
+Routes & id & UUID & Clave primaria (PK), identificador único de la ruta. \\
+\hline
+Routes & nombre & String & Nombre descriptivo de la ruta SIT. \\
+\hline
+Routes & codigo\_sit & String & Código de ruta, valor único (\texttt{UNIQUE}). \\
+\hline
+Routes & color & String & Color de representación de la ruta (formato hexadecimal). \\
+\hline
+Routes & geometria & LineString & Geometría espacial del trazo completo de la ruta. \\
+\hline
+Stops & id & UUID & Clave primaria (PK), identificador único de paradero. \\
+\hline
+Stops & nombre & String & Nombre del paradero. \\
+\hline
+Stops & ubicacion & Point & Coordenada geográfica del paradero. \\
+\hline
+Stops & referencia & Text & Descripción referencial de ubicación. \\
+\hline
+Buses & id & UUID & Clave primaria (PK), identificador único de bus. \\
+\hline
+Buses & placa & String & Placa del bus, valor único (\texttt{UNIQUE}). \\
+\hline
+Buses & modelo & String & Modelo o serie de la unidad. \\
+\hline
+Buses & capacidad & Integer & Cantidad máxima de pasajeros de la unidad. \\
+\hline
+Buses & estado & Enum & Estado operativo: \texttt{activo}, \texttt{mantenimiento}, \texttt{fuera\_de\_servicio}. \\
+\hline
+Drivers & id & UUID & Clave primaria (PK), identificador único de conductor. \\
+\hline
+Drivers & nombre & String & Nombres y apellidos del conductor. \\
+\hline
+Drivers & dni & String & Documento nacional de identidad, valor único (\texttt{UNIQUE}). \\
+\hline
+Drivers & telefono & String & Teléfono de contacto del conductor. \\
+\hline
+Assignments & id & UUID & Clave primaria (PK), identificador único de asignación de turno. \\
+\hline
+Assignments & bus\_id & UUID & Clave foránea (FK) hacia \texttt{Buses.id}. \\
+\hline
+Assignments & driver\_id & UUID & Clave foránea (FK) hacia \texttt{Drivers.id}. \\
+\hline
+Assignments & route\_id & UUID & Clave foránea (FK) hacia \texttt{Routes.id}. \\
+\hline
+Assignments & fecha\_turno & DateTime & Fecha y hora del turno asignado. \\
+\hline
+Live\_Tracking & bus\_id & UUID & Clave primaria y foránea (PK/FK) hacia \texttt{Buses.id}. \\
+\hline
+Live\_Tracking & ultima\_ubicacion & Point & Última coordenada GPS reportada por la unidad. \\
+\hline
+Live\_Tracking & ultima\_actualizacion & Timestamp & Marca temporal de la última actualización. \\
+\hline
+Live\_Tracking & velocidad\_actual & Float & Velocidad registrada en la última lectura. \\
+\hline
+Live\_Tracking & rumbo & Float & Dirección de desplazamiento (grados). \\
+\hline
+Traffic\_History & id & BigInt & Clave primaria (PK), identificador histórico incremental. \\
+\hline
+Traffic\_History & route\_id & UUID & Clave foránea (FK) hacia \texttt{Routes.id}. \\
+\hline
+Traffic\_History & segmento\_ruta & Integer & Índice o tramo específico evaluado de la ruta. \\
+\hline
+Traffic\_History & velocidad\_promedio & Float & Velocidad promedio registrada en el tramo. \\
+\hline
+Traffic\_History & hora\_punta & Boolean & Indicador de condición de hora punta (\texttt{true}/\texttt{false}). \\
+\hline
+Traffic\_History & timestamp & DateTime & Fecha y hora del registro histórico de tráfico. \\
+\hline
+Route\_Stops & route\_id & UUID & Clave foránea (FK) hacia \texttt{Routes.id}; parte de relación N:M. \\
+\hline
+Route\_Stops & stop\_id & UUID & Clave foránea (FK) hacia \texttt{Stops.id}; parte de relación N:M. \\
+\hline
+Route\_Stops & orden & Integer & Orden secuencial del paradero dentro de la ruta. \\
+\hline
+\end{longtable}
+
 \paragraph{Setup del entorno y estructura de repositorios}
 \begin{itemize}
     \item Inicialización de repositorio backend con NestJS: repositorio publicado en \url{https://github.com/rogerinfas/api-gps-based-transit-optimization}.
