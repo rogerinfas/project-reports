@@ -779,12 +779,23 @@ Route\_Stops & orden & Integer & Orden secuencial del paradero dentro de la ruta
 \end{itemize}
 
 \paragraph{Configuración técnica base}
+A continuación se resume la configuración alcanzada en los repositorios de implementación (API backend con NestJS y panel web con Next.js), según \texttt{.env.example}, manifiestos y flujos de calidad de código en el repositorio.
+
+\subparagraph{Repositorio API (backend, NestJS)}
 \begin{itemize}
-    \item Variables de entorno (\texttt{.env}): \textbf{(vacío por ahora)}.
-    \item Configuración de ESLint y Prettier: \textbf{(vacío por ahora)}.
-    \item Configuración CI/CD: \textbf{(vacío por ahora)}.
-    \item Contenedores base con Docker Compose (DB + App): \textbf{(vacío por ahora)}.
-    \item Dependencias core (Prisma, tipos PostGIS, Class-validator): \textbf{(vacío por ahora)}.
+    \item \textbf{Stack y gestor de paquetes:} TypeScript, Node.js 20, pnpm; scripts principales: \texttt{start:dev}, \texttt{build}, \texttt{lint}, \texttt{test}, y comandos \texttt{prisma:generate}, \texttt{prisma:migrate:dev} y \texttt{prisma:migrate:deploy}.
+    \item \textbf{Variables de entorno (\texttt{.env}):} se documentan en \texttt{.env.example}: \texttt{PORT} (por defecto 4000), parámetros de conexión \texttt{DB\_HOST}, \texttt{DB\_PORT}, \texttt{DB\_NAME}, \texttt{DB\_USER}, \texttt{DB\_PASSWORD}, variables para Docker \texttt{POSTGRES\_*}, y \texttt{DATABASE\_URL} hacia PostgreSQL. Los secretos reales no se versionan; solo se replica la plantilla en nuevos entornos.
+    \item \textbf{ESLint y Prettier:} configuración en modo \texttt{flat} en \texttt{eslint.config.mjs} con \texttt{typescript-eslint} (recomendado estricto con chequeo de tipos), \texttt{eslint-plugin-prettier} y \texttt{eslint-config-prettier}. Prettier: \texttt{.prettierrc} con comillas simples y coma final. Husky: hook \texttt{pre-commit} que ejecuta \texttt{pnpm lint} y \texttt{pnpm test --runInBand}.
+    \item \textbf{CI/CD (GitHub Actions):} flujo de integración con jobs encadenados: instalación con \texttt{pnpm install --frozen-lockfile}, \texttt{prisma generate}, \texttt{lint}, \texttt{test}, \texttt{build} y \texttt{prisma validate}. Despliegue continuo vía SSH al servidor: se validan secretos, se sincroniza el repositorio y se orquesta \texttt{docker compose} con \texttt{docker/docker-compose.prod.yml} (migraciones Prisma y contenedor de la API en producción). Imagen: \texttt{docker/Dockerfile} en varias etapas (Node 20 Alpine, pnpm, generación de cliente Prisma, compilación, imagen mínima de ejecución, puerto 4000). Base de datos: servicio \texttt{postgres} con imagen \texttt{postgis/postgis:16-3.4}, script de inicio \texttt{CREATE EXTENSION postgis} y volúmenes con healthcheck; entorno de desarrollo en \texttt{docker/docker-compose.yml} con mapeo de puerto y mismas variables.
+    \item \textbf{Dependencias principales:} NestJS 11, Prisma 7 y cliente con adaptador \texttt{@prisma/adapter-pg}, \texttt{pg}, \texttt{class-validator} y \texttt{class-transformer}, además de la cadena de pruebas con Jest. El acceso a datos geoespaciales queda a cargo de PostGIS a nivel de motor (extensión activada al crear el contenedor).
+\end{itemize}
+
+\subparagraph{Repositorio panel (frontend, Next.js)}
+\begin{itemize}
+    \item \textbf{Stack y gestor de paquetes:} Next.js 16, React 19, Tailwind CSS 4, TypeScript, pnpm; scripts \texttt{dev} (con Webpack en el comando por defecto), \texttt{build} y \texttt{start}. Paquetes de UI: \texttt{lucide-react}.
+    \item \textbf{Variables de entorno (\texttt{.env}):} en \texttt{.env.example} se definen \texttt{FRONTEND\_PORT} (3000) y \texttt{NEXT\_PUBLIC\_API\_BASE\_URL} apuntando a la URL base de la API (p.\,ej. \texttt{http://localhost:4000} en desarrollo). Así se separa el origen de la API del código del cliente.
+    \item \textbf{ESLint:} \texttt{eslint.config.mjs} con \texttt{eslint-config-next} (reglas \textit{core-web-vitals} y capa TypeScript) e \textit{ignores} explícitos para \texttt{.next/}, \texttt{out/} y \texttt{build/}. No hay Prettier en \texttt{package.json} del front; el formato queda bajo criterio de la configuración de Next y de ESLint. Husky: \texttt{pre-commit} con \texttt{pnpm lint}.
+    \item \textbf{CI/CD:} en integración, instalación con pnpm, \texttt{lint} y \texttt{build}. En despliegue, comprobación de secretos (host SSH, ruta de aplicación, \texttt{NEXT\_PUBLIC\_API\_BASE\_URL}, etc.) y \texttt{docker compose -f docker/docker-compose.prod.yml} con construcción de la imagen. \texttt{docker/Dockerfile} multi-stage (Node 20, pnpm, \texttt{ARG} \texttt{NEXT\_PUBLIC\_API\_BASE\_URL} inyectada en el build) y contenedor con \texttt{pnpm start}. \texttt{docker-compose.prod} incluye servicio bajo red externa y etiquetas Traefik para enrutamiento HTTPS (certificado y host según entorno de despliegue).
 \end{itemize}
 
 \subsubsection{Implementación}
