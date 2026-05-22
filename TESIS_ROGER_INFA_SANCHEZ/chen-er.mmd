@@ -1,0 +1,69 @@
+flowchart TD
+    %% Entities (Rectangles)
+    Route[Route]
+    Stop[Stop]
+    Vehicle[Vehicle]
+    GpsPosition[GpsPosition]
+    EtaPrediction[EtaPrediction]
+
+    %% Relationships (Diamonds)
+    RouteStop{pasa por}
+    Assigned{asignado a}
+    Reports{registra}
+    PredRoute{predice para}
+    PredStop{llega a}
+
+    %% Attributes (Pills/Stadiums)
+    %% Route
+    r_id([id])
+    r_code([code])
+    r_name([name])
+    %% Stop
+    s_id([id])
+    s_name([name])
+    s_loc([location])
+    %% Vehicle
+    v_id([id])
+    v_plate([plateNumber])
+    v_status([status])
+    %% GpsPosition
+    g_speed([speedKph])
+    g_loc([location])
+    %% EtaPrediction
+    e_eta([etaSeconds])
+    e_conf([confidence])
+
+    %% Entity-Attribute Links
+    Route --- r_id
+    Route --- r_code
+    Route --- r_name
+
+    Stop --- s_id
+    Stop --- s_name
+    Stop --- s_loc
+
+    Vehicle --- v_id
+    Vehicle --- v_plate
+    Vehicle --- v_status
+
+    GpsPosition --- g_speed
+    GpsPosition --- g_loc
+
+    EtaPrediction --- e_eta
+    EtaPrediction --- e_conf
+
+    %% Entity-Relationship Links
+    Route ---|1| Assigned
+    Assigned ---|n| Vehicle
+
+    Route ---|1| RouteStop
+    RouteStop ---|n| Stop
+
+    Vehicle ---|1| Reports
+    Reports ---|n| GpsPosition
+
+    Vehicle ---|1| PredRoute
+    PredRoute ---|n| EtaPrediction
+
+    Stop ---|1| PredStop
+    PredStop ---|n| EtaPrediction

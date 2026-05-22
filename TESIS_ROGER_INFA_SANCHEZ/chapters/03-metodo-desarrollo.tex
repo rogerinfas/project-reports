@@ -20,19 +20,18 @@ Como estrategia de diseño, se aplican principios SOLID, inyección de dependenc
 \paragraph{Modelado de dominio (entidades, value objects y agregados)}
 \begin{itemize}
     \item \textbf{Agregado Ruta:} entidad raíz \texttt{Route}, asociada a su geometría \texttt{LineString} y a la secuencia de paraderos mediante \texttt{RouteStop}.
-    \item \textbf{Agregado Bus:} entidad raíz \texttt{Bus}, con estado operativo y trazabilidad de asignación.
+    \item \textbf{Agregado Vehículo:} entidad raíz \texttt{Vehicle}, con estado operativo, placa y asociación directa a una ruta.
     \item \textbf{Agregado Paradero:} entidad \texttt{Stop}, con ubicación geoespacial \texttt{Point} y metadatos de referencia.
-    \item \textbf{Value Objects:} \texttt{PlateNumber}, \texttt{RouteCode}, \texttt{GeoPoint}, \texttt{GeoLineString}, \texttt{BusStatus}, \texttt{DNI}, \texttt{Speed}, \texttt{Heading}.
+    \item \textbf{Value Objects:} \texttt{PlateNumber}, \texttt{RouteCode}, \texttt{VehicleStatus}, \texttt{GeoPoint}, \texttt{Speed}, \texttt{Heading}.
 \end{itemize}
 
 \paragraph{Reglas de negocio iniciales para monitoreo}
 \begin{enumerate}
-    \item Un bus solo puede tener una asignación activa por turno.
-    \item Una asignación requiere bus, conductor y ruta válidos.
-    \item Solo buses en estado \texttt{activo} publican ubicación en tiempo real.
-    \item Cada registro de ubicación debe incluir marca temporal válida.
-    \item La placa del bus, el DNI del conductor y el código SIT de ruta son únicos.
-    \item El cálculo de ETA usa historial de tráfico por segmento de ruta y condición de hora punta.
+    \item Un vehículo solo puede estar asignado a una ruta a la vez.
+    \item Solo vehículos en estado \texttt{activo} publican y registran posiciones GPS en tiempo real (\texttt{GpsPosition}).
+    \item Cada registro de ubicación debe incluir marca temporal válida y coordenadas exactas.
+    \item La placa del vehículo y el código SIT de la ruta deben ser valores únicos en todo el sistema.
+    \item El cálculo de ETA (\texttt{EtaPrediction}) se basa en la distancia, las posiciones históricas y la simulación del recorrido actual.
 \end{enumerate}
 
 \paragraph{Levantamiento de información con operador}
@@ -67,27 +66,27 @@ Las historias de usuario se documentan en formato \textbf{Como/Quiero/Para}, inc
 \textbf{ID} & \textbf{Rol} & \textbf{Necesito / Quiero} & \textbf{Para} \\
 \hline
 \endhead
-HU-001 & Usuario del transporte & Ver en el mapa los buses activos por ruta. & Estimar mejor mi hora de salida y reducir espera en paradero. \\
+HU-001 & Usuario del transporte & Ver en el mapa los vehículos activos por ruta. & Estimar mejor mi hora de salida y reducir espera en paradero. \\
 \hline
 HU-002 & Usuario del transporte & Identificar el paradero más cercano a mi ubicación actual. & Reducir tiempo de búsqueda y caminata innecesaria. \\
 \hline
 HU-003 & Usuario del transporte & Consultar una ruta específica con su trazo y paraderos ordenados. & Planificar mi desplazamiento con anticipación. \\
 \hline
-HU-004 & Usuario del transporte & Visualizar el ETA del próximo bus al paradero seleccionado. & Tomar decisiones de viaje con menor incertidumbre. \\
+HU-004 & Usuario del transporte & Visualizar el ETA del próximo vehículo al paradero seleccionado. & Tomar decisiones de viaje con menor incertidumbre. \\
 \hline
-HU-005 & Operador & Registrar asignación bus-conductor-ruta por turno. & Mantener control operativo diario de la flota. \\
+HU-005 & Operador & Asignar un vehículo a una ruta operativa específica. & Mantener control operativo diario de la flota. \\
 \hline
-HU-006 & Operador & Actualizar ubicación GPS del bus en tiempo real. & Mejorar precisión de monitoreo y de ETA. \\
+HU-006 & Operador & Actualizar ubicación GPS del vehículo en tiempo real. & Mejorar precisión de monitoreo y de ETA. \\
 \hline
-HU-007 & Operador & Consultar el estado operativo del bus (activo/mantenimiento/fuera de servicio). & Evitar publicar unidades no disponibles. \\
+HU-007 & Operador & Consultar el estado operativo del vehículo (activo/mantenimiento/fuera de servicio). & Evitar publicar unidades no disponibles. \\
 \hline
-HU-008 & Administrador & Registrar y editar rutas SIT con color y geometría. & Mantener actualizado el catálogo operativo. \\
+HU-008 & Administrador & Registrar y editar rutas SIT con código y geometría. & Mantener actualizado el catálogo operativo. \\
 \hline
 HU-009 & Administrador & Registrar y editar paraderos con referencia geográfica. & Mejorar precisión de puntos de abordaje y descenso. \\
 \hline
-HU-010 & Administrador & Registrar y actualizar datos de conductores y buses. & Asegurar trazabilidad de operación por unidad y chofer. \\
+HU-010 & Administrador & Registrar y actualizar datos de los vehículos y su estado. & Asegurar trazabilidad de operación por unidad. \\
 \hline
-HU-011 & Administrador & Consultar historial de tráfico por ruta, tramo y franja horaria. & Alimentar la estimación de tiempos de arribo. \\
+HU-011 & Administrador & Consultar predicciones de tiempos de llegada (ETA) por ruta y paradero. & Evaluar la calidad del servicio y precisión de las estimaciones. \\
 \hline
 HU-012 & Investigador & Exportar métricas de espera antes y después del uso del sistema. & Evaluar el impacto del modelo propuesto en la tesis. \\
 \hline
@@ -104,22 +103,22 @@ HU-012 & Investigador & Exportar métricas de espera antes y después del uso de
 \textbf{ID} & \textbf{Escenario} & \textbf{Contexto} & \textbf{Evento} & \textbf{Resultado esperado} \\
 \hline
 \endhead
-HU-001 & Visualizar buses activos & En caso que el usuario seleccione una ruta válida con unidades activas. & Cuando actualice el mapa. & El sistema muestra marcadores de buses con su última ubicación y hora de actualización. \\
+HU-001 & Visualizar vehículos activos & En caso que el usuario seleccione una ruta válida con unidades activas. & Cuando actualice el mapa. & El sistema muestra marcadores de vehículos con su última ubicación y hora de actualización. \\
 \hline
 HU-002 & Paradero más cercano & En caso que el usuario permita geolocalización del navegador. & Cuando solicite ``paradero cercano''. & El sistema calcula distancia y resalta el paradero más próximo. \\
 \hline
-HU-004 & ETA en paradero & En caso que existan datos de tráfico e historial para la ruta. & Cuando seleccione un paradero. & El sistema muestra ETA estimado del siguiente bus y rango de confianza. \\
+HU-004 & ETA en paradero & En caso que existan datos de predicción para la ruta. & Cuando seleccione un paradero. & El sistema muestra ETA estimado del siguiente vehículo y rango de confianza. \\
 \hline
-HU-005 & Asignación de turno & En caso que bus, conductor y ruta existan y estén disponibles. & Cuando el operador registre el turno. & El sistema crea una asignación válida sin duplicidad de bus activo en el mismo horario. \\
+HU-005 & Asignación de ruta & En caso que vehículo y ruta existan y estén disponibles. & Cuando el operador asigne la unidad. & El sistema asocia el vehículo a la ruta sin conflictos de estado. \\
 \hline
-HU-006 & Actualización GPS & En caso que el bus esté en estado activo. & Cuando llegue un nuevo paquete de ubicación. & El sistema actualiza \texttt{Live\_Tracking} con punto, timestamp, velocidad y rumbo. \\
+HU-006 & Actualización GPS & En caso que el vehículo esté en estado activo. & Cuando llegue un nuevo paquete de ubicación. & El sistema actualiza \texttt{GpsPosition} con punto, timestamp, velocidad y rumbo. \\
 \hline
-HU-011 & Consulta de tráfico histórico & En caso que el administrador seleccione ruta, segmento y rango de fechas. & Cuando ejecute la consulta. & El sistema devuelve velocidad promedio, condición de hora punta y serie temporal. \\
+HU-011 & Consulta de ETA & En caso que existan predicciones de ETA para la ruta y paradero. & Cuando ejecute la consulta. & El sistema devuelve el tiempo estimado de llegada y la confianza de la predicción. \\
 \hline
 \end{longtable}
 
 \paragraph{Modelo de datos de dominio}
-El modelo de datos representa la estructura conceptual del sistema para el monitoreo de transporte público, identificando las entidades principales (\texttt{Bus}, \texttt{Ruta}, \texttt{Paradero}, \texttt{Conductor} y \texttt{SeguimientoEnVivo}), sus atributos y sus relaciones de dominio. Este artefacto permite visualizar cómo se organiza la información operativa y geoespacial, sirviendo como base para el diseño de casos de uso, persistencia de datos y reglas de negocio en las siguientes iteraciones.
+El modelo de datos representa la estructura conceptual del sistema para el monitoreo de transporte público, identificando las entidades principales (\texttt{Vehicle}, \texttt{Route}, \texttt{Stop}, \texttt{EtaPrediction} y \texttt{GpsPosition}), sus atributos y sus relaciones de dominio. Este artefacto permite visualizar cómo se organiza la información operativa y geoespacial, sirviendo como base para el diseño de casos de uso, persistencia de datos y reglas de negocio en las siguientes iteraciones.
 
 \begin{figure}[H]
     \centering
@@ -600,76 +599,78 @@ El diagrama de secuencia describe la interacción entre usuario, interfaz web, A
 
 \paragraph{1. Entidades principales}
 \begin{itemize}
-    \item \textbf{Routes}
+    \item \textbf{Route}
     \begin{itemize}
-        \item \texttt{id}: UUID (PK)
-        \item \texttt{nombre}: String
-        \item \texttt{codigo\_sit}: String (Unique)
-        \item \texttt{color}: String (Hexadecimal)
-        \item \texttt{geometria}: LineString
+        \item \texttt{id}: String (CUID, PK)
+        \item \texttt{name}: String
+        \item \texttt{code}: String (Unique)
+        \item \texttt{description}: String (Optional)
+        \item \texttt{isActive}: Boolean
+        \item \texttt{path}: LineString (PostGIS)
     \end{itemize}
-    \item \textbf{Stops}
+    \item \textbf{Stop}
     \begin{itemize}
-        \item \texttt{id}: UUID (PK)
-        \item \texttt{nombre}: String
-        \item \texttt{ubicacion}: Point
-        \item \texttt{referencia}: Text
+        \item \texttt{id}: String (CUID, PK)
+        \item \texttt{name}: String
+        \item \texttt{code}: String (Unique)
+        \item \texttt{latitude}: Decimal
+        \item \texttt{longitude}: Decimal
+        \item \texttt{location}: Point (PostGIS)
+        \item \texttt{isActive}: Boolean
     \end{itemize}
-    \item \textbf{Buses}
+    \item \textbf{Vehicle}
     \begin{itemize}
-        \item \texttt{id}: UUID (PK)
-        \item \texttt{placa}: String (Unique)
-        \item \texttt{modelo}: String
-        \item \texttt{capacidad}: Integer
-        \item \texttt{estado}: Enum (\texttt{activo}, \texttt{mantenimiento}, \texttt{fuera\_de\_servicio})
-    \end{itemize}
-    \item \textbf{Drivers}
-    \begin{itemize}
-        \item \texttt{id}: UUID (PK)
-        \item \texttt{nombre}: String
-        \item \texttt{dni}: String (Unique)
-        \item \texttt{telefono}: String
+        \item \texttt{id}: String (CUID, PK)
+        \item \texttt{code}: String (Unique)
+        \item \texttt{plateNumber}: String (Unique)
+        \item \texttt{capacity}: Integer
+        \item \texttt{status}: Enum (\texttt{ACTIVE}, \texttt{INACTIVE}, \texttt{MAINTENANCE})
+        \item \texttt{routeId}: FK $\rightarrow$ Route
     \end{itemize}
 \end{itemize}
 
 \paragraph{2. Entidades de relación y tiempo real}
 \begin{itemize}
-    \item \textbf{Assignments}
+    \item \textbf{RouteStop}
     \begin{itemize}
-        \item \texttt{id}: UUID (PK)
-        \item \texttt{bus\_id}: FK $\rightarrow$ Buses
-        \item \texttt{driver\_id}: FK $\rightarrow$ Drivers
-        \item \texttt{route\_id}: FK $\rightarrow$ Routes
-        \item \texttt{fecha\_turno}: DateTime
+        \item \texttt{routeId}: FK $\rightarrow$ Route (PK)
+        \item \texttt{stopId}: FK $\rightarrow$ Stop (PK)
+        \item \texttt{stopOrder}: Integer
+        \item \texttt{distanceFromRouteStartMeters}: Integer (Optional)
+        \item \texttt{plannedTravelSeconds}: Integer (Optional)
     \end{itemize}
-    \item \textbf{Live\_Tracking}
+    \item \textbf{GpsPosition}
     \begin{itemize}
-        \item \texttt{bus\_id}: FK $\rightarrow$ Buses (PK)
-        \item \texttt{ultima\_ubicacion}: Point
-        \item \texttt{ultima\_actualizacion}: Timestamp
-        \item \texttt{velocidad\_actual}: Float
-        \item \texttt{rumbo}: Float
+        \item \texttt{id}: String (CUID, PK)
+        \item \texttt{vehicleId}: FK $\rightarrow$ Vehicle
+        \item \texttt{latitude}: Decimal
+        \item \texttt{longitude}: Decimal
+        \item \texttt{speedKph}: Decimal
+        \item \texttt{headingDegrees}: Decimal
+        \item \texttt{recordedAt}: DateTime
+        \item \texttt{location}: Point (PostGIS)
     \end{itemize}
 \end{itemize}
 
 \paragraph{3. Entidades para tiempos y tráfico}
 \begin{itemize}
-    \item \textbf{Traffic\_History}
+    \item \textbf{EtaPrediction}
     \begin{itemize}
-        \item \texttt{id}: BigInt (PK)
-        \item \texttt{route\_id}: FK $\rightarrow$ Routes
-        \item \texttt{segmento\_ruta}: Integer
-        \item \texttt{velocidad\_promedio}: Float
-        \item \texttt{hora\_punta}: Boolean
-        \item \texttt{timestamp}: DateTime
+        \item \texttt{id}: String (CUID, PK)
+        \item \texttt{vehicleId}: FK $\rightarrow$ Vehicle
+        \item \texttt{routeId}: FK $\rightarrow$ Route
+        \item \texttt{stopId}: FK $\rightarrow$ Stop
+        \item \texttt{etaSeconds}: Integer
+        \item \texttt{predictedArrivalAt}: DateTime
+        \item \texttt{confidence}: Decimal
     \end{itemize}
 \end{itemize}
 
 \paragraph{Relaciones lógicas principales}
 \begin{itemize}
-    \item Una \texttt{Route} tiene muchos \texttt{Stops} (N:M) mediante tabla intermedia \texttt{Route\_Stops} con orden secuencial.
-    \item Una \texttt{Route} tiene muchos \texttt{Buses} activos (1:N).
-    \item Un \texttt{Bus} tiene una sola ubicación en tiempo real (1:1) en \texttt{Live\_Tracking}.
+    \item Una \texttt{Route} tiene muchos \texttt{Stops} (N:M) mediante tabla intermedia \texttt{RouteStop} con orden secuencial.
+    \item Una \texttt{Route} tiene muchos \texttt{Vehicles} activos (1:N).
+    \item Un \texttt{Vehicle} registra múltiples ubicaciones en tiempo real (1:N) en \texttt{GpsPosition}.
 \end{itemize}
 
 \paragraph{Diagrama E-R (artefacto gráfico)}
@@ -695,79 +696,81 @@ Como complemento del diagrama E-R, se presenta el diccionario de datos inicial c
 \textbf{Entidad} & \textbf{Campo} & \textbf{Tipo} & \textbf{Restricciones / descripción} \\
 \hline
 \endhead
-Routes & id & UUID & Clave primaria (PK), identificador único de la ruta. \\
+Route & id & String & Clave primaria (PK), CUID único de la ruta. \\
 \hline
-Routes & nombre & String & Nombre descriptivo de la ruta SIT. \\
+Route & name & String & Nombre descriptivo de la ruta SIT. \\
 \hline
-Routes & codigo\_sit & String & Código de ruta, valor único (\texttt{UNIQUE}). \\
+Route & code & String & Código de ruta, valor único (\texttt{UNIQUE}). \\
 \hline
-Routes & color & String & Color de representación de la ruta (formato hexadecimal). \\
+Route & description & String & Descripción opcional de la ruta. \\
 \hline
-Routes & geometria & LineString & Geometría espacial del trazo completo de la ruta. \\
+Route & isActive & Boolean & Indicador de operatividad de la ruta. \\
 \hline
-Stops & id & UUID & Clave primaria (PK), identificador único de paradero. \\
+Route & path & LineString & Geometría espacial PostGIS del trazo. \\
 \hline
-Stops & nombre & String & Nombre del paradero. \\
+Stop & id & String & Clave primaria (PK), CUID único del paradero. \\
 \hline
-Stops & ubicacion & Point & Coordenada geográfica del paradero. \\
+Stop & name & String & Nombre del paradero. \\
 \hline
-Stops & referencia & Text & Descripción referencial de ubicación. \\
+Stop & code & String & Código de paradero, valor único (\texttt{UNIQUE}). \\
 \hline
-Buses & id & UUID & Clave primaria (PK), identificador único de bus. \\
+Stop & latitude & Decimal & Latitud decimal (9,6). \\
 \hline
-Buses & placa & String & Placa del bus, valor único (\texttt{UNIQUE}). \\
+Stop & longitude & Decimal & Longitud decimal (9,6). \\
 \hline
-Buses & modelo & String & Modelo o serie de la unidad. \\
+Stop & location & Point & Geometría Point de PostGIS. \\
 \hline
-Buses & capacidad & Integer & Cantidad máxima de pasajeros de la unidad. \\
+Vehicle & id & String & Clave primaria (PK), CUID único del vehículo. \\
 \hline
-Buses & estado & Enum & Estado operativo: \texttt{activo}, \texttt{mantenimiento}, \texttt{fuera\_de\_servicio}. \\
+Vehicle & code & String & Código interno del vehículo (\texttt{UNIQUE}). \\
 \hline
-Drivers & id & UUID & Clave primaria (PK), identificador único de conductor. \\
+Vehicle & plateNumber & String & Placa del vehículo (\texttt{UNIQUE}). \\
 \hline
-Drivers & nombre & String & Nombres y apellidos del conductor. \\
+Vehicle & capacity & Integer & Cantidad máxima de pasajeros. \\
 \hline
-Drivers & dni & String & Documento nacional de identidad, valor único (\texttt{UNIQUE}). \\
+Vehicle & status & Enum & Estado: \texttt{ACTIVE}, \texttt{INACTIVE}, \texttt{MAINTENANCE}. \\
 \hline
-Drivers & telefono & String & Teléfono de contacto del conductor. \\
+Vehicle & routeId & String & Clave foránea (FK) hacia \texttt{Route.id}. \\
 \hline
-Assignments & id & UUID & Clave primaria (PK), identificador único de asignación de turno. \\
+RouteStop & routeId & String & Clave foránea (FK) hacia \texttt{Route.id}. \\
 \hline
-Assignments & bus\_id & UUID & Clave foránea (FK) hacia \texttt{Buses.id}. \\
+RouteStop & stopId & String & Clave foránea (FK) hacia \texttt{Stop.id}. \\
 \hline
-Assignments & driver\_id & UUID & Clave foránea (FK) hacia \texttt{Drivers.id}. \\
+RouteStop & stopOrder & Integer & Orden secuencial del paradero en la ruta. \\
 \hline
-Assignments & route\_id & UUID & Clave foránea (FK) hacia \texttt{Routes.id}. \\
+RouteStop & distanceFromRouteStartMeters & Integer & Distancia desde el inicio de la ruta (opcional). \\
 \hline
-Assignments & fecha\_turno & DateTime & Fecha y hora del turno asignado. \\
+RouteStop & plannedTravelSeconds & Integer & Tiempo estimado planificado de viaje (opcional). \\
 \hline
-Live\_Tracking & bus\_id & UUID & Clave primaria y foránea (PK/FK) hacia \texttt{Buses.id}. \\
+GpsPosition & id & String & Clave primaria (PK), CUID del registro. \\
 \hline
-Live\_Tracking & ultima\_ubicacion & Point & Última coordenada GPS reportada por la unidad. \\
+GpsPosition & vehicleId & String & Clave foránea (FK) hacia \texttt{Vehicle.id}. \\
 \hline
-Live\_Tracking & ultima\_actualizacion & Timestamp & Marca temporal de la última actualización. \\
+GpsPosition & latitude & Decimal & Latitud decimal (9,6). \\
 \hline
-Live\_Tracking & velocidad\_actual & Float & Velocidad registrada en la última lectura. \\
+GpsPosition & longitude & Decimal & Longitud decimal (9,6). \\
 \hline
-Live\_Tracking & rumbo & Float & Dirección de desplazamiento (grados). \\
+GpsPosition & speedKph & Decimal & Velocidad registrada en km/h. \\
 \hline
-Traffic\_History & id & BigInt & Clave primaria (PK), identificador histórico incremental. \\
+GpsPosition & headingDegrees & Decimal & Dirección en grados (rumbo). \\
 \hline
-Traffic\_History & route\_id & UUID & Clave foránea (FK) hacia \texttt{Routes.id}. \\
+GpsPosition & recordedAt & DateTime & Fecha y hora exacta del registro GPS. \\
 \hline
-Traffic\_History & segmento\_ruta & Integer & Índice o tramo específico evaluado de la ruta. \\
+GpsPosition & location & Point & Ubicación espacial (PostGIS). \\
 \hline
-Traffic\_History & velocidad\_promedio & Float & Velocidad promedio registrada en el tramo. \\
+EtaPrediction & id & String & Clave primaria (PK). \\
 \hline
-Traffic\_History & hora\_punta & Boolean & Indicador de condición de hora punta (\texttt{true}/\texttt{false}). \\
+EtaPrediction & vehicleId & String & Clave foránea (FK) hacia \texttt{Vehicle.id}. \\
 \hline
-Traffic\_History & timestamp & DateTime & Fecha y hora del registro histórico de tráfico. \\
+EtaPrediction & routeId & String & Clave foránea (FK) hacia \texttt{Route.id}. \\
 \hline
-Route\_Stops & route\_id & UUID & Clave foránea (FK) hacia \texttt{Routes.id}; parte de relación N:M. \\
+EtaPrediction & stopId & String & Clave foránea (FK) hacia \texttt{Stop.id}. \\
 \hline
-Route\_Stops & stop\_id & UUID & Clave foránea (FK) hacia \texttt{Stops.id}; parte de relación N:M. \\
+EtaPrediction & etaSeconds & Integer & Tiempo estimado de llegada en segundos. \\
 \hline
-Route\_Stops & orden & Integer & Orden secuencial del paradero dentro de la ruta. \\
+EtaPrediction & predictedArrivalAt & DateTime & Marca temporal de la llegada pronosticada. \\
+\hline
+EtaPrediction & confidence & Decimal & Nivel de confianza de la predicción. \\
 \hline
 \end{longtable}
 
