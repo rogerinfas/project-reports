@@ -814,18 +814,18 @@ Como ejemplo representativo de esta metodología, se documentó y analizó el ar
     \item \textbf{Aseveraciones (Asserts):} Verificación de que cada caso de uso invoque correctamente a su correspondiente puerto y devuelva la entidad de dominio rehidratada esperada, validando tanto caminos felices como el control de excepciones (como la respuesta \texttt{NotFoundException} en búsquedas fallidas).
 \end{itemize}
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{assets/captura-ejecucion-test-individual.png}
+    \figcaptionwithauthor{Resultado de la ejecución individual aislada del archivo de pruebas unitarias \texttt{route.service.spec.ts} mediante Jest}
+\end{figure}
+
 Se validaron exitosamente los casos de uso centrales del backend (creación de vehículos, registro de paraderos, simulación geométrica de rutas, asignación de turnos y orquestación de WebSockets). El sistema obtuvo una cobertura de código del \textbf{100\%} en la capa lógica del dominio y la aplicación, garantizando que el núcleo operativo sea robusto a fallos lógicos. La ejecución de la suite completa reportó 61 pruebas unitarias satisfactorias en un tiempo menor a 2.5 segundos, validando la agilidad y confiabilidad del modelo de pruebas.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.85\textwidth]{assets/captura-pruebas-unitarias.png}
     \figcaptionwithauthor{Resultado de la ejecución exitosa de pruebas unitarias Jest en el Backend}
-\end{figure}
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.85\textwidth]{assets/captura-ejecucion-test-individual.png}
-    \figcaptionwithauthor{Resultado de la ejecución individual aislada del archivo de pruebas unitarias \texttt{route.service.spec.ts} mediante Jest}
 \end{figure}
 
 \begin{figure}[H]
