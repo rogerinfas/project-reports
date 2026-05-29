@@ -798,9 +798,27 @@ En esta fase se presentan las pruebas funcionales y técnicas de software aplica
 Para validar los requisitos del sistema y optimizar la cobertura de código, se aplicaron tres técnicas fundamentales de diseño de software:
 
 \begin{enumerate}
-    \item \textbf{Partición de Equivalencias:} Aplicado a los estados del vehículo (\texttt{ACTIVE}, \texttt{INACTIVE}, \texttt{MAINTENANCE}) y a la geolocalización, verificando que los registros GPS se encuentren exclusivamente dentro del bounding box geoespacial de la provincia de Arequipa (Latitud \texttt{[-16.6, -16.2]} y Longitud \texttt{[-71.7, -71.2]}).
-    \item \textbf{Análisis de Valores Límite:} Diseñado para variables operativas como la velocidad (\texttt{speedKph}), evaluando las fronteras entre el estado estacionario (\texttt{0.0} km/h), los límites permitidos de circulación urbana (\texttt{100.0} km/h) y valores negativos o excesivos mediante esquemas de validación de esquemas (DTOs). Asimismo, se evalúan los límites del identificador de placa vehicular de 6 a 7 caracteres válidos según la regulación de transporte.
-    \item \textbf{Tabla de Decisiones:} Implementado para el flujo de sincronización de tracking, asegurando que únicamente los buses con asignación vigente a una ruta y con estado operativo \texttt{ACTIVE} actualicen su posición en tiempo real e inicien el cálculo automático de arribo (ETA) a los paraderos.
+    \item \textbf{Partición de Equivalencias:} Aplicado tanto a los estados operativos del vehículo como a la geolocalización de coordenadas:
+    \begin{itemize}
+        \item \textit{Estados del Vehículo:} Los estados válidos (\texttt{ACTIVE}, \texttt{INACTIVE}, \texttt{MAINTENANCE}) representan la clase de equivalencia válida. Esto se valida en la capa de presentación mediante el decorador \texttt{@IsIn([...VehicleStatuses])} de \texttt{class-validator} dentro del DTO \texttt{CreateVehicleDto} (\texttt{create-vehicle.dto.ts}), bloqueando en el pipeline global de NestJS cualquier estado inválido (ej. \texttt{'REPAIR'}). Asimismo, a nivel de base de datos en PostgreSQL, se restringe físicamente mediante un tipo \texttt{enum} mapeado con Prisma (\texttt{schema.prisma}).
+        \item \textit{Geolocalización:} Se restringen los datos espaciales al bounding box de la provincia de Arequipa (Latitud \texttt{[-16.6, -16.2]} y Longitud \texttt{[-71.7, -71.2]}). Esto se procesa mediante tipos espaciales nativos \texttt{Geometry(Point, 4326)} y \texttt{Geometry(LineString, 4326)} administrados a través de la extensión \textbf{PostGIS} en la base de datos de producción PostgreSQL, garantizando la integridad de los trazos geométricos en el mapa y la simulación.
+    \end{itemize}
+    \item \textbf{Análisis de Valores Límite:} Diseñado para variables cuantitativas operativas:
+    \begin{itemize}
+        \item \textit{Velocidad (\texttt{speedKph}):} Se evalúan las fronteras críticas del dominio que van desde el estado estacionario (\texttt{0.0} km/h) hasta los límites permitidos de circulación vial urbana (\texttt{100.0} km/h). NestJS restringe valores negativos mediante decoradores de rango como \texttt{@Min(0)} en los esquemas de transferencia de datos (DTOs) de la API, y a nivel de base de datos se limita mediante el tipo de datos físico \texttt{Decimal(5, 2)} en PostgreSQL.
+        \item \textit{Placa Vehicular (\texttt{plateNumber}):} Se definen valores frontera entre 6 y 7 caracteres válidos según la regulación oficial de transporte del MTC peruano (ej. \texttt{ABC-123} o \texttt{A1B-234}). La validación estricta de longitud y patrón se implementa en la capa de entrada del backend usando \texttt{@MinLength(1)} y \texttt{@MaxLength(32)} en el archivo \texttt{create-vehicle.dto.ts}, combinados con validadores basados en expresiones regulares (\texttt{@Matches}).
+    \end{itemize}
+    \item \textbf{Tabla de Decisiones (Lógica de Orquestación del Tracking):} Implementado para coordinar el flujo reactivo de posicionamiento en tiempo real por WebSockets. Para que un dispositivo sea considerado apto para telemetría, debe cumplir simultáneamente dos condiciones lógicas booleanas:
+    \begin{itemize}
+        \item \textit{Condición 1 (Estado Operativo):} El vehículo/ruta debe estar en un estado operativo activo (\texttt{isActive = true}).
+        \item \textit{Condición 2 (Asignación de Ruta):} Debe existir una trayectoria espacial válida asignada al bus (\texttt{outboundPath IS NOT NULL}).
+    \end{itemize}
+    Esta tabla de decisiones lógica de cuatro cuadrantes se implementa formalmente en el backend dentro del servicio \texttt{SimulationService} (\texttt{simulation.service.ts}), mediante una consulta SQL optimizada con Prisma:
+    \begin{verbatim}
+    SELECT id, "outboundPath" FROM "Route" 
+    WHERE "isActive" = true AND "outboundPath" IS NOT NULL
+    \end{verbatim}
+    De esta forma, solo la intersección de ambas condiciones (el caso de decisión verdadero/verdadero) desencadena la inicialización del simulador, el cálculo de progreso e interpolación del punto espacial vía PostGIS, y su subsecuente difusión hacia los clientes de mapa a través de WebSockets (\texttt{this.trackingGateway.server.to(routeId).emit('vehicle_update', ...)}).
 \end{enumerate}
 
 \paragraph{Pruebas Unitarias de Casos de Uso (Backend)}
