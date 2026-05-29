@@ -835,14 +835,30 @@ Se validaron exitosamente los casos de uso centrales del backend (creación de v
 \end{figure}
 
 \paragraph{Pruebas de DevOps y Despliegue (VPS, Traefik y Let's Encrypt)}
-La validación de la infraestructura en producción (VPS Linux) se orientó a la estabilidad del canal bidireccional de comunicación en tiempo real (\textit{WebSockets} mediante \textit{Socket.io}). Debido al comportamiento de \textit{handshake} inicial de Socket.io mediante peticiones HTTP polivalentes, se configuraron y probaron con éxito las etiquetas de \textbf{Sticky Sessions} (sesiones pegajosas) mediante cookies a nivel del proxy inverso \textbf{Traefik}, redirigiendo de manera segura todo el tráfico del websocket (\texttt{/socket.io}) al mismo contenedor de backend.
+La validación de la infraestructura en producción (VPS Linux) se orientó a la estabilidad del canal de comunicación bidireccional de WebSockets y a la robustez del flujo automático de Integración y Despliegue Continuo (CI/CD) orquestado a través de \textbf{GitHub Actions}.
 
-Las pruebas de comunicación en red confirmaron que al forzar el transporte directo a protocolo \texttt{['websocket']} puro en el cliente Next.js, se reducen las fallas de conexión inicial y se asegura el establecimiento rápido del túnel seguro (HTTPS/WSS) firmado mediante certificados TLS automáticos de \textbf{Let's Encrypt}. Asimismo, el flujo de integración continua (\textbf{GitHub Actions}) valida automáticamente la calidad del código, sintaxis y migración de Prisma antes de orquestar el despliegue automático del contenedor de producción.
+El pipeline de entrega continua está diseñado bajo dos flujos de trabajo paralelos y automáticos:
+\begin{itemize}
+    \item \textbf{Integración Continua (CI):} Se ejecuta en cada Push o Pull Request hacia la rama \texttt{develop}. En el \textbf{Backend}, este flujo inicializa un entorno virtual de Node.js, instala las dependencias de forma consistente mediante \texttt{pnpm install --frozen-lockfile}, genera el cliente de base de datos de Prisma (\texttt{prisma:generate}), valida la calidad estática de sintaxis y tipado (\texttt{pnpm lint}), ejecuta la suite completa de pruebas unitarias con Jest (\texttt{pnpm test}) y finalmente compila el código en producción (\texttt{pnpm build}). En el \textbf{Frontend}, el flujo análogo asegura que la interfaz de usuario basada en Next.js compile su empaquetado de producción de forma limpia y pase la auditoría estática de ESLint.
+    \item \textbf{Despliegue Continuo (CD):} Se activa automáticamente tras la aprobación e integración de los cambios en las ramas principales de producción (\texttt{main}/\texttt{master}). GitHub Actions establece una conexión segura mediante SSH Key secreta al servidor VPS, sincroniza el código remoto, construye las imágenes optimizadas de Docker multi-stage y orquesta el reinicio seguro de los contenedores mediante \texttt{docker-compose.prod.yml}. Este despliegue aplica automáticamente las migraciones pendientes en PostgreSQL (\texttt{prisma migrate deploy}) y levanta el servicio por detrás del proxy inverso de \textbf{Traefik}, el cual asigna automáticamente los certificados SSL de \textbf{Let's Encrypt} y activa las Sticky Sessions.
+\end{itemize}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.85\textwidth]{assets/captura-devops-despliegue.png}
-    \figcaptionwithauthor{Flujo de integración continua en GitHub Actions y orquestación de despliegue con Docker y Traefik}
+    \includegraphics[width=0.85\textwidth]{assets/captura-ci-backend.png}
+    \figcaptionwithauthor{Flujo de Integración Continua (CI) del Backend en GitHub Actions}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{assets/captura-ci-frontend.png}
+    \figcaptionwithauthor{Flujo de Integración Continua (CI) del Frontend en GitHub Actions}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{assets/captura-cd-despliegue.png}
+    \figcaptionwithauthor{Orquestación conjunta del Despliegue Continuo (CD) de Frontend y Backend en el servidor de producción}
 \end{figure}
 
 \paragraph{Pruebas de Diseño de Interfaz y UI/UX (Frontend)}
