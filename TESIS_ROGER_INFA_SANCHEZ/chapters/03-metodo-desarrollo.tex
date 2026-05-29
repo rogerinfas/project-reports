@@ -861,6 +861,24 @@ El pipeline de entrega continua está diseñado bajo dos flujos de trabajo paral
     \figcaptionwithauthor{Orquestación conjunta del Despliegue Continuo (CD) de Frontend y Backend en el servidor de producción desde Github Actions}
 \end{figure}
 
+Para validar y verificar la estabilidad operativa del entorno de producción directamente en el servidor VPS, se implementó el monitoreo activo de contenedores mediante la herramienta \textbf{ctop}. Esta interfaz gráfica por terminal permite inspeccionar en tiempo real el consumo de recursos (CPU, memoria, red y disco) de cada servicio orquestado en Docker. 
+
+En la Figura \ref{fig:ctop-general} se observa el listado general del estado saludable y en ejecución de todos los contenedores que componen la infraestructura (incluyendo el proxy inverso \textbf{Traefik}, la base de datos centralizada de producción \textbf{PostgreSQL}, el servicio del \textbf{Backend} y la aplicación del \textbf{Frontend}). De igual manera, en la Figura \ref{fig:ctop-detalle} se visualiza la telemetría detallada del contenedor del backend, constatando un consumo mínimo de recursos y un correcto comportamiento de las conexiones a sockets.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{assets/captura-ctop-general.png}
+    \figcaptionwithauthor{Monitoreo general de los contenedores Docker en ejecución activa dentro del VPS de producción mediante la interfaz de terminal ctop}
+    \label{fig:ctop-general}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{assets/captura-ctop-detalle.png}
+    \figcaptionwithauthor{Inspección detallada del contenedor Docker correspondiente al backend del sistema en producción en ctop}
+    \label{fig:ctop-detalle}
+\end{figure}
+
 \paragraph{Pruebas de Diseño de Interfaz y UI/UX (Frontend)}
 El panel web administrador y de monitoreo de usuario final fue verificado en base a las siguientes dimensiones funcionales:
 \begin{itemize}
