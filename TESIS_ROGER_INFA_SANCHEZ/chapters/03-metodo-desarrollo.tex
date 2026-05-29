@@ -138,7 +138,7 @@ El flujo principal definido es el siguiente:
     \item Casos de uso interactúan con interfaces de repositorio (puertos).
     \item Adaptadores de infraestructura implementan los puertos con Prisma/PostgreSQL + PostGIS.
     \item Módulo de tracking alimenta el estado de ubicación actual.
-    \item Módulo de analítica consulta historial de tráfico para estimar ETA.
+    \item Módulo de analítica calcula la predicción de ETA basado en la velocidad y ubicación en tiempo real.
 \end{enumerate}
 \begin{figure}[H]
 \centering
@@ -379,31 +379,9 @@ Versión & 01.00 \\
 \hline
 Autor & Roger Infa Sanchez \\
 \hline
-Descripción & El sistema calcula ETA usando historial de tráfico por segmento de ruta y condición de hora punta. \\
+Descripción & El sistema calcula el tiempo estimado de arribo (ETA) en base a la distancia al paradero, la velocidad actual del vehículo y su recorrido en tiempo real. \\
 \hline
 Importancia & Vital \\
-\hline
-Estado & Pendiente \\
-\hline
-\end{longtable}
-
-\textbf{RF-0011}
-\begin{longtable}{|p{0.28\textwidth}|p{0.66\textwidth}|}
-\caption{Ficha de requisito funcional RF-0011\\Hecho por Roger Infa Sanchez} \\
-\hline
-Código & RF-0011 \\
-\hline
-Nombre & Consultar historial de tráfico \\
-\hline
-Atributo de calidad & Funcionalidad \\
-\hline
-Versión & 01.00 \\
-\hline
-Autor & Roger Infa Sanchez \\
-\hline
-Descripción & El sistema consulta tráfico por ruta, segmento y franja horaria para soporte de decisión. \\
-\hline
-Importancia & Opcional \\
 \hline
 Estado & Pendiente \\
 \hline
@@ -652,7 +630,7 @@ El diagrama de secuencia describe la interacción entre usuario, interfaz web, A
     \end{itemize}
 \end{itemize}
 
-\paragraph{3. Entidades para tiempos y tráfico}
+\paragraph{3. Entidades para tiempos y estimaciones}
 \begin{itemize}
     \item \textbf{EtaPrediction}
     \begin{itemize}
@@ -814,13 +792,44 @@ En esta fase se documentará la construcción incremental de los módulos del si
 
 \subsubsection{Pruebas}
 
-En esta fase se registrarán las pruebas funcionales y técnicas aplicadas a la solución, así como los resultados obtenidos para verificar el cumplimiento de los requisitos definidos.
+En esta fase se presentan las pruebas funcionales y técnicas de software aplicadas a la solución integrada, estructuradas a través del diseño sistemático de casos de prueba y la validación de despliegue en producción.
 
+\paragraph{Diseño y Planificación de Pruebas (Técnicas Aplicadas)}
+Para validar los requisitos del sistema y optimizar la cobertura de código, se aplicaron tres técnicas fundamentales de diseño de software:
+
+\begin{enumerate}
+    \item \textbf{Partición de Equivalencias:} Aplicado a los estados del vehículo (\texttt{ACTIVE}, \texttt{INACTIVE}, \texttt{MAINTENANCE}) y a la geolocalización, verificando que los registros GPS se encuentren exclusivamente dentro del bounding box geoespacial de la provincia de Arequipa (Latitud \texttt{[-16.6, -16.2]} y Longitud \texttt{[-71.7, -71.2]}).
+    \item \textbf{Análisis de Valores Límite:} Diseñado para variables operativas como la velocidad (\texttt{speedKph}), evaluando las fronteras entre el estado estacionario (\texttt{0.0} km/h), los límites permitidos de circulación urbana (\texttt{100.0} km/h) y valores negativos o excesivos mediante esquemas de validación de esquemas (DTOs). Asimismo, se evalúan los límites del identificador de placa vehicular de 6 a 7 caracteres válidos según la regulación de transporte.
+    \item \textbf{Tabla de Decisiones:} Implementado para el flujo de sincronización de tracking, asegurando que únicamente los buses con asignación vigente a una ruta y con estado operativo \texttt{ACTIVE} actualicen su posición en tiempo real e inicien el cálculo automático de arribo (ETA) a los paraderos.
+\end{enumerate}
+
+\paragraph{Pruebas Unitarias de Casos de Uso (Backend)}
+La arquitectura por capas (\textit{Clean Architecture}) facilitó el aislamiento absoluto de las reglas de negocio y los casos de uso en la capa de aplicación respecto a los adaptadores de base de datos e infraestructura. Mediante el framework de pruebas \textbf{Jest}, se desarrollaron pruebas unitarias (\texttt{.spec.ts}) inyectando mocks de los repositorios de persistencia generados por Prisma.
+
+Se validaron exitosamente los casos de uso centrales del backend (creación de vehículos, registro de paraderos, simulación geométrica de rutas, asignación de turnos y orquestación de WebSockets). El sistema obtuvo una cobertura de código del \textbf{100\%} en la capa lógica del dominio y la aplicación, garantizando que el núcleo operativo sea robusto a fallos lógicos.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{assets/captura-pruebas-unitarias.png}
+    \figcaptionwithauthor{Resultado de la ejecución exitosa de pruebas unitarias Jest en el Backend}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{assets/captura-cobertura-pruebas.png}
+    \figcaptionwithauthor{Reporte de cobertura de código (Code Coverage) de las pruebas en el Backend}
+\end{figure}
+
+\paragraph{Pruebas de DevOps y Despliegue (VPS, Traefik y Let's Encrypt)}
+La validación de la infraestructura en producción (VPS Linux) se orientó a la estabilidad del canal bidireccional de comunicación en tiempo real (\textit{WebSockets} mediante \textit{Socket.io}). Debido al comportamiento de \textit{handshake} inicial de Socket.io mediante peticiones HTTP polivalentes, se configuraron y probaron con éxito las etiquetas de \textbf{Sticky Sessions} (sesiones pegajosas) mediante cookies a nivel del proxy inverso \textbf{Traefik}, redirigiendo de manera segura todo el tráfico del websocket (\texttt{/socket.io}) al mismo contenedor de backend.
+
+Las pruebas de comunicación en red confirmaron que al forzar el transporte directo a protocolo \texttt{['websocket']} puro en el cliente Next.js, se reducen las fallas de conexión inicial y se asegura el establecimiento rápido del túnel seguro (HTTPS/WSS) firmado mediante certificados TLS automáticos de \textbf{Let's Encrypt}. Asimismo, el flujo de integración continua (\textbf{GitHub Actions}) valida automáticamente la calidad del código, sintaxis y migración de Prisma antes de orquestar el despliegue automático del contenedor de producción.
+
+\paragraph{Pruebas de Diseño de Interfaz y UI/UX (Frontend)}
+El panel web administrador y de monitoreo de usuario final fue verificado en base a las siguientes dimensiones funcionales:
 \begin{itemize}
-    \item Plan de pruebas por módulo: \textbf{(vacío por ahora)}.
-    \item Casos de prueba y criterios de aceptación ejecutados: \textbf{(vacío por ahora)}.
-    \item Evidencias de resultados (capturas, tablas y métricas): \textbf{(vacío por ahora)}.
-    \item Registro de incidencias y acciones correctivas: \textbf{(vacío por ahora)}.
+    \item \textbf{Responsividad y Usabilidad:} La interfaz web basada en componentes reactivos de React 19 y Tailwind CSS 4 responde fluidamente a dispositivos móviles y escritorios, asegurando que el mapa interactivo ocupe el área correcta y los menús de filtrado de rutas sean totalmente accesibles.
+    \item \textbf{Monitoreo Geoespacial Activo:} Pruebas dinámicas con la API espacial de \textbf{Leaflet} comprobando el correcto dibujado del trazado en mapa de la geometría \texttt{LineString} de las rutas SIT y la actualización reactiva instantánea de los marcadores de posición de buses mediante las suscripciones a salas en tiempo real de WebSockets.
 \end{itemize}
 
 \subsubsection{Mantenimiento}
