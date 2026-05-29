@@ -825,6 +825,12 @@ La validación de la infraestructura en producción (VPS Linux) se orientó a la
 
 Las pruebas de comunicación en red confirmaron que al forzar el transporte directo a protocolo \texttt{['websocket']} puro en el cliente Next.js, se reducen las fallas de conexión inicial y se asegura el establecimiento rápido del túnel seguro (HTTPS/WSS) firmado mediante certificados TLS automáticos de \textbf{Let's Encrypt}. Asimismo, el flujo de integración continua (\textbf{GitHub Actions}) valida automáticamente la calidad del código, sintaxis y migración de Prisma antes de orquestar el despliegue automático del contenedor de producción.
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{assets/captura-devops-despliegue.png}
+    \figcaptionwithauthor{Flujo de integración continua en GitHub Actions y orquestación de despliegue con Docker y Traefik}
+\end{figure}
+
 \paragraph{Pruebas de Diseño de Interfaz y UI/UX (Frontend)}
 El panel web administrador y de monitoreo de usuario final fue verificado en base a las siguientes dimensiones funcionales:
 \begin{itemize}
