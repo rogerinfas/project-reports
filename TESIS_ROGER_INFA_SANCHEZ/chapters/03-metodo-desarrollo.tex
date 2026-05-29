@@ -834,9 +834,15 @@ Las pruebas de comunicación en red confirmaron que al forzar el transporte dire
 \paragraph{Pruebas de Diseño de Interfaz y UI/UX (Frontend)}
 El panel web administrador y de monitoreo de usuario final fue verificado en base a las siguientes dimensiones funcionales:
 \begin{itemize}
-    \item \textbf{Responsividad y Usabilidad:} La interfaz web basada en componentes reactivos de React 19 y Tailwind CSS 4 responde fluidamente a dispositivos móviles y escritorios, asegurando que el mapa interactivo ocupe el área correcta y los menús de filtrado de rutas sean totalmente accesibles.
+    \item \textbf{Responsividad y Usabilidad:} La interfaz web basada en componentes reactivos de React 19 y Tailwind CSS 4 responde fluidamente a dispositivos móviles y escritorios, asegurando que el mapa interactivo ocupe el área correcta y los menús de filtrado de rutas sean totalmente accesibles. Para validar la correcta adaptación y visualización adaptativa (responsividad) en múltiples pantallas concurrentemente, se utilizó la extensión de Google Chrome \textbf{Responsive Viewer}, evaluando los layouts operativos en resoluciones críticas equivalentes a un iPhone 14, iPhone 14 Pro Max, iPad Air 5 y MacBook Air.
     \item \textbf{Monitoreo Geoespacial Activo:} Pruebas dinámicas con la API espacial de \textbf{Leaflet} comprobando el correcto dibujado del trazado en mapa de la geometría \texttt{LineString} de las rutas SIT y la actualización reactiva instantánea de los marcadores de posición de buses mediante las suscripciones a salas en tiempo real de WebSockets.
 \end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{assets/captura-responsive-viewer.png}
+    \figcaptionwithauthor{Validación de responsividad multidispositivo (iPhone 14, iPhone 14 Pro Max, iPad Air 5 y MacBook Air) mediante la herramienta Responsive Viewer}
+\end{figure}
 
 \subsubsection{Mantenimiento}
 
