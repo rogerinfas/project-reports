@@ -806,7 +806,15 @@ Para validar los requisitos del sistema y optimizar la cobertura de código, se 
 \paragraph{Pruebas Unitarias de Casos de Uso (Backend)}
 La arquitectura por capas (\textit{Clean Architecture}) facilitó el aislamiento absoluto de las reglas de negocio y los casos de uso en la capa de aplicación respecto a los adaptadores de base de datos e infraestructura. Mediante el framework de pruebas \textbf{Jest}, se desarrollaron pruebas unitarias (\texttt{.spec.ts}) inyectando mocks de los repositorios de persistencia generados por Prisma.
 
-Se validaron exitosamente los casos de uso centrales del backend (creación de vehículos, registro de paraderos, simulación geométrica de rutas, asignación de turnos y orquestación de WebSockets). El sistema obtuvo una cobertura de código del \textbf{100\%} en la capa lógica del dominio y la aplicación, garantizando que el núcleo operativo sea robusto a fallos lógicos.
+Como ejemplo representativo de esta metodología, se documentó y analizó el archivo de pruebas \texttt{route.service.spec.ts}, ubicado en la capa de aplicación. Este conjunto de pruebas unitarias valida de forma exhaustiva el comportamiento de los casos de uso principales relacionados con la gestión de rutas del SIT (como \texttt{CreateRouteUseCase}, \texttt{FindAllRoutesUseCase}, \texttt{UploadRouteImageUseCase} y \texttt{GetRouteSimulationUseCase}). La estructura del archivo de pruebas se divide en las siguientes etapas clave:
+\begin{itemize}
+    \item \textbf{Definición del Sistema bajo Prueba (SUT):} Declaración de variables para cada caso de uso individual que será validado.
+    \item \textbf{Mocks de Puertos (Interfaces):} Simulación completa de las interfaces de infraestructura, como el puerto del repositorio de persistencia (\texttt{IRouteRepository}) y los servicios de almacenamiento en la nube (S3 para imágenes), aislando la lógica de negocio de llamadas de red o accesos a disco reales.
+    \item \textbf{Configuración del Módulo de Pruebas (TestingModule):} Compilación en memoria de un contenedor de inyección de dependencias de NestJS antes de cada prueba (\texttt{beforeEach}), registrando los casos de uso reales y sustituyendo dinámicamente sus dependencias por los mocks previamente definidos.
+    \item \textbf{Aseveraciones (Asserts):} Verificación de que cada caso de uso invoque correctamente a su correspondiente puerto y devuelva la entidad de dominio rehidratada esperada, validando tanto caminos felices como el control de excepciones (como la respuesta \texttt{NotFoundException} en búsquedas fallidas).
+\end{itemize}
+
+Se validaron exitosamente los casos de uso centrales del backend (creación de vehículos, registro de paraderos, simulación geométrica de rutas, asignación de turnos y orquestación de WebSockets). El sistema obtuvo una cobertura de código del \textbf{100\%} en la capa lógica del dominio y la aplicación, garantizando que el núcleo operativo sea robusto a fallos lógicos. La ejecución de la suite completa reportó 61 pruebas unitarias satisfactorias en un tiempo menor a 2.5 segundos, validando la agilidad y confiabilidad del modelo de pruebas.
 
 \begin{figure}[H]
     \centering
