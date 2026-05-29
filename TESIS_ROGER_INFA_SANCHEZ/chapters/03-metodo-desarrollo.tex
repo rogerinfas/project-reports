@@ -840,57 +840,57 @@ La validación de la infraestructura en producción (VPS Linux) se orientó a la
 El pipeline de entrega continua está diseñado bajo dos flujos de trabajo paralelos y automáticos:
 \begin{itemize}
     \item \textbf{Integración Continua (CI):} Se ejecuta en cada Push o Pull Request hacia la rama \texttt{develop}. En el \textbf{Backend}, este flujo inicializa un entorno virtual de Node.js, instala las dependencias de forma consistente mediante \texttt{pnpm install --frozen-lockfile}, genera el cliente de base de datos de Prisma (\texttt{prisma:generate}), valida la calidad estática de sintaxis y tipado (\texttt{pnpm lint}), ejecuta la suite completa de pruebas unitarias con Jest (\texttt{pnpm test}) y finalmente compila el código en producción (\texttt{pnpm build}). En el \textbf{Frontend}, el flujo análogo asegura que la interfaz de usuario basada en Next.js compile su empaquetado de producción de forma limpia y pase la auditoría estática de ESLint.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=1\textwidth]{assets/captura-ci-backend.png}
+        \figcaptionwithauthor{Flujo de Integración Continua (CI) del Backend en GitHub Actions}
+    \end{figure}
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=1\textwidth]{assets/captura-ci-frontend.png}
+        \figcaptionwithauthor{Flujo de Integración Continua (CI) del Frontend en GitHub Actions}
+    \end{figure}
+
     \item \textbf{Despliegue Continuo (CD):} Se activa automáticamente tras la aprobación e integración de los cambios en las ramas principales de producción (\texttt{main}/\texttt{master}). GitHub Actions establece una conexión segura mediante SSH Key secreta al servidor VPS, sincroniza el código remoto, construye las imágenes optimizadas de Docker multi-stage y orquesta el reinicio seguro de los contenedores mediante \texttt{docker-compose.prod.yml}. Este despliegue aplica automáticamente las migraciones pendientes en PostgreSQL (\texttt{prisma migrate deploy}) y levanta el servicio por detrás del proxy inverso de \textbf{Traefik}, el cual asigna automáticamente los certificados SSL de \textbf{Let's Encrypt} y activa las Sticky Sessions.
 \end{itemize}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1\textwidth]{assets/captura-ci-backend.png}
-    \figcaptionwithauthor{Flujo de Integración Continua (CI) del Backend en GitHub Actions}
-\end{figure}
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=1\textwidth]{assets/captura-ci-frontend.png}
-    \figcaptionwithauthor{Flujo de Integración Continua (CI) del Frontend en GitHub Actions}
-\end{figure}
-
-\begin{figure}[H]
-    \centering
     \includegraphics[width=1\textwidth]{assets/captura-cd-despliegue.png}
-    \figcaptionwithauthor{Orquestación conjunta del Despliegue Continuo (CD) de Frontend y Backend en el servidor de producción}
+    \figcaptionwithauthor{Orquestación conjunta del Despliegue Continuo (CD) de Frontend y Backend en el servidor de producción desde Github Actions}
 \end{figure}
 
 \paragraph{Pruebas de Diseño de Interfaz y UI/UX (Frontend)}
 El panel web administrador y de monitoreo de usuario final fue verificado en base a las siguientes dimensiones funcionales:
 \begin{itemize}
     \item \textbf{Responsividad y Usabilidad:} La interfaz web basada en componentes reactivos de React 19 y Tailwind CSS 4 responde fluidamente a dispositivos móviles y escritorios, asegurando que el mapa interactivo ocupe el área correcta y los menús de filtrado de rutas sean totalmente accesibles. Para validar la correcta adaptación y visualización adaptativa (responsividad) en múltiples pantallas concurrentemente, se utilizó la extensión de Google Chrome \textbf{Responsive Viewer}, evaluando los layouts operativos en resoluciones críticas equivalentes a un iPhone 14, iPhone 14 Pro Max, iPad Air 5 y MacBook Air.
-    \item \textbf{Monitoreo Geoespacial Activo:} Pruebas dinámicas con la API espacial de \textbf{Leaflet} comprobando el correcto dibujado del trazado en mapa de la geometría \texttt{LineString} de las rutas SIT y la actualización reactiva instantánea de los marcadores de posición de buses mediante las suscripciones a salas en tiempo real de WebSockets.
-\end{itemize}
-
-\begin{figure}[H]
+    \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{assets/captura-responsive-viewer.png}
     \figcaptionwithauthor{Validación de responsividad multidispositivo de la pantalla de monitoreo principal (iPhone 14, iPhone 14 Pro Max, iPad Air 5 y MacBook Air) mediante la herramienta Responsive Viewer}
-\end{figure}
+    \end{figure}
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=\textwidth]{assets/captura-responsive-login.png}
-    \figcaptionwithauthor{Validación de responsividad multidispositivo de la interfaz de inicio de sesión (Login) mediante la herramienta Responsive Viewer}
-\end{figure}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=\textwidth]{assets/captura-responsive-login.png}
+        \figcaptionwithauthor{Validación de responsividad multidispositivo de la interfaz de inicio de sesión (Login) mediante la herramienta Responsive Viewer}
+    \end{figure}
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=\textwidth]{assets/captura-responsive-operations.png}
-    \figcaptionwithauthor{Validación de responsividad multidispositivo del panel de operaciones administrativas mediante la herramienta Responsive Viewer}
-\end{figure}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=\textwidth]{assets/captura-responsive-operations.png}
+        \figcaptionwithauthor{Validación de responsividad multidispositivo del panel de operaciones administrativas mediante la herramienta Responsive Viewer}
+    \end{figure}
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=\textwidth]{assets/captura-responsive-simulation.png}
-    \figcaptionwithauthor{Validación de responsividad multidispositivo del panel de monitoreo y simulación geoespacial en tiempo real (\texttt{/simulation}) mediante la herramienta Responsive Viewer}
-\end{figure}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=\textwidth]{assets/captura-responsive-simulation.png}
+        \figcaptionwithauthor{Validación de responsividad multidispositivo del panel de monitoreo y simulación geoespacial en tiempo real (\texttt{/simulation}) mediante la herramienta Responsive Viewer}
+    \end{figure}
+
+        \item \textbf{Monitoreo Geoespacial Activo:} Pruebas dinámicas con la API espacial de \textbf{Leaflet} comprobando el correcto dibujado del trazado en mapa de la geometría \texttt{LineString} de las rutas SIT y la actualización reactiva instantánea de los marcadores de posición de buses mediante las suscripciones a salas en tiempo real de WebSockets.
+    \end{itemize}
 
 \subsubsection{Mantenimiento}
 
