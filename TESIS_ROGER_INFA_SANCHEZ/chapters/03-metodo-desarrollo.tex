@@ -818,7 +818,7 @@ Para validar los requisitos del sistema y optimizar la cobertura de código, se 
     SELECT id, "outboundPath" FROM "Route" 
     WHERE "isActive" = true AND "outboundPath" IS NOT NULL
     \end{verbatim}
-    De esta forma, solo la intersección de ambas condiciones (el caso de decisión verdadero/verdadero) desencadena la inicialización del simulador, el cálculo de progreso e interpolación del punto espacial vía PostGIS, y su subsecuente difusión hacia los clientes de mapa a través de WebSockets (\texttt{this.trackingGateway.server.to(routeId).emit('vehicle_update', ...)}).
+    De esta forma, solo la intersección de ambas condiciones (el caso de decisión verdadero/verdadero) desencadena la inicialización del simulador, el cálculo de progreso e interpolación del punto espacial vía PostGIS, y su subsecuente difusión hacia los clientes de mapa a través de WebSockets (\texttt{this.trackingGateway.server.to(routeId).emit('vehicle\_update', ...)}).
 \end{enumerate}
 
 \paragraph{Pruebas Unitarias de Casos de Uso (Backend)}
