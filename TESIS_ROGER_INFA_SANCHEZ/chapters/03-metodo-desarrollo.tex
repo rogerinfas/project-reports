@@ -928,6 +928,130 @@ El panel web administrador y de monitoreo de usuario final fue verificado en bas
         \item \textbf{Monitoreo Geoespacial Activo:} Pruebas dinámicas con la API espacial de \textbf{Leaflet} comprobando el correcto dibujado del trazado en mapa de la geometría \texttt{LineString} de las rutas SIT y la actualización reactiva instantánea de los marcadores de posición de buses mediante las suscripciones a salas en tiempo real de WebSockets.
     \end{itemize}
 
+\paragraph{Validación Estadística de Hipótesis (Prueba de Wilcoxon)}
+
+Para evaluar formalmente el impacto de la plataforma de monitoreo web y tracking GPS sobre el tiempo de espera de los usuarios, se diseñó un experimento con un tamaño de muestra $N = 20$ usuarios recurrentes de los corredores del SIT. El estudio comparó los tiempos de espera registrados en dos escenarios:
+\begin{enumerate}
+    \item \textbf{Pre-test (Sin GPS):} Tiempo de espera de los usuarios en minutos acudiendo al paradero bajo el esquema tradicional de operación (sin información del arribo de los buses).
+    \item \textbf{Post-test (Con GPS):} Tiempo de espera de los mismos usuarios utilizando la aplicación web de telemetría y consulta de ETA en tiempo real, permitiéndoles acudir al paradero de forma sincronizada con el arribo de las unidades.
+\end{enumerate}
+
+Para asegurar la rigurosidad estadística en la elección de la prueba de contraste, primero se aplicó el test de normalidad de \textbf{Shapiro-Wilk} a ambos grupos de mediciones. La prueba de Shapiro-Wilk arrojó un valor $p = 0.3608$ para el Pre-test (indicando normalidad) y $p = 0.0205$ para el Post-test (rechazando la normalidad al ser $p < 0.05$). Al no cumplirse el supuesto de normalidad en ambas distribuciones de manera conjunta, se invalida el uso de pruebas paramétricas como la prueba \textit{t de Student} para muestras pareadas, justificando la aplicación obligatoria de la prueba no paramétrica de \textbf{Rangos con Signo de Wilcoxon}.
+
+A continuación, se formulan las hipótesis estadísticas correspondientes:
+\begin{itemize}
+    \item \textbf{Hipótesis Nula ($H_0$):} La mediana de las diferencias de los tiempos de espera entre el pre-test y el post-test es igual a cero (el sistema GPS no produce ninguna reducción en la espera).
+    $$H_0: \tilde{\theta}_{pre} = \tilde{\theta}_{post}$$
+    \item \textbf{Hipótesis Alternativa ($H_1$):} La mediana de los tiempos de espera de los usuarios en el post-test es menor en comparación con el pre-test (el sistema GPS reduce significativamente la espera).
+    $$H_1: \tilde{\theta}_{pre} > \tilde{\theta}_{post}$$
+\end{itemize}
+
+Los estadísticos descriptivos calculados a partir de los datos experimentales se resumen en la Tabla \ref{tab:descriptivos_wilcoxon}.
+
+\begin{table}[H]
+\centering
+\caption{Estadísticos descriptivos y resultados de normalidad (N=20)}
+\label{tab:descriptivos_wilcoxon}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|l|c|c|c|c|c|c|}
+\hline
+\rowcolor[HTML]{F3F4F6} 
+\textbf{Grupo} & \textbf{Media (min)} & \textbf{Mediana (min)} & \textbf{Desv. Est.} & \textbf{Mínimo} & \textbf{Máximo} & \textbf{Shapiro-Wilk (p)} \\ \hline
+Pre-test (Sin GPS) & 15.27 & 14.80 & 3.86 & 9.50 & 24.50 & 0.3608 \\ \hline
+Post-test (Con GPS) & 8.05 & 7.65 & 1.64 & 5.70 & 13.20 & 0.0205 \\ \hline
+\end{tabular}%
+}
+\figcaptionwithauthor{Estadísticas descriptivos del experimento de tiempos de espera}
+\end{table}
+
+Como se observa, se experimentó una notable reducción en la media de los tiempos de espera, pasando de $15.27$ minutos (Pre-test) a $8.05$ minutos (Post-test), lo cual equivale a una disminución promedio del $47.28\%$. La dispersión de los datos (desviación estándar) también se redujo drásticamente de $3.86$ a $1.64$ minutos, indicando un servicio de espera mucho más predecible y homogéneo para los usuarios.
+
+La distribución de los tiempos de espera se visualiza gráficamente en la Figura \ref{fig:fig-wilcoxon}, donde se aprecian con claridad los cuartiles y la reducción de la variabilidad extrema.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.75\textwidth]{assets/grafico-wilcoxon.png}
+\figcaptionwithauthor{Distribución comparativa de tiempos de espera mediante diagrama de cajas (Boxplot)}
+\label{fig:fig-wilcoxon}
+\end{figure}
+
+A continuación, se detalla de manera rigurosa y procedimental la aplicación del algoritmo de la Prueba de Rangos con Signo de Wilcoxon para muestras relacionadas sobre las 20 observaciones pareadas, garantizando la trazabilidad matemática y la validación formal de los resultados por parte de los revisores académicos:
+
+\begin{enumerate}
+    \item \textbf{Paso 1: Cálculo de Diferencias.} Para cada sujeto de la muestra, se toma el valor del tiempo de espera de la Condición 1 (Pre-test) y se le resta el valor correspondiente de la Condición 2 (Post-test) para obtener la diferencia real $d_i = X_{1,i} - X_{2,i}$.
+    \item \textbf{Paso 2: Filtrado de Ceros.} Se revisa la lista de diferencias y se descartan los valores exactamente iguales a cero ($d_i = 0$). En este experimento, ninguna de las 20 diferencias resultó nula, por lo que la muestra efectiva para el test estadístico se mantiene en $N' = 20$.
+    \item \textbf{Paso 3: Ordenamiento de Valores Absolutos.} Se calcula el valor absoluto de las diferencias $|d_i|$, ignorando temporalmente su signo, y se ordenan de menor a mayor. A cada observación se le asigna una posición de orden consecutiva (caja de orden) desde la posición 1 hasta la 20.
+    \item \textbf{Paso 4: Tratamiento de Empates (Promedios).} En los casos donde existen valores absolutos idénticos que ocupan múltiples posiciones consecutivas, se calcula la media aritmética de dichas posiciones. Dicho promedio se asigna como el rango final para todas las observaciones empatadas en ese valor.
+    \item \textbf{Paso 5: Asignación de Signos.} A cada rango final calculado se le restituye el signo ($+$ o $-$) que tenía la diferencia original en el Paso 1. Dado que todas las diferencias calculadas en este experimento son positivas ($d_i > 0$), todos los rangos asignados reciben signo positivo ($+$).
+    \item \textbf{Paso 6: Sumatorias por Signo.} Se realizan las sumas independientes de las posiciones correspondientes a cada signo:
+    \begin{itemize}
+        \item Suma de rangos positivos ($W^+$):
+        $$W^+ = \sum_{d_i > 0} R_i = 1.0 + 2.0 + 3.0 + \dots + 20.0 = 210.0$$
+        \item Suma de rangos negativos ($W^-$):
+        $$W^- = \sum_{d_i < 0} R_i = 0.0$$
+    \end{itemize}
+    \item \textbf{Paso 7: Estadístico W.} Se define el estadístico $W$ de Wilcoxon como la sumatoria de menor valor numérico entre ambas:
+    $$W = \min(W^+, W^-) = \min(210.0, 0.0) = 0.0$$
+    \item \textbf{Paso 8: Regla de Decisión y Valor Crítico.} Dado que planteamos una hipótesis unilateral de una cola (buscando determinar si el sistema reduce el tiempo de espera), el nivel de significancia de $\alpha = 0.05$ se evalúa de manera directa. Para una muestra de tamaño $N' = 20$ en una prueba de una cola, el valor crítico tabulado es $W_{\text{crit}} = 60$ (y para una prueba de dos colas con $\alpha/2=0.025$ es $W_{\text{crit}} = 52$). La hipótesis nula $H_0$ se rechaza si el estadístico calculado es menor o igual al valor crítico:
+    $$W_{\text{calc}} = 0.0 \le W_{\text{crit}} = 60 \implies \text{Se rechaza la hipótesis nula } H_0$$
+\end{enumerate}
+
+El desglose matemático detallado para cada una de las 20 observaciones pareadas, con la asignación correspondiente de diferencias, valores absolutos, rangos consecutivos y promedios de empates, se expone de forma exhaustiva en la Tabla \ref{tab:wilcoxon_paso_a_paso}.
+
+\begin{table}[H]
+\centering
+\caption{Cálculo paso a paso de rangos para la Prueba de Wilcoxon (N=20)}
+\label{tab:wilcoxon_paso_a_paso}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+\hline
+\rowcolor[HTML]{F3F4F6} 
+\textbf{ID} & \textbf{Pre-test ($X_1$)} & \textbf{Post-test ($X_2$)} & \textbf{Dif. ($d_i$)} & \textbf{Abs. ($|d_i|$)} & \textbf{Caja Temp.} & \textbf{Rango Final} & \textbf{Signo} & \textbf{Rango Signado} \\ \hline
+1 & 14.9 & 13.2 & 1.7 & 1.7 & 1 & 1.0 & + & 1.0 \\ \hline
+2 & 14.7 & 6.1 & 8.6 & 8.6 & 15 & 15.0 & + & 15.0 \\ \hline
+3 & 13.4 & 7.5 & 5.9 & 5.9 & 9 & 9.0 & + & 9.0 \\ \hline
+4 & 9.5 & 6.6 & 2.9 & 2.9 & 3 & 3.0 & + & 3.0 \\ \hline
+5 & 12.9 & 7.8 & 5.1 & 5.1 & 8 & 8.0 & + & 8.0 \\ \hline
+6 & 10.1 & 7.0 & 3.1 & 3.1 & 4 & 4.0 & + & 4.0 \\ \hline
+7 & 16.6 & 8.2 & 8.4 & 8.4 & 13 & 13.5 & + & 13.5 \\ \hline
+8 & 13.4 & 7.1 & 6.3 & 6.3 & 10 & 10.0 & + & 10.0 \\ \hline
+9 & 16.9 & 8.5 & 8.4 & 8.4 & 14 & 13.5 & + & 13.5 \\ \hline
+10 & 17.1 & 10.1 & 7.0 & 7.0 & 11 & 11.0 & + & 11.0 \\ \hline
+11 & 11.8 & 7.5 & 4.3 & 4.3 & 6 & 6.0 & + & 6.0 \\ \hline
+12 & 17.6 & 7.4 & 10.2 & 10.2 & 16 & 16.0 & + & 16.0 \\ \hline
+13 & 15.7 & 8.4 & 7.3 & 7.3 & 12 & 12.0 & + & 12.0 \\ \hline
+14 & 12.0 & 8.1 & 3.9 & 3.9 & 5 & 5.0 & + & 5.0 \\ \hline
+15 & 24.5 & 7.4 & 17.1 & 17.1 & 20 & 20.0 & + & 20.0 \\ \hline
+16 & 21.3 & 6.9 & 14.4 & 14.4 & 19 & 19.0 & + & 19.0 \\ \hline
+17 & 16.9 & 5.7 & 11.2 & 11.2 & 17 & 17.0 & + & 17.0 \\ \hline
+18 & 11.6 & 9.1 & 2.5 & 2.5 & 2 & 2.0 & + & 2.0 \\ \hline
+19 & 13.5 & 9.0 & 4.5 & 4.5 & 7 & 7.0 & + & 7.0 \\ \hline
+20 & 21.0 & 9.4 & 11.6 & 11.6 & 18 & 18.0 & + & 18.0 \\ \hline
+\end{tabular}%
+}
+\figcaptionwithauthor{Desglose del cálculo de rangos para la Prueba de Wilcoxon}
+\end{table}
+
+Al ejecutar el contraste general, se obtuvieron los resultados consolidados en la Tabla \ref{tab:resultado_wilcoxon}.
+
+\begin{table}[H]
+\centering
+\caption{Resultados de la prueba de Wilcoxon (Muestras Relacionadas)}
+\label{tab:resultado_wilcoxon}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|l|c|c|c|c|}
+\hline
+\rowcolor[HTML]{F3F4F6} 
+\textbf{Comparación} & \textbf{Suma Rangos ($W^+$)} & \textbf{Suma Rangos ($W^-$)} & \textbf{Estadístico $W$} & \textbf{p-valor} \\ \hline
+Pre-test > Post-test & 210.0 & 0.0 & 0.0 & 9.54e-07 \\ \hline
+\end{tabular}%
+}
+\figcaptionwithauthor{Resultados de la prueba de rangos con signo de Wilcoxon}
+\end{table}
+
+Dado que el estadístico obtenido ($W = 0.0$) es menor que el valor crítico de una cola para $N=20$ ($\alpha=0.05 \implies W_{\text{crit}} = 60$) y el valor de probabilidad obtenido ($p = 9.54 \times 10^{-7}$) es sustancialmente menor que el nivel de significancia prefijado $\alpha = 0.05$ (e incluso menor que $\alpha = 0.001$), se \textbf{rechaza categóricamente la hipótesis nula ($H_0$)} en favor de la hipótesis alternativa ($H_1$). Se concluye de manera contundente que el uso del sistema de optimización y monitoreo de rutas de transporte basado en posicionamiento global reduce significativamente los tiempos de espera de los pasajeros en el área metropolitana de Arequipa.
+
+
 \subsubsection{Mantenimiento}
 
 Esta sección documentará las actividades de ajuste, mejora y sostenibilidad de la solución, incluyendo control de cambios, correcciones y recomendaciones para evolución futura.
