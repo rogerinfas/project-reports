@@ -48,7 +48,7 @@ Con el objetivo de cuantificar la problemática identificada en los paraderos y 
 
 \paragraph{Cuestionario de Evaluación Post-Implementación (Post-test)}
 
-Como complemento cualitativo a la medición física de tiempos de espera realizada para la Prueba de Wilcoxon, se aplicó un cuestionario de evaluación post-implementación a los 20 usuarios que conformaron la muestra del experimento. Este cuestionario recogió la valoración de los usuarios respecto a la reducción percibida en sus tiempos de espera, la precisión de los tiempos estimados de arribo (ETA) proporcionados por la plataforma web TransiGo, la facilidad de uso de la interfaz y su nivel de satisfacción general. El contenido de este instrumento se expone de manera íntegra en el \textbf{Anexo C}.
+Como complemento cualitativo a la medición de tiempos de espera realizada mediante la simulación de la Prueba de Wilcoxon, se aplicó un cuestionario de evaluación post-implementación a los 20 usuarios que conformaron la muestra del experimento y que interactuaron con el escenario simulado de la plataforma. Este cuestionario recogió la valoración de los usuarios respecto a la reducción percibida en sus tiempos de espera bajo la simulación, la precisión del algoritmo de estimación de arribo (ETA) evaluado en el simulador de TransiGo, la facilidad de uso de la interfaz y su nivel de satisfacción general. El contenido de este instrumento se expone de manera íntegra en el \textbf{Anexo C}.
 
 \paragraph{Historias de usuario iniciales (formato estructurado)}
 
@@ -938,7 +938,7 @@ El panel web administrador y de monitoreo de usuario final fue verificado en bas
 
 \paragraph{Validación Estadística de Hipótesis (Prueba de Wilcoxon)}
 
-Para evaluar formalmente el impacto de la plataforma de monitoreo web y tracking GPS sobre el tiempo de espera de los usuarios, se diseñó un experimento con un tamaño de muestra $N = 20$ usuarios recurrentes de los corredores del SIT. El estudio comparó los tiempos de espera registrados en dos escenarios:
+Para evaluar formalmente el impacto de la plataforma de monitoreo web y tracking GPS sobre el tiempo de espera de los usuarios, se diseñó un experimento en un escenario simulado utilizando la telemetría en tiempo real del sistema. Se contó con un tamaño de muestra $N = 20$ usuarios recurrentes de los corredores del SIT, quienes interactuaron con una simulación del funcionamiento de la plataforma TransiGo basada en trayectos y posiciones GPS de buses en operación. El estudio comparó los tiempos de espera registrados en dos escenarios:
 \begin{enumerate}
     \item \textbf{Pre-test (Sin GPS):} Tiempo de espera de los usuarios en minutos acudiendo al paradero bajo el esquema tradicional de operación (sin información del arribo de los buses).
     \item \textbf{Post-test (Con GPS):} Tiempo de espera de los mismos usuarios utilizando la aplicación web de telemetría y consulta de ETA en tiempo real, permitiéndoles acudir al paradero de forma sincronizada con el arribo de las unidades.
