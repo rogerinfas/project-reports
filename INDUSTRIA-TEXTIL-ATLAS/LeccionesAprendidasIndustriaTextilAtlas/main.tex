@@ -1,0 +1,126 @@
+\documentclass[11pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage{parskip}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{fancyhdr}
+\usepackage[table]{xcolor}
+\usepackage{enumitem}
+
+\geometry{a4paper, top=2.3cm, bottom=2.3cm, left=2.1cm, right=2.1cm}
+\setstretch{1.1}
+\setlength{\headheight}{52pt}
+\setlength{\headsep}{16pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\includegraphics[height=1.05cm]{../InformeImplementacionIndustriaTextilAtlas/assets/logo-atlas.png}}
+\fancyhead[C]{\small\itshape Informe de Lecciones Aprendidas\\Contrato: [CONTRATO]}
+\fancyhead[R]{\small p\'ag. \thepage}
+\renewcommand{\headrulewidth}{0.6pt}
+
+\begin{document}
+
+\begin{center}
+    {\Large \textbf{LECCIONES APRENDIDAS}}\\[0.25cm]
+    {\Large \textbf{MEJORA DE LA EFICIENCIA OPERATIVA Y CRECIMIENTO COMERCIAL EN INDUSTRIA TEXTIL ATLAS E.I.R.L. A TRAVÉS DE LA IMPLEMENTACIÓN DE HERRAMIENTAS DIGITALES PARA GESTIÓN DE STOCK Y MARKETING}}\\[0.25cm]
+    {\large \textbf{[CONTRATO]}}
+\end{center}
+
+\textbf{Objetivo General del proyecto:}\\
+Optimizar la gestión comercial, operativa y de compras de la empresa mediante la implementación de un sistema ERP simplificado (Odoo Online SaaS) que centralice el catálogo de 22 artículos deportivos con codificación SKU, automatice la reposición de existencias en base a reglas de stock mínimo y agilice las transacciones en mostrador con la terminal POS. El proyecto busca erradicar la dependencia de procesos manuales e informales en cuadernos de papel, protegiendo los márgenes de ganancia bajo supervisión de la gerencia general.
+
+\textbf{Resultados obtenidos:}
+\begin{itemize}
+    \item Eliminación de los registros manuales y "papelitos" en el mostrador de San Camilo, centralizando el 100\% de las transacciones comerciales diarias en el Punto de Venta (POS) de Odoo.
+    \item Estandarización y estructuración del catálogo maestro de 22 accesorios deportivos y prendas licradas bajo códigos SKU unificados en la base de datos de Inventario.
+    \item Reducción drástica del tiempo promedio de despacho y preparación de pedidos, descendiendo de 15--20 minutos por cliente a menos de 5 minutos.
+    \item Incremento de la exactitud de inventario a más del 98\%, minimizando las discrepancias físicas en tienda y reduciendo la pérdida de oportunidades de venta por desabastecimiento.
+    \item Automatización del aprovisionamiento, logrando que más del 60\% de los pedidos de reposición se generen como solicitudes de compra automáticas basadas en reglas de stock mínimo sugerido.
+\end{itemize}
+
+\textbf{Lecciones Aprendidas}\\
+Al concluir con el proyecto de "MEJORA DE LA EFICIENCIA OPERATIVA Y CRECIMIENTO COMERCIAL EN INDUSTRIA TEXTIL ATLAS E.I.R.L. A TRAVÉS DE LA IMPLEMENTACIÓN DE HERRAMIENTAS DIGITALES PARA GESTIÓN DE STOCK Y MARKETING", se obtuvieron valiosos aprendizajes sobre transformación digital y cambio cultural. Esta evaluación reflexiva permite identificar los factores clave que facilitaron el éxito (como la capacitación práctica en entornos de simulación), los desafíos internos mitigados (como la resistencia de los vendedores a registrar ventas en tiempo real) y los factores externos que afectaron la operatividad (como la inestabilidad de internet en tienda), aportando pautas claras para asegurar la sostenibilidad del sistema.
+
+\newpage
+\textbf{Reflexión de Lecciones Aprendidas}
+
+\definecolor{RoundGray}{RGB}{235,235,235}
+\definecolor{HeaderGray}{RGB}{245,245,245}
+\begin{longtable}{|p{5.1cm}|p{5.1cm}|p{5.1cm}|}
+\hline
+\rowcolor{RoundGray}\multicolumn{3}{|l|}{\textbf{Primera Ronda}} \\ \hline
+\rowcolor{HeaderGray}\textbf{¿Qué salió bien? ¿Por qué se hizo bien?} & \textbf{¿Tuvieron todo lo necesario?} & \textbf{¿El plan del proyecto se llevó según lo ejecutado?} \\ \hline
+\begin{itemize}[leftmargin=*,nosep]
+    \item Reducción drástica en tiempos de despacho ($<5$ min).
+    \item Registro unificado de la base de datos por SKUs en la nube.
+    \item El éxito se basó en realizar talleres presenciales en mostrador.
+    \item El acompañamiento en vivo permitió disipar temores y validar el flujo operativo bajo la presión real del cliente.
+    \item El catálogo de 22 productos permitió ordenar la rotación de accesorios.
+\end{itemize} &
+\begin{itemize}[leftmargin=*,nosep]
+    \item Se contó con terminales informáticas y dispositivos móviles aptos para Odoo.
+    \item La estabilidad y velocidad de la conexión a internet en San Camilo fue un recurso crítico.
+    \item Se requirió contratar un enlace de respaldo móvil para asegurar que el POS no sufra retrasos en hora punta.
+\end{itemize} &
+\begin{itemize}[leftmargin=*,nosep]
+    \item Se cumplió con la ruta crítica y sprints de implementación.
+    \item Hubo un desvío menor en el Sprint 1.
+    \item Clasificar los artículos deportivos y establecer sus costos unitarios cobrados por talleres externos de confección tomó más tiempo del planeado.
+    \item Se requirió una depuración de datos exhaustiva.
+\end{itemize} \\ \hline
+\end{longtable}
+
+\begin{longtable}{|p{3.8cm}|p{3.8cm}|p{3.8cm}|p{3.8cm}|}
+\hline
+\rowcolor{RoundGray}\multicolumn{4}{|l|}{\textbf{Segunda Ronda}} \\ \hline
+\rowcolor{HeaderGray}\textbf{¿Qué salió mal?} & \textbf{¿Qué se tenía que hacer para que saliera bien?} & \textbf{¿El entorno del proyecto fue colaborativo?} & \textbf{¿Las partes involucradas participaron eficazmente?} \\ \hline
+\begin{itemize}[leftmargin=*,nosep]
+    \item Resistencia de los vendedores a registrar en el POS al instante.
+    \item Temor a demorar la atención a clientes tradicionales de mostrador.
+    \item Dudas gerenciales sobre el modelo de pago recurrente (suscripción SaaS) en lugar de un software de pago único.
+\end{itemize} &
+\begin{itemize}[leftmargin=*,nosep]
+    \item Implementar talleres intensivos en el entorno de pruebas Sandbox.
+    \item Practicar cobros simulados antes de salir en vivo.
+    \item Demostrar que el costo recurrente de Odoo en la nube elimina gastos de servidores, backups y los costos de merma por descuadre manual de existencias.
+\end{itemize} &
+\begin{itemize}[leftmargin=*,nosep]
+    \item El entorno fue muy participativo.
+    \item Se resolvieron dudas del catálogo deportivo a través de un canal de comunicación digital directa.
+    \item El personal de almacén aportó en el orden físico de los estantes para coincidir con la ubicación en Odoo.
+\end{itemize} &
+\begin{itemize}[leftmargin=*,nosep]
+    \item Víctor Huayllaro (Coordinador) asumió un rol protagónico.
+    \item Se involucró directamente en la revisión de costos de talleres externos.
+    \item Garantizó que la política interna de "cero cuadernos" se cumpla de forma estricta en el mostrador.
+\end{itemize} \\ \hline
+
+\rowcolor{RoundGray}\multicolumn{4}{|l|}{\textbf{Tercera Ronda}} \\ \hline
+\rowcolor{HeaderGray}\textbf{¿Qué condiciones fuera del control del equipo afectaron al proyecto?} & \textbf{¿Estuvieron identificados los riesgos?} & \textbf{¿Qué acciones se tomaron?} & \textbf{¿Los cambios del proyecto fueron viables y se ajustaron al alcance?} \\ \hline
+\begin{itemize}[leftmargin=*,nosep]
+    \item Indisponibilidad o retraso en las cotizaciones y despachos de mercadería de los talleres confeccionistas externos.
+    \item Inestabilidad ocasional de la red eléctrica local en la zona de San Camilo.
+\end{itemize} &
+\begin{itemize}[leftmargin=*,nosep]
+    \item Se mapearon riesgos como la resistencia y fallas en la red.
+    \item Inicialmente no se previó la alta dependencia de la puntualidad de talleres tercerizados en la actualización de stocks mínimos.
+\end{itemize} &
+\begin{itemize}[leftmargin=*,nosep]
+    \item Priorización de reglas de stock mínimo con márgenes de seguridad amplios para absorber retrasos.
+    \item Habilitación del acceso desde celulares al POS para operar con datos móviles ante caídas del Wi-Fi en tienda.
+\end{itemize} &
+\begin{itemize}[leftmargin=*,nosep]
+    \item Los cambios se ajustaron estrictamente al alcance.
+    \item Adoptar el modelo Out-of-the-box (POS, Inventario, Compras, Ventas) permitió cumplir los hitos.
+    \item Se evitó desarrollar software a medida, ahorrando costos y facilitando la adopción inicial del personal.
+\end{itemize} \\ \hline
+\end{longtable}
+
+\end{document}
