@@ -2,35 +2,61 @@
 
 \subsection{Configuración inicial}
 \begin{indentedsubsection}
-% Describir la configuración inicial aquí
+La puesta en marcha de la plataforma para Industria Textil Atlas E.I.R.L. se realiza bajo el modelo de Odoo en la nube, garantizando un entorno centralizado y accesible desde cualquier terminal en tienda o dispositivo móvil. En esta etapa preliminar se configuró la base de datos principal adoptando los Nuevos Soles (PEN) como moneda oficial de trabajo, en coherencia con la estructura de cobranzas e informes contables del negocio. Si bien la instancia base cuenta con una suite completa de aplicaciones instaladas (incluyendo Inventario, Punto de Venta, Contactos, Conversaciones, Compras, Manufactura, Código de barras, Tableros, Ajustes), el uso operativo real del sistema se restringe y enfoca de manera exclusiva en los módulos de Inventario, Punto de Venta (POS) y Compras. Módulos como Contactos y Tableros se emplean como herramientas de soporte para la consolidación de informes, mientras que el módulo de Manufactura queda relegado y sin uso operativo dentro del flujo logístico estructurado.
 \end{indentedsubsection}
 
-\subsection{Implementación del módulo CRM (Gestión turística y proveedores)}
+\subsection{Implementación del módulo de Inventario (Logística y existencias)}
 \begin{indentedsubsection}
-% Describir la implementación de CRM aquí
+El módulo de Inventario es el núcleo del proyecto y se parametrizó para establecer un control físico exacto del almacén, erradicando los conteos basados en la memoria. Las acciones implementadas contemplan:
+\begin{itemize}
+    \item \textbf{Estructuración del catálogo SKU:} creación de códigos de identificación únicos (SKU) en la base de datos para diferenciar los artículos deportivos de terceros y materiales (rodilleras, musleras, tobilleras, muñequeras, coderas, pantorrilleras, menisqueras, soportes, pelotas, balones, redes, mitones, mangas, polos y pantalonetas de licra, y bandas de resistencia) por atributos de talla, color y modelo.
+    \item \textbf{Mapeo de ubicaciones físicas:} definición de la estructura de ubicaciones dentro del almacén digital para organizar físicamente los productos, reduciendo drásticamente los tiempos empleados en la localización manual de la mercadería.
+    \item \textbf{Gestión de transacciones de stock:} parametrización de los flujos de recepción de mercadería y control de salidas, facilitando un inventario perpetuo y reduciendo el margen de error del almacén por debajo del nivel crítico previo.
+\end{itemize}
 \end{indentedsubsection}
 
-\subsection{Implementación del módulo de Ventas (Cotizador automatizado)}
+\subsection{Implementación del Punto de Venta (POS) y Gestión de Ventas}
 \begin{indentedsubsection}
-% Describir la implementación del módulo de ventas aquí
+Para agilizar la atención directa al cliente en el mostrador de San Camilo y eliminar el registro analógico de transacciones, se desplegó el módulo de Punto de Venta (POS) con las siguientes características:
+\begin{itemize}
+    \item \textbf{Interfaz simplificada de caja:} configuración de una pantalla intuitiva de facturación y cobro rápido para el personal de ventas, permitiendo realizar transacciones en efectivo o registrar pagos mediante transferencias y billeteras digitales (Yape/Plin).
+    \item \textbf{Consulta de stock en tiempo real:} integración directa con el almacén que permite a los vendedores verificar la disponibilidad física de cualquier accesorio deportivo o prenda de licra desde el mostrador en menos de 1 segundo, previniendo comprometer ventas sin mercadería disponible.
+    \item \textbf{Emisión de tickets de venta:} habilitación del flujo para la emisión automática del comprobante simplificado del POS al concretarse la operación, vinculando la venta física con la salida del almacén.
+\end{itemize}
 \end{indentedsubsection}
 
-\subsection{Gestión de cobros y pagos fraccionados}
+\subsection{Gestión de Compras y Control de Precios por Gerencia}
 \begin{indentedsubsection}
-% Describir la gestión de cobros y pagos fraccionados aquí
-\end{indentedsubsection}
-
-\subsection{Implementación del módulo de Encuestas (Feedback Post-Servicio)}
-\begin{indentedsubsection}
-% Describir la implementación de encuestas aquí
+El módulo de Compras y la sección de tarifas del sistema se parametrizaron para empoderar financieramente a la gerencia y automatizar el aprovisionamiento de stock:
+\begin{itemize}
+    \item \textbf{Control estratégico de precios y costos:} configuración de accesos y permisos restringidos para que únicamente la gerencia (Víctor Huayllaro) visualice los costos de compra de proveedores externos, simule márgenes de rentabilidad y asigne de manera dinámica los precios de venta a mostrar en el Punto de Venta (POS).
+    \item \textbf{Reglas de abastecimiento automático (Puntos de reorden):} establecimiento de niveles mínimos de inventario para cada SKU en el sistema. Al caer el stock por debajo del límite mínimo, el sistema genera automáticamente sugerencias y borradores de órdenes de compra dirigidos a los proveedores correspondientes para evitar paradas por quiebres de existencias.
+\end{itemize}
 \end{indentedsubsection}
 
 \subsection{Integración entre módulos y trazabilidad del sistema}
 \begin{indentedsubsection}
-% Describir la integración y trazabilidad del sistema aquí
+La principal fortaleza técnica de esta implementación radica en el flujo automático e interconectado de información. El Punto de Venta (POS) no opera de forma aislada; cada transacción registrada en mostrador por el vendedor ejecuta una salida en tiempo real en el módulo de Inventario. Cuando el sistema detecta que un producto ha alcanzado su límite mínimo de stock, detona una alerta de reabastecimiento en el módulo de Compras. La gerencia aprueba la sugerencia del sistema convirtiéndola en una Orden de Compra formal para el proveedor. Finalmente, cuando el encargado de almacén registra la recepción física de la mercadería y su SKU en el módulo de Inventario, el stock se actualiza inmediatamente en el sistema, quedando disponible de forma instantánea para la venta en el POS de la tienda.
 \end{indentedsubsection}
 
 \subsection{Mapa de procesos actual (con Odoo)}
 \begin{indentedsubsection}
-% Describir el mapa de procesos actual con Odoo aquí
+El flujo operativo optimizado con la implantación del sistema ERP permite un ciclo comercial y logístico ágil, libre de registros manuales y con total control financiero. A continuación, se detalla la secuencia de los procesos bajo el nuevo esquema tecnológico:
+\end{indentedsubsection}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.95\textwidth]{assets/mapa-procesos-actual-odoo-atlas.png}
+    \caption{Mapa de procesos actual con Odoo en Industria Textil Atlas E.I.R.L.}
+\end{figure}
+
+\begin{indentedsubsection}
+\begin{itemize}
+    \item \textbf{1. Atención y consulta:} el cliente solicita un artículo deportivo (ej. rodilleras, tobilleras, musleras o pelotas) en tienda o por WhatsApp. El vendedor consulta la disponibilidad física exacta del producto en menos de 1 segundo desde la pantalla del Punto de Venta (POS).
+    \item \textbf{2. Venta y Ticket rápido:} el vendedor registra los artículos seleccionados en la terminal del POS, procesa el cobro por mostrador y emite el ticket de caja al instante.
+    \item \textbf{3. Descarga automática de stock:} al concretarse la venta en el POS, el módulo de Inventario actualiza y refleja de forma instantánea la salida física de la mercadería.
+    \item \textbf{4. Alerta de Reorden:} el sistema de inventarios monitorea de forma continua las existencias; cuando un accesorio llega a su nivel mínimo de stock (ej. muñequeras, redes de básquet o bandas de resistencia), el sistema genera automáticamente una sugerencia de compra.
+    \item \textbf{5. Aprobación de la Gerencia:} el gerente Víctor Huayllaro accede al panel del sistema, analiza los precios de costo sugeridos, define los precios de venta actualizados en base al margen de ganancia deseado y aprueba formalmente la orden de compra en el sistema.
+    \item \textbf{6. Recepción en Almacén:} el encargado de almacén recibe la mercadería enviada por el proveedor, registra el ingreso de las unidades en el módulo de Inventario con la codificación SKU y la disponibilidad de stock se actualiza inmediatamente para la venta en el POS.
+\end{itemize}
 \end{indentedsubsection}
