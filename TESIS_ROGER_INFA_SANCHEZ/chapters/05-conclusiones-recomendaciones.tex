@@ -1,0 +1,30 @@
+\subsection*{Conclusiones}
+
+Tras analizar a fondo los datos y el desarrollo del proyecto, se determinaron las siguientes conclusiones:
+
+\begin{itemize}
+    \item \textbf{Reducción del tiempo de espera (Objetivo General):} La plataforma web con seguimiento GPS logró disminuir notablemente el tiempo de espera en los paraderos. Al comparar el pre-test y el post-test mediante la prueba estadística de Wilcoxon para las 20 observaciones pareadas, obtuvimos un valor $W = 0.0$ con un p-valor de $9.54 \times 10^{-7}$. Al ser este resultado menor al valor crítico de la tabla ($W_{\text{crit}} = 60$), rechazamos la hipótesis nula. El tiempo promedio que la gente espera pasó de $15.27$ minutos a apenas $8.05$ minutos, lo que significa un ahorro promedio de tiempo del $47.28\%$.
+    
+    \item \textbf{Situación de partida y diagnóstico (Objetivo Específico 1):} Los cuestionarios iniciales dejaron en claro que el desorden del transporte público en Arequipa estresa mucho a la población. El problema real no es solo que los buses tarden en pasar, sino que nadie sabe a qué hora llegarán. Esto justificó plenamente la creación del sistema de telemetría y estimación del arribo de las unidades.
+    
+    \item \textbf{Estructura técnica del software (Objetivo Específico 2):} La elección de Clean Architecture para programar la API del backend y el panel de administración fue acertada. Separar la lógica del negocio de los detalles de las bases de datos y la comunicación en tiempo real por WebSockets funcionó muy bien. Gracias a esto, el sistema es escalable y se le pueden agregar más funciones en el futuro sin comprometer lo que ya funciona.
+    
+    \item \textbf{Aceptación del usuario (Objetivo Específico 3):} Las encuestas finales después de usar el prototipo mostraron opiniones muy favorables. La interfaz en mapa con Leaflet agradó por su sencillez y facilidad de uso. A los participantes les pareció cómodo ver el bus avanzar en tiempo real, lo que demuestra la utilidad práctica de la solución.
+    
+    \item \textbf{Limitaciones detectadas:} Las pruebas se hicieron en un entorno de simulación basado en datos de la ruta Characato-Sabandia. Hay que tener en cuenta que en una implementación masiva real pueden surgir imprevistos como congestión por accidentes, desvíos de tráfico o zonas de Arequipa donde se pierda la señal móvil del GPS. Estas son variables del mundo real que podrían alterar la precisión de los tiempos estimados.
+\end{itemize}
+
+\newpage
+\subsection*{Recomendaciones}
+
+Para mejorar el sistema en futuras etapas del proyecto, sugerimos tomar en cuenta los siguientes puntos:
+
+\begin{itemize}
+    \item \textbf{Filtro para corregir la posición GPS:} Es fundamental añadir un filtro de posición en el servidor (como el filtro de Kalman o Map Matching) antes de mostrar la ubicación en el mapa. Esto servirá para evitar saltos o desvíos extraños en la posición del bus cuando pasa cerca de edificios altos o zonas con baja cobertura.
+    
+    \item \textbf{Uso de algoritmos avanzados de predicción:} Para estimar la hora de llegada (ETA) con mayor precisión, se recomienda usar modelos de inteligencia artificial en lugar de un cálculo simple de velocidad y distancia. Incorporar factores como tráfico por horas, días de la semana y clima ayudará a dar un tiempo de llegada mucho más exacto.
+    
+    \item \textbf{Equipos GPS más confiables:} En lugar de usar una aplicación móvil en los celulares de los choferes para transmitir la ubicación, conviene instalar rastreadores GPS físicos conectados directamente a la batería del vehículo. De esta forma, evitamos que la aplicación se cierre o se apague por error durante el recorrido de la flota.
+    
+    \item \textbf{Notificaciones de proximidad en segundo plano:} Sugerimos implementar notificaciones PUSH o geofencing en el teléfono de los usuarios. Así, la aplicación podrá avisarles automáticamente con una vibración o alerta cuando el bus esté a unos 5 minutos del paradero, sin necesidad de que la persona esté revisando el mapa en el navegador constantemente.
+\end{itemize}
