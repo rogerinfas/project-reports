@@ -2,15 +2,47 @@
 
 \subsection{Diagnóstico de procesos actuales}
 \begin{indentedsubsection}
-% Describir el diagnóstico de procesos actuales aquí
+Antes del inicio del proyecto de digitalización, Industria Textil Atlas E.I.R.L. operaba bajo un esquema de gestión empírico y tradicional en su punto de venta física en Arequipa. A pesar de contar con más de dos décadas de permanencia en el mercado y una clientela local consolidada, los flujos operativos relacionados con el almacenamiento, la fijación de precios de venta y la atención de mostrador se caracterizaban por la ausencia de automatización y la dependencia de controles analógicos.
+
+El diagnóstico detallado de las operaciones de comercialización muestra los siguientes comportamientos iniciales:
+\begin{itemize}
+    \item \textbf{Canales de venta aislados:} los pedidos recibidos mediante canales digitales (WhatsApp) y la atención directa en la tienda física de San Camilo no se centralizaban, registrándose de forma desordenada en anotaciones en papel e historiales de chat del vendedor.
+    \item \textbf{Gestión física de inventario:} la validación del stock se efectuaba mediante revisiones visuales continuas en los estantes del almacén, obligando al personal a dejar el mostrador y depender de la memoria para estimar si se contaba con unidades disponibles de una talla o color específicos.
+    \item \textbf{Precios informales en mostrador:} al no disponer de un tarifario automatizado, las consultas sobre precios mayoristas o minoristas se resolvían revisando listas de precios escritas a mano pegadas en el mostrador, propensas a errores manuales ante cambios de costos del proveedor.
+    \item \textbf{Cobranza e inventario desligados:} el flujo de caja diario (efectivo y transacciones Yape/transferencias) y el registro de la salida física de mercadería se controlaban por separado mediante libros de ventas físicos, imposibilitando la conciliación rápida del inventario y la caja.
+\end{itemize}
 \end{indentedsubsection}
 
 \subsection{Brechas identificadas}
 \begin{indentedsubsection}
-% Describir las brechas identificadas aquí
+El análisis de los flujos de distribución e inventarios permitió definir las siguientes brechas operativas críticas que afectaban la escalabilidad y la eficiencia operativa de la empresa:
+
+\begin{itemize}
+    \item \textbf{A. Descoordinación de Ventas vs. Stock:} al venderse mercadería sin una validación de existencias en tiempo real, el personal solía concretar transacciones de artículos agotados, generando quiebres de servicio con el cliente final y daños en la reputación de cumplimiento de la marca.
+    \item \textbf{B. Lentitud extrema en el despacho:} el tiempo invertido en atender a un cliente en tienda oscilaba entre los 15 y 20 minutos (muy superior a los 5 minutos deseados). Esta demora se originaba por la carencia de una codificación SKU unificada en almacén, lo que forzaba al personal a buscar físicamente entre las pilas de productos.
+    \item \textbf{C. Descontrol en compras e inventarios:} el margen de error del 30\% en existencias provocaba que las órdenes de reposición a los proveedores externos se ejecutaran por estimación, acumulando mercadería de baja rotación en almacén (inmovilizando capital) y sufriendo paralelamente desabastecimiento de artículos de alta demanda.
+    \item \textbf{D. Dificultad para el control financiero y de márgenes:} la gerencia no disponía de un registro integrado de costos de adquisición de los proveedores. Esto impedía calcular rápidamente la rentabilidad de cada línea de productos y ajustar oportunamente los precios de venta frente a las variaciones del mercado.
+\end{itemize}
 \end{indentedsubsection}
 
 \subsection{Mapa de procesos inicial (Pre-intervención tecnológica)}
 \begin{indentedsubsection}
-% Describir el mapa de procesos inicial aquí
+El flujo operativo tradicional de Industria Textil Atlas E.I.R.L. se caracterizaba por su fragmentación, falta de trazabilidad y una alta dependencia de inspecciones visuales. A continuación, se ilustra la secuencia de procesos previa al despliegue del sistema:
+\end{indentedsubsection}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.95\textwidth]{assets/mapa-procesos-inicial-atlas.png}
+    \caption{Mapa de procesos inicial (pre-intervención tecnológica) de Industria Textil Atlas E.I.R.L.}
+\end{figure}
+
+\begin{indentedsubsection}
+\begin{itemize}
+    \item \textbf{1. Contacto y Pedido:} el cliente acude a la tienda de San Camilo o escribe por WhatsApp solicitando artículos de protección deportiva o accesorios del catálogo (rodilleras, coderas, pelotas de fútbol, cintas kinesiológicas o bandas de resistencia).
+    \item \textbf{2. Búsqueda física en Almacén:} el personal suspende la atención y acude a los estantes para verificar visualmente si el producto está en stock, demorando hasta 20 minutos debido a la falta de SKU o codificación.
+    \item \textbf{3. Fijación manual de precios:} el vendedor verifica el precio del producto de memoria o revisando listas impresas y papelitos en el mostrador, calculando descuentos sobre la marcha de forma manual.
+    \item \textbf{4. Registro de la Venta:} una vez cerrada la transacción, el vendedor anota a mano la salida del producto y los detalles del cobro en un cuaderno de ventas físico.
+    \item \textbf{5. Cobranza informal:} el pago se recibe en efectivo o mediante capturas de pantalla de billeteras digitales (Yape/Plin) que se verifican visualmente en el celular del vendedor, sin registrarse en ninguna plataforma de caja.
+    \item \textbf{6. Aprovisionamiento reactivo:} al finalizar la semana, se inspecciona visualmente el almacén para estimar faltantes. La gerencia realiza llamadas de urgencia a los talleres de confección tercerizada o proveedores de pelotas para compras de emergencia, provocando sobrecostos por fletes y quiebres de stock continuos.
+\end{itemize}
 \end{indentedsubsection}
