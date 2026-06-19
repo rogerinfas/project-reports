@@ -1,0 +1,124 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage{geometry}
+\usepackage{array}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{colortbl}
+\usepackage{longtable}
+\usepackage{ragged2e}
+
+\geometry{margin=2cm}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{4pt}
+\renewcommand{\arraystretch}{1.25}
+
+\newcommand{\fotobloque}[1]{%
+  \IfFileExists{assets/#1}{%
+    \includegraphics[width=0.28\textwidth,height=5.2cm,keepaspectratio]{assets/#1}%
+  }{%
+    \fcolorbox{black}{gray!10}{%
+      \parbox[c][5.2cm][c]{0.28\textwidth}{\centering\small Subir imagen\\\texttt{assets/#1}}%
+    }%
+  }%
+}
+
+\begin{document}
+
+\begin{center}
+{\Large\textbf{FOTOS (10)}}\\[2mm]
+\textit{Industria Textil Atlas E.I.R.L.}\\
+\textit{Módulos: Punto de Venta (POS), Inventario, Compras y Ventas}
+\end{center}
+
+\vspace{3mm}
+
+\rowcolors{2}{gray!4}{white}
+\begin{longtable}{|>{\centering\arraybackslash}m{0.30\textwidth}|>{\RaggedRight\arraybackslash}m{0.24\textwidth}|>{\RaggedRight\arraybackslash}m{0.40\textwidth}|}
+\hline
+\rowcolor{gray!20}
+\textbf{FOTO} & \textbf{ETIQUETAS} & \textbf{DESCRIPCIÓN (100 palabras)}\\
+\hline
+\endfirsthead
+\hline
+\rowcolor{gray!20}
+\textbf{FOTO} & \textbf{ETIQUETAS} & \textbf{DESCRIPCIÓN (100 palabras)}\\
+\hline
+\endhead
+
+\texttt{FOTO1\_CATALOGO\_PRODUCTOS}
+&
+\#Inventario, \#CatalogoProductos, \#SKU, \#Estandarizacion, \#BaseDeDatos
+&
+Vista del catálogo de productos en el módulo de Inventario de Odoo. Esta captura muestra los 22 artículos deportivos codificados bajo el estándar SKU. Cada producto tiene asignado su nombre comercial, costo unitario de producción tercerizada y precio de venta al público. La centralización de estos datos elimina los antiguos cuadernos de notas del mostrador y evita errores en la identificación de existencias. Permite realizar búsquedas rápidas en segundos, garantizando consistencia de precios y stock.
+\\ \hline
+
+\texttt{FOTO2\_FICHA\_PRODUCTO}
+&
+\#Inventario, \#FichaProducto, \#Costos, \#Trazabilidad, \#ControlInterno
+&
+Pantalla detallada de la ficha de un producto en Odoo. En este formulario se aprecian datos de configuración clave como la categoría del producto, precio, coste de adquisición y el tipo de producto (almacenable). Además, se centraliza la información del proveedor asignado para la compra y la trazabilidad de los movimientos del stock. Su uso permite mantener los márgenes de ganancia bajo supervisión directa de la gerencia general de la empresa.
+\\ \hline
+
+\texttt{FOTO3\_REGLAS\_STOCK\_MINIMO}
+&
+\#Inventario, \#Abastecimiento, \#StockMinimo, \#Automatizacion, \#Reposicion
+&
+Configuración de las reglas de stock mínimo en el módulo de Inventario para el aprovisionamiento automático. En esta vista se definen los parámetros de cantidad mínima de seguridad y cantidad máxima para los artículos deportivos de alta rotación. Cuando el inventario físico cae por debajo de la cantidad mínima especificada, el sistema genera automáticamente una solicitud de cotización al proveedor. Esto reduce la pérdida de oportunidades de venta por desabastecimiento en tienda.
+\\ \hline
+
+\texttt{FOTO4\_POS\_ABIERTO}
+&
+\#POS, \#PuntoDeVenta, \#VentaRapida, \#Mostrador, \#MostradorSanCamilo
+&
+Interfaz gráfica del Punto de Venta (POS) en Odoo listo para operar en el mostrador del local comercial de San Camilo. Se visualiza la botonera táctil con las imágenes, categorías y precios de los artículos deportivos. Esta herramienta permite a los vendedores procesar transacciones en mostrador de manera sumamente rápida, seleccionando los productos con un solo toque y eliminando los retrasos de despacho, que disminuyeron de 20 a menos de 5 minutos.
+\\ \hline
+
+\texttt{FOTO5\_POS\_PAGO}
+&
+\#POS, \#RegistroPago, \#ControlCaja, \#CierreTransaccion, \#ReciboDigital
+&
+Pantalla de registro de pagos y cierre de transacción en el POS. Muestra las diferentes modalidades de pago disponibles (efectivo y banco/transferencia digital) y el cálculo automático del cambio. La confirmación del cobro actualiza el stock físico de forma inmediata en el inventario general y genera un recibo digital nativo. Este flujo asegura que el 100\% de las operaciones diarias de mostrador queden registradas sin depender de anotaciones manuales informales.
+\\ \hline
+
+\texttt{FOTO6\_ORDEN\_COMPRA}
+&
+\#Compras, \#OrdenCompra, \#AbastecimientoAuto, \#Tercerizacion, \#Proveedores
+&
+Vista de una solicitud de presupuesto de compra generada de manera automática en el módulo de Compras. Basándose en las reglas de stock mínimo previamente configuradas en el almacén, el ERP calcula las necesidades y confecciona la orden dirigida al taller confeccionista correspondiente. Este flujo automatizado reduce la carga administrativa de compras de la gerencia general y profesionaliza la relación comercial con los talleres de confección y proveedores externos.
+\\ \hline
+
+\texttt{FOTO7\_VALORACION\_INVENTARIO}
+&
+\#Inventario, \#ValoracionStock, \#ReporteFinanciero, \#CapitalDeTrabajo, \#Odoo
+&
+Reporte de valoración de inventario en tiempo real del módulo de Inventario. La pantalla despliega el listado de las unidades disponibles de cada SKU junto con su costo unitario y el valor total del inventario valorizado. Esta herramienta financiera aporta control total a la gerencia sobre el capital inmovilizado en el almacén de San Camilo. Facilita la toma de decisiones sobre compras de stock y el cálculo exacto de la rentabilidad bruta de la empresa.
+\\ \hline
+
+\texttt{FOTO\_DETALLE\_VENTA}
+&
+\#Ventas, \#CotizacionMayorista, \#Presupuesto, \#Trazabilidad, \#Clientes
+&
+Ficha de detalle de un presupuesto de venta en el módulo comercial de Ventas de Odoo. Utilizada para procesar requerimientos de clientes mayoristas, instituciones educativas y clubes deportivos. Se detallan los artículos deportivos solicitados, descuentos autorizados por volumen y condiciones comerciales. Centraliza la información del pedido y su estatus (presupuesto, presupuesto enviado o pedido de venta), garantizando la trazabilidad desde la cotización hasta el despacho final.
+\\ \hline
+
+\texttt{FOTO\_LISTADO\_VENTAS}
+&
+\#Ventas, \#ListadoPedidos, \#SeguimientoComercial, \#Monitoreo, \#Gerencia
+&
+Bandeja principal del módulo de Ventas que agrupa todas las cotizaciones y pedidos comerciales de la empresa. La vista permite filtrar los presupuestos según su estado, fecha de emisión, cliente y vendedor responsable. Su uso constante optimiza el seguimiento comercial a clientes corporativos y mayoristas. Facilita que la gerencia pueda evaluar el desempeño del equipo comercial y proyectar el flujo de ingresos semanales de forma estructurada.
+\\ \hline
+
+\texttt{FOTO\_PDF\_COTIZACION}
+&
+\#Ventas, \#PDFCotizacion, \#Estandarizacion, \#ImagenCorporativa, \#OdooOnline
+&
+Visualización preliminar de la propuesta comercial generada en formato PDF nativo por Odoo. Esta cotización profesional contiene el logotipo de la empresa, descripción detallada del catálogo deportivo, SKUs solicitados, precios unitarios oficiales y el total de la oferta. El envío de este documento a los clientes mejora sustancialmente la imagen comercial de Industria Textil Atlas, reduciendo los tiempos de cotización y formalizando el acuerdo de venta.
+\\ \hline
+
+\end{longtable}
+
+\end{document}
