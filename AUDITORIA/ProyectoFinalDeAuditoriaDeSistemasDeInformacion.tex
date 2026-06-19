@@ -5,6 +5,10 @@
 \usepackage[margin=2.5cm]{geometry}
 \usepackage{setspace} % Para el interlineado
 \usepackage[hidelinks]{hyperref}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, arrows.meta, positioning, calc, babel}
+
 
 \begin{document}
 
@@ -113,6 +117,41 @@ El análisis de arquitectura de TI de la organización revela una coexistencia h
 \end{itemize}
 El principal problema reside en que no existe un límite de seguridad o segmentación de red corporativa claro entre las estaciones de trabajo locales (ordenadores personales que ejecutan Ubuntu 22.04 LTS y Windows) y el servidor Nextcloud. Cualquier vulnerabilidad en el firewall del router local o una intrusión en una de las estaciones de trabajo de los desarrolladores expone el acceso de red directa al servidor documental de la empresa, comprometiendo no solo el código fuente propietario de los clientes, sino también la información de los contratos vigentes de digitalización empresarial.
 
+\begin{figure}[h!]
+    \centering
+    \begin{tikzpicture}[
+        node distance=1.2cm and 1.8cm,
+        box/.style={draw, rectangle, rounded corners, minimum width=2.8cm, minimum height=1cm, align=center, fill=blue!10, draw=blue!50, thick, font=\small},
+        warnbox/.style={draw, rectangle, rounded corners, minimum width=2.8cm, minimum height=1cm, align=center, fill=red!10, draw=red!50, thick, font=\small},
+        cloud/.style={draw, ellipse, minimum width=2.2cm, minimum height=0.8cm, align=center, fill=gray!10, draw=gray!50, thick, font=\small},
+        link/.style={->, >=latex, thick}
+    ]
+        % Nodes
+        \node[cloud] (internet) {Internet};
+        \node[box, below=of internet] (router) {Router Principal\\(Gateway Local)};
+        \node[warnbox, below=of router] (switch) {Switch de Red Local\\(Sin VLANs / Unificado)};
+        
+        \node[box, below left=of switch, xshift=-0.5cm] (dev1) {Estación Dev\\(Ubuntu 22.04)};
+        \node[box, below=of switch] (admin) {Estación Admin\\(Windows)};
+        \node[warnbox, below right=of switch, xshift=0.5cm] (server) {Servidor Físico\\(Proxmox VE)};
+        \node[warnbox, below=0.8cm of server] (nextcloud) {Contenedor Docker\\(Nextcloud local)};
+
+        % Connections
+        \draw[link] (internet) -- (router);
+        \draw[link] (router) -- (switch);
+        \draw[link] (switch) -- (dev1);
+        \draw[link] (switch) -- (admin);
+        \draw[link] (switch) -- (server);
+        \draw[link, dashed, red] (server) -- (nextcloud) node[midway, right, font=\tiny] {Hosting};
+        
+        % Vulnerability annotation
+        \draw[<->, >=latex, red, very thick, dashed] (dev1) to[bend right=25] node[below, align=center, font=\tiny] {Tránsito Libre / Riesgo de Movimiento Lateral} (server);
+        
+    \end{tikzpicture}
+    \caption{Topología actual de la red local de ACIDE, evidenciando la falta de segmentación (VLANs) entre estaciones de desarrollo y el servidor local de archivos.}
+    \label{fig:topologia_red}
+\end{figure}
+
 \subsection{Estructura Del Área A Auditar}
 El área de Digitales se estructura bajo la metodología ágil \textbf{Scrum}. 
 \begin{itemize}
@@ -184,6 +223,39 @@ Se auditarán los siguientes activos y procesos técnicos:
     \item \textbf{Repositorios y Versionado:} Gestión de ramas y calidad de código en el desarrollo de software.
     \item \textbf{Infraestructura Física:} Servidor local, laptops de desarrollo, impresoras y conectividad de red del área.
 \end{itemize}
+
+\begin{figure}[h!]
+    \centering
+    \begin{tikzpicture}[
+        node distance=1.2cm and 1.6cm,
+        comp/.style={draw, rectangle, double, minimum width=2.6cm, minimum height=1.1cm, align=center, fill=gray!15, draw=black, thick, font=\small},
+        nodebox/.style={draw, rectangle, rounded corners, minimum width=3.8cm, minimum height=3.6cm, fill=blue!5, draw=blue!40, thick, dashed},
+        link/.style={<->, >=latex, thick}
+    ]
+        % Nodes/Servers with labels placed above them
+        \node[nodebox, label={[font=\small\bfseries, yshift=0.1cm]above:Cloud Pública (SaaS)}] (cloud) {};
+        \node[nodebox, right=of cloud, label={[font=\small\bfseries, yshift=0.1cm]above:VPS Externo (DevOps)}] (vps) {};
+        \node[nodebox, right=of vps, label={[font=\small\bfseries, yshift=0.1cm]above:Servidor Local (Proxmox VE)}] (local) {};
+
+        % Components inside Cloud
+        \node[comp] (jira) at (cloud.center) {Jira Cloud /\\Odoo Studio};
+        
+        % Components inside VPS
+        \node[comp] (jenkins) at (vps.center) {Jenkins\\(CI/CD Pipeline)};
+
+        % Components inside Local Server
+        \node[comp, yshift=0.7cm] (docker) at (local.center) {Docker Host};
+        \node[comp, yshift=-0.7cm] (nextcloud) at (local.center) {Nextcloud\\(Docs/Backups)};
+
+        % Interconnections
+        \draw[link] (jira) -- node[midway, above, font=\tiny] {Webhook} (jenkins);
+        \draw[link] (jenkins) -- node[midway, above, font=\tiny] {SSH / Deploy} (docker);
+        \draw[link] (docker) -- node[midway, right, font=\tiny] {Local Net} (nextcloud);
+
+    \end{tikzpicture}
+    \caption{Diagrama de Despliegue UML que muestra la distribución e interacción de las aplicaciones cloud (Jira y Odoo), el servidor de integración continua VPS (Jenkins) y el entorno local de virtualización.}
+    \label{fig:diagrama_despliegue}
+\end{figure}
 
 \subsubsection{Criterios de Exclusión}
 Quedan fuera del alcance de esta auditoría:
@@ -338,26 +410,82 @@ Aplicada a la infraestructura local gestionada en PROXMOX:
 
 \subsection{Valoración Del Riesgo}
 \subsection{Matriz De Riesgo}
+
+A continuación se muestra la matriz visual de los riesgos identificados, mapeando su nivel de probabilidad e impacto para establecer las prioridades de atención:
+
+\begin{figure}[h!]
+    \centering
+    \begin{tikzpicture}[scale=1.2, every node/.style={font=\footnotesize}]
+        % Color zones
+        % Bajo (Verde): (0,0) to (2,2)
+        \fill[green!20] (0,0) rectangle (2,2);
+        \fill[green!20] (0,0) rectangle (1,3);
+        % Moderado (Amarillo): (2,0) to (4,2), (0,2) to (2,3)
+        \fill[yellow!30] (2,0) rectangle (3,2);
+        \fill[yellow!30] (0,2) rectangle (2,3);
+        \fill[yellow!30] (1,1) rectangle (3,2);
+        % Mayor (Naranja): (2,2) to (4,3), (0,3) to (2,4)
+        \fill[orange!30] (3,0) rectangle (4,3);
+        \fill[orange!30] (0,3) rectangle (2,4);
+        \fill[orange!30] (2,2) rectangle (4,3);
+        % Inaceptable (Rojo): (4,2) to (5,4), (2,3) to (4,4)
+        \fill[red!30] (4,0) rectangle (5,4);
+        \fill[red!30] (2,3) rectangle (4,4);
+        
+        \draw[step=1cm, black, thin] (0,0) grid (5,4);
+        
+        % Labels for Probability (Y axis)
+        \node[left] at (0,0.5) {Baja};
+        \node[left] at (0,1.5) {Media};
+        \node[left] at (0,2.5) {Alta};
+        \node[left] at (0,3.5) {Muy Alta};
+        \node[rotate=90] at (-0.8, 2) {\textbf{Probabilidad}};
+        
+        % Labels for Impact (X axis)
+        \node[below] at (0.5,0) {Menor};
+        \node[below] at (1.5,0) {Moderado};
+        \node[below] at (2.5,0) {Mayor};
+        \node[below] at (3.5,0) {Alto};
+        \node[below] at (4.5,0) {Crítico};
+        \node[below=0.4cm] at (2.5,0) {\textbf{Impacto}};
+        
+        % Placement of Risk Numbers
+        % R1: HDD Failure -> Probabilidad Alta (2.5), Impacto Crítico (4.5)
+        \node[draw, circle, fill=white, inner sep=1.5pt] at (4.5, 2.5) {\textbf{R1}};
+        % R2: UPS Failure -> Probabilidad Media (1.5), Impacto Alto (3.5) (desplazado a la izquierda)
+        \node[draw, circle, fill=white, inner sep=1.5pt] at (3.3, 1.5) {\textbf{R2}};
+        % R3: Physical location -> Probabilidad Media (1.5), Impacto Moderado (1.5)
+        \node[draw, circle, fill=white, inner sep=1.5pt] at (1.5, 1.5) {\textbf{R3}};
+        % R4: Session timeout -> Probabilidad Alta (2.5), Impacto Alto (3.5)
+        \node[draw, circle, fill=white, inner sep=1.5pt] at (3.5, 2.5) {\textbf{R4}};
+        % R5: HTTPS/TLS -> Probabilidad Media (1.5), Impacto Alto (3.5) (desplazado a la derecha)
+        \node[draw, circle, fill=white, inner sep=1.5pt] at (3.7, 1.5) {\textbf{R5}};
+        
+    \end{tikzpicture}
+    \caption{Matriz de Probabilidad e Impacto de riesgos de la infraestructura de ACIDE.}
+    \label{fig:matriz_riesgo_visual}
+\end{figure}
+
 \subsection{Matriz De Probabilidad E Impacto}
 A partir del análisis de brechas e inspección técnica, se identificaron y valoraron los siguientes riesgos críticos de seguridad y operación en la infraestructura local:
 \begin{enumerate}
-    \item \textbf{Falla Mecánica Catastrófica del Almacenamiento (HDD):} 
+    \item \textbf{R1: Falla Mecánica Catastrófica del Almacenamiento (HDD):} 
     \begin{itemize}
         \item \textit{Probabilidad:} Alta. \textit{Impacto:} Crítico. \textit{Nivel de Riesgo:} \textbf{INACEPTABLE} (Peligro inminente de pérdida irreversible de datos de clientes).
     \end{itemize}
-    \item \textbf{Corrupción de Datos por Corte Eléctrico en Servidor sin UPS:}
+    \item \textbf{R2: Corrupción de Datos por Corte Eléctrico en Servidor sin UPS:}
     \begin{itemize}
         \item \textit{Probabilidad:} Media. \textit{Impacto:} Alto. \textit{Nivel de Riesgo:} \textbf{MAYOR} (Daño potencial en los sistemas de archivos de las máquinas virtuales y bases de datos).
     \end{itemize}
-    \item \textbf{Vulneración Física o Accidental del Hardware (Ubicación Inadecuada):}
+    \item \textbf{R3: Vulneración Física o Accidental del Hardware (Ubicación Inadecuada):}
     \begin{itemize}
-        \item \textit{Probabilidad:} Media. \textit{Impacto:} Alto. \textit{Nivel de Riesgo:} \textbf{MODERADO} (Riesgo de apagados accidentales, desconexiones o robo físico del equipo por estar en área común).
+        \item \textit{Probabilidad:} Media. \textit{Impacto:} Moderado. \textit{Nivel de Riesgo:} \textbf{MODERADO} (Riesgo de apagados accidentales, desconexiones o robo físico del equipo por estar en área común).
     \end{itemize}
-    \item \textbf{Acceso No Autorizado y Fuga de Credenciales por Sesiones Activas Desatendidas:}
+    \item \textbf{R4: Acceso No Autorizado y Fuga de Credenciales por Sesiones Activas Desatendidas:}
     \begin{itemize}
         \item \textit{Probabilidad:} Alta. \textit{Impacto:} Alto. \textit{Nivel de Riesgo:} \textbf{MAYOR} (Pérdida de control de accesos a Jira, Odoo y repositorios debido a la falta de políticas de bloqueo automático).
     \end{itemize}
-    \item \textbf{Interceptación de Tráfico de Datos Sensibles (Man-in-the-Middle):}
+    \item \textbf{R5: Interceptación de Tráfico de Datos Sensibles (Man-in-the-Middle):}
     \begin{itemize}
         \item \textit{Probabilidad:} Media. \textit{Impacto:} Alto. \textit{Nivel de Riesgo:} \textbf{MAYOR} (Exposición de credenciales de Nextcloud y documentos en tránsito debido a la falta de HTTPS forzado por TLS/SSL).
     \end{itemize}
