@@ -2,20 +2,38 @@
 
 \subsection{Enfoque metodológico del proyecto}
 \begin{indentedsubsection}
-% Describir el enfoque metodológico del proyecto aquí
+La implementación del sistema de gestión para Industria Textil Atlas E.I.R.L. se rige bajo un enfoque de transformación digital ágil y práctico, centrado de forma exclusiva en sus necesidades logísticas de inventarios, compras y operaciones de punto de venta (POS). Dado que toda la confección textil y fabricación de accesorios se terceriza a talleres externos, el proyecto descarta por completo la instalación de módulos complejos de manufactura (MRP), priorizando una configuración nativa, limpia y libre de desarrollos de código a medida. Esto asegura una adopción sumamente ágil y minimiza los riesgos de retraso tecnológico en el negocio.
 \end{indentedsubsection}
 
 \subsection{Metodología ágil y enfoque ``Aprender Haciendo''}
 \begin{indentedsubsection}
-% Describir la metodología ágil y el enfoque de aprender haciendo aquí
+Debido al nivel de madurez digital inicial de los trabajadores de la empresa, evaluado en un 35.34\%, se adopta una metodología práctica orientada a la acción. Para garantizar que los usuarios asimilen el sistema sin interrumpir la operación, el plan formativo se estructura bajo la modalidad ``Aprender Haciendo'', utilizando simulaciones de procesos con el catálogo real del negocio:
+
+\begin{itemize}
+    \item \textbf{Simulaciones de almacén:} el encargado practicará el registro de recepciones de mercadería e insumos críticos (como rodilleras, musleras, tobilleras, muñequeras y coderas) directamente en el sistema, aprendiendo a conciliar el inventario físico con el digital.
+    \item \textbf{Simulaciones de venta rápida (POS):} el personal de ventas ejecutará prácticas continuas de atención en mostrador para la salida de artículos como pelotas de fútbol, bandas de resistencia, cintas kinesiológicas y mangas de vóley utilizando la terminal del POS.
+    \item \textbf{Política estricta de cambio (``Cero Papelitos''):} para erradicar definitivamente los vicios de la gestión manual (cuadernos físicos y papelitos en tienda), se establece como regla de negocio obligatoria que ningún artículo comercializado en la tienda física de San Camilo podrá ser despachado al cliente sin haber sido registrado previamente en la interfaz de la terminal POS, forzando la disciplina operativa y garantizando la meta de adopción superior al 90\% en 3 meses.
+\end{itemize}
 \end{indentedsubsection}
 
 \subsection{Herramientas de gestión y comunicación}
 \begin{indentedsubsection}
-% Describir las herramientas de gestión y comunicación aquí
+El éxito de la implantación operativa se apoya en un conjunto de herramientas y canales de coordinación ágiles:
+
+\begin{itemize}
+    \item \textbf{Entorno de pruebas (Sandbox):} se habilitará una base de datos paralela para que el personal realice transacciones simuladas, registre ingresos ficticios de stock y practique arqueos de caja en la terminal del Punto de Venta sin afectar la base de datos real del negocio ni la contabilidad.
+    \item \textbf{Canal de coordinación directo:} se habilitará el grupo oficial de WhatsApp ``Proyecto Logístico POS Atlas'' para que el personal de tienda y almacén reporte incidentes operativos, realice consultas de interfaz y reciba asistencia inmediata sobre errores de uso en el día a día.
+    \item \textbf{Esquema híbrido de sesiones:} las etapas de estructuración de la base de datos y diseño SKU se ejecutarán de forma remota mediante Meet/Zoom. Por el contrario, la puesta en marcha de las terminales del POS, simulación de arqueos de caja y prácticas de picking físico se realizarán obligatoriamente de forma presencial en el local comercial de San Camilo, asegurando que las herramientas funcionen bajo la presión real de atención.
+\end{itemize}
 \end{indentedsubsection}
 
 \subsection{Sprints de configuración (Fases Ágiles)}
 \begin{indentedsubsection}
-% Describir los sprints de configuración aquí
+La configuración técnica del sistema se organiza bajo el marco ágil de Scrum mediante tres sprints definidos de trabajo secuencial:
+
+\begin{itemize}
+    \item \textbf{Sprint 1: Cimientos y Catálogo SKU:} creación del entorno en la nube e importación de la base de datos de artículos (tobilleras, coderas, pelotas, etc.). En este sprint se configura la matriz de permisos de usuario: el personal de Ventas tendrá un acceso estrictamente restringido a la interfaz de ventas de la terminal POS, mientras que el gerente Víctor Huayllaro tendrá el control exclusivo de los costos de compra y de la configuración de precios.
+    \item \textbf{Sprint 2: Gestión de Inventarios y Puntos de Reorden:} estructuración del módulo de almacenes y mapeo de ubicaciones físicas. Se parametrizarán las reglas de stock mínimo automático para la mercadería tercerizada, emitiendo alertas cuando accesorios críticos de alta demanda estén cerca del quiebre.
+    \item \textbf{Sprint 3: Punto de Venta (POS) y Gestión de Precios/Márgenes:} configuración final de la terminal POS y habilitación del panel financiero para la gerencia, permitiendo a Víctor Huayllaro simular y reestructurar de manera ágil los precios de venta a mostrar en el POS en base al margen de rentabilidad deseado por producto.
+\end{itemize}
 \end{indentedsubsection}
