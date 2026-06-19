@@ -1,34 +1,47 @@
 \section{Resultados de la implementación}
 \begin{indentedsubsection}
-% Describir una introducción general a los resultados aquí
+A la fecha de elaboración de este informe, el proyecto se encuentra en la fase de cierre de la implementación del sistema Odoo y el inicio de la "marcha blanca" en la tienda física de San Camilo. Las herramientas parametrizadas ya están disponibles y listas para el uso diario de los operarios de almacén y el personal de ventas, permitiendo registrar la entrada de productos de los talleres de tercerización, controlar la mercancía en el mostrador e iniciar el proceso de compras estructurado. Los resultados documentados en esta sección reflejan los logros inmediatos de configuración en la base de datos y la planificación del desempeño proyectada en base al Plan de Implementación de Industria Textil Atlas E.I.R.L.
 \end{indentedsubsection}
 
 \subsection{Resultados inmediatos de configuración}
 \begin{indentedsubsection}
-% Describir los resultados inmediatos aquí
+Los principales logros técnicos alcanzados al culminar la parametrización de la plataforma en la nube son:
+\begin{itemize}
+    \item \textbf{Entorno centralizado y bimonetario:} despliegue de la instancia en Odoo Online configurada en la moneda nacional (Soles - PEN), alineada a la contabilidad y ventas de mostrador de la empresa.
+    \item \textbf{Estandarización de catálogo con códigos SKU:} se estructuró y cargó la base de datos maestra con la codificación SKU de todas las líneas de productos deportivos complementarios, accesorios y materiales de licra de manera unificada.
+    \item \textbf{Punto de Venta (POS) activo:} configuración de la terminal de mostrador simplificada para el personal de ventas, vinculada en tiempo real con el stock disponible de la tienda.
+    \item \textbf{Parametrización de reglas de compras:} automatización de los puntos de reorden y alertas de stock mínimo para la generación de borradores de órdenes de compra a proveedores externos de artículos y telas.
+\end{itemize}
 \end{indentedsubsection}
 
 \subsection{Resultados preliminares (Marcha blanca)}
 \begin{indentedsubsection}
-% Describir los resultados de la marcha blanca aquí
+Durante las semanas iniciales de la fase de marcha blanca, se ha evidenciado una mejora sustancial en la disciplina operativa de la tienda comercial. La aplicación estricta de la política de "Cero Papelitos" ha forzado al personal de ventas a registrar de manera inmediata cada transacción en la terminal del Punto de Venta (POS) y verificar existencias digitalmente antes de despachar al cliente. Asimismo, la gerencia de Víctor Huayllaro cuenta con visibilidad constante sobre los costos de adquisición y precios de venta finales del mostrador en una sola interfaz, permitiendo analizar la rentabilidad global de manera ágil y oportuna sin depender de reportes en papel o en la memoria.
 \end{indentedsubsection}
 
 \subsection{Indicadores y metas de desempeño (KPIs)}
 \begin{indentedsubsection}
-% Completar los indicadores y metas en la siguiente tabla
-
-\renewcommand{\arraystretch}{1.35}
-\begin{tabularx}{\textwidth}{|>{\raggedright\arraybackslash}p{3.1cm}|>{\raggedright\arraybackslash}p{3.0cm}|>{\raggedright\arraybackslash}p{2.8cm}|X|}
-    \hline
-    \textbf{KPI (Indicador)} & \textbf{Situación Previa (Manual)} & \textbf{Meta Esperada (con Odoo)} & \textbf{Impacto Esperado} \\ \hline
-     &  &  &  \\ \hline
-     &  &  &  \\ \hline
-     &  &  &  \\ \hline
-     &  &  &  \\ \hline
-\end{tabularx}
+De acuerdo con las metas formales aprobadas en el Plan de Implementación de Industria Textil Atlas E.I.R.L., el impacto de la digitalización se evaluará mediante la siguiente matriz de indicadores clave de desempeño (KPIs):
 \end{indentedsubsection}
+
+\renewcommand{\arraystretch}{1.4}
+\begin{tabularx}{\textwidth}{|>{\raggedright\arraybackslash}p{3.2cm}|>{\raggedright\arraybackslash}p{2.8cm}|>{\raggedright\arraybackslash}p{2.8cm}|X|}
+    \hline
+    \textbf{KPI (Indicador)} & \textbf{Línea de Base (Manual)} & \textbf{Meta (con Odoo)} & \textbf{Impacto Esperado} \\ \hline
+    Tiempo de búsqueda y preparación de pedidos & 15 a 20 minutos por cliente & Reducción del 25\% en control y 15\% en preparación & Mayor agilidad en la atención de mostrador y capacidad de atender más transacciones. \\ \hline
+    Exactitud en el registro de existencias & Margen de error superior al 30\% & Reducción del 20\% (exactitud > 78\% el primer año) & Eliminación de compras de productos duplicados y prevención de quiebres de stock. \\ \hline
+    Decisiones de compra basadas en datos & 100\% intuitivas y de urgencia (reactivo) & > 60\% de compras data-driven al sexto mes & Optimización del capital de trabajo e inventario planificado con proveedores. \\ \hline
+    Tasa de adopción de la herramienta & Cero (madurez digital del 35.34\%) & > 90\% de usuarios activos diarios al tercer mes & Abandono definitivo del uso de cuadernos físicos y registros de ventas en papel. \\ \hline
+    Reducción de costos por merma y obsolescencia & Pérdidas anuales continuas sin visibilidad de stock & Disminución del 15\% de mermas en los primeros 6 meses & Recuperación de la pérdida por accesorios vencidos o stock inmovilizado. \\ \hline
+    Índice de Satisfacción del Cliente (CSAT) & Medición inexistente / informal & Evaluación semestral estandarizada & Incremento de la lealtad y confianza del cliente minorista y mayorista. \\ \hline
+\end{tabularx}
 
 \subsection{Impacto esperado en la eficiencia operativa}
 \begin{indentedsubsection}
-% Describir el impacto esperado aquí
+El Plan de Implementación proyecta una optimización drástica de los tiempos operativos en Industria Textil Atlas E.I.R.L. La automatización del Punto de Venta y el control SKU en el almacén representarán una reducción del 25\% en los tiempos destinados a la preparación de mercadería y control físico de existencias. Complementariamente, la centralización de los costos y los reportes de ventas en la nube permitirá una reducción del 50\% en el tiempo que la gerencia y administración dedican a la elaboración manual de informes financieros y de almacén, liberando horas-hombre críticas que se reorientarán a la planificación comercial y negociación oportuna con proveedores.
+\end{indentedsubsection}
+
+\subsection{Proyección del Retorno de Inversión (ROI)}
+\begin{indentedsubsection}
+En coherencia con los documentos técnicos del proyecto, la recuperación de la inversión financiera se proyecta de manera sostenible con un retorno positivo anual a partir del cierre del primer año de implementación completa. Este retorno no solo proviene del incremento en la velocidad de atención del POS en la tienda de San Camilo, sino principalmente del ahorro directo por la reducción de errores de stock (estimado entre un 3\% y 5\% de pérdidas anuales por desabastecimiento, obsolescencia y compras duplicadas de accesorios de terceros). La digitalización de compras y almacén garantiza que el capital de trabajo de Atlas se asigne de manera eficiente y rentable a partir del primer año operativo completo.
 \end{indentedsubsection}
