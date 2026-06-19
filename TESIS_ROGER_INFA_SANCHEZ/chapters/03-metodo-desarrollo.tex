@@ -936,21 +936,45 @@ El panel web administrador y de monitoreo de usuario final fue verificado en bas
         \item \textbf{Monitoreo Geoespacial Activo:} Pruebas dinámicas con la API espacial de \textbf{Leaflet} comprobando el correcto dibujado del trazado en mapa de la geometría \texttt{LineString} de las rutas SIT y la actualización reactiva instantánea de los marcadores de posición de buses mediante las suscripciones a salas en tiempo real de WebSockets.
     \end{itemize}
 
-\paragraph{Validación Estadística de Hipótesis (Prueba de Wilcoxon)}
+\paragraphDe acuerdo con el video, el paso a paso para realizar el cálculo manual de la prueba de Wilcoxon es el siguiente:
 
-Para evaluar formalmente el impacto de la plataforma de monitoreo web y tracking GPS sobre el tiempo de espera de los usuarios, se diseñó un experimento en un escenario simulado utilizando la telemetría en tiempo real del sistema. Se contó con un tamaño de muestra $N = 20$ usuarios recurrentes de los corredores del SIT, quienes interactuaron con una simulación del funcionamiento de la plataforma TransiGo basada en trayectos y posiciones GPS de buses en operación. El estudio comparó los tiempos de espera registrados en dos escenarios:
+**1. Calcular las diferencias entre las condiciones**
+Para cada participante, debes restarle a la "condición 1" el valor de la "condición 2" para obtener la diferencia.
+
+**2. Clasificar y ordenar las diferencias (sin tener en cuenta los signos)**
+Debes ordenar los resultados obtenidos del paso anterior de menor a mayor, imaginando que los acomodas en posiciones o "cajitas" numeradas del 1 en adelante. Durante este paso debes tener en cuenta dos reglas muy importantes:
+*   **Descartar los ceros:** Si la diferencia entre ambas condiciones es "0", este valor representa la "nada" y se ignora por completo; no ocupa ninguna posición o "cajita".
+*   **Promediar los empates:** Si un mismo número de diferencia se repite varias veces, debes promediar las posiciones. Para ser justos, se suman los números de las "cajitas" que ocuparían y el resultado se divide entre la cantidad de repeticiones (por ejemplo, si el número 1 ocupa las cajitas 1, 2 y 3, se suma 1+2+3=6 y se divide entre 3, por lo que a todos los "unos" se les asigna la posición 2).
+
+**3. Separar las clasificaciones según el signo de la diferencia**
+Una vez obtenidos los valores de las posiciones (o clasificaciones), debes devolverles el signo original (positivo o negativo) que tenían producto de la resta inicial en el paso 1.
+
+**4. Sumar los valores clasificados**
+Debes hacer dos sumatorias por separado: primero sumar todas las clasificaciones que corresponden a signos positivos y, por otro lado, sumar todas las clasificaciones correspondientes a los signos negativos. 
+
+**5. Determinar el valor de Wilcoxon (W)**
+El estadístico W de Wilcoxon corresponde a **la sumatoria de menor valor** obtenida en el paso anterior. 
+
+**6. Comparar con el valor crítico en las tablas**
+Finalmente, debes buscar el valor crítico en las tablas de Wilcoxon tomando en cuenta el tamaño de tu muestra (número de participantes) y el nivel de significancia según tus hipótesis (a una cola o a dos colas). 
+
+A diferencia de otras pruebas donde se busca que tu resultado sea mayor, **en la prueba de Wilcoxon se requiere que el valor de W calculado sea menor que el valor crítico de la tabla** para poder rechazar la hipótesis nula y aceptar que existen diferencias significativas.{Validación Estadística de Hipótesis (Prueba de Wilcoxon)}
+
+Para evaluar formalmente el impacto de la plataforma de monitoreo web y tracking GPS sobre el tiempo de espera de los usuarios, se diseñó un experimento empírico con diseño pre-experimental de pre-test y post-test con un solo grupo. La recolección de los datos de partida se vinculó directamente con los instrumentos cuali-cuantitativos descritos previamente (Cuestionario de Diagnóstico Pre-test y Cuestionario de Evaluación Post-test). Se contó con una muestra de $N = 20$ usuarios recurrentes de los corredores del Sistema Integrado de Transportes (SIT) de Arequipa, quienes interactuaron con el escenario experimental controlado utilizando la telemetría en tiempo real y la simulación del recorrido de los buses de la empresa TransiGo.
+
+El estudio contrastó los tiempos de espera registrados en los siguientes escenarios operativos:
 \begin{enumerate}
-    \item \textbf{Pre-test (Sin GPS):} Tiempo de espera de los usuarios en minutos acudiendo al paradero bajo el esquema tradicional de operación (sin información del arribo de los buses).
-    \item \textbf{Post-test (Con GPS):} Tiempo de espera de los mismos usuarios utilizando la aplicación web de telemetría y consulta de ETA en tiempo real, permitiéndoles acudir al paradero de forma sincronizada con el arribo de las unidades.
+    \item \textbf{Pre-test (Sin GPS):} Medición del tiempo de espera habitual en minutos reportado por los usuarios en el paradero bajo la modalidad de operación convencional, caracterizada por la incertidumbre y la total ausencia de información sobre el arribo físico de los buses.
+    \item \textbf{Post-test (Con GPS):} Medición del tiempo de espera de los mismos usuarios tras utilizar activamente la aplicación web para la consulta del tiempo estimado de arribo (ETA) en tiempo real, permitiéndoles sincronizar de manera óptima su salida hacia el paradero según la cercanía del bus.
 \end{enumerate}
 
-Para asegurar la rigurosidad estadística en la elección de la prueba de contraste, primero se aplicó el test de normalidad de \textbf{Shapiro-Wilk} a ambos grupos de mediciones. La prueba de Shapiro-Wilk arrojó un valor $p = 0.3608$ para el Pre-test (indicando normalidad) y $p = 0.0205$ para el Post-test (rechazando la normalidad al ser $p < 0.05$). Al no cumplirse el supuesto de normalidad en ambas distribuciones de manera conjunta, se invalida el uso de pruebas paramétricas como la prueba \textit{t de Student} para muestras pareadas, justificando la aplicación obligatoria de la prueba no paramétrica de \textbf{Rangos con Signo de Wilcoxon}.
+Para asegurar la rigurosidad estadística en la elección del estadístico de contraste, primero se aplicó la prueba de normalidad de \textbf{Shapiro-Wilk} a ambas distribuciones de datos. La prueba arrojó un valor $p = 0.3608$ para el Pre-test (lo que sugiere que los datos no difieren significativamente de una distribución normal) y un valor $p = 0.0205$ para el Post-test (lo que implica el rechazo de la hipótesis de normalidad al ser $p < 0.05$). Debido a que al menos una de las dos distribuciones no cumple con el supuesto de normalidad, se invalida el uso de pruebas paramétricas como la prueba \textit{t de Student} para muestras pareadas, justificando rigurosamente el empleo de la alternativa no paramétrica: la prueba de \textbf{Rangos con Signo de Wilcoxon} para muestras relacionadas.
 
-A continuación, se formulan las hipótesis estadísticas correspondientes:
+A continuación, se formulan las hipótesis de investigación sometidas a contraste estadístico:
 \begin{itemize}
-    \item \textbf{Hipótesis Nula ($H_0$):} La mediana de las diferencias de los tiempos de espera entre el pre-test y el post-test es igual a cero (el sistema GPS no produce ninguna reducción en la espera).
+    \item \textbf{Hipótesis Nula ($H_0$):} La mediana de las diferencias de los tiempos de espera entre el pre-test y el post-test es igual a cero, lo que implica que el uso de la plataforma basada en tracking GPS no genera una reducción en el tiempo de espera de los usuarios.
     $$H_0: \tilde{\theta}_{pre} = \tilde{\theta}_{post}$$
-    \item \textbf{Hipótesis Alternativa ($H_1$):} La mediana de los tiempos de espera de los usuarios en el post-test es menor en comparación con el pre-test (el sistema GPS reduce significativamente la espera).
+    \item \textbf{Hipótesis Alternativa ($H_1$):} La mediana de los tiempos de espera en el post-test es significativamente menor que en el pre-test, demostrando que la plataforma basada en tracking GPS y predicción de ETA disminuye el tiempo de espera de los usuarios.
     $$H_1: \tilde{\theta}_{pre} > \tilde{\theta}_{post}$$
 \end{itemize}
 
