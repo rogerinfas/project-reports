@@ -104,7 +104,12 @@ La organización cuenta con un capital humano total de \textbf{37 empleados}. El
 La presente auditoría se define como una evaluación sistemática, crítica y objetiva de los controles de seguridad, eficiencia operativa y gestión de datos en el área de Digitales. El proceso busca verificar que el uso de herramientas como Nextcloud y los flujos de trabajo en Jira cumplan con estándares de integridad y confidencialidad.
 
 \subsection{Análisis Detallado}
-El análisis se centra en la coexistencia de servicios en la nube con la infraestructura interna. Mientras que el desarrollo DevOps y las instancias de Odoo Studio operan en la nube (SaaS), la gestión documental y la comunicación interna residen en un servidor \textbf{Nextcloud} dentro de la red local. El análisis detalla que cualquier vulnerabilidad en la red interna comprometería no solo la operatividad, sino la privacidad de los datos sensibles de la organización y sus clientes.
+El análisis de arquitectura de TI de la organización revela una coexistencia híbrida y crítica entre servicios alojados en la nube y recursos locales:
+\begin{itemize}
+    \item \textbf{Servicios Cloud (SaaS):} El entorno de seguimiento Jira Cloud, el repositorio de versionado de software y las instancias de parametrización en Odoo Studio operan bajo servicios en la nube contratados.
+    \item \textbf{Servicios Locales (On-Premises):} El servidor de gestión documental de proyectos, las copias de seguridad locales y la mensajería interna residen en una instancia local del software libre \textbf{Nextcloud}. Dicho servidor Nextcloud está montado como un contenedor Docker virtualizado en el entorno local de la oficina, operando sobre un hipervisor PROXMOX VE de un servidor físico ensamblado.
+\end{itemize}
+El principal problema reside en que no existe un límite de seguridad o segmentación de red corporativa claro entre las estaciones de trabajo locales (ordenadores personales que ejecutan Ubuntu 22.04 LTS y Windows) y el servidor Nextcloud. Cualquier vulnerabilidad en el firewall del router local o una intrusión en una de las estaciones de trabajo de los desarrolladores expone el acceso de red directa al servidor documental de la empresa, comprometiendo no solo el código fuente propietario de los clientes, sino también la información de los contratos vigentes de digitalización empresarial.
 
 \subsection{Estructura Del Área A Auditar}
 El área de Digitales se estructura bajo la metodología ágil \textbf{Scrum}. 
@@ -114,11 +119,11 @@ El área de Digitales se estructura bajo la metodología ágil \textbf{Scrum}.
 \end{itemize}
 
 \subsection{Nivel De Riesgo}
-El nivel de riesgo se califica como \textbf{Medio-Alto}. El principal activo crítico es el servidor local de \textbf{Nextcloud}. Los riesgos identificados son:
+El nivel de riesgo inicial de la infraestructura del área de Digitales se califica preliminarmente como \textbf{Alto}. Esta ponderación se fundamenta en la criticidad de los activos de información expuestos en el servidor local de Nextcloud (donde reside el 100\% de los entregables y la documentación de las consultorías activas del proyecto de digitalización de clientes). A partir del análisis preliminar, se identifican las siguientes brechas y vectores de riesgo:
 \begin{itemize}
-    \item \textbf{Privacidad de Datos:} Vulnerabilidad de la información ante accesos no autorizados desde el exterior.
-    \item \textbf{Seguridad de Estaciones de Trabajo:} Riesgos derivados del uso de equipos locales para tareas de programación y digitalización.
-    \item \textbf{Integridad de Red:} Posibles brechas en la configuración de la red interna que expongan el tráfico de datos corporativos.
+    \item \textbf{Compromiso de Privacidad de Datos y Propiedad Intelectual:} Riesgo alto de exfiltración de planos de arquitectura, credenciales maestras y documentación confidencial del cliente, debido a la ausencia de políticas de cifrado de almacenamiento y a la falta de mecanismos avanzados de autenticación (como MFA) en el Nextcloud local.
+    \item \textbf{Inseguridad en las Estaciones de Trabajo (Endpoints):} Estaciones de desarrollo locales ejecutando comandos con privilegios elevados y descargando paquetes de terceros sin un repositorio local controlado, lo que facilita la introducción involuntaria de código malicioso o dependencias vulnerables.
+    \item \textbf{Falta de Control de Acceso Perimetral y Segmentación de Red:} Inexistencia de segmentación VLAN entre la red regular de la oficina (tráfico administrativo) y el segmento de red donde residen el hipervisor PROXMOX y los contenedores del servidor Nextcloud. Esto expone los activos críticos del área ante cualquier ataque de suplantación ARP o de movimiento lateral dentro de la red inalámbrica local.
 \end{itemize}
 
 \subsection{Áreas Involucradas}
@@ -258,23 +263,31 @@ Para la ejecución efectiva de esta auditoría, se solicitará a la Jefatura de 
 \end{itemize}
 
 \subsection{Plan De Auditoría}
-El proceso de auditoría se enmarcará en los lineamientos de la norma internacional \textbf{ISO/IEC 27005}, enfocada en la gestión de riesgos de seguridad de la información. El plan se estructura en las siguientes fases operativas:
+El proceso de auditoría se enmarca metodológicamente en las directrices de la norma internacional \textbf{ISO/IEC 27005} para la gestión de riesgos de seguridad de la información, y adopta controles específicos de la guía de buenas prácticas de \textbf{ISO/IEC 27002} (particularmente el Dominio 8 sobre Seguridad Operativa y el Dominio 5 sobre Controles de Acceso). El plan se estructura detalladamente en las siguientes fases operativas:
 
 \subsubsection{Investigación Preliminar}
-\subsubsection{Recolección De Información}
-\subsubsection{Aplicación De Instrumentos}
+Se recopilarán los diagramas de red en Excalidraw y las políticas internas vigentes. Se llevará a cabo un reconocimiento inicial pasivo de los puertos abiertos desde el segmento inalámbrico local hacia el servidor físico.
 
-\subsubsection{Ejecución De Pruebas}
-Se implementarán las siguientes pruebas técnicas en la infraestructura:
+\subsubsection{Recolección De Información}
+Entrevistas técnicas presenciales con el encargado de TI (Alex Flores) y revisión de los logs del hipervisor PROXMOX VE. Se inspeccionará físicamente el cableado y el estado de refrigeración y suministro de energía del servidor local.
+
+\subsubsection{Aplicación De Instrumentos}
+Uso de listas de verificación de controles basadas en CIS Controls (versión 8) y cuestionarios semiestructurados para evaluar la madurez de la gestión de accesos en Odoo Studio y la política de snapshots en Proxmox.
+
+\subsubsection{Ejecución De Pruebas Técnicas}
+Para verificar empíricamente la solidez de la infraestructura local, se ejecutarán las siguientes pruebas técnicas controladas:
 \begin{itemize}
-    \item \textbf{Escaneo de Vulnerabilidades:} Uso de herramientas como Nessus o OpenVAS sobre el segmento de red de PROXMOX y las instancias de Ubuntu para detectar puertos abiertos no justificados.
-    \item \textbf{Auditoría de I/O de Almacenamiento:} Pruebas de estrés de lectura/escritura (benchmark) utilizando herramientas como \texttt{fio} o \texttt{hdparm} para evaluar la degradación de los discos mecánicos.
-    \item \textbf{Revisión de Seguridad en Contenedores:} Análisis estático de las imágenes de Docker utilizadas para el despliegue de Odoo utilizando herramientas como Trivy o Docker Bench for Security.
-    \item \textbf{Test de Recuperación de Desastres (DRP):} Simulacro de restauración de una máquina virtual o contenedor LXC desde un snapshot de PROXMOX para medir el Tiempo Objetivo de Recuperación (RTO).
+    \item \textbf{Escaneo de Puertos y Vulnerabilidades:} Ejecución de escaneos dirigidos sobre las direcciones IP locales de la subred del hipervisor (\texttt{192.168.10.0/24}) y los contenedores LXC usando las herramientas \textbf{Nmap} y \textbf{OpenVAS} para identificar servicios expuestos.
+    \item \textbf{Pruebas de Estrés y Desempeño de Discos (Storage Benchmark):} Ejecución de pruebas de carga de I/O aleatorio usando la herramienta \textbf{fio} en el disco físico mecánico del host, analizando métricas de latencia de escritura y degradación física (valores SMART).
+    \item \textbf{Análisis de Configuración de Contenedores Docker:} Ejecución de análisis estáticos sobre las imágenes base y archivos Compose de Odoo y Nextcloud locales mediante la herramienta \textbf{Trivy} para detectar secretos embebidos e inyecciones de vulnerabilidades conocidas.
+    \item \textbf{Simulación de Recuperación ante Desastres (Test DRP):} Clonación y restauración programada de una máquina virtual (LXC Nextcloud) en un almacenamiento alternativo, con la finalidad de medir el Tiempo Objetivo de Recuperación (RTO) real frente al teórico.
 \end{itemize}
 
 \subsubsection{Proceso De Análisis De Evaluación De Riesgos}
+Evaluación cuali-cuantitativa basada en la probabilidad de ocurrencia e impacto de las brechas detectadas en la fase de pruebas técnicas, clasificando los riesgos en una matriz de prioridad.
+
 \subsubsection{Tratamiento De Riesgo}
+Elaboración del catálogo de acciones recomendadas y soluciones técnicas para la reducción del riesgo a un nivel residual aceptable para la gerencia general de ACIDE.
 
 \clearpage
 \section{FASE III: DESARROLLO DE LA AUDITORÍA}
@@ -320,31 +333,49 @@ Aplicada a la infraestructura local gestionada en PROXMOX:
 \subsection{Valoración Del Riesgo}
 \subsection{Matriz De Riesgo}
 \subsection{Matriz De Probabilidad E Impacto}
-A partir del análisis, se identificaron y valoraron los siguientes riesgos críticos de infraestructura:
+A partir del análisis de brechas e inspección técnica, se identificaron y valoraron los siguientes riesgos críticos de seguridad y operación en la infraestructura local:
 \begin{enumerate}
     \item \textbf{Falla Mecánica Catastrófica del Almacenamiento (HDD):} 
     \begin{itemize}
-        \item \textit{Probabilidad:} Alta. \textit{Impacto:} Crítico. \textit{Nivel de Riesgo:} \textbf{INACEPTABLE}.
+        \item \textit{Probabilidad:} Alta. \textit{Impacto:} Crítico. \textit{Nivel de Riesgo:} \textbf{INACEPTABLE} (Peligro inminente de pérdida irreversible de datos de clientes).
     \end{itemize}
     \item \textbf{Corrupción de Datos por Corte Eléctrico en Servidor sin UPS:}
     \begin{itemize}
-        \item \textit{Probabilidad:} Media. \textit{Impacto:} Alto. \textit{Nivel de Riesgo:} \textbf{MAYOR}.
+        \item \textit{Probabilidad:} Media. \textit{Impacto:} Alto. \textit{Nivel de Riesgo:} \textbf{MAYOR} (Daño potencial en los sistemas de archivos de las máquinas virtuales y bases de datos).
     \end{itemize}
     \item \textbf{Vulneración Física o Accidental del Hardware (Ubicación Inadecuada):}
     \begin{itemize}
-        \item \textit{Probabilidad:} Media. \textit{Impacto:} Alto. \textit{Nivel de Riesgo:} \textbf{MODERADO}.
+        \item \textit{Probabilidad:} Media. \textit{Impacto:} Alto. \textit{Nivel de Riesgo:} \textbf{MODERADO} (Riesgo de apagados accidentales, desconexiones o robo físico del equipo por estar en área común).
+    \end{itemize}
+    \item \textbf{Acceso No Autorizado y Fuga de Credenciales por Sesiones Activas Desatendidas:}
+    \begin{itemize}
+        \item \textit{Probabilidad:} Alta. \textit{Impacto:} Alto. \textit{Nivel de Riesgo:} \textbf{MAYOR} (Pérdida de control de accesos a Jira, Odoo y repositorios debido a la falta de políticas de bloqueo automático).
+    \end{itemize}
+    \item \textbf{Interceptación de Tráfico de Datos Sensibles (Man-in-the-Middle):}
+    \begin{itemize}
+        \item \textit{Probabilidad:} Media. \textit{Impacto:} Alto. \textit{Nivel de Riesgo:} \textbf{MAYOR} (Exposición de credenciales de Nextcloud y documentos en tránsito debido a la falta de HTTPS forzado por TLS/SSL).
     \end{itemize}
 \end{enumerate}
 
 \subsection{Impacto Económico}
-La materialización de una falla mecánica del disco desencadenaría la inoperatividad total del entorno de desarrollo local y de las plataformas de comunicación interna (Nextcloud). Se estima un Tiempo de Inactividad (\textit{Downtime}) de entre 3 a 7 días hábiles para adquirir hardware nuevo, reinstalar PROXMOX y restaurar los últimos snapshots útiles.
+La materialización de una falla de hardware o una brecha de seguridad grave detendría por completo los entornos locales de desarrollo y digitalización comercial. Se estima un Tiempo de Inactividad (\textit{Downtime}) mínimo de 3 a 7 días hábiles para restablecer la operatividad.
 
-Considerando que ACIDE maneja contratos de implementación de software e integraciones de normativas ISO que oscilan entre los \textbf{S/ 20,000 y S/ 40,000 soles} por proyecto, una caída del sistema impactaría directamente en:
+Para cuantificar formalmente esta pérdida, se propone el siguiente modelo matemático para el cálculo del Costo de Inactividad ($C_{downtime}$):
+$$C_{downtime} = P_{SLA} + (C_{HH} \times N \times T_{d}) + C_{rep}$$
+
+Donde:
 \begin{itemize}
-    \item \textbf{Penalizaciones Contractuales:} El incumplimiento de cronogramas y Acuerdos de Nivel de Servicio (SLA) con los clientes activa cláusulas de penalidad que promedian entre el 10\% y el 15\% del valor total del contrato (Pérdidas estimadas de S/ 2,000 a S/ 6,000 por proyecto activo).
-    \item \textbf{Pérdida de Horas-Hombre:} El coste absorbido por la empresa al tener a 12 especialistas inactivos o trabajando a capacidad mínima durante la semana de recuperación.
-    \item \textbf{Daño Reputacional y Cancelaciones:} Si la falla incluye la corrupción irrecuperable de documentación confidencial almacenada en Nextcloud, existe un riesgo inminente de resolución de contratos de S/ 40,000, además de comprometer las credenciales de la propia ACIDE frente a futuras licitaciones.
+    \item $P_{SLA}$: Penalidades contractuales por incumplimiento de plazos con clientes ($10\%$ a $15\%$ del valor de un contrato promedio de S/ 30,000, equivalente a S/ 4,500 por cliente afectado).
+    \item $C_{HH}$: Costo promedio por hora-hombre de los desarrolladores y especialistas (S/ 25.00 soles).
+    \item $N$: Número de colaboradores afectados e inactivos ($12$ integrantes en el área).
+    \item $T_{d}$: Tiempo total de inactividad del sistema en horas (estimado en $48$ horas laborables para una recuperación de 6 días).
+    \item $C_{rep}$: Costo directo de reposición de hardware degradado y soporte externo de restauración (S/ 3,500 soles).
 \end{itemize}
+
+Reemplazando los valores en la ecuación para un escenario de fallo con un único cliente penalizado:
+$$C_{downtime} = S/\,4,500 + (S/\,25.00 \times 12 \times 48) + S/\,3,500 = S/\,22,400.00 \text{ soles}$$
+
+Este impacto económico representa una pérdida de liquidez inmediata del $56\%$ sobre el margen de utilidad esperado en un proyecto estándar de consultoría, justificando la inversión preventiva en hardware robusto redundante.
 
 \section{FASE IV: INFORME DE AUDITORÍA}
 
