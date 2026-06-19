@@ -1,0 +1,171 @@
+\documentclass[12pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage{parskip}
+\usepackage{multicol}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+
+\geometry{a4paper, top=2.2cm, bottom=2.8cm, left=2.2cm, right=2.2cm}
+\setstretch{1.1}
+\setlength{\headheight}{52pt}
+\setlength{\headsep}{16pt}
+\setlength{\footskip}{24pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\includegraphics[width=0.42\textwidth]{../../MachuPicchu/ResumenEjecutivoMachuPicchu/assets/logo-produce.png}}
+\fancyhead[R]{\includegraphics[width=0.3\textwidth]{../../MachuPicchu/ResumenEjecutivoMachuPicchu/assets/logo-proinnovate.png}}
+\fancyfoot[C]{\footnotesize Página \thepage\ |\ \pageref{LastPage}}
+
+\begin{document}
+
+\vspace*{0.2cm}
+
+\begin{center}
+    {\large \textbf{MEJORA DE LA EFICIENCIA OPERATIVA Y CRECIMIENTO COMERCIAL EN INDUSTRIA TEXTIL ATLAS E.I.R.L. A TRAVÉS DE LA IMPLEMENTACIÓN DE HERRAMIENTAS DIGITALES PARA GESTIÓN DE STOCK Y MARKETING}}\\[0.4cm]
+    {\large \textbf{N\textdegree\ [CONTRATO]}}
+\end{center}
+
+\textbf{Elaborado por:} [NOMBRE COORDINADOR]\\
+\textbf{Correo:} [CORREO COORDINADOR]
+
+\textbf{Resumen:}\\
+El presente proyecto de transformación digital fue ejecutado en INDUSTRIA TEXTIL ATLAS E.I.R.L. con el objetivo de optimizar sus operaciones comerciales y logísticas mediante la implementación de un sistema de planificación de recursos empresariales (ERP) simplificado en la nube. A través de la parametrización de Odoo Online (SaaS), se unificaron la consulta de existencias, la venta de mostrador, el registro de cotizaciones mayoristas y las órdenes de abastecimiento en una sola plataforma, eliminando el uso de cuadernos y apuntes sueltos. La estandarización del catálogo de 22 artículos de protección y accesorios deportivos mediante códigos SKU y la configuración de puntos de reorden permitieron agilizar la atención en la tienda de San Camilo. Como resultado, la empresa redujo el tiempo de preparación de pedidos de 15--20 a menos de 5 minutos, aumentó la exactitud de inventario a más del 98\% y automatizó más del 60\% de los pedidos de reposición hacia los talleres de confección externos, sentando las bases para el crecimiento comercial y logístico sostenible del negocio.
+
+\newpage
+\begin{multicols}{2}
+\textbf{Palabras Clave:} ERP, Odoo, SKU, control de inventario, Punto de Venta (POS), automatización comercial, compras, distribución, Arequipa.
+
+\textbf{Problema:}\\
+Previo a la intervención tecnológica, la empresa operaba bajo un modelo de madurez digital inicial (estimado en 35.34\%), caracterizado por una dependencia absoluta de procesos manuales e informales. Al no poseer talleres de costura propios y tercerizar por completo la confección de sus artículos deportivos a talleres externos, la coordinación de existencias y precios se realizaba de manera desintegrada. Los principales problemas identificados fueron:
+\begin{itemize}
+    \item \textbf{Falta de Codificación y Desorden Logístico:} El almacén carecía de una nomenclatura única. La ausencia de códigos SKU generaba discrepancias frecuentes (con un 25\% de error de stock en promedio) y obligaba a realizar búsquedas físicas a ciegas para atender a los clientes.
+    \item \textbf{Tiempos de Despacho Lentos en Mostrador:} El proceso de consulta de stock y preparación de pedidos para la venta minorista y mayorista promediaba entre 15 y 20 minutos por cliente en la tienda física de San Camilo, deteriorando la calidad del servicio.
+    \item \textbf{Cálculo Manual de Márgenes de Utilidad:} La fijación de precios y el registro de los costos de adquisición de talleres se realizaban por intuición o memoria, impidiendo a la gerencia controlar de forma precisa y dinámica la rentabilidad comercial.
+    \item \textbf{Gestión de Compras Reactiva e Improvisada:} El abastecimiento de artículos se efectuaba cuando el mostrador ya se encontraba desprovisto, incurriendo en quiebres de stock continuos por no contar con alertas preventivas.
+    \item \textbf{Vulnerabilidad de Datos Comerciales:} Toda la información de ventas históricas, listas de precios mayoristas y costos residía en cuadernos físicos de papel y chats de WhatsApp personales, expuesta a pérdidas totales por extravíos.
+\end{itemize}
+
+\textbf{Objetivo General del proyecto:}\\
+Implementar y poner en marcha un sistema de gestión empresarial integrado (ERP Odoo) en modalidad SaaS que permita unificar el control de existencias por códigos SKU, automatizar el reabastecimiento en mostrador mediante reglas de stock mínimo y agilizar el proceso de ventas minoristas y mayoristas de Industria Textil Atlas E.I.R.L.
+
+\textbf{Justificación del proyecto:}\\
+La transición digital responde a la necesidad de superar las ineficiencias de un modelo logístico y comercial netamente analógico. La dependencia de transacciones manuales dilataba la atención al cliente e incrementaba el error operativo, afectando la competitividad de la empresa.
+
+La implementación nativa (Out-of-the-box) de Odoo Online centraliza el negocio a través de los módulos de Inventario, POS, Compras y Ventas, eliminando los procesos en papel y permitiendo:
+\begin{itemize}
+    \item \textbf{Agilizar la atención de mostrador:} Con una terminal POS táctil e intuitiva con consulta de stock en tiempo real.
+    \item \textbf{Optimizar la cadena de suministro:} Generando alertas automáticas de compra para proveedores y talleres en base a la demanda.
+    \item \textbf{Asegurar el control financiero:} Centralizando los márgenes de ganancia y costos reales bajo supervisión exclusiva de la gerencia general (Víctor Huayllaro).
+\end{itemize}
+
+\textbf{Hipótesis:}\\
+La adopción de una plataforma ERP integrada y simplificada reducirá los tiempos de atención en mostrador a menos de 5 minutos, reducirá la tasa de error por diferencias de stock a menos del 2\%, y automatizará más del 60\% de los pedidos de aprovisionamiento en base a datos de rotación reales, proyectando un retorno de inversión (ROI) positivo en un horizonte de 18 a 24 meses debido a la eficiencia y reducción de mermas.
+
+\textbf{Metodología implementada:}\\
+El proyecto se ejecutó bajo un enfoque ágil (sprints) enfocado en la metodología "Aprender Haciendo" para facilitar la adopción por el personal. Las etapas desarrolladas fueron:
+\begin{itemize}
+    \item \textbf{Análisis y Depuración de Datos:} Mapeo de existencias iniciales y depuración del catálogo maestro de 22 artículos deportivos.
+    \item \textbf{Diseño y Carga del Catálogo SKU:} Importación de la base de datos de productos y sus respectivos costos y precios.
+    \item \textbf{Configuración Modular:}
+    \begin{itemize}
+        \item \textbf{Inventario:} Estructura de ubicaciones y configuración de reglas de reorden automático.
+        \item \textbf{POS:} Interfaz táctil de caja para la tienda de San Camilo.
+        \item \textbf{Ventas y Compras:} Flujo de cotizaciones PDF para WhatsApp y automatización de órdenes a talleres.
+    \end{itemize}
+    \item \textbf{Capacitación en Entorno Sandbox:} Talleres prácticos utilizando una base de datos de pruebas para entrenar al personal sin riesgos.
+    \item \textbf{Puesta en Marcha (Marcha Blanca):} Lanzamiento del sistema y soporte continuo mediante canales de WhatsApp específicos.
+\end{itemize}
+
+\textbf{Herramientas Tecnológicas Implementadas:}
+\begin{itemize}
+    \item \textbf{ERP SaaS (Odoo Online):} Plataforma en la nube bajo modelo libre de desarrollos a medida, garantizando estabilidad y actualizaciones nativas automáticas.
+    \item \textbf{Módulos Parametrizados:}
+    \begin{itemize}
+        \item \textbf{Inventario:} Control de existencias perpetuo y reglas de stock mínimo.
+        \item \textbf{POS:} Terminal de venta minorista rápida para mostrador.
+        \item \textbf{Ventas:} Generador automático de cotizaciones en PDF.
+        \item \textbf{Compras:} Emisor de solicitudes de reabastecimiento en base a reglas de stock mínimo.
+    \end{itemize}
+    \item \textbf{Infraestructura y Seguridad:} Acceso multiplataforma 24/7 con resguardo automático de datos, restringiendo los accesos de costos sensibles únicamente al gerente general.
+\end{itemize}
+
+\textbf{Resultados:}\\
+La adopción de Odoo ha transformado la operatividad logística y comercial de la tienda, logrando mejoras cuantificables e inmediatas:
+\begin{itemize}
+    \item \textbf{Reducción del Tiempo de Atención:} Se logró descender el tiempo de preparación de pedidos y cobro a menos de 5 minutos por cliente en mostrador.
+    \item \textbf{Exactitud y Control Logístico:} Implementación del 100\% del catálogo con codificación SKU, elevando la exactitud del almacén a más del 98\% y reduciendo la pérdida de existencias.
+    \item \textbf{Aprovisionamiento Inteligente:} Más del 60\% de las compras sugeridas por stock mínimo se ejecutan de forma planificada hacia los confeccionistas.
+    \item \textbf{Control de Márgenes de Utilidad:} Visibilidad completa y centralizada de la estructura de costos y precios finales del negocio en soles (PEN) por la gerencia.
+\end{itemize}
+
+Para validar el impacto del proyecto, se expone la siguiente comparativa:
+\vspace{0.2cm}
+\begin{center}
+\scriptsize
+\renewcommand{\arraystretch}{1.15}
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{|p{1.85cm}|p{1.65cm}|p{1.45cm}|p{1.15cm}|}
+\hline
+\textbf{Indicador} & \centering\textbf{Valor Inicial} & \centering\textbf{Valor Final} & \centering\textbf{\% Mejora}\tabularnewline \hline
+Tiempo de despacho & 15 - 20 min & $<$ 5 min & $\sim$75\% \\ \hline
+Exactitud de stock & \textasciitilde75\% exacto & $>$ 98\% exacto & $\sim$30\% \\ \hline
+Compras manuales & 100\% manual & $<$ 40\% manual & 60\% \\ \hline
+Adopción del ERP & 35.34\% madurez & $>$ 90\% uso & $>$ 90\% \\ \hline
+\end{tabular}
+\normalsize
+\end{center}
+
+\textbf{Impactos:}
+\begin{itemize}
+    \item \textbf{Impacto Económico:} Reducción de mermas e ineficiencias de compras improvisadas, asegurando el capital de trabajo neto en base a la rotación de los 22 productos.
+    \item \textbf{Impacto Operativo:} Eliminación definitiva de apuntes manuales y profesionalización de la pyme comercial, incrementando la productividad del personal y la seguridad en la nube.
+\end{itemize}
+
+\textbf{Conclusiones:}
+\begin{itemize}
+    \item El proyecto se cerró satisfactoriamente con la puesta en marcha de Odoo, logrando que el personal de tienda de San Camilo adopte la disciplina del registro digital diario.
+    \item La digitalización del catálogo deportivo con códigos SKU eliminó los silos de datos y el desorden logístico del almacén.
+    \item Se redujeron los tiempos de atención y preparación de pedidos a menos de 5 minutos, incrementando la agilidad de ventas minoristas y mayoristas.
+    \item La empresa cuenta ahora con una plataforma robusta y escalable que le permitirá, en fases posteriores, unificar la facturación SUNAT sin incurrir en dobles sistemas.
+\end{itemize}
+
+\vspace{0.4cm}
+\noindent
+\scriptsize
+\renewcommand{\arraystretch}{1.15}
+\setlength{\tabcolsep}{3pt}
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{|p{3.25cm}|p{1.35cm}|p{1.45cm}|}
+\hline
+\textbf{Fuente de financiamiento} & \centering\textbf{Importe (s/.)} & \centering\textbf{Porcentaje}\tabularnewline \hline
+\textbf{ProInnóvate} & & \\ \hline
+\textbf{Industria Textil Atlas E.I.R.L.} & & \\ \hline
+\textbf{COSTO TOTAL} & & \\ \hline
+\end{tabular}
+}
+\normalsize
+
+\vspace{0.25cm}
+\begin{center}
+\scriptsize\itshape
+El presente resumen ejecutivo del proyecto fue\\
+elaborado por la Coordinación General del Proyecto y\\
+editado por el Programa Nacional de Desarrollo\\
+Tecnológico e Innovación (ProInnóvate) con fines\\
+informativos.\\[0.2cm]
+Para mayor información sobre el proyecto\\
+contactarse con:\\\relax
+[NOMBRE COORDINADOR]\\\relax
+INDUSTRIA TEXTIL ATLAS E.I.R.L.\\
+Correo: [CORREO COORDINADOR]
+\end{center}
+\end{multicols}
+
+\end{document}
