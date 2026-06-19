@@ -1,0 +1,58 @@
+\section{Resultados Obtenidos}
+
+\subsection{Optimización de Procesos}
+
+Con la puesta en marcha definitiva de Odoo, Industria Textil Atlas E.I.R.L. ha estructurado un flujo operativo completamente integrado en la nube, unificando la venta minorista, los pedidos de volumen mayoristas, el control logístico de almacén y las compras a talleres confeccionistas externos. A diferencia del modelo manual anterior, el nuevo flujo digital garantiza la consistencia de datos y la trazabilidad de la mercadería:
+
+\begin{itemize}
+    \item \textbf{Gestión de Almacén e Inventario Perpetuo:} Cada ingreso de mercadería desde los confeccionistas y cada salida por ventas en el POS se registran de forma automática bajo códigos SKU unificados. Esto permite al encargado de almacén y al personal de ventas consultar la disponibilidad física exacta de artículos deportivos en menos de 1 segundo.
+    \item \textbf{Venta Ágil en Mostrador (POS):} La interfaz del POS permite registrar transacciones rápidamente. El personal selecciona los productos clasificados por categorías en pantalla y procesa los cobros detallando el medio de pago, lo que reduce las colas y deduce inmediatamente el stock del almacén central.
+    \item \textbf{Generación de Presupuestos Comerciales:} El módulo de Ventas permite registrar cotizaciones mayoristas en segundos. Al seleccionar el cliente y las cantidades de artículos deportivos, el sistema genera de forma automática una propuesta formal en PDF con los importes, impuestos y descuentos calculados, lista para ser enviada al cliente por WhatsApp.
+    \item \textbf{Reabastecimiento Planificado:} Al alcanzar el nivel de stock de seguridad, el sistema genera una sugerencia de compra en borrador dentro del módulo de Compras. La gerencia puede auditar los costos reales cobrados por los talleres proveedores externos, ajustar los precios de venta en mostrador y autorizar la orden de abastecimiento con un solo clic.
+\end{itemize}
+
+\subsection{Impacto en la Productividad}
+
+La digitalización de los procesos logísticos y comerciales ha generado un incremento sustancial en la eficiencia operativa de la empresa. Para validar y cuantificar este impacto, se presenta la siguiente tabla comparativa de indicadores clave, confrontando la línea base (situación previa) descrita en el diagnóstico inicial con los resultados registrados tras la fase de marcha blanca del sistema:
+
+\begin{table}[htbp]
+\centering
+\renewcommand{\arraystretch}{1.25}
+\setlength{\tabcolsep}{5pt}
+\small
+\begin{tabularx}{\textwidth}{|>{\raggedright\arraybackslash}p{3.2cm}|>{\raggedright\arraybackslash}X|>{\raggedright\arraybackslash}p{2.5cm}|>{\raggedright\arraybackslash}p{2.5cm}|}
+\hline
+\textbf{Indicador (KPI)} & \textbf{Fórmula de Cálculo} & \textbf{Línea Base} & \textbf{Valor Final} \\ \hline
+Tiempo de despacho y preparación de pedidos & $\frac{\sum Tiempo}{N^\circ Clientes}$ en mostrador & 15 - 20 minutos & $< 5$ minutos \\ \hline
+Exactitud del inventario físico & $100\% - \left(\frac{N^\circ SKU\_Discrepancias}{N^\circ SKU\_Total}\times 100\right)$ & \textasciitilde75\% exactitud & $> 98\%$ exactitud \\ \hline
+Aprovisionamiento basado en datos reales & $\left(\frac{N^\circ Compras\_Sugeridas}{N^\circ Compras\_Totales}\right)\times 100$ & 0\% (Manual e intuitivo) & $> 60\%$ sugerido por Odoo \\ \hline
+Nivel de adopción digital del personal & \% Usuarios que operan Odoo diariamente & 35.34\% (Madurez inicial) & $> 90\%$ adopción activa \\ \hline
+\end{tabularx}
+\normalsize
+\end{table}
+
+\subsection{Adopción del Sistema}
+
+La adopción de Odoo ha representado una evolución cultural significativa para el equipo de Industria Textil Atlas E.I.R.L. La Sra. y el personal de tienda de San Camilo han transitado con éxito hacia la disciplina de registrar el 100\% de las transacciones en el POS, descartando por completo el uso de cuadernos. Entre los principales logros de la adopción se destacan:
+\begin{itemize}
+    \item Registro oportuno de cada ingreso de stock proveniente de los talleres confeccionistas a través de la codificación SKU de inventarios.
+    \item Consulta inmediata de stock en pantalla durante la atención al público en la tienda comercial de San Camilo, evitando búsquedas a ciegas.
+    \item Autonomía completa de la gerencia general (Víctor Huayllaro) para auditar costos de talleres externos, controlar márgenes comerciales y aprobar solicitudes de compra en el sistema.
+\end{itemize}
+
+\subsection{Plan de Capacitaciones}
+
+Para garantizar la sostenibilidad operativa de la plataforma y transferir los conocimientos necesarios al equipo de la empresa, se dictó un programa formativo de entrenamiento práctico estructurado en las siguientes sesiones:
+
+\begin{table}[htbp]
+\centering
+\renewcommand{\arraystretch}{1.25}
+\begin{tabular}{|p{3.8cm}|p{7.2cm}|p{1.8cm}|}
+\hline
+\textbf{Perfil Destinatario} & \textbf{Temas Impartidos y Talleres Prácticos} & \textbf{Horas} \\ \hline
+Personal de Ventas & Operación del POS mostrador, apertura y cierre de caja, y medios de pago. & 3 horas \\ \hline
+Equipo Comercial & Módulo de Ventas: presupuestos, listas de precios mayoristas y generación de cotización en PDF. & 2 horas \\ \hline
+Encargado de Almacén & Módulo de Inventario: control de SKUs, consultas de stock y registro de recepciones físicas. & 3 horas \\ \hline
+Gerencia General & Módulo de Compras: reglas de reabastecimiento automático, control de costos y simulación de márgenes. & 2 horas \\ \hline
+\end{tabular}
+\end{table}

@@ -1,0 +1,21 @@
+\section{Desafíos y Oportunidades de Mejora}
+
+Durante el proceso de implementación y marcha blanca del sistema Odoo en Industria Textil Atlas E.I.R.L., se identificaron desafíos operativos y organizacionales específicos de la comercialización y distribución de artículos deportivos, así como oportunidades estratégicas para potenciar el negocio a mediano y largo plazo.
+
+\subsection{Desafíos Identificados}
+
+\begin{itemize}
+    \item \textbf{Disciplina de Registro sin Procesos Paralelos:} La principal barrera detectada fue la inercia del personal a utilizar "papelitos" o anotaciones manuales en mostrador ante flujos altos de clientes en San Camilo. Garantizar la disciplina operativa de registrar cada venta en tiempo real en la terminal POS es crítico para que la información de inventario no se desvirtúe.
+    \item \textbf{Estandarización y Depuración del Almacén Físico:} Trasladar un almacén sin codificación previa a un catálogo unificado por SKU con 22 líneas de productos deportivos requirió un arduo esfuerzo de clasificación. Mantener la concordancia exacta entre el stock a la mano en Odoo y las unidades físicas en los estantes exige auditorías periódicas y rigurosas.
+    \item \textbf{Trazabilidad con Talleres Confeccionistas Externos:} Dado que la empresa terceriza por completo la confección de sus artículos deportivos, el seguimiento de los plazos de entrega y la actualización de los costos reales de adquisición representan un reto administrativo constante. Se requiere registrar puntualmente las recepciones en Inventarios para medir la puntualidad de los proveedores externos.
+    \item \textbf{Baja Madurez Digital Inicial del Personal:} Con un nivel inicial del 35.34\%, el personal de mostrador presentaba dificultades para interactuar con interfaces digitales complejas. Esto obligó a extender el periodo de simulación en base de datos de pruebas (Sandbox) para otorgarles confianza en el uso del POS.
+\end{itemize}
+
+\subsection{Oportunidades de Mejora}
+
+\begin{itemize}
+    \item \textbf{Unificación Total del Sistema de Ventas y Facturación (SUNAT):} Actualmente, la empresa utiliza Odoo para registrar transacciones y un sistema externo facturador para los comprobantes de SUNAT. Existe la oportunidad de integrar la facturación electrónica directamente en Odoo, eliminando la duplicidad de sistemas y transacciones comerciales redundantes.
+    \item \textbf{Optimización Estacional de Puntos de Reorden:} La demanda de artículos deportivos en Arequipa presenta picos estacionales (campañas escolares, campeonatos locales). La gerencia tiene la oportunidad de ajustar periódicamente las reglas de stock mínimo en Odoo para abastecerse de forma preventiva antes de los meses de alta demanda.
+    \item \textbf{Explotación del Reporte de Valoración de Existencias:} Utilizar activamente el tablero financiero de inventarios permitirá a Víctor Huayllaro analizar la rotación de cada producto del catálogo. Esto facilitará la toma de decisiones informadas sobre liquidaciones de stock de baja rotación y la inversión de capital en productos de alto margen.
+    \item \textbf{Restricción y Jerarquización de Permisos de Usuario:} Consolidar la política de seguridad y roles en Odoo asegurará que el personal de ventas acceda únicamente a la pantalla de mostrador, mientras que la información sensible de costos de adquisición de talleres externos permanezca restringida exclusivamente a la gerencia general.
+\end{itemize}
