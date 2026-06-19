@@ -1,0 +1,361 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{graphicx}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{setspace} % Para el interlineado
+\usepackage[hidelinks]{hyperref}
+
+\begin{document}
+
+% --- INICIO DE LA CARÁTULA ---
+\begin{titlepage}
+    \centering
+    \vspace*{1cm}
+    {\bfseries\Large UNIVERSIDAD LA SALLE \par}
+    \vspace{1cm}
+    {\includegraphics[width=0.3\textwidth]{logo.png}\par}
+    \vspace{1cm}
+    {\scshape\Large Facultad de Ingeniería \par}
+    \vspace{1.5cm}
+    {\itshape\large Curso: \par}
+    {\bfseries\Large Auditoría de Sistemas de Información \par}
+    \vspace{2cm}
+    {\bfseries\huge PROYECTO FINAL DE AUDITORÍA \par}
+    \vfill
+    
+    {\large\textbf{Integrantes:}\par}
+    \vspace{0.5cm}
+    {\large
+    Infa Sánchez, Roger \\
+    Mares Graos, Frederick Dicarlo \\
+    Ortiz Rosas, Joshua David \\
+    Saya Ramos, Arnold Daniel \par}
+    
+    \vfill
+    {\large Arequipa, Perú \par}
+    {\large Mayo 2026 \par}
+\end{titlepage}
+% --- FIN DE LA CARÁTULA ---
+
+\newpage
+\tableofcontents % Índice automático
+\newpage
+
+\onehalfspacing % Interlineado 1.5 para el cuerpo del trabajo
+
+\clearpage
+\section{FASE I: ANÁLISIS INICIAL}
+
+\subsection{Empresa}
+
+\subsubsection{Descripción General}
+ACIDE es la \textit{Asociación Civil de Investigación para el Desarrollo y la Empresa}. Es una consultora que impulsa el desarrollo empresarial y fortalece capacidades en los sectores público y privado. Cuenta con más de una década de experiencia en proyectos de consultoría y digitalización, asesorías estratégicas, transferencia de tecnología e iniciativas innovadoras, con respaldo de certificación ISO y un equipo multidisciplinario orientado a la excelencia.
+
+Ofrece cuatro líneas de servicio: \textbf{asesoría} (orientación personalizada para desafíos y decisiones estratégicas), \textbf{consultoría} (análisis y soluciones para mejorar eficiencia y desempeño), \textbf{capacitación} (formación práctica para equipos de trabajo) y \textbf{digitalización} (herramientas tecnológicas para modernizar operaciones internas y externas).
+
+\subsubsection{Historia}
+\textbf{2008 — MTPE proveedor.} Inicio de actividades en la zona sur del país; desarrollo de 50 planes de negocio en Puno y Arequipa mediante el Programa NIE (Nuevas Iniciativas Empresariales), en el marco del Ministerio de Trabajo y Promoción del Empleo.
+
+\textbf{2013 — Alianzas estratégicas y convenios.} ACIDE se constituye como aliado estratégico del OSCE, capacitando a funcionarios en contrataciones del Estado; firma convenio con la GREA (Arequipa) para formar a docentes y personal administrativo en gestión pública y educativa.
+
+\textbf{2016 — Reconocimientos y certificación de calidad.} El OSCE reconoce a ACIDE como aliado estratégico y la ubica entre las cuatro principales capacitadoras del sector logístico a nivel nacional. Obtiene certificación ISO 9001 por su gestión en atención al cliente, proyectos, asesoría y capacitación en sectores públicos y privados.
+
+\textbf{2018 — Expansión y distinciones.} Creación del Centro Técnico Productivo PROINTEC (Resolución Gerencial Regional N° 0685); mención INNOVATE Perú como consultora de mayor trascendencia nacional; alianzas con universidades La Salle, UNSA y San Martín de Porres.
+
+\textbf{2023 — Congreso de la República.} Reconocimiento por trayectoria y contribución al desarrollo sostenible del país, destacando valores y principios de práctica empresarial ética y responsable.
+
+\textbf{2024 — Municipalidad Provincial de Arequipa.} Reconocimiento por esfuerzo, innovación y excelencia emprendedora y por el impacto en el desarrollo económico y social.
+
+\subsubsection{Misión}
+Crear la pronta solución para las necesidades empresariales, brindando la mejor calidad, respuesta, cooperación, ética profesional e innovación del mercado. Como asociación civil sin fines de lucro, mediante asesoría, consultoría, capacitación y monitoreo promueve la investigación y el desarrollo institucional y empresarial en distintos sectores económicos.
+
+\subsubsection{Visión}
+La historia de ACIDE refleja un compromiso con la innovación, la calidad y la ética para impulsar el desarrollo empresarial. Los valores que orientan esta visión incluyen innovación, compromiso, transparencia, adaptabilidad, colaboración y calidad en las relaciones con los clientes y en cada solución ofrecida.
+
+\subsection{Organigrama}
+\subsubsection{Descripción General}
+La estructura organizacional de \textbf{ACIDE} se define como una organización funcional y jerárquica. La empresa centraliza la toma de decisiones en la Gerencia General, delegando la operatividad a jefaturas de área especializadas. Se observa una comunicación vertical donde las directrices estratégicas descienden hacia los colaboradores a través de mandos medios.
+
+\subsubsection{Niveles Jerárquicos}
+Se identifican tres niveles principales de jerarquía dentro de la organización:
+\begin{enumerate}
+    \item \textbf{Nivel Estratégico:} Representado por la Gerencia General, responsable de la visión global y objetivos a largo plazo.
+    \item \textbf{Nivel Táctico:} Compuesto por los Jefes de Área (Consultoría, Comercial, Planificación, Digitales y Marketing). En el área específica a auditar, este nivel incluye una Jefatura y una Subjefatura que actúa como nexo de comunicación.
+    \item \textbf{Nivel Operativo:} Integrado por los colaboradores y especialistas encargados de la ejecución técnica de los proyectos.
+\end{enumerate}
+
+\subsubsection{Departamentos y Áreas Funcionales}
+La empresa se divide en cinco pilares operativos:
+\begin{itemize}
+    \item \textbf{Consultoría:} Asesoría especializada a clientes.
+    \item \textbf{Comercial:} Gestión de ventas y captación de mercado.
+    \item \textbf{Planificación:} Gestión de recursos y tiempos.
+    \item \textbf{Digitales y Marketing:} Área objeto de la auditoría, enfocada en la digitalización externa y presencia de marca.
+\end{itemize}
+
+\subsubsection{Relaciones de Autoridad}
+Existe una autoridad lineal directa. Los colaboradores reportan directamente a la Subjefatura y Jefatura de Digitales. La comunicación de directrices se realiza de forma escalonada, asegurando que los comunicados oficiales de la jefatura sean transmitidos y supervisados por la subjefatura antes de llegar al personal operativo.
+
+\subsection{Cantidad De Empleados}
+La organización cuenta con un capital humano total de \textbf{37 empleados}. El área de Digitales y Marketing, la cual es el foco de este estudio, está compuesta por \textbf{12 integrantes} (incluyendo mandos medios y personal operativo). Todo el personal labora bajo la modalidad \textbf{100\% presencial} en las instalaciones de la empresa.
+
+\subsection{Definición De Auditoría}
+La presente auditoría se define como una evaluación sistemática, crítica y objetiva de los controles de seguridad, eficiencia operativa y gestión de datos en el área de Digitales. El proceso busca verificar que el uso de herramientas como Nextcloud y los flujos de trabajo en Jira cumplan con estándares de integridad y confidencialidad.
+
+\subsection{Análisis Detallado}
+El análisis se centra en la coexistencia de servicios en la nube con la infraestructura interna. Mientras que el desarrollo DevOps y las instancias de Odoo Studio operan en la nube (SaaS), la gestión documental y la comunicación interna residen en un servidor \textbf{Nextcloud} dentro de la red local. El análisis detalla que cualquier vulnerabilidad en la red interna comprometería no solo la operatividad, sino la privacidad de los datos sensibles de la organización y sus clientes.
+
+\subsection{Estructura Del Área A Auditar}
+El área de Digitales se estructura bajo la metodología ágil \textbf{Scrum}. 
+\begin{itemize}
+    \item \textbf{Gestión de Tareas:} Se utiliza la herramienta \textbf{Jira} para el seguimiento de sprints y backlog.
+    \item \textbf{Foco Operativo:} Digitalización externa a nivel nacional. No se realizan tareas de soporte técnico interno (IT tradicional), sino que el equipo está volcado netamente a la implementación de soluciones digitales para terceros.
+\end{itemize}
+
+\subsection{Nivel De Riesgo}
+El nivel de riesgo se califica como \textbf{Medio-Alto}. El principal activo crítico es el servidor local de \textbf{Nextcloud}. Los riesgos identificados son:
+\begin{itemize}
+    \item \textbf{Privacidad de Datos:} Vulnerabilidad de la información ante accesos no autorizados desde el exterior.
+    \item \textbf{Seguridad de Estaciones de Trabajo:} Riesgos derivados del uso de equipos locales para tareas de programación y digitalización.
+    \item \textbf{Integridad de Red:} Posibles brechas en la configuración de la red interna que expongan el tráfico de datos corporativos.
+\end{itemize}
+
+\subsection{Áreas Involucradas}
+\begin{itemize}
+    \item Jefatura de Digitales y Marketing.
+    \item Equipo de Desarrollo y Digitalización (Colaboradores).
+    \item Infraestructura de Red Interna.
+\end{itemize}
+
+\subsection{Plan De Trabajo Global}
+El plan se divide en cuatro fases:
+\begin{enumerate}
+    \item \textbf{Levantamiento:} Entrevistas con el equipo y mapeo de la red local.
+    \item \textbf{Evaluación Técnica:} Auditoría de permisos en Nextcloud y revisión de seguridad en estaciones de trabajo (Ubuntu).
+    \item \textbf{Análisis de Procesos:} Revisión de la gestión en Jira y flujos de trabajo en Odoo Studio.
+    \item \textbf{Informe:} Entrega de recomendaciones para blindar la red interna y optimizar la digitalización.
+\end{enumerate}
+
+\clearpage
+\section{FASE II: PLANIFICACIÓN DE LA OPERACIÓN}
+
+\subsection{Objetivo General}
+Evaluar los procesos operativos del área de Tecnologías de la Información en la empresa \textbf{ACIDE}, con un enfoque crítico en el ciclo de vida de desarrollo de software (SDLC), la personalización de soluciones Odoo y la madurez de sus prácticas \textbf{DevOps}. Todo esto con el fin de garantizar la eficiencia técnica, la seguridad de la infraestructura local y la robustez en la entrega continua de servicios digitales.
+
+\subsection{Objetivos Específicos}
+\begin{itemize}
+    \item \textbf{Optimización de Procesos:} Analizar los flujos de trabajo actuales en el desarrollo de software y digitalización para identificar cuellos de botella y proponer mejoras en la productividad del equipo técnico.
+    \item \textbf{Auditoría de Infraestructura Física:} Evaluar el estado, configuración y rendimiento del servidor local, estaciones de trabajo (PCs de escritorio), laptops y periféricos, asegurando que soporten las demandas de compilación y despliegue de software.
+    \item \textbf{Seguridad y Control Interno:} Verificar los protocolos de acceso, gestión de secretos y respaldo de información en el servidor local para prevenir la pérdida de propiedad intelectual y código fuente de los clientes.
+    \item \textbf{Evaluación de Entornos de Desarrollo:} Revisar las metodologías aplicadas en la personalización de Odoo y desarrollo a medida, asegurando que cumplen con estándares de calidad, mantenibilidad y escalabilidad.
+    \item \textbf{Auditoría de Prácticas DevOps y CI/CD:} Evaluar la efectividad de las tuberías (pipelines) de \textbf{Integración Continua y Despliegue Continuo}, verificando el uso de herramientas de automatización, gestión de contenedores, pruebas automatizadas y el control de versiones para optimizar los lanzamientos a producción.
+\end{itemize}
+
+\subsection{Fechas}
+El proyecto de auditoría tiene una duración prevista de \textbf{14 semanas}. Se ha establecido un cronograma estimado que considera las fases de planificación, ejecución y entrega de resultados en el siguiente periodo:
+\begin{itemize}
+    \item \textbf{Fecha de Inicio Estimada:} 06 de abril de 2026.
+    \item \textbf{Fecha de Ejecución:} 13 de abril de 2026.
+    \item \textbf{Fecha de Finalización Estimada:} 16 de julio de 2026.
+\end{itemize}
+Este periodo incluye el levantamiento de información en campo, pruebas de estrés a la infraestructura y la redacción del informe final con el plan de mejora de procesos.
+
+\subsection{Alcance}
+
+\subsubsection{Ámbito de Estudio}
+La auditoría se circunscribe exclusivamente a las operaciones realizadas de manera presencial en las instalaciones de \textbf{ACIDE}. El estudio abarca el ciclo de vida de los proyectos de desarrollo de software a medida, con especial énfasis en la configuración, personalización y despliegue de módulos en el ecosistema \textbf{Odoo}. Se evaluará tanto el flujo de trabajo del personal técnico como la interacción con la infraestructura local.
+
+\subsubsection{Criterios de Inclusión}
+Se auditarán los siguientes activos y procesos técnicos:
+\begin{itemize}
+    \item \textbf{Entorno de Virtualización:} Configuración de contenedores \textbf{Docker} y orquestación de despliegues.
+    \item \textbf{Pipeline CI/CD:} Revisión de la automatización en el servidor \textbf{Jenkins} alojado en el VPS.
+    \item \textbf{Sistemas Operativos:} Servidores y estaciones de trabajo bajo la distribución \textbf{Ubuntu LTS}.
+    \item \textbf{Repositorios y Versionado:} Gestión de ramas y calidad de código en el desarrollo de software.
+    \item \textbf{Infraestructura Física:} Servidor local, laptops de desarrollo, impresoras y conectividad de red del área.
+\end{itemize}
+
+\subsubsection{Criterios de Exclusión}
+Quedan fuera del alcance de esta auditoría:
+\begin{itemize}
+    \item Áreas administrativas, comerciales y de marketing de la empresa.
+    \item Gestión financiera y estados contables.
+    \item Dispositivos personales de los empleados que no sean utilizados para fines laborales.
+    \item Soporte técnico a clientes finales fuera de la etapa de despliegue inicial.
+\end{itemize}
+
+\subsubsection{Posibles Problemas}
+Se identifican los siguientes riesgos para la ejecución del proyecto:
+\begin{itemize}
+    \item \textbf{Disponibilidad del Personal:} Alta saturación y carga laboral de los integrantes del área de \textbf{Digitales} debido a la simultaneidad de proyectos, lo que podría limitar el tiempo para entrevistas y pruebas.
+    \item \textbf{Continuidad Operativa:} Riesgo de interrupción mínima durante las pruebas de estrés en el servidor local o el VPS de producción.
+    \item \textbf{Acceso a Información:} Posibles retrasos en la obtención de credenciales de administración para la revisión de logs en Jenkins o Docker.
+\end{itemize}
+
+\subsubsection{Resultados Esperados}
+La culminación de este proceso de auditoría proporcionará a la alta gerencia de \textbf{ACIDE} y al equipo de \textbf{Digitales} un conjunto de entregables técnicos orientados a la mejora operativa. Se espera obtener:
+\begin{itemize}
+    \item \textbf{Informe Detallado de Hallazgos y Deficiencias:} Un catálogo formal de errores detectados en la configuración de contenedores Docker, debilidades en los pipelines de Jenkins y vulnerabilidades en la infraestructura de servidores Ubuntu LTS.
+    \item \textbf{Análisis de Brechas Tecnológicas (Gap Analysis):} Un diagnóstico que compare el estado actual de los despliegues y el desarrollo de software frente a las mejores prácticas internacionales de la industria (DevOps y seguridad de la información).
+    \item \textbf{Matriz de Priorización de Riesgos:} Una clasificación de los errores encontrados basada en su impacto económico y operativo, permitiendo a la empresa identificar qué correcciones requieren atención inmediata.
+    \item \textbf{Guía de Recomendaciones Estratégicas:} Propuestas técnicas concretas para la optimización de la integración continua (CI) y la entrega continua (CD), orientadas a reducir la saturación del equipo técnico mediante la automatización efectiva.
+    \item \textbf{Base de Conocimiento para Mejora de Procesos:} Documentación técnica que servirá como hoja de ruta para estandarizar el desarrollo a medida y asegurar que las implementaciones de Odoo sean escalables y seguras a largo plazo.
+\end{itemize}
+
+\subsection{Inventario de Puntos a Tratar}
+Basado en la naturaleza de \textbf{ACIDE} como consultora orientada a la excelencia y digitalización, el presente inventario define los componentes críticos a inspeccionar. El objetivo es garantizar que la infraestructura tecnológica soporte los estándares de certificación ISO y proteja la información estratégica de sus clientes en los sectores público y privado.
+
+\subsubsection{1. Auditoría de Equipos de Red y Comunicación}
+Se enfoca en asegurar que el hardware de red (routers, switches y firewalls) gestione el tráfico de datos de manera segura y eficiente.
+
+\begin{itemize}
+    \item \textbf{Puntos a Auditar:}
+    \begin{itemize}
+        \item \textbf{Archivos de configuración y versiones:} Revisión de firmware y parámetros actuales de los dispositivos de red.
+        \item \textbf{Segmentación y Firewalls:} Evaluación de zonas de seguridad (VLANs) y reglas de filtrado de tráfico.
+        \item \textbf{Protocolos de Comunicación:} Verificación del uso de protocolos seguros (SSH, SNMPv3, HTTPS) frente a versiones vulnerables.
+        \item \textbf{Gestión de Cambios:} Control de bitácoras y registros de modificaciones en la infraestructura.
+    \end{itemize}
+    \item \textbf{Justificación:} Se audita para minimizar riesgos de acceso no autorizado, detectar vulnerabilidades críticas documentadas (NVD) y asegurar que la red cumpla con las políticas de seguridad interna.
+\end{itemize}
+
+\subsubsection{2. Auditoría de Sistemas Operativos (SO)}
+Este punto evalúa el software base que soporta las operaciones de consultoría, capacitación y digitalización de la empresa.
+
+\begin{itemize}
+    \item \textbf{Puntos a Auditar:}
+    \begin{itemize}
+        \item \textbf{Configuración vs. Políticas:} Comparación del estado actual de los servidores frente al estándar de seguridad de la organización.
+        \item \textbf{Protección de Endpoints:} Estado y configuración de antivirus y firewalls de host administrados centralizadamente.
+        \item \textbf{Gestión de Parches:} Verificación de que el SO cuente con las últimas actualizaciones de seguridad críticas.
+        \item \textbf{Servicios y Aplicaciones:} Identificación de servicios innecesarios activos que puedan ampliar la superficie de ataque.
+        \item \textbf{Tareas Programadas:} Revisión de procesos automáticos para descartar persistencias maliciosas.
+        \item \textbf{Directorio Activo (AD):} Gestión de identidades, privilegios de usuario y políticas de contraseñas.
+    \end{itemize}
+    \item \textbf{Justificación:} Los sistemas mal configurados o desactualizados facilitan vectores de ataque. La auditoría garantiza un entorno estandarizado, reduce la complejidad administrativa y asegura la trazabilidad de las operaciones.
+\end{itemize}
+\subsection{Persona Colaboradora}
+Para el desarrollo de esta auditoría, se ha designado un canal de comunicación directo con el personal estratégico del área de Digitales. La colaboración principal proviene de:
+
+\begin{itemize}
+    \item \textbf{Alex Flores Valdez (Encargado de TI - Área de Digitales):} Actúa como el facilitador principal de información técnica y operativa. Su participación es fundamental para:
+    \begin{itemize}
+        \item Proveer acceso a las configuraciones de seguridad y privilegios del servidor \textbf{Nextcloud}.
+        \item Facilitar el inventario técnico de las estaciones de trabajo bajo entorno \textbf{Ubuntu}.
+        \item Explicar los flujos de conectividad de la red interna para la evaluación de la privacidad de los datos.
+        \item Coordinar la revisión de las licencias y accesos a las plataformas en la nube (\textbf{Odoo Studio}).
+    \end{itemize}
+    \item \textbf{Personal Operativo de Digitalización:} Colaboradores del área que participarán de manera indirecta mediante la observación de sus procesos diarios y el uso de las herramientas de gestión de tareas en \textbf{Jira}.
+\end{itemize}
+\subsection{Documentos Requeridos}
+Para la ejecución efectiva de esta auditoría, se solicitará a la Jefatura de Digitales la siguiente documentación y accesos:
+\begin{itemize}
+    \item \textbf{Esquemas de Red y Arquitectura:} Diagramas topológicos preliminares elaborados en Excalidraw por el equipo técnico.
+    \item \textbf{Accesos al Hipervisor:} Credenciales de lectura al entorno \textbf{PROXMOX VE}, necesario para auditar la asignación de recursos (vCPU, RAM, almacenamiento) tanto del nodo host como de las máquinas virtuales (VMs) y contenedores LXC.
+    \item \textbf{Políticas de Copias de Seguridad:} Documentación (formal o informal) sobre la frecuencia y destino de los respaldos de las máquinas virtuales y del servidor Nextcloud.
+    \item \textbf{Inventario de Hardware:} Especificaciones técnicas detalladas del servidor local (placa base, procesador, tipo y estado de los discos de almacenamiento).
+\end{itemize}
+
+\subsection{Plan De Auditoría}
+El proceso de auditoría se enmarcará en los lineamientos de la norma internacional \textbf{ISO/IEC 27005}, enfocada en la gestión de riesgos de seguridad de la información. El plan se estructura en las siguientes fases operativas:
+
+\subsubsection{Investigación Preliminar}
+\subsubsection{Recolección De Información}
+\subsubsection{Aplicación De Instrumentos}
+
+\subsubsection{Ejecución De Pruebas}
+Se implementarán las siguientes pruebas técnicas en la infraestructura:
+\begin{itemize}
+    \item \textbf{Escaneo de Vulnerabilidades:} Uso de herramientas como Nessus o OpenVAS sobre el segmento de red de PROXMOX y las instancias de Ubuntu para detectar puertos abiertos no justificados.
+    \item \textbf{Auditoría de I/O de Almacenamiento:} Pruebas de estrés de lectura/escritura (benchmark) utilizando herramientas como \texttt{fio} o \texttt{hdparm} para evaluar la degradación de los discos mecánicos.
+    \item \textbf{Revisión de Seguridad en Contenedores:} Análisis estático de las imágenes de Docker utilizadas para el despliegue de Odoo utilizando herramientas como Trivy o Docker Bench for Security.
+    \item \textbf{Test de Recuperación de Desastres (DRP):} Simulacro de restauración de una máquina virtual o contenedor LXC desde un snapshot de PROXMOX para medir el Tiempo Objetivo de Recuperación (RTO).
+\end{itemize}
+
+\subsubsection{Proceso De Análisis De Evaluación De Riesgos}
+\subsubsection{Tratamiento De Riesgo}
+
+\clearpage
+\section{FASE III: DESARROLLO DE LA AUDITORÍA}
+
+\subsection{Proceso De Recolección De Información Y Planteamiento De Actividades}
+
+\subsection{Aplicación De Instrumentos Para El Levantamiento De Información}
+\subsubsection{Cuestionarios y Encuestas}
+Se aplicó una entrevista técnica semiestructurada a Alex Flores Valdez (Encargado de TI). Las respuestas críticas revelaron lo siguiente:
+\begin{itemize}
+    \item \textbf{Esquema de redundancia:} No existe un arreglo RAID por hardware ni ZFS configurado para redundancia; los datos de las máquinas virtuales residen en discos duros mecánicos (HDD) individuales.
+    \item \textbf{Respaldos:} Los snapshots de PROXMOX se guardan en un disco secundario dentro del mismo chasis físico. No existen rutinas de copias de seguridad fuera del sitio (off-site) automatizadas.
+\end{itemize}
+
+\subsubsection{Revisión de Documentación}
+
+\subsubsection{Observación}
+Durante una jornada laboral estándar del área de Digitales, se evidenció lo siguiente:
+\begin{itemize}
+    \item Los colaboradores acceden a los paneles de administración de Odoo y Jira dejando las sesiones activas en sus estaciones de trabajo cuando se ausentan de sus escritorios (ausencia de políticas de bloqueo de pantalla).
+    \item Físicamente, el servidor principal carece de un entorno controlado (Data Center). Es un equipo ensamblado con apariencia de ``PC Gamer'' ubicado en una oficina de tránsito regular, expuesto a polvo, alteraciones accidentales de cableado y carente de una fuente de alimentación ininterrumpida (UPS) de grado empresarial.
+\end{itemize}
+
+\subsection{Aplicación De Técnicas Y Herramientas Para El Levantamiento De Actividades}
+\subsubsection{Matriz DAFO}
+Aplicada a la infraestructura local gestionada en PROXMOX:
+\begin{itemize}
+    \item \textbf{Fortalezas:} El equipo de Digitales posee un nivel técnico excepcionalmente alto y un conocimiento profundo de la arquitectura del servidor. Cualquier miembro del área es capaz de realizar mantenimiento físico y reconfigurar el hipervisor sin depender de terceros.
+    \item \textbf{Oportunidades:} El dominio del equipo sobre tecnologías de virtualización facilita una transición futura muy ágil hacia entornos Cloud o infraestructuras hiperconvergentes empresariales.
+    \item \textbf{Debilidades:} El servidor físico utiliza hardware de consumo con Discos Duros Mecánicos (HDD). Esto genera un cuello de botella severo en el rendimiento de entrada/salida (I/O) y carece de la confiabilidad de grado servidor (ausencia de memoria ECC y fuentes redundantes).
+    \item \textbf{Amenazas:} Alto riesgo de pérdida total de datos por desgaste y fallo inminente de los discos HDD bajo carga 24/7. Vulnerabilidad ante fluctuaciones del suministro eléctrico local que podrían corromper los sistemas de archivos de las VMs.
+\end{itemize}
+
+\subsubsection{Matriz de Actividades}
+
+\subsubsection{Matriz de Brechas}
+\begin{itemize}
+    \item \textbf{Estado Actual:} Servidor con hardware de consumo (HDD), sin redundancia de discos (No RAID), con hipervisor PROXMOX realizando respaldos locales dentro del mismo equipo físico.
+    \item \textbf{Estado Deseado (Estándar ISO):} Servidor de grado empresarial con almacenamiento de estado sólido (SSD/NVMe) configurado en RAID 1 o 5. Esquema de backups automatizados bajo la regla 3-2-1 (3 copias, 2 medios distintos, 1 copia externa).
+    \item \textbf{Brecha:} Alta. Se requiere urgente inversión en almacenamiento sólido e implementación de un protocolo de respaldos externo para proteger la continuidad operativa.
+\end{itemize}
+
+\subsection{Valoración Del Riesgo}
+\subsection{Matriz De Riesgo}
+\subsection{Matriz De Probabilidad E Impacto}
+A partir del análisis, se identificaron y valoraron los siguientes riesgos críticos de infraestructura:
+\begin{enumerate}
+    \item \textbf{Falla Mecánica Catastrófica del Almacenamiento (HDD):} 
+    \begin{itemize}
+        \item \textit{Probabilidad:} Alta. \textit{Impacto:} Crítico. \textit{Nivel de Riesgo:} \textbf{INACEPTABLE}.
+    \end{itemize}
+    \item \textbf{Corrupción de Datos por Corte Eléctrico en Servidor sin UPS:}
+    \begin{itemize}
+        \item \textit{Probabilidad:} Media. \textit{Impacto:} Alto. \textit{Nivel de Riesgo:} \textbf{MAYOR}.
+    \end{itemize}
+    \item \textbf{Vulneración Física o Accidental del Hardware (Ubicación Inadecuada):}
+    \begin{itemize}
+        \item \textit{Probabilidad:} Media. \textit{Impacto:} Alto. \textit{Nivel de Riesgo:} \textbf{MODERADO}.
+    \end{itemize}
+\end{enumerate}
+
+\subsection{Impacto Económico}
+La materialización de una falla mecánica del disco desencadenaría la inoperatividad total del entorno de desarrollo local y de las plataformas de comunicación interna (Nextcloud). Se estima un Tiempo de Inactividad (\textit{Downtime}) de entre 3 a 7 días hábiles para adquirir hardware nuevo, reinstalar PROXMOX y restaurar los últimos snapshots útiles.
+
+Considerando que ACIDE maneja contratos de implementación de software e integraciones de normativas ISO que oscilan entre los \textbf{S/ 20,000 y S/ 40,000 soles} por proyecto, una caída del sistema impactaría directamente en:
+\begin{itemize}
+    \item \textbf{Penalizaciones Contractuales:} El incumplimiento de cronogramas y Acuerdos de Nivel de Servicio (SLA) con los clientes activa cláusulas de penalidad que promedian entre el 10\% y el 15\% del valor total del contrato (Pérdidas estimadas de S/ 2,000 a S/ 6,000 por proyecto activo).
+    \item \textbf{Pérdida de Horas-Hombre:} El coste absorbido por la empresa al tener a 12 especialistas inactivos o trabajando a capacidad mínima durante la semana de recuperación.
+    \item \textbf{Daño Reputacional y Cancelaciones:} Si la falla incluye la corrupción irrecuperable de documentación confidencial almacenada en Nextcloud, existe un riesgo inminente de resolución de contratos de S/ 40,000, además de comprometer las credenciales de la propia ACIDE frente a futuras licitaciones.
+\end{itemize}
+
+\section{FASE IV: INFORME DE AUDITORÍA}
+
+\subsection{Carta de presentación del informe}
+\subsection{Introducción al informe final}
+\subsection{Principales Observaciones}
+\subsection{Plan de Acción}
+\subsection{Plan de Mejoras}
+
+\section{CONCLUSIONES}
+
+\section{RECOMENDACIONES}
+
+\end{document}
