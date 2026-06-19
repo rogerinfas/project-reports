@@ -1,36 +1,60 @@
 \section{Alcance de implementación}
 \begin{indentedsubsection}
-% Describir el alcance de la implementación aquí
+El proyecto contempla la implementación, configuración y parametrización de un sistema de gestión en la nube (ERP) para Industria Textil Atlas E.I.R.L. El alcance se enfoca de manera exclusiva en las funcionalidades operativas nativas (out-of-the-box) del sistema para automatizar los procesos de logística de almacenes, el punto de venta en mostrador (POS) y la gestión de compras y fijación de precios, asegurando una transición ágil, segura y adaptada a la capacidad tecnológica de la empresa.
 \end{indentedsubsection}
 
 \subsection{Alcance temático}
 \begin{indentedsubsection}
-% Describir el alcance temático aquí
+Se han seleccionado y parametrizado las funcionalidades críticas para el control operativo de la distribución comercial, excluyendo cualquier tipo de desarrollo de código a medida:
+
+\begin{itemize}
+    \item \textbf{a. Gestión de Inventarios (Logística):} centralización del control de existencias en tiempo real, distinguiendo entre materias primas (telas recibidas para tercerización, avíos e insumos por unidades), productos terminados (polos y pantalonetas de licra, buzos, etc.) y artículos complementarios (rodilleras, musleras, tobilleras, muñequeras, coderas, pantorrilleras, menisqueras, soportes de rodilla, soportes y moldeadores de cintura, suspensores, pelotas de fútbol, balones de balonmano, redes de básquet, sets de ping pong, mitones, mangas de vóley, cintas kinesiológicas, ankles y bandas de resistencia). Habilitación de ubicaciones físicas y parametrización de puntos de reorden automáticos para alertar sobre niveles mínimos de existencias, previniendo quiebres de mercadería.
+    \item \textbf{b. Punto de Venta (POS):} despliegue del módulo de Punto de Venta para el personal de tienda. Permitirá registrar las transacciones del día a día, realizar cobros bajo la modalidad minorista y mayorista, y consultar en tiempo real el stock disponible en almacén antes de concretar una venta.
+    \item \textbf{c. Gestión de Compras y Control de Precios por Gerencia:} automatización del ciclo de compras dirigido a los talleres externos de confección y proveedores de accesorios. Configuración de permisos exclusivos para que la gerencia pueda registrar precios de costo, simular márgenes de ganancia deseados y actualizar de forma masiva y centralizada los precios de venta finales mostrados en el Punto de Venta (POS).
+\end{itemize}
+
+Quedan expresamente excluidos del alcance del proyecto:
+\begin{itemize}
+    \item El módulo de manufactura/producción (MRP) y cualquier control de planta o taller de costura a medida.
+    \item Módulos de CRM complejos, automatización de marketing digital y plataformas e-commerce.
+    \item La facturación electrónica, la cual seguirá operando mediante el software aislado actual reportado a la SUNAT.
+    \item La compra de hardware o equipos físicos.
+\end{itemize}
 \end{indentedsubsection}
 
 \subsection{Alcance organizacional}
 \begin{indentedsubsection}
-% Describir el alcance organizacional aquí
+La intervención tecnológica define responsabilidades y roles específicos dentro de la estructura de la empresa:
+
+\begin{itemize}
+    \item \textbf{a. Gerencia General (Víctor Huayllaro):} actuará como Coordinador General del proyecto, con privilegios exclusivos para gestionar precios de compra de los proveedores, definir y ajustar márgenes de ganancia deseados, autorizar compras de reposición sugeridas por el sistema y monitorear reportes de rentabilidad y stock.
+    \item \textbf{b. Personal de Ventas:} encargado exclusivamente de operar el Punto de Venta (POS), registrar las ventas en el mostrador físico, consultar el stock en tiempo real y emitir los tickets correspondientes a las transacciones de los clientes.
+    \item \textbf{c. Encargado de Almacén:} responsable de registrar diariamente los ingresos de productos terminados recibidos de los talleres externos y proveedores de accesorios, ejecutar el control de salidas por ventas o traslados, y etiquetar y organizar la mercadería utilizando la nueva estandarización de códigos SKU.
+    \item \textbf{d. Migración de Datos:} preparación e importación de la Data Maestra en plantillas estructuradas de Excel, limitándose estrictamente al catálogo codificado de productos y materias primas (SKUs), el listado de proveedores y los saldos de inventario iniciales. Cabe destacar que de forma transversal durante todo el proyecto se realizará la recolección continua de datos de todos los productos para su posterior carga en el sistema.
+\end{itemize}
 \end{indentedsubsection}
 
 \subsection{Alcance temporal}
 \begin{indentedsubsection}
-% Describir el alcance temporal aquí
+La duración planificada del proyecto es de 6 meses calendarios bajo una ruta crítica oficial definida en el plan de implementación, la cual asegura la parametrización secuencial del sistema y la adecuada asimilación de los procesos de control logístico y punto de venta por parte del personal de Industria Textil Atlas.
 \end{indentedsubsection}
 
 \subsection{Cronograma y estado de implementación}
 \begin{indentedsubsection}
-% Describir las actividades de implementación en la siguiente tabla
+El cronograma del proyecto de digitalización y su desarrollo se organiza formalmente a través de las siguientes fases secuenciales:
 
 \renewcommand{\arraystretch}{1.4}
-\begin{tabularx}{\textwidth}{|>{\raggedright\arraybackslash}p{2.1cm}|>{\raggedright\arraybackslash}p{3.2cm}|X|}
+\begin{tabularx}{\textwidth}{|>{\raggedright\arraybackslash}p{2.2cm}|>{\raggedright\arraybackslash}p{3.8cm}|X|}
     \hline
     \textbf{Fase} & \textbf{Actividad clave} & \textbf{Enfoque en Odoo} \\ \hline
-    Fase 1 & & \\ \hline
-    Fase 2 & & \\ \hline
-    Fase 3 & & \\ \hline
-    Fase 4 & & \\ \hline
-    Fase 5 & & \\ \hline
-    Fase 6 & & \\ \hline
+    Fase 1 (Mes 1) & Planificación y Cimientos & Selección de la Entidad Proveedora de Servicios Tecnológicos (EPST), definición de requerimientos técnicos logísticos y configuración del entorno en la nube con asignación de roles y permisos. \\ \hline
+    Fase 2 (Meses 2-3) & Gestión de Almacenes y Codificación SKU & Configuración de ubicaciones físicas digitales, control de entradas/salidas, movimientos de inventario y estandarización del catálogo de códigos SKU para todos los productos de protección y accesorios deportivos. \\ \hline
+    Fase 3 (Meses 3-4) & Configuración del Punto de Venta (POS) & Parametrización del módulo Punto de Venta para la tienda de San Camilo, configuración de la interfaz simplificada para el personal de ventas y vinculación del POS con el inventario en tiempo real. \\ \hline
+    Fase 4 (Meses 4-5) & Gestión de Compras y Control de Márgenes & Habilitación del flujo de compras a talleres externos y proveedores de accesorios, parametrización de reglas de stock mínimo (puntos de reorden automáticos) y configuración de las pantallas de control de precios y márgenes de ganancia para la gerencia. \\ \hline
+    Fase 5 (Mes 5) & Pruebas Integrales y Capacitación & Simulación del flujo completo (recepción de mercadería del taller, actualización del stock, venta rápida en POS y control de márgenes gerenciales) y capacitación práctica obligatoria al personal de ventas y almacén. \\ \hline
+    Fase 6 (Mes 6) & Puesta en Marcha y Cierre & Marcha blanca operativa en tienda física con soporte, firma del acta de conformidad y cierre oficial del proyecto. \\ \hline
 \end{tabularx}
+
+\vspace{0.3cm}
+\textbf{Nota Transversal:} En cada una de las fases descritas en el cronograma se mantendrán actividades activas de recopilación, depuración y estructuración de los datos técnicos de todos los productos (prendas de confección tercerizada, telas, avíos, y artículos complementarios como rodilleras, musleras, tobilleras, muñequeras, coderas, pantorrilleras, menisqueras, soportes, pelotas y bandas) con la finalidad de asegurar la calidad de la información antes de subirla de manera definitiva al sistema.
 \end{indentedsubsection}
