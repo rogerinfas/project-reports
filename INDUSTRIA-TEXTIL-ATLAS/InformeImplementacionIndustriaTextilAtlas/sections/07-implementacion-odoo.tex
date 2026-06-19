@@ -2,16 +2,17 @@
 
 \subsection{Configuración inicial}
 \begin{indentedsubsection}
-La puesta en marcha de la plataforma para Industria Textil Atlas E.I.R.L. se realiza bajo el modelo de Odoo en la nube, garantizando un entorno centralizado y accesible desde cualquier terminal en tienda o dispositivo móvil. En esta etapa preliminar se configuró la base de datos principal adoptando los Nuevos Soles (PEN) como moneda oficial de trabajo, en coherencia con la estructura de cobranzas e informes contables del negocio. Si bien la instancia base cuenta con una suite completa de aplicaciones instaladas (incluyendo Inventario, Punto de Venta, Contactos, Conversaciones, Compras, Manufactura, Código de barras, Tableros, Ajustes), el uso operativo real del sistema se restringe y enfoca de manera exclusiva en los módulos de Inventario, Punto de Venta (POS) y Compras. Módulos como Contactos y Tableros se emplean como herramientas de soporte para la consolidación de informes, mientras que el módulo de Manufactura queda relegado y sin uso operativo dentro del flujo logístico estructurado.
+La puesta en marcha de la plataforma para Industria Textil Atlas E.I.R.L. se realiza bajo el modelo de Odoo en la nube, garantizando un entorno centralizado y accesible desde cualquier terminal en tienda o dispositivo móvil. En esta etapa preliminar se configuró la base de datos principal adoptando los Nuevos Soles (PEN) como moneda oficial de trabajo, en coherencia con la estructura de cobranzas e informes contables del negocio. La instancia base cuenta con los módulos operativos de Ventas, Inventario, Punto de Venta (POS) y Compras completamente integrados y funcionales, mientras que otros módulos complementarios como Contactos y Tableros actúan de soporte (ver Figura~\ref{fig:configuracion_inicial_odoo}).
 \end{indentedsubsection}
 
 \begin{figure}[h!]
     \centering
     \includegraphics[width=0.9\textwidth]{assets/captura-configuracion-inicial-odoo-atlas.png}
-    \caption{Captura de la configuración inicial en Odoo Online para Industria Textil Atlas E.I.R.L.}
+    \caption{Captura de la pantalla principal de Odoo con el módulo de Ventas y POS instalados para Industria Textil Atlas E.I.R.L.}
     \label{fig:configuracion_inicial_odoo}
 \end{figure}
 
+\clearpage
 \subsection{Implementación del módulo de Inventario (Logística y existencias)}
 \begin{indentedsubsection}
 El módulo de Inventario es el núcleo del proyecto y se parametrizó para establecer un control físico exacto del almacén, erradicando los conteos basados en la memoria. A continuación, se detallan las configuraciones visuales críticas del inventario:
@@ -19,7 +20,7 @@ El módulo de Inventario es el núcleo del proyecto y se parametrizó para estab
 
 \subsubsection{Catálogo maestro de artículos deportivos con codificación SKU}
 \begin{indentedsubsection}
-El catálogo de productos en Odoo unifica toda la oferta comercial de Industria Textil Atlas E.I.R.L. La base de datos centraliza los artículos deportivos propios y de terceros de forma ordenada. A través de esta interfaz en lista, el personal del almacén y la gerencia pueden visualizar de un vistazo rápido los nombres, las categorías y las existencias reales ("Unidades a la mano") de cada SKU registrado, facilitando las auditorías físicas y reduciendo drásticamente las discrepancias.
+El catálogo de productos en Odoo unifica toda la oferta comercial de Industria Textil Atlas E.I.R.L. La base de datos centraliza los artículos deportivos propios y de terceros de forma ordenada. A través de esta interfaz en lista, el personal del almacén y la gerencia pueden visualizar de un vistazo rápido los nombres, las categorías y las existencias reales ("Unidades a la mano") de cada SKU registrado, facilitando las auditorías físicas y reduciendo drásticamente las discrepancias (ver Figura~\ref{fig:inventario_catalogo}).
 \end{indentedsubsection}
 
 \begin{figure}[h!]
@@ -31,7 +32,7 @@ El catálogo de productos en Odoo unifica toda la oferta comercial de Industria 
 
 \subsubsection{Ficha detallada de artículo y parametrización de costos}
 \begin{indentedsubsection}
-La ficha detallada del producto en el sistema actúa como el registro maestro de cada artículo. En ella se establecen los datos clave para la venta y compras, tales como la referencia interna de codificación SKU y el tipo de producto. Asimismo, esta ficha consolida los datos de costo de adquisición de los proveedores y el precio de venta en mostrador, permitiendo a la gerencia monitorear de manera precisa los costos reales e individualizados que sustentan los márgenes financieros de la empresa.
+La ficha detallada del producto en el sistema actúa como el registro maestro de cada artículo. En ella se establecen los datos clave para la venta y compras, tales como la referencia interna de codificación SKU y el tipo de producto. Asimismo, esta ficha consolida los datos de costo de adquisición de los proveedores y el precio de venta en mostrador, permitiendo a la gerencia monitorear de manera precisa los costos reales e individualizados que sustentan los márgenes financieros de la empresa (ver Figura~\ref{fig:inventario_ficha}).
 \end{indentedsubsection}
 
 \begin{figure}[h!]
@@ -41,6 +42,49 @@ La ficha detallada del producto en el sistema actúa como el registro maestro de
     \label{fig:inventario_ficha}
 \end{figure}
 
+\clearpage
+\subsection{Implementación del módulo de Ventas (Cotizaciones y pedidos mayoristas)}
+\begin{indentedsubsection}
+El módulo de Ventas es la herramienta comercial clave para canalizar los requerimientos de volumen, cotizaciones de colegios o clubes y ventas digitales por WhatsApp. A continuación, se detallan las interfaces correspondientes:
+\end{indentedsubsection}
+
+\subsubsection{Vista de lista de presupuestos y cotizaciones comerciales}
+\begin{indentedsubsection}
+La vista general de cotizaciones permite al personal de ventas realizar un seguimiento riguroso del embudo comercial de la empresa. En esta interfaz se listan las cotizaciones elaboradas, su número de documento, el cliente institucional asociado, la fecha de emisión y el estado comercial actual (Presupuesto, Presupuesto enviado o Pedido de venta), centralizando toda la información en un solo lugar (ver Figura~\ref{fig:ventas_listado}).
+\end{indentedsubsection}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.9\textwidth]{assets/foto_listado_ventas.png}
+    \caption{Listado general de cotizaciones y pedidos registrados en el módulo de Ventas.}
+    \label{fig:ventas_listado}
+\end{figure}
+
+\subsubsection{Ficha detallada de presupuesto y cotización de venta}
+\begin{indentedsubsection}
+La ficha del presupuesto en el módulo de Ventas permite registrar de manera estructurada los requerimientos del cliente. En esta interfaz se seleccionan los artículos deportivos solicitados, se ingresan las cantidades correspondientes y se calculan de manera automática los subtotales e impuestos correspondientes. El personal puede simular precios especiales o aplicar descuentos por volumen para cerrar acuerdos comerciales rentables rápidamente (ver Figura~\ref{fig:ventas_detalle}).
+\end{indentedsubsection}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.9\textwidth]{assets/foto_detalle_venta.png}
+    \caption{Detalle de un presupuesto comercial estructurado en el módulo de Ventas.}
+    \label{fig:ventas_detalle}
+\end{figure}
+
+\subsubsection{Propuesta comercial en formato PDF para el cliente}
+\begin{indentedsubsection}
+A partir del presupuesto estructurado en el sistema, Odoo genera una propuesta comercial formal en formato PDF con la identidad visual de Industria Textil Atlas E.I.R.L. Este documento digital contiene la descripción de los productos deportivos solicitados, precios unitarios y condiciones, presentándose de manera limpia y profesional para su envío inmediato a los clientes por WhatsApp o correo electrónico (ver Figura~\ref{fig:ventas_pdf}).
+\end{indentedsubsection}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.9\textwidth]{assets/foto_pdf_cotizacion.png}
+    \caption{Propuesta comercial formal generada en PDF lista para ser enviada al cliente.}
+    \label{fig:ventas_pdf}
+\end{figure}
+
+\clearpage
 \subsection{Implementación del Punto de Venta (POS) y Gestión de Ventas}
 \begin{indentedsubsection}
 Para agilizar la atención directa al cliente en el mostrador de San Camilo y eliminar el registro analógico de transacciones, se desplegó el módulo de Punto de Venta (POS) con las siguientes interfaces operativas:
@@ -48,7 +92,7 @@ Para agilizar la atención directa al cliente en el mostrador de San Camilo y el
 
 \subsubsection{Interfaz de mostrador del Punto de Venta (POS)}
 \begin{indentedsubsection}
-La interfaz del mostrador (POS) de Odoo proporciona al personal de ventas una pantalla táctil y visual sumamente intuitiva. El catálogo se encuentra categorizado por tipo de producto para agilizar la búsqueda de existencias como pelotas, rodilleras o tobilleras en pleno proceso de atención. Al seleccionar un producto en el POS, el sistema interactúa en tiempo real con el stock del almacén, impidiendo vender artículos que no se encuentren disponibles en la tienda física.
+La interfaz del mostrador (POS) de Odoo proporciona al personal de ventas una pantalla táctil y visual sumamente intuitiva. El catálogo se encuentra categorizado por tipo de producto para agilizar la búsqueda de existencias como pelotas, rodilleras o tobilleras en pleno proceso de atención. Al seleccionar un producto en el POS, el sistema interactúa en tiempo real con el stock del almacén, impidiendo vender artículos que no se encuentren disponibles en la tienda física (ver Figura~\ref{fig:pos_abierto}).
 \end{indentedsubsection}
 
 \begin{figure}[h!]
@@ -60,7 +104,7 @@ La interfaz del mostrador (POS) de Odoo proporciona al personal de ventas una pa
 
 \subsubsection{Pasarela de pagos en caja e impresión rápida de tickets}
 \begin{indentedsubsection}
-Al concretar una transacción, la pantalla de pago en el POS permite al personal de ventas seleccionar de manera rápida la modalidad de cobranza utilizada por el cliente (efectivo, transferencias o billeteras electrónicas como Yape y Plin). Al confirmar la forma de pago, el sistema deduce automáticamente las unidades del inventario de forma perpetua e imprime un comprobante simplificado de venta de manera automatizada para entregarlo al cliente.
+Al concretar una transacción, la pantalla de pago en el POS permite al personal de ventas seleccionar de manera rápida la modalidad de cobranza utilizada por el cliente (efectivo, transferencias o billeteras electrónicas como Yape y Plin). Al confirmar la forma de pago, el sistema deduce automáticamente las unidades del inventario de forma perpetua e imprime un comprobante simplificado de venta de manera automatizada para entregarlo al cliente (ver Figura~\ref{fig:pos_pago}).
 \end{indentedsubsection}
 
 \begin{figure}[h!]
@@ -70,6 +114,7 @@ Al concretar una transacción, la pantalla de pago en el POS permite al personal
     \label{fig:pos_pago}
 \end{figure}
 
+\clearpage
 \subsection{Gestión de Compras y Control de Precios por Gerencia}
 \begin{indentedsubsection}
 El módulo de Compras y la sección de tarifas del sistema se parametrizaron para empoderar financieramente a la gerencia y automatizar el aprovisionamiento de stock:
@@ -77,7 +122,7 @@ El módulo de Compras y la sección de tarifas del sistema se parametrizaron par
 
 \subsubsection{Parametrización de reglas de reabastecimiento automático}
 \begin{indentedsubsection}
-Las reglas de stock mínimo automático (puntos de reorden) evitan la fatiga operativa y la compra improvisada o reactiva de materiales. En esta pantalla, la gerencia define los parámetros de existencias mínimas de seguridad para cada accesorio deportivo en base a los plazos de entrega de los proveedores. Cuando el stock real de un SKU desciende del nivel establecido, el sistema detona de forma proactiva una sugerencia de compra en borrador.
+Las reglas de stock mínimo automático (puntos de reorden) evitan la fatiga operativa y la compra improvisada o reactiva de materiales. En esta pantalla, la gerencia define los parámetros de existencias mínimas de seguridad para cada accesorio deportivo en base a los plazos de entrega de los proveedores. Cuando el stock real de un SKU desciende del nivel establecido, el sistema detona de forma proactiva una sugerencia de compra en borrador (ver Figura~\ref{fig:compras_reorden}).
 \end{indentedsubsection}
 
 \begin{figure}[h!]
@@ -89,7 +134,7 @@ Las reglas de stock mínimo automático (puntos de reorden) evitan la fatiga ope
 
 \subsubsection{Flujo de Solicitud de Presupuesto y Órdenes de Compra}
 \begin{indentedsubsection}
-La interfaz de Solicitudes de Presupuesto en el módulo de Compras consolida los borradores generados por las reglas de stock mínimo. El gerente Víctor Huayllaro puede visualizar el proveedor asignado, los ítems a reponer con su costo sugerido y convertirlos en órdenes de compra formales del sistema para enviarlas directamente a los talleres externos o fabricantes, manteniendo control estricto sobre las finanzas del negocio.
+La interfaz de Solicitudes de Presupuesto en el módulo de Compras consolida los borradores generados por las reglas de stock mínimo. El gerente Víctor Huayllaro puede visualizar el proveedor asignado, los ítems a reponer con su costo sugerido y convertirlos en órdenes de compra formales del sistema para enviarlas directamente a los talleres externos o fabricantes, manteniendo control estricto sobre las finanzas del negocio (ver Figura~\ref{fig:compras_orden}).
 \end{indentedsubsection}
 
 \begin{figure}[h!]
@@ -101,7 +146,7 @@ La interfaz de Solicitudes de Presupuesto en el módulo de Compras consolida los
 
 \subsubsection{Reportes y tableros de valoración de existencias}
 \begin{indentedsubsection}
-El tablero financiero de inventarios constituye el panel principal de auditoría para la gerencia general. A través de este reporte de valoración de existencias, Víctor Huayllaro puede inspeccionar detalladamente el valor en soles de toda la mercadería almacenada y el costo total de los productos en tienda, lo que le permite tomar decisiones informadas sobre las políticas de precios, ofertas y el capital de trabajo neto.
+El tablero financiero de inventarios constituye el panel principal de auditoría para la gerencia general. A través de este reporte de valoración de existencias, Víctor Huayllaro puede inspeccionar detalladamente el valor en soles de toda la mercadería almacenada y el costo total de los productos en tienda, lo que le permite tomar decisiones informadas sobre las políticas de precios, ofertas y el capital de trabajo neto (ver Figura~\ref{fig:inventario_valoracion}).
 \end{indentedsubsection}
 
 \begin{figure}[h!]
@@ -111,11 +156,13 @@ El tablero financiero de inventarios constituye el panel principal de auditoría
     \label{fig:inventario_valoracion}
 \end{figure}
 
+\clearpage
 \subsection{Integración entre módulos y trazabilidad del sistema}
 \begin{indentedsubsection}
-La principal fortaleza técnica de esta implementación radica en el flujo automático e interconectado de información. El Punto de Venta (POS) no opera de forma aislada; cada transacción registrada en mostrador por el vendedor ejecuta una salida en tiempo real en el módulo de Inventario. Cuando el sistema detecta que un producto ha alcanzado su límite mínimo de stock, detona una alerta de reabastecimiento en el módulo de Compras. La gerencia aprueba la sugerencia del sistema convirtiéndola en una Orden de Compra formal para el proveedor. Finalmente, cuando el encargado de almacén registra la recepción física de la mercadería y su SKU en el módulo de Inventario, el stock se actualiza inmediatamente en el sistema, quedando disponible de forma instantánea para la venta en el POS de la tienda.
+La principal fortaleza técnica de esta implementación radica en el flujo automático e interconectado de información. El módulo de Ventas y el Punto de Venta (POS) se comunican directamente con el módulo de Inventario para verificar y descontar stock. Cada venta realizada en el POS o confirmada como cotización en Ventas deduce de forma inmediata las unidades físicas de almacén. Cuando el sistema detecta que un accesorio ha alcanzado su stock mínimo de seguridad, detona una alerta de reposición en el módulo de Compras. La gerencia aprueba la sugerencia convirtiéndola en una orden de compra para el proveedor, y cuando el encargado de almacén registra la recepción física de la mercadería mediante su código SKU en el módulo de Inventario, las existencias se actualizan en tiempo real, quedando disponibles para la venta mayorista en Ventas o minorista en el POS.
 \end{indentedsubsection}
 
+\clearpage
 \subsection{Mapa de procesos actual (con Odoo)}
 \begin{indentedsubsection}
 El flujo operativo optimizado con la implantación del sistema ERP permite un ciclo comercial y logístico ágil, libre de registros manuales y con total control financiero. A continuación, se detalla la secuencia de los procesos bajo el nuevo esquema tecnológico:
@@ -129,11 +176,14 @@ El flujo operativo optimizado con la implantación del sistema ERP permite un ci
 
 \begin{indentedsubsection}
 \begin{itemize}
-    \item \textbf{1. Atención y consulta:} el cliente solicita un artículo deportivo (ej. rodilleras, tobilleras, musleras o pelotas) en tienda o por WhatsApp. El vendedor consulta la disponibilidad física exacta del producto en menos de 1 segundo desde la pantalla del Punto de Venta (POS).
-    \item \textbf{2. Venta y Ticket rápido:} el vendedor registra los artículos seleccionados en la terminal del POS, procesa el cobro por mostrador y emite el ticket de caja al instante.
-    \item \textbf{3. Descarga automática de stock:} al concretarse la venta en el POS, el módulo de Inventario actualiza y refleja de forma instantánea la salida física de la mercadería.
+    \item \textbf{1. Atención y consulta:} el cliente solicita un artículo deportivo (ej. rodilleras, tobilleras, musleras o pelotas) en tienda o por WhatsApp. El vendedor consulta la disponibilidad física exacta del producto en menos de 1 segundo desde la pantalla del Punto de Venta (POS) o del módulo de Ventas.
+    \item \textbf{2. Venta y Ticket rápido:} el vendedor registra los artículos en la terminal del POS para ventas de mostrador, o elabora un presupuesto formal en Ventas si es un pedido institucional, emitiendo el ticket de caja o la cotización en PDF al instante.
+    \item \textbf{3. Descarga automática de stock:} al concretarse la venta en el POS o confirmarse en Ventas, el módulo de Inventario actualiza y refleja de forma instantánea la salida física de la mercadería.
     \item \textbf{4. Alerta de Reorden:} el sistema de inventarios monitorea de forma continua las existencias; cuando un accesorio llega a su nivel mínimo de stock (ej. muñequeras, redes de básquet o bandas de resistencia), el sistema genera automáticamente una sugerencia de compra.
     \item \textbf{5. Aprobación de la Gerencia:} el gerente Víctor Huayllaro accede al panel del sistema, analiza los precios de costo sugeridos, define los precios de venta actualizados en base al margen de ganancia deseado y aprueba formalmente la orden de compra en el sistema.
-    \item \textbf{6. Recepción en Almacén:} el encargado de almacén recibe la mercadería enviada por el proveedor, registra el ingreso de las unidades en el módulo de Inventario con la codificación SKU y la disponibilidad de stock se actualiza inmediatamente para la venta en el POS.
+    \item \textbf{6. Recepción en Almacén:} el encargado de almacén recibe la mercadería enviada por el proveedor, registra el ingreso de las unidades en el módulo de Inventario con la codificación SKU y la disponibilidad de stock se actualiza inmediatamente para la venta en el POS y Ventas.
 \end{itemize}
 \end{indentedsubsection}
+
+\clearpage
+
