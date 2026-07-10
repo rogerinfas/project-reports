@@ -62,44 +62,89 @@ Justo debajo del cliente, puedes establecer cuándo vence la cotización (ej. v�
 En la pestaña central (marcada en rojo) haz clic en \textbf{``Agregar un producto''} y busca el tour que el cliente desea. Asegúrate de revisar la columna de \textbf{Cantidad} y \textbf{Precio Unitario}. El sistema calculará el IGV o los impuestos configurados en la parte inferior.
 
 % ─────────────────────────────────────────────────────────────────────────────
-\subsection{4. Los botones de Acción (Enviar y Confirmar)}
+\subsection{4. Flujos clave: Imprimir, Previsualizar, Enviar y Confirmar}
 
-Una vez que la cotización está llena, la atención pasa a la esquina superior izquierda.
+Una vez que tu cotización está armada con cliente y precios, tienes a tu disposición los flujos más importantes del sistema.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.9\textwidth]{assets/ven_g4_botones_accion.png}
-    \caption{Los botones principales de acción.}
+    \caption{El panel principal de botones de acción superior.}
 \end{figure}
+
+\subsubsection{A. Flujo: Imprimir o generar PDF interno}
+Si el cliente está en la oficina física y necesita un papel, busca el botón con el ícono de engranaje que dice \textbf{``Acción''} o directamente el botón \textbf{``Imprimir''}. Esto generará un PDF tradicional de Odoo con el presupuesto para que lo pases por la impresora.
+
+\subsubsection{B. Flujo: Vista previa del cliente (Portal Web)}
+Antes de mandar nada, es vital saber qué verá el cliente. 
+\begin{itemize}
+    \item Haz clic en el botón \textbf{``Vista previa del cliente''}.
+    \item Odoo te sacará de tu vista de trabajador y te mostrará el \textbf{Portal Web}. El cliente verá una página interactiva muy profesional con el logo de Perú Flores, donde puede aceptar y firmar digitalmente.
+    \item Para volver, haz clic en \textbf{``Volver a editar''} en la cinta superior oscura.
+\end{itemize}
+
+\subsubsection{C. Flujo: Enviar por correo electrónico}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.9\textwidth]{assets/ven_06_enviar_correo_highlight_real.png}
-    \caption{Botón para enviar la proforma por email directamente desde Odoo.}
+    \includegraphics[width=0.9\textwidth]{assets/ven_flujo_1_enviar.png}
+    \caption{Botón para enviar la proforma oficial por email (marcado en rojo).}
 \end{figure}
 
-Haz clic en \textbf{``Enviar por correo electrónico''} para mandar el presupuesto oficial en PDF. El sistema te abrirá una ventana para que edites el mensaje si lo deseas.
+Al hacer clic en \textbf{``Enviar por correo electrónico''}, Odoo abrirá una \textbf{Ventana Modal (emergente)} como la que se ve a continuación:
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.9\textwidth]{assets/ven_07_confirmar_highlight_real.png}
-    \caption{El botón de confirmación de venta.}
+    \includegraphics[width=0.9\textwidth]{assets/ven_flujo_2_modal_correo.png}
+    \caption{Ventana emergente de correo con la plantilla cargada y el PDF adjunto.}
 \end{figure}
 
-Cuando el cliente te pague o confirme el viaje, vuelve a esta pantalla y haz clic en \textbf{``Confirmar''}. ¡Esto convierte tu cotización en una venta real (Pedido)!
+\begin{itemize}
+    \item En esta vista, verás el correo del destinatario y una plantilla ya redactada.
+    \item En la parte inferior notarás que el PDF de la cotización ya está adjunto.
+    \item Revisa el texto y haz clic en el botón \textbf{``Enviar''} de la esquina inferior.
+\end{itemize}
+
+\subsubsection{D. Flujo: Confirmar (Cierre de venta)}
+
+Cuando el cliente paga su adelanto o totalidad, debes darle clic al botón \textbf{``Confirmar''}. ¡Este es el paso crítico! La cotización se congela y se convierte en un \textbf{Pedido de Venta}.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{assets/ven_flujo_4_confirmado.png}
+    \caption{El resultado de Confirmar: Observa cómo el estado cambia a "Orden de venta" (verde).}
+\end{figure}
+
+Al estar confirmada, la agencia asume el compromiso de viaje y se habilitan opciones logísticas (como generar las facturas formales o recibos de adelanto).
+
+\subsubsection{E. Flujo: Cancelar}
+
+Si por algún motivo la venta se cae, el pasajero desiste o hubo un error en la cotización, puedes presionar el botón \textbf{``Cancelar''}.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{assets/ven_flujo_5_cancelar.png}
+    \caption{Botón Cancelar (marcado en rojo). Utilízalo solo cuando la cotización ya no sirva.}
+\end{figure}
+
+Al cancelar, el documento queda invalidado (pasa a estado "Cancelado") y ya no se suma a tus proyecciones de ventas de la semana.
 
 % ─────────────────────────────────────────────────────────────────────────────
-\subsection{5. La Barra de Estados}
-
-¿Cómo sabes en qué etapa está tu venta sin leer todo el documento? Mirando la esquina superior derecha.
+\subsection{5. La Barra de Estados y el Cobro}
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.9\textwidth]{assets/ven_g5_estado.png}
-    \caption{La barra de estado del documento.}
+    \caption{La barra de estado del documento. Es vital para saber en qué parte del flujo estás.}
 \end{figure}
 
-Esta barra avanzará desde \textbf{Presupuesto} (borrador), pasará a \textbf{Presupuesto enviado} (cuando mandas el correo) y terminará en \textbf{Pedido de Venta} (cuando confirmas).
+Esta barra te indicará visualmente tu progreso:
+1. \textbf{Presupuesto:} Cuando lo estás armando.
+2. \textbf{Presupuesto enviado:} Inmediatamente después de hacer el flujo de "Enviar por correo".
+3. \textbf{Orden de Venta (Confirmado):} Cuando realizaste el flujo de "Confirmar".
+4. \textbf{Cancelado:} Si interrumpiste el proceso con el flujo de "Cancelar".
+
+\textbf{Crear Factura:} Una vez en "Orden de Venta", aparecerá el botón ``Crear Factura''. Al hacer clic, saldrá una vista donde puedes elegir cobrar el 100\% o un pago de adelanto (Down payment).
 
 % ─────────────────────────────────────────────────────────────────────────────
 \subsection{6. El Historial de comunicaciones (Chatter)}
