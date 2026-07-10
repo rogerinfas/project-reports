@@ -1,12 +1,20 @@
-\section{Implementación de la Solución Digital (Odoo / SaaS)}
+\section{Implementación de la Solución Digital e Integración Operativa}
 
-La ejecución técnica se estructuró para dotar a la empresa de una única fuente de verdad operativa. Se optó por una plataforma de gestión empresarial en la nube (modelo SaaS), que permitió una adopción rápida sin necesidad de adquirir servidores físicos.
+Para materializar los objetivos de Textiles y Confecciones Atlas E.I.R.L., y considerando las restricciones presupuestales y técnicas de una MYPE, el Plan de Implementación descartó rotundamente el desarrollo de un software a medida por sus altos costos de mantenimiento y tiempos de despliegue prolongados. En su lugar, la propuesta técnica central consistió en la adopción de una plataforma de gestión empresarial Odoo en su versión SaaS (Cloud). Esta elección garantizó una implementación ágil, escalable y accesible de manera inmediata desde los limitados dispositivos actuales de la empresa (una computadora de mostrador y un celular corporativo). 
 
-\subsection{Configuración del Módulo de Inventario}
-Se realizó el levantamiento de información y la carga masiva del catálogo de artículos deportivos, estructurando los datos por familias de productos, variantes (tallas, colores) y unidades de medida. El sistema fue parametrizado para reflejar los ingresos por compras a proveedores y mantener un stock valorizado actualizado en tiempo real, eliminando la necesidad del "conteo visual".
+El proceso de despliegue y puesta en marcha se alineó a la metodología ágil Scrum, ejecutada a lo largo de un horizonte máximo de 6 meses (con cierre en julio de 2026), garantizando entregables (entregas progresivas de valor) y subdividiéndose en fases clave:
 
-\subsection{Despliegue del Punto de Venta (POS)}
-Para el mostrador de la calle Deán Valdivia, se implementó una interfaz de Punto de Venta ágil y amigable. Esta herramienta permitió a los vendedores consultar disponibilidad de balones, camisetas y trofeos en segundos, y registrar la salida de mercadería de manera inmediata. Esta acción cierra la brecha de desconexión entre la venta y el almacén.
+\subsection{Fase 1: Diagnóstico Técnico y Levantamiento de Información}
+Durante el primer mes, se procedió con la tarea crítica del mapeo detallado del flujo operativo en la tienda física. Se identificaron de manera exhaustiva las categorías de los artículos (indumentaria técnica, calzado, trofeos, balones) y se ejecutó el inventariado manual final indispensable para la migración. Esta fase sentó las bases para definir una arquitectura de base de datos capaz de soportar las variables complejas (tallas, modelos, colores) que exige el sector textil deportivo.
 
-\subsection{Estrategia de Marketing Digital y Catálogo Online}
-De forma paralela a la gestión interna, se configuró el ecosistema digital de la marca. Se establecieron perfiles oficiales en redes sociales (Facebook e Instagram) integrados a través de Meta Business Suite. Asimismo, se habilitó un catálogo digital accesible vía WhatsApp Business, lo que facilitó enviar proformas visuales e inmediatas a clientes en provincias (Cusco, Puno), profesionalizando el canal de venta remota.
+\subsection{Fase 2: Selección y Configuración de Odoo SaaS}
+Con la estructura clara, se aprovisionó el entorno en la nube de Odoo. Se configuró exhaustivamente el Módulo de Inventario para soportar la centralización del stock y se establecieron reglas de reabastecimiento (puntos de pedido). Paralelamente, se parametrizó la base de datos de clientes mediante la aplicación de Contactos y CRM de Odoo. Esta acción unificó y centralizó los datos de contacto y ventas que históricamente residían dispersos de manera informal en el celular corporativo (WhatsApp) de la gerencia, transformándolos en un directorio comercial estructurado.
+
+\subsection{Fase 3: Carga de Datos y Despliegue del Punto de Venta (POS)}
+Se llevó a cabo la tarea de "saneamiento y migración de datos", trasladando todo el inventario físico al sistema y generando, por primera vez, el catálogo digital interno. Inmediatamente después, se habilitó la interfaz de Ventas (Punto de Venta o POS) en la computadora del mostrador de la calle Deán Valdivia. La integración de este módulo permitió que cada transacción ejecutada agilizara el proceso comercial de los vendedores y, simultáneamente, descargara el stock en tiempo real, garantizando la sincronicidad entre las entradas y las salidas de almacén.
+
+\subsection{Fase 4: Ecosistema Omnicanal y Estrategia de Marketing Digital}
+Validada la operación logística interna, se procedió a habilitar los canales digitales (Complemento Estratégico). El Pack Trimestral de Marketing Digital estructuró el ecosistema en Meta: se profesionalizó la presencia en redes sociales (Facebook, Instagram y TikTok) diseñando y redactando publicaciones mensuales, y se activó el Catálogo Digital de productos en WhatsApp Business. A través de Meta Business Suite, se implementó la gestión de pauta y administración de campañas publicitarias estacionales orientadas específicamente a captar clientes B2B e institucionales en el sur del país (provincias). 
+
+\subsection{Fase 5: Pruebas, Marcha Piloto y Producción}
+El tramo final consistió en las pruebas de sincronización para validar que el stock baje correctamente tras las simulaciones de ventas, impidiendo la rotura de inventario ("quiebre de stock fantasma"). Posteriormente se realizó el apagón analógico controlado (Go-Live), entregando como respaldo los Manuales de Usuario (Videotutoriales para POS e Inventarios) y la Documentación Técnica, asegurando el soporte técnico preventivo, la continuidad operativa del sistema y la ciberseguridad para la protección de datos de clientes.

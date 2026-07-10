@@ -1,0 +1,854 @@
+                       PLAN DE IMPLEMENTACION
+
+
+  Optimización de Procesos e Implementación Digital para mejorar la
+                 Gestión de Inventarios y fortalecer la
+ presencia comercial y digital de Textiles y Confecciones Atlas E.I.R.L.
+
+
+
+
+Empresa beneficiaria     :   TEXTILES Y CONFECCIONES ATLAS E.I.R.L.
+RUC                      :   20558074427
+Contrato                 :   N° 954-PROINNOVATE-IMTEMD-2025
+Periodo del informe      :   29/10/2025 - 28/11/2025
+
+
+
+
+                                                AGENTE AUTOMATIZADO
+                                                LLAMA.PE S.A.
+                                                sistemas@llama.pe
+                                                Fecha: 26/03/2026 10:42
+                                                Firmado por Watana
+
+
+
+   FARIDE SOFIA CUELLAR                  FREDY VICTOR RAMOS GRANDA
+           BRAVO                             Consultor del proyecto
+   Coordinador general del
+          proyecto
+
+                                AREQUIPA – PERÚ
+                                      2025
+                                                             Contenido
+
+
+
+1.      Objetivo del plan ......................................................................................... 1
+
+     1.1. Contexto y Justificación......................................................................... 1
+
+     1.2. Componentes Clave del Plan ................................................................ 1
+
+        1.2.1. Implementación de un Sistema de Gestión Logística Digital .......... 2
+
+        1.2.2. Desarrollo de un Programa de Marketing Digital ............................ 2
+
+     1.3. Metas y Resultados Esperados ............................................................. 2
+
+     1.4. Ruta Estratégica y Priorización ............................................................. 3
+
+2.      Brechas identificadas .................................................................................. 4
+
+     2.1. Brechas Tecnológicas ........................................................................... 4
+
+     2.2. Brechas de Procesos ............................................................................ 5
+
+     2.3. Brechas en Marketing y Capital Humano .............................................. 5
+
+3.      Impacto de las brechas ............................................................................... 5
+
+     3.1. Impacto en la Eficiencia Interna ............................................................ 5
+
+     3.2. Impacto en los Costos ........................................................................... 5
+
+     3.3. Impacto en la Competitividad ................................................................ 6
+
+     3.4. Impacto en la Experiencia del Cliente ................................................... 6
+
+4.      Evaluación de implementación .................................................................... 6
+
+     4.1. Metodología de implementación ........................................................... 6
+
+     4.2. Ruta crítica ............................................................................................ 7
+
+     4.3. Análisis Costo - Beneficio...................................................................... 8
+
+        4.3.1. Beneficios Esperados (ROI) ........................................................... 8
+
+     4.4. Indicadores (KPIs) ................................................................................. 8
+
+5.      Contenido de plan de implementación ...................................................... 10
+
+     5.1. Propuesta técnica ............................................................................... 10
+
+        5.1.1. Solución de Gestión de Inventarios: ............................................. 10
+        5.1.2. Solución de Marketing Digital: ...................................................... 10
+
+     5.2. Alcance del proyecto ........................................................................... 11
+
+        5.2.1. Procesos y áreas impactadas: ...................................................... 11
+
+        5.2.2. Tecnologías para adoptar: ............................................................ 11
+
+        5.2.3. Necesidad de capacitación y soporte técnico: .............................. 11
+
+     5.3. Actividades y Cronograma .................................................................. 12
+
+        5.3.1. Responsables del proyecto: ......................................................... 12
+
+     5.4. Documentación para completar .......................................................... 13
+
+        5.4.1. Entregables principales: ............................................................... 13
+
+6.      Indicadores de impacto y seguimiento ...................................................... 13
+
+     6.1. Identificación y Clasificación de KPIs .................................................. 14
+
+     6.2. Métricas y Fuentes de Datos ............................................................... 14
+
+     6.3. Metodología de Seguimiento ............................................................... 15
+
+     6.4. Frecuencia y Responsables ................................................................ 15
+
+        6.4.1. Frecuencia de medición ................................................................ 15
+
+        6.4.2. Responsables del monitoreo ........................................................ 15
+
+     6.5. Ciclo de Mejora Continua .................................................................... 15
+
+7.      Presupuesto .............................................................................................. 16
+
+8.      Conclusiones............................................................................................. 17
+
+9.      Recomendaciones .................................................................................... 18
+
+     9.1. Corto Plazo: Adopción y Confianza en el Sistema .............................. 18
+
+     9.2. Mediano Plazo: Optimización y Expansión Digital .............................. 19
+
+     9.3. Largo Plazo: Innovación y Proyección Nacional ................................. 19
+1. Objetivo del plan
+
+   El presente plan de implementación para Textiles y Confecciones Atlas E.I.R.L.
+   tiene como objetivo central la transformación digital de su modelo de
+   comercialización. Esto se logrará mediante la adopción de un sistema digital de
+   gestión de inventarios y ventas y el fortalecimiento de su presencia comercial a
+   través de un programa de marketing estratégico. Con ello, se busca optimizar la
+   eficiencia operativa, centralizar la información de stock y potenciar las ventas
+   regionales.
+
+   1.1.   Contexto y Justificación
+          Actualmente, Textiles y Confecciones Atlas E.I.R.L. enfrenta limitaciones
+          críticas en su gestión diaria debido a su infraestructura mínima (una PC y
+          un celular) y procesos analógicos:
+
+          •   Gestión de Stock Manual: El uso de cuadernos y Excel aislados
+              genera errores constantes en la disponibilidad de productos, pérdida
+              de información y falta de trazabilidad en las ventas.
+
+          •   Desconexión Operativa: No existe un sistema integrado que vincule
+              las ventas en mostrador de la calle Deán Valdivia con el stock real y la
+              facturación, lo que provoca duplicidad de tareas y una toma de
+              decisiones lenta basada en la memoria del personal.
+
+          •   Alcance Digital Limitado: La visibilidad de la marca es incipiente,
+              desaprovechando el potencial de captar clientes mayoristas en
+              provincias mediante canales digitales profesionales.
+
+          Con un nivel de madurez digital del 42.67%, la empresa se encuentra en
+          el punto ideal para migrar hacia una gestión sistematizada que soporte su
+          crecimiento.
+
+   1.2.   Componentes Clave del Plan
+          El plan se estructura en torno a dos ejes fundamentales:
+   1.2.1. Implementación de un Sistema de Gestión Logística Digital
+           •   Control de Stock en Tiempo Real: Registro digital de ingresos de
+               mercadería y salidas por ventas para conocer existencias exactas
+               sin conteos físicos constantes.
+
+           •   Centralización de Información: Consolidación de datos de
+               proveedores, clientes y ventas en una sola plataforma accesible
+               desde la PC de mostrador.
+
+           •   Automatización de Consultas: Agilizar la respuesta a clientes
+               mediante el acceso inmediato a precios y disponibilidad de
+               artículos deportivos.
+
+   1.2.2. Desarrollo de un Programa de Marketing Digital
+           •   Catálogo Digital: Creación de un portafolio de productos visual y
+               actualizado para facilitar las ventas por WhatsApp y redes sociales.
+
+           •   Estrategias de Visibilidad Online: Campañas segmentadas para
+               posicionar a Textiles y Confecciones Atlas E.I.R.L. como el
+               proveedor líder para clubes y ligas deportivas en el sur del Perú
+               (Arequipa, Cusco, Puno).
+
+1.3.   Metas y Resultados Esperados
+       El plan establece objetivos concretos y medibles para los primeros 6
+       meses:
+
+       •   Reducir en un 15% los errores de inventario, eliminando las
+           discrepancias entre lo anotado y lo existente.
+
+       •   Mejorar en un 10% los tiempos de respuesta y entrega, agilizando
+           la confirmación de pedidos.
+
+       •   Incrementar la presencia digital en un 15%, logrando un mayor
+           alcance y número de consultas efectivas a través de canales digitales.
+
+       •   Optimizar la toma de decisiones mediante el uso de reportes
+           automatizados de rotación de mercadería.
+       Para garantizar la trazabilidad del proyecto y el cumplimiento de los
+       objetivos de Textiles y Confecciones Atlas E.I.R.L., se establece la
+       siguiente matriz que define el punto de partida (Situación Actual) y el éxito
+       esperado tras la implementación:
+
+                                                                  Meta Final
+                                            Línea Base
+   Objetivo      Indicador de Éxito                              (Resultado       Fuente de
+                                        (Situación Actual
+  Estratégico          (KPI)                                     Esperado –      Verificación
+                                           -Abril 2026)
+                                                                 Junio 2026)
+                 Exactitud de                                                    Reporte
+ Reducir en                             0% (Registro
+                 Inventario:                                                     comparativo
+ un 15% los                             manual en              75% de
+                 Coincidencia entre                                              de cierre de
+ errores de                             cuadernos sin          coincidencia
+                 stock físico y                                                  stock del
+ inventario                             respaldo digital).
+                 digital.                                                        sistema POS.
+                 Tiempo de
+ Mejorar en                                                                      Logs de
+                 Respuesta:             45 - 60 Minutos        < 5 Minutos
+ un 10% los                                                                      atención y
+                 Promedio de            (Depende de            (Consulta
+ tiempos de                                                                      capturas de
+                 atención a             verificación física    inmediata en
+ respuesta y                                                                     pantalla del
+                 consultas de stock     en estantes).          base de datos).
+ entrega                                                                         sistema.
+                 (provincias).
+                                                                                 Enlaces a
+                 Omnicanalidad:                                2 Canales
+                                        0 Canales                                perfiles de
+                 Número de canales                             oficiales con
+                                        (Inexistencia de                         redes
+                 oficiales activos y                           identidad
+                                        perfiles en FB, IG).                     sociales
+ Incrementar     profesionales.                                corporativa.
+                                                                                 activos.
+ la presencia
+                                                                                 Métricas de
+ digital en un   Crecimiento de
+                                        <0                                       Meta
+ 15%             Alcance:
+                                        consultas/mes          >5                Business
+                 Consultas efectivas
+                                        (Atención              consultas/mes     Suite y
+                 por canales
+                                        reactiva/informal).                      WhatsApp
+                 digitales/catálogo.
+                                                                                 Business.
+                 Reportabilidad:                               Reporte           Dashboards
+                                        Nula / Empírica
+ Optimizar la    Frecuencia de                                 Semanal           generados
+                                        (Decisiones
+ toma de         análisis de rotación                          Automático de     por el
+                                        basadas en conteo
+ decisiones      de artículos                                  productos         software de
+                                        visual).
+                 deportivos.                                   estrella.         gestión.
+
+
+
+1.4.   Ruta Estratégica y Priorización
+       La ejecución se realizará de forma secuencial para garantizar que el
+       crecimiento comercial tenga un soporte operativo sólido:
+       •   Prioridad Principal (Gestión Interna): La primera acción será
+           implementar el sistema logístico para estabilizar el control de
+           inventarios. No se puede vender más si no se sabe con exactitud qué
+           hay en el almacén.
+       •   Complemento Estratégico (Crecimiento Externo): Una vez que el
+           sistema sea confiable, se lanzará el programa de marketing digital.
+             Esto asegura que la demanda generada pueda ser atendida con
+             eficiencia.
+         •   Secuencia Progresiva: El orden asegura que cada avance refuerce
+             al siguiente: primero la eficiencia operativa en la tienda, luego la
+             expansión comercial hacia afuera.
+         •   Visión de Futuro: Esta priorización construye un ecosistema digital
+             sostenible, permitiendo que Textiles y Confecciones Atlas E.I.R.L.
+             capitalice sus 35 años de experiencia con herramientas de gestión
+             modernas.
+2. Brechas identificadas
+   El diagnóstico realizado en Textiles y Confecciones Atlas E.I.R.L. evidencia una
+   serie de brechas significativas que separan su gestión actual de un modelo de
+   negocio competitivo y digitalizado.
+
+  2.1.   Brechas Tecnológicas
+         •   Ausencia de un sistema de gestión de inventarios integrado: La
+             empresa no dispone de un software para el control de stock en tiempo
+             real, lo que ocasiona desajustes entre lo que se ofrece al cliente y lo
+             que realmente existe en el almacén.
+
+         •   Información fragmentada y no centralizada: Los datos clave de
+             ventas y stock están dispersos en cuadernos y hojas de cálculo
+             manuales, sin respaldo en la nube, dificultando la consulta rápida
+             desde el mostrador.
+
+         •   Infraestructura mínima y desconectada: Se depende de una única
+             PC y un celular corporativo; además, el portal de facturación de
+             SUNAT opera de forma aislada, obligando a registrar la misma
+             información varias veces.
+
+         •   Nivel de madurez digital intermedio-bajo (42.67%): El diagnóstico
+             muestra deficiencias críticas especialmente en las dimensiones de
+             Operaciones y Comercial.
+  2.2.    Brechas de Procesos
+          •   Ineficiencia en procesos manuales: La verificación de existencias
+              para responder consultas (especialmente de provincias) se hace de
+              forma visual o manual, consumiendo tiempo y generando cuellos de
+              botella en la atención.
+
+          •   Pérdida de información y falta de trazabilidad: No existe un historial
+              digital de ventas y rotación de productos, lo que impide saber qué
+              artículos deportivos tienen mayor demanda.
+
+          •   Dependencia de la gerencia: La validación de precios y stock
+              depende excesivamente de la memoria o supervisión directa del
+              Gerente, limitando la agilidad de los vendedores.
+
+  2.3.    Brechas en Marketing y Capital Humano
+          •   Estrategia de marketing digital incipiente: Se usan redes sociales
+              de forma básica, pero se carece de un catálogo digital y pauta para
+              captar activamente a clubes deportivos regionales.
+
+          •   Ausencia de capacitación formal: El personal no ha recibido
+              formación técnica en el uso de herramientas de gestión de inventarios
+              o atención al cliente digital profesional.
+
+3. Impacto de las brechas
+  Estas brechas generan un impacto directo en la rentabilidad y el posicionamiento
+  de Textiles y Confecciones Atlas E.I.R.L. en el mercado de Arequipa y el sur del
+  país.
+
+  3.1.    Impacto en la Eficiencia Interna
+          La dependencia de procesos analógicos provoca duplicidad de tareas. El
+          vendedor debe anotar la venta en papel y luego procesarla en la PC, lo
+          que reduce la productividad y la capacidad de respuesta ante pedidos de
+          provincias.
+
+  3.2.    Impacto en los Costos
+          La falta de integración se traduce en capital de trabajo inmovilizado en
+          mercadería que no rota. La ausencia de un sistema preciso lleva a errores
+         en las compras a proveedores, generando sobre-stock de productos
+         innecesarios o falta de artículos clave para la temporada deportiva.
+
+  3.3.   Impacto en la Competitividad
+         Frente a competidores que ya muestran catálogos actualizados por
+         WhatsApp y sistemas de venta rápidos, Textiles y Confecciones Atlas
+         E.I.R.L. se encuentra en desventaja. La carencia de digitalización limita
+         su capacidad para competir por precios y velocidad de entrega.
+
+  3.4.   Impacto en la Experiencia del Cliente
+         La incertidumbre sobre el stock ("voy a revisar si queda en el almacén")
+         afecta la confianza del cliente. Una atención lenta o con errores en precios
+         genera insatisfacción, especialmente en el segmento de instituciones y
+         clubes que requieren proformas exactas e inmediatas.
+
+4. Evaluación de implementación
+  El plan de digitalización se ejecutará bajo un marco escalonado y flexible,
+  priorizando la entrega progresiva de valor. La implementación tendrá una
+  duración de 6 meses, organizada en fases que permitirán validar resultados de
+  manera temprana en la tienda de la calle Deán Valdivia.
+
+  El enfoque central es garantizar que el sistema de gestión de inventarios (POS)
+  y el programa de marketing digital:
+
+  •   Respondan a las brechas críticas de descontrol de stock.
+
+  •   Optimicen la atención en el mostrador y la gestión de pedidos de provincias.
+
+  •   Fortalezcan la competitividad y visibilidad online hacia clubes y ligas
+      deportivas.
+
+  4.1.   Metodología de implementación
+         Se aplicará la metodología ágil Scrum, ideal para entornos digitales por
+         su capacidad de entregar resultados tangibles en ciclos cortos (Sprints).
+         Esto permitirá que la empresa vea mejoras en su control de inventarios
+         desde el segundo mes.
+
+         Roles y Artefactos clave:
+       •   Product Owner (Gerencia): Priorizará las funciones del sistema (ej.
+           carga de productos más vendidos primero).
+
+       •   Development Team: Encargados de configurar el software POS y
+           diseñar las campañas de marketing.
+
+       •   Product Backlog: Lista priorizada que incluye el registro digital de
+           tallas, modelos, precios y base de datos de clientes.
+
+4.2.   Ruta crítica
+       La ruta crítica representa las tareas esenciales que no pueden retrasarse
+       para cumplir con el lanzamiento en el mes 6:
+
+       •   Levantamiento de información técnica: Inventariado manual final
+           para migración.
+
+       •   Selección de la plataforma POS/Ventas: Elección de un sistema
+           compatible con la PC actual.
+
+       •   Carga de datos de inventario: Digitalización de existencias de
+           artículos deportivos.
+
+       •   Configuración del módulo de Ventas (POS): Integración con el flujo
+           de atención al cliente.
+
+       •   Pruebas de sincronización: Validación de que el stock baje
+           correctamente tras cada venta.
+
+       •   Capacitación del personal: Uso del sistema y atención digital.
+
+       •   Lanzamiento piloto controlado y oficial.
+Ilustración 1 Ruta crítica
+
+        4.3.     Análisis Costo - Beneficio
+                 La inversión en el sistema logístico, de ventas (POS) y marketing
+                 representa una decisión estratégica que supera el gasto inicial.
+                 •    Adquisición de software (SaaS) o plataforma POS.
+                 •    Servicios de marketing digital y diseño de catálogo.
+                 •    Capacitación del personal de ventas.
+             4.3.1. Beneficios Esperados (ROI)
+                      •      Tangibles: Reducción de errores en inventario (meta 15%),
+                             eliminación de ventas perdidas por falta de información de stock y
+                             reducción de tiempos en proformas.
+
+                      •      Intangibles: Mejora drástica en la imagen de marca frente a clubes
+                             deportivos, toma de decisiones basada en reportes reales de
+                             ventas y mayor alcance regional en el sur del Perú.
+
+                 El costo de no actuar es significativamente mayor, ya que implicaría
+                 continuar con el estancamiento operativo y la pérdida progresiva de
+                 clientes frente a competidores ya digitalizados.
+
+        4.4.     Indicadores (KPIs)
+                 Para garantizar el éxito de la transformación digital, Textiles y
+                 Confecciones Atlas E.I.R.L. contará con un sistema de indicadores (KPIs)
+                 que permitirán medir de forma objetiva el impacto del sistema logístico, el
+                 POS y la estrategia de marketing en la rentabilidad del negocio.
+Los KPIs definidos son:
+
+•   Tasa de reducción de errores de inventario: Mide la disminución de
+    discrepancias entre el stock físico y el registro digital (actualmente
+    manual).
+
+       o   Meta: Reducción del 15% de errores en el primer semestre.
+
+•   Tasa de optimización del ciclo de venta: Evalúa la mejora en la
+    eficiencia desde que se recibe una consulta (especialmente de
+    provincias) hasta que se procesa el pedido.
+
+       o   Meta: Reducción del 10% en el tiempo de procesamiento y
+           respuesta de proformas.
+
+•   Nivel de Precisión de Stock en Tiempo Real: Mide la fiabilidad de la
+    consulta de inventario en el mostrador, asegurando que el personal de
+    ventas brinde información 100% exacta al cliente.
+
+       o   Meta: Lograr un 95% de coincidencia entre sistema y almacén
+           físico.
+
+•   Crecimiento de Alcance y Presencia Digital: Mide el aumento de la
+    visibilidad online (Facebook y/o TikTok) y la efectividad de las
+    campañas para atraer nuevos clubes y ligas deportivas.
+
+       o   Meta: Incremento del 15% en el alcance de marca y consultas
+           digitales efectivas.
+
+•   Eficiencia en la Gestión Estratégica: Evalúa la capacidad de la
+    gerencia para realizar pedidos a proveedores basándose en reportes
+    automatizados de "productos más vendidos", en lugar de conteos
+    visuales.
+
+       o   Meta: Generación de reportes semanales automáticos de
+           rotación de mercadería.
+
+El monitoreo mensual de estos indicadores permitirá a la gerencia de
+Textiles y Confecciones Atlas E.I.R.L. validar el retorno de la inversión,
+corregir desviaciones en la estrategia de marketing y asegurar que la
+         digitalización cumpla su propósito: profesionalizar la atención al cliente y
+         consolidar el liderazgo comercial de la empresa en el sur del Perú.
+
+5. Contenido de plan de implementación
+  5.1.   Propuesta técnica
+         La propuesta técnica se centra en la implementación de un Sistema de
+         Gestión Logística y Ventas (POS) y un Programa de Marketing Digital.
+         Ambos pilares modernizarán la operación en tienda y expandirán el
+         alcance comercial hacia el mercado regional.
+
+     5.1.1. Solución de Gestión de Inventarios:
+            •   Se propone implementar una plataforma en la nube (SaaS) con
+                funcionalidades de control de stock en tiempo real, registro de
+                ventas y un panel administrativo para el seguimiento de pedidos de
+                provincias.
+
+            •   Se considerarán soluciones ágiles y escalables como Zoho
+                Inventory, Odoo u otro (módulo Ventas/Inventario/POS) , que
+                permiten operar desde la PC actual y el celular de la empresa sin
+                requerir servidores locales.
+
+            •   La solución será intuitiva para facilitar su adopción por el personal
+                de ventas, permitiendo centralizar el catálogo de artículos
+                deportivos y precios en un solo lugar.
+
+     5.1.2. Solución de Marketing Digital:
+            •   Gestión profesional de redes sociales (Facebook, TikTok, y/o
+                Instagram) para fortalecer la marca Textiles y Confecciones Atlas
+                E.I.R.L. en el sector deportivo.
+
+            •   Lanzamiento de campañas segmentadas por temporadas para
+                captar clientes B2B (instituciones) y B2C.
+
+            •   Implementación de un Catálogo Digital, permitiendo que los
+                clientes de provincias visualicen la oferta actualizada desde sus
+                móviles.
+5.2.   Alcance del proyecto
+       El proyecto impactará directamente en la eficiencia de la tienda física y en
+       la capacidad de respuesta digital de la empresa.
+
+   5.2.1. Procesos y áreas impactadas:
+          •       Operaciones     y   Logística:    Transformación     del   ciclo   de
+                  mercadería, desde la recepción del proveedor hasta el despacho al
+                  cliente final, eliminando el uso de cuadernos.
+
+          •       Ventas y Atención al Cliente: El personal tendrá acceso
+                  inmediato al stock real desde la PC del mostrador, agilizando
+                  proformas y evitando la pérdida de ventas por falta de información.
+
+          •       Comercial y Marketing: Ejecución de una estrategia multicanal
+                  para consolidar la presencia de la empresa en el sur del Perú.
+
+          •       Gerencia y Administración: Acceso a reportes automáticos de
+                  ventas diarias y rotación de stock, facilitando la toma de decisiones
+                  financieras basadas en datos reales.
+
+   5.2.2. Tecnologías para adoptar:
+          •       Plataforma de Gestión: Software tipo ERP ligero o POS con
+                  inventario integrado (Zoho, Odoo o similar).
+
+          •       Herramientas de Marketing: Uso de Meta Business Suite para la
+                  gestión de pauta, y WhatsApp Business para la atención masiva.
+
+          •       Nivel de Integración Esperado: El sistema deberá sincronizar el
+                  inventario con el módulo de ventas, permitiendo que cada
+                  transacción descargue automáticamente el stock del almacén.
+
+   5.2.3. Necesidad de capacitación y soporte técnico:
+              •    Capacitación del Personal: Entrenamiento práctico en el registro
+                   digital de productos, manejo del punto de venta (POS) y
+                   actualización básica del catálogo digital.
+
+              •    Soporte Técnico: Acompañamiento especializado durante la
+                   migración de datos (del Excel al sistema) y soporte post-
+               implementación para asegurar la continuidad de las operaciones
+               en la PC única de la empresa.
+
+5.3.   Actividades y Cronograma
+       La ejecución se desarrollará en un horizonte de máximo 6 meses,
+       organizada en fases progresivas para asegurar un despliegue eficiente y
+       con la capacidad de ajustar la estrategia si fuera necesario.
+
+
+
+
+                               Ilustración 2 Cronograma
+
+   5.3.1. Responsables del proyecto:
+          •   Coordinador general del plan.
+
+          •   Proveedor tecnológico especializado en la gestión de inventarios.
+
+          •   Equipo de marketing digital interno o externo.
+
+          •   Soporte técnico para el mantenimiento y la resolución de
+              incidencias.
+  5.4.   Documentación para completar
+         La implementación del sistema logístico (POS) y del plan de marketing
+         digital requiere la elaboración de documentación técnica y operativa que
+         respalde el uso, la capacitación y el seguimiento del proyecto. Estos
+         entregables garantizarán la continuidad operativa, la adopción por parte
+         del personal de ventas y la sostenibilidad de la estrategia comercial.
+
+     5.4.1. Entregables principales:
+            ➢ Manuales de Usuario y/o videotutorial (POS e Inventarios)
+
+                   o Explicaciones prácticas sobre la digitalización del stock, el
+                       registro de ingresos de mercadería, la realización de ventas
+                       en mostrador y la generación de reportes de rotación.
+
+                   o Diseñados para facilitar la operación diaria por parte del
+                       personal de ventas y almacén, asegurando que el sistema
+                       sea su herramienta principal de consulta.
+
+            ➢ Documentación Técnica y de Configuración del Sistema
+                o Descripción de la configuración de la plataforma en la nube,
+                      requisitos de acceso desde la computadora única de la
+                      empresa y lineamientos de ciberseguridad para la protección
+                      de datos de clientes.
+
+                   o Material dirigido a asegurar el soporte técnico preventivo y
+                      futuros mantenimientos de la herramienta.
+
+            ➢ Actas de Seguimiento, Control y Cierre
+
+                   o Registros de los acuerdos alcanzados en cada Sprint (bajo
+                       metodología Scrum), avances validados por la gerencia y
+                       ajustes realizados durante los 6 meses de implementación.
+
+                   o Aseguran la trazabilidad de la inversión y el cumplimiento de
+                       los hitos establecidos en la ruta crítica.
+
+6. Indicadores de impacto y seguimiento
+  El éxito de la transformación digital en Textiles y Confecciones Atlas E.I.R.L.
+  depende de un sistema de monitoreo que permita medir objetivamente los
+resultados del nuevo software logístico y de las estrategias de marketing. Estos
+indicadores actúan como una brújula para la toma de decisiones estratégicas,
+garantizando que la inversión se traduzca en eficiencia operativa y crecimiento
+comercial.
+
+6.1.   Identificación y Clasificación de KPIs
+       Los indicadores se organizan en áreas clave que reflejan los objetivos de
+       la empresa:
+
+       o Eficiencia Logística: Precisión de stock y reducción de rotura de
+          inventario.
+
+       o Gestión Comercial: Tiempo de respuesta a proformas y tasa de
+          conversión de ventas.
+
+       o Presencia Digital: Alcance en redes sociales y crecimiento de la base
+          de datos de clientes regionales.
+
+
+
+
+6.2.   Métricas y Fuentes de Datos
+       La objetividad del seguimiento se basa en fuentes de información
+       digitalizadas que reemplazan a los registros manuales:
+
+       o Sistema de Gestión Logística (POS/Software): Datos de pedidos de
+          provincias, niveles de stock en tiempo real y registro de ventas diarias.
+
+       o Herramientas de Marketing Digital: Métricas de Meta Business Suite
+          (Facebook/Instagram), interacción en WhatsApp Business y tráfico al
+          catálogo digital.
+
+       o Registros Administrativos: Reportes de ventas y comparativos de
+          rentabilidad mensual.
+6.3.   Metodología de Seguimiento
+       Se combinará la agilidad de los datos en tiempo real con análisis
+       detallados para asegurar la sostenibilidad del proyecto:
+
+       o Dashboards del Sistema: Visualización inmediata de los productos
+          más vendidos en la PC de ventas.
+
+       o Reportes Automatizados: Análisis semanales del desempeño
+          comercial y efectividad de las promociones.
+
+       o Analítica Digital: Evaluación del comportamiento de los usuarios
+          frente al catálogo digital para ajustar la oferta de artículos deportivos.
+
+6.4.   Frecuencia y Responsables
+       Para que el monitoreo sea útil, se asignan periodicidades y responsables
+       claros:
+
+   6.4.1. Frecuencia de medición
+          o Diaria/Semanal: Nivel de stock crítico, registro de ventas y
+                 consultas por canales digitales.
+
+          o Mensual: Tasa de reducción de errores de inventario y efectividad
+                 de las campañas de marketing.
+
+          o Semestral: Auditoría digital de inventarios y revisión del impacto
+                 en la rentabilidad global.
+
+   6.4.2. Responsables del monitoreo
+          o Encargado de Ventas/Almacén: Control de existencias y
+                 precisión en el registro de salidas de mercadería.
+
+          o Responsable           de    Marketing:     Alcance   de   campañas     y
+                 actualización del catálogo digital.
+
+          o Gerencia General: Análisis de los dashboards estratégicos para la
+                 toma de decisiones de compra a proveedores.
+
+6.5.   Ciclo de Mejora Continua
+       Los KPIs no solo muestran resultados, sino que impulsan la optimización
+       constante del negocio:
+         o Identificación de Desviaciones: Detección de problemas como baja
+             rotación de ciertos artículos deportivos o lentitud en la respuesta a
+             clientes de provincias.
+
+         o Análisis de Causas Raíz: Revisión de si la falla está en el registro del
+             sistema, en la logística de despacho o en el contenido de las
+             campañas digitales.
+
+         o Implementación de Ajustes: Mejora en la configuración del software,
+             refuerzo en la capacitación del personal o cambio de enfoque en la
+             publicidad online.
+
+         o Validación de Efectividad: Monitoreo del impacto tras los cambios
+             aplicados para asegurar que la empresa se adapte ágilmente a las
+             demandas del mercado regional.
+
+
+7. Presupuesto
+
+                                                                    COFINANCIAMIENTO
+                                                      Aporte       ENTIDAD EJECUTORA
+        Partidas Descripción           Aporte total ProInnóvate
+                                                        RNR        APORTE   APORTE NO
+                                                                  MONETARIO MONETARIO
+
+   SERVICIOS A TERCEROS
+
+   -                                     S/ 0.00      S/ 0.00       S/ 0.00     S/ 0.00
+
+   CONSULTORÍA
+   Implementación de Sistema de
+   Gestión Comercial
+   Configuración de inventarios
+   (entradas/salidas/stock y
+   despliegue de Catálogo Digital de
+   productos.
+   Pack Trimestral de Marketing             S/
+                                                    S/ 39,661.00 S/ 10,225.00   S/ 0.00
+   Digital y Gestión de Redes           49,886.00
+   Servicio de 3 meses que incluye,
+   Estrategia de lanzamiento, diseño
+   y redacción de publicaciones
+   mensuales (Facebook/TikTok/IG)
+   y administración de campañas
+   publicitarias.
+   GASTOS ELEGIBLES
+   DIFUSIÓN - HITO 03                   S/ 400.00    S/ 339.00     S/ 61.00     S/ 0.00
+   MATERIALES E INSUMOS
+   No está permitido compras             S/ 0.00      S/ 0.00       S/ 0.00     S/ 0.00
+   HONORARIOS
+   Coordinador General                     S/ 6,857.00       S/ 0.00             S/ 0.00     S/ 6,857.00
+
+
+
+
+                                                                 COFINANCIAMIENTO ENTIDAD
+                                               Aporte                   EJECUTORA
+          RESUMEN         Aporte total       ProInnóvate
+                                                 RNR              APORTE                   APORTE NO
+                                                                 MONETARIO                 MONETARIO
+
+   Servicios a terceros      S/ 0.00           S/ 0.00                 S/ 0.00               S/ 0.00
+                               S/
+   Consultoría                               S/ 39,661.00        S/ 10,225.00                S/ 0.00
+                           49,886.00
+   Gastos elegibles        S/ 400.00          S/ 339.00                S/ 61.00              S/ 0.00
+   Materiales e
+                             S/ 0.00           S/ 0.00                 S/ 0.00               S/ 0.00
+   insumos
+   Honorarios              S/ 6,857.00         S/ 0.00                 S/ 0.00             S/ 6,857.00
+                               S/
+                  TOTAL                      S/ 40,000.00        S/ 10,286.00              S/ 6,857.00
+                           57,143.00
+
+
+
+                                                                  COFINANCIAMIENTO ENTIDAD
+                                                Aporte                   EJECUTORA
+     PRESUPUESTO
+                            Aporte total      ProInnóvate
+      APROBADO                                                     APORTE                  APORTE NO
+                                                  RNR
+                                                                  MONETARIO                MONETARIO
+                                 S/
+   MONETARIO                                  S/ 40,000.00        S/ 10,286.00             S/ 6,857.00
+                             50,286.00
+   NO MONETARIO               S/ 0.00            S/ 0.00                S/ 0.00              S/ 0.00
+                                 S/
+                   TOTAL                      S/ 40,000.00        S/ 10,286.00             S/ 6,857.00
+                             50,286.00
+
+
+8. Conclusiones
+
+  En conclusión, el presente Plan de Implementación marca un hito decisivo en la
+  evolución estratégica de Textiles y Confecciones Atlas E.I.R.L., estableciendo
+  una ruta crítica diseñada para la profesionalización operativa y la competitividad
+  digital. La viabilidad de este proyecto se sustenta en los siguientes pilares:
+
+      •    Viabilidad en la Ejecución y Sostenibilidad: El plan es plenamente
+           ejecutable al basarse en una arquitectura tecnológica ligera (SaaS/Cloud)
+           que no requiere infraestructuras complejas, adaptándose a la capacidad
+           actual de la empresa. Se aprovechan los 35 años de prestigio y el
+           liderazgo comprometido de la gerencia, orientando estos activos hacia la
+           consolidación de un sistema operativo moderno que garantiza la
+           continuidad del negocio.
+     •   Eficiencia Operativa Probada: Se resuelve la problemática histórica del
+         descontrol de stock y la dependencia de registros manuales. La
+         implementación del sistema POS y el inventario en la nube elimina la
+         duplicidad de tareas, mitigando el riesgo de error humano y transformando
+         la información en el activo principal para la aceleración de ventas.
+
+     •   Viabilidad Temporal y Cumplimiento de Hitos: El cronograma
+         propuesto es realista y consistente, asegurando la entrega de los
+         productos finales dentro del plazo establecido por el programa (con cierre
+         proyectado antes del 22 de julio de 2026). La metodología escalada
+         permite obtener resultados tangibles desde el segundo mes de
+         implementación, asegurando un retorno de inversión temprano.
+
+     •   Transformación y Liderazgo Regional: Con la puesta en marcha de
+         este plan, Textiles y Confecciones Atlas E.I.R.L. trasciende su modelo de
+         tienda tradicional para convertirse en una comercializadora tecnológica de
+         alto impacto, capaz de atender la demanda de Arequipa, Cusco y Puno
+         con precisión, rapidez y una visibilidad online profesional.
+
+     •   Resiliencia Competitiva: Este plan no es una solución aislada, sino la
+         base de un ecosistema digital sólido que garantiza la sostenibilidad frente
+         a competidores modernos, posicionando a la empresa como el referente
+         técnico y comercial del rubro deportivo en el sur del Perú.
+
+9. Recomendaciones
+  9.1.   Corto Plazo: Adopción y Confianza en el Sistema
+         o Entrenar al personal de ventas en el uso del software para que el
+            registro digital sea instintivo y reemplace totalmente al cuaderno desde
+            el primer día.
+
+         o Garantizar que la PC de ventas y la conexión a internet sean estables
+            para evitar retrocesos al sistema manual por fallas técnicas.
+
+         o Asegurar que la carga inicial de productos (tallas, modelos y precios)
+            sea exacta para generar confianza en los reportes del sistema.
+9.2.   Mediano Plazo: Optimización y Expansión Digital
+       o Utilizar los reportes automatizados de ventas para negociar mejores
+          precios con proveedores de los artículos con mayor rotación.
+
+       o Invertir en pauta publicitaria dirigida específicamente a clubes
+          deportivos y ligas de Cusco y Puno, utilizando el catálogo digital como
+          herramienta de cierre de ventas.
+
+       o Implementar una base de datos de clientes para enviar promociones
+          personalizadas por WhatsApp según la temporada deportiva.
+
+9.3.   Largo Plazo: Innovación y Proyección Nacional
+       o Estudiar las tendencias de compra estacionales para anticipar el stock
+          necesario antes de las campañas escolares o campeonatos
+          regionales.
+
+       o Evaluar la apertura de nuevos puntos de venta o un centro de
+          distribución mayorista, gestionados bajo la misma plataforma digital
+          centralizada.
+
+       o Mantener al equipo actualizado en herramientas de atención al cliente
+          digital para sostener la ventaja competitiva obtenida.
+

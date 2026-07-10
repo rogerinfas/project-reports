@@ -1,0 +1,3204 @@
+Diagnóstico Situacional – Textiles y Confecciones Atlas E.I.R.L.
+
+                       DIAGNOSTICO SITUACIONAL
+
+
+   Optimización de Procesos e Implementación Digital para mejorar la
+  Gestión de Inventarios y fortalecer la presencia comercial y digital de
+                  Textiles y Confecciones Atlas E.I.R.L.
+
+
+
+
+Empresa beneficiaria     :   TEXTILES Y CONFECCIONES ATLAS E.I.R.L.
+RUC                      :   20558074427
+Contrato                 :   N: 954-PROINNOVATE-IMTEMD-2025
+Periodo del informe      :   29/10/2025 – 28/11/2025
+
+
+
+
+                                                AGENTE AUTOMATIZADO
+                                                LLAMA.PE S.A.
+                                                sistemas@llama.pe
+                                                Fecha: 26/03/2026 10:43
+                                                Firmado por Watana
+
+
+
+    FARIDE SOFIA CUELLAR                  FREDY VICTOR RAMOS GRANDA
+           BRAVO                              Consultor del proyecto
+    Coordinador general del
+          proyecto
+
+
+
+
+                             AREQUIPA – PERÚ
+                                   2025
+Diagnóstico Situacional – Textiles y Confecciones Atlas E.I.R.L.
+
+                                                      Contenido
+
+
+
+1.      Información general de la empresa ............................................................. 1
+
+2.      Objetivo del diagnóstico .............................................................................. 2
+
+3.      Descripción de la empresa .......................................................................... 3
+
+4.      Metodología ................................................................................................ 5
+
+     4.1. Herramientas usadas ............................................................................ 5
+
+     4.2. Matriz FODA ......................................................................................... 5
+
+        4.2.1. Fortalezas (Factores Internos) ........................................................ 6
+
+        4.2.2. Debilidades (Factores Internos) ...................................................... 7
+
+        4.2.3. Oportunidades (Factores Externos) ................................................ 7
+
+        4.2.4. Amenazas (Factores Externos) ...................................................... 7
+
+     4.3. Análisis PESTEL ................................................................................... 8
+
+        4.3.1. Factores Políticos ........................................................................... 8
+
+        4.3.2. Factores Económicos ..................................................................... 8
+
+        4.3.3. Factores Socioculturales ................................................................ 9
+
+        4.3.4. Factores Tecnológicos .................................................................... 9
+
+        4.3.5. Factores Ecológicos (Ambientales) .............................................. 10
+
+        4.3.6. Factores Legales .......................................................................... 10
+
+     4.4. Análisis GAP ....................................................................................... 10
+
+        4.4.1. Dimensión Logística y Control de Existencias .............................. 11
+
+        4.4.2. Dimensión Comercial y Omnicanalidad ........................................ 11
+
+        4.4.3. Dimensión Administrativa y Toma de Decisiones ......................... 12
+
+        4.4.4. Dimensión de Presencia Digital y Marketing ................................ 12
+
+        4.4.5. Plan de Acción Estratégico ........................................................... 13
+
+        4.4.6. KPIs para Medir el Éxito (Indicadores de Impacto) ....................... 14
+
+     4.5. Flujograma de procesos ...................................................................... 15
+Diagnóstico Situacional – Textiles y Confecciones Atlas E.I.R.L.
+
+        4.5.1. Procesos Estratégicos .................................................................. 15
+
+        4.5.2. Procesos Operativos Principales (Ciclo de Venta) ....................... 15
+
+        4.5.3. El Inventario como Eje del Servicio .............................................. 16
+
+     4.6. Benchmarking ..................................................................................... 17
+
+        4.6.1. Textiles y Confecciones Atlas E.I.R.L. .......................................... 17
+
+        4.6.2. Competidor La Fábrica ................................................................. 18
+
+        4.6.3. Competidor Texfaser .................................................................... 18
+
+        4.6.4. Competidor J.E.M. Textiles ........................................................... 18
+
+     4.7. Auditoría tecnológica ........................................................................... 19
+
+        4.7.1. Evaluación del Estado Actual ....................................................... 19
+
+        4.7.2. Nivel de Madurez Tecnológica ..................................................... 21
+
+5.      Estado de madurez digital ......................................................................... 21
+
+     5.1. Matriz de subdimensiones................................................................... 21
+
+        5.1.1. Indicador de Evaluación General .................................................. 22
+
+        5.1.2. Prácticas de Gestión..................................................................... 24
+
+        5.1.3. Capital Humano ............................................................................ 25
+
+        5.1.4. Infraestructura Y Software ............................................................ 26
+
+        5.1.5. Comercial y Financiero ................................................................. 28
+
+        5.1.6. Operaciones Y Cadena De Suministro ......................................... 29
+
+     5.2. Matriz de priorización .......................................................................... 30
+
+        5.2.1. Metodología de Evaluación .......................................................... 30
+
+        5.2.2. Resultados y Ruta Estratégica...................................................... 31
+
+     5.3. Análisis de interoperabilidad ............................................................... 31
+
+        5.3.1. Objetivo del análisis ...................................................................... 32
+
+        5.3.2. Resultado ..................................................................................... 32
+
+        5.3.3. Análisis ......................................................................................... 32
+
+        5.3.4. Plan de acción .............................................................................. 32
+Diagnóstico Situacional – Textiles y Confecciones Atlas E.I.R.L.
+
+        5.3.5. Impacto esperado ......................................................................... 32
+
+6.      Resultados ................................................................................................ 33
+
+     6.1. Capacidades Organizacionales ........................................................... 33
+
+     6.2. Procesos Operativos ........................................................................... 33
+
+     6.3. Resultado de Brechas Críticas Detectadas ......................................... 34
+
+     6.4. Resultado del Análisis de Factores Externos ...................................... 35
+
+     6.5. Resultado del Análisis Comparativo .................................................... 35
+
+     6.6. Conclusión .......................................................................................... 35
+
+7.      Validación del autodiagnóstico .................................................................. 36
+
+     7.1. Verificación Cruzada de Resultados ................................................... 36
+
+     7.2. Contraste con los objetivos de la digitalización ................................... 37
+
+     7.3. Conclusiones de la Validación ............................................................ 38
+
+        7.3.1. Confiabilidad del Diagnóstico ....................................................... 38
+
+        7.3.2. Precisión ....................................................................................... 38
+
+8.      Matriz de consistencia ............................................................................... 39
+
+9.      Cronograma .............................................................................................. 40
+
+     9.1. Fase 1: Diagnóstico y Arquitectura (Mes 1) ........................................ 40
+
+     9.2. Fase 2: Selección y Configuración (Mes 2) ......................................... 40
+
+     9.3. Fase 3: Desarrollo e Integración Operativa (Mes 3) ............................ 40
+
+     9.4. Fase 4: Sincronización y Pruebas (Mes 4) .......................................... 40
+
+     9.5. Fase 5: Capacitación, Piloto y Lanzamiento (Mes 4) .......................... 40
+
+10.       Anexos ................................................................................................... 41
+
+11.       Evidencia Fotográfica ............................................................................... 1
+Diagnóstico Situacional – Textiles y Confecciones Atlas E.I.R.L.
+Diagnóstico Situacional – Textiles y Confecciones Atlas E.I.R.L.
+
+1. Información general de la empresa
+   Textiles y Confecciones Atlas E.I.R.L. es una organización formalmente
+   constituida en la ciudad de Arequipa, Perú, iniciando sus operaciones
+   comerciales el 1 de febrero del mismo año. La empresa tiene su sede
+   principal en la calle Dean Valdivia N.° 321, Arequipa, y está categorizada
+   como una microempresa (MYPE) dentro del sector comercial textil.
+
+   Con un respaldo de más de 35 años de experiencia en el mercado y una
+   década    de   formalización   empresarial,   la   organización   ha   logrado
+   posicionarse como un referente en el sur del país. A diferencia de otras
+   empresas del rubro, Textiles y Confecciones Atlas E.I.R.L. se especializa
+   exclusivamente en la comercialización y venta de:
+
+      •   Indumentaria deportiva: Camisetas, buzos y ropa técnica para
+          diversas disciplinas.
+
+      •   Artículos deportivos: Accesorios y equipamiento complementario
+          para deportistas.
+
+   La misión de la empresa es satisfacer de manera integral las necesidades de
+   deportistas y organizaciones mediante la comercialización de prendas y
+   artículos deportivos de alta calidad, garantizando un servicio de venta ágil,
+   eficiente y adaptado a las tendencias del mercado. Su visión es Consolidarse
+   como la comercializadora de artículos deportivos líder en el sur del Perú
+   (Arequipa, Puno y Cusco), proyectándose hacia la importación directa de
+   implementos bajo su propia marca.
+
+   Actualmente, la empresa gestiona sus operaciones con un equipo de entre
+   10 y 12 colaboradores dedicados a la fuerza de ventas, atención al cliente y
+   logística. Su éxito se basa en la especialización exclusiva en el sector
+   deporte, lo que le permite ofrecer un catálogo altamente competitivo en el
+   mercado arequipeño.
+Diagnóstico Situacional – Textiles y Confecciones Atlas E.I.R.L.
+
+
+
+
+                               Ilustración 1 Organigrama
+
+2. Objetivo del diagnóstico
+   El diagnóstico empresarial de Textiles y Confecciones Atlas E.I.R.L. tiene
+   como objetivo principal realizar una evaluación integral del estado actual de
+   la organización, mediante un análisis detallado de sus procesos comerciales,
+   logísticos y administrativos. Este análisis constituye el punto de partida para
+   definir acciones estratégicas que impulsen la modernización operativa y la
+   transformación digital de la empresa en su rol como comercializadora.
+
+   De manera específica, el diagnóstico persigue los siguientes propósitos:
+
+   •   Identificar fortalezas y competencias comerciales: Reconocer los
+       recursos, capacidades de venta y ventajas competitivas que posicionan a
+       la empresa en el mercado deportivo regional, así como el potencial de su
+       capital humano en la atención al cliente.
+
+   •   Detectar debilidades y áreas de oportunidad: Evidenciar limitaciones
+       en la gestión de inventarios, procesos de venta ineficientes o falta de
+       herramientas digitales, identificando factores externos favorables para el
+       crecimiento del sector deporte.
+
+   •   Determinar el nivel de madurez digital: Establecer la situación actual
+       de la empresa respecto a la integración tecnológica en su ciclo de ventas
+       y distribución, clasificándola en los niveles: Básico, Intermedio, Avanzado
+       o Finalizado.
+Diagnóstico Situacional – Textiles y Confecciones Atlas E.I.R.L.
+
+   •   Revelar brechas de digitalización: Definir las diferencias entre el estado
+       presente y el estado deseado para adoptar tecnologías que eleven la
+       productividad comercial y la competitividad de la organización.
+
+   •   Definir herramientas tecnológicas a integrar: Proporcionar criterios
+       claros sobre qué soluciones (como sistemas de gestión de ventas o e-
+       commerce) deben incorporarse según las necesidades detectadas.
+
+   •   Evaluar la capacidad de adopción tecnológica: Determinar qué tan
+       preparada está la empresa para implementar nuevas soluciones digitales
+       en su flujo de comercialización y qué ajustes internos se requieren.
+
+   •   Priorizar objetivos y planes de mejora: Orientar la toma de decisiones
+       hacia los procesos más críticos, incluyendo la seguridad de la información
+       de clientes y la gestión de riesgos logísticos.
+
+   •   Aterrizar la situación real de la empresa: Generar una base sólida para
+       la ejecución de proyectos estratégicos, como la digitalización del catálogo
+       y un programa de marketing digital para fortalecer la presencia en línea
+       dentro del mercado deportivo.
+
+   En suma, el diagnóstico busca no solo identificar el estado actual de la
+   comercializadora, sino también establecer las rutas de acción para alcanzar
+   una transformación digital efectiva. Asimismo, constituye una herramienta
+   fundamental para validar la viabilidad del proyecto ante entidades como
+   ProInnóvate, asegurando que las soluciones propuestas para la empresa
+   sean realistas y sostenibles en el mediano y largo plazo.
+
+3. Descripción de la empresa
+   Textiles y Confecciones Atlas E.I.R.L. es una microempresa arequipeña
+   especializada exclusivamente en la comercialización y venta de prendas y
+   artículos deportivos. Su catálogo incluye una amplia gama de productos
+   como camisetas, buzos, shorts, pelotas, trofeos y accesorios especializados
+   para diversas disciplinas. Su propuesta de valor se basa en la curaduría de
+   productos de calidad y la capacidad de proveer equipamiento deportivo
+   integral, lo que la posiciona como un aliado estratégico para deportistas y
+   organizaciones del sector.
+Diagnóstico Situacional – Textiles y Confecciones Atlas E.I.R.L.
+
+   La organización cuenta con una estructura funcional adaptada a la
+   comercialización, compuesta por las áreas de Gerencia, Administración,
+   Ventas y Logística. El equipo humano, integrado por entre 5 y 7
+   colaboradores, se especializa en funciones críticas de la cadena de ventas:
+
+   •   Gestión de compras y selección de proveedores.
+
+   •   Atención al cliente y fuerza de ventas (mostrador).
+
+   •   Control de inventarios y gestión de almacén.
+
+   •   Logística de despacho, empaquetado y entrega final.
+
+   En el ámbito tecnológico, la empresa dispone de equipos de cómputo para la
+   gestión administrativa (las ventas). No obstante, la gestión de stocks, el
+   control de inventarios y la planificación de compras aún se realizan de forma
+   manual o mediante herramientas digitales básicas (WhatsApp, Excel, y
+   Google Drive). Esta dependencia de procesos manuales genera dispersión
+   de la información y limita la velocidad de respuesta comercial, identificándose
+   como la principal área de mejora técnica.
+
+   El mercado de Textiles y Confecciones Atlas E.I.R.L. se compone de
+   deportistas individuales, clubes deportivos, ligas regionales, clientes
+   mayoristas y minoristas, así como consumidores finales apasionados por el
+   deporte. Su cobertura principal se concentra en Arequipa, con una presencia
+   creciente en regiones como Puno, Cusco y Lima.
+
+   Entre sus fortalezas destacan:
+
+   •   Una reputación consolidada en el rubro deportivo.
+
+   •   Gran capacidad de adaptación a la estacionalidad (campañas deportivas).
+
+   •   Vasta experiencia de sus fundadores en el mercado textil deportivo.
+
+   Por el contrario, los desafíos actuales se centran en la competencia de
+   productos importados de bajo costo y la necesidad urgente de digitalizar los
+   procesos de venta y control de mercadería.
+Diagnóstico Situacional – Textiles y Confecciones Atlas E.I.R.L.
+
+   Alineada con su visión, la empresa busca fortalecer su liderazgo en el
+   comercio deportivo regional a través de tres pilares:
+
+   •   Transformación Digital: Implementación de un sistema de gestión logística
+       y de inventarios en tiempo real.
+
+   •   Marketing Digital: Despliegue de campañas estratégicas para posicionar
+       la marca Atlas como el referente principal en equipamiento deportivo del
+       sur del Perú.
+
+4. Metodología
+4.1.   Herramientas usadas
+       Para cumplir con estos objetivos, el diagnóstico de Textiles y
+       Confecciones Atlas E.I.R.L. emplea diversas herramientas de análisis
+       estratégico, adaptadas a su modelo de comercialización:
+
+       •   FODA: Para identificar las fortalezas y debilidades internas de la
+           gestión comercial, así como las oportunidades y amenazas del entorno
+           deportivo regional.
+
+       •   PESTEL: Para evaluar factores políticos, económicos, sociales,
+           tecnológicos, ecológicos y legales que afectan específicamente al
+           comercio de artículos deportivos y las importaciones.
+
+       •   GAP: Para comparar el estado actual de la empresa con el nivel de
+           digitalización ideal e identificar las brechas en la gestión de inventarios
+           y ventas.
+
+       •   Mapa de procesos: Para clasificar y entender los procesos
+           estratégicos, operativos (compras, almacenamiento, ventas) y de
+           soporte de la comercializadora.
+
+       •   Benchmarking: Para contrastar el desempeño de la empresa con
+           competidores directos y referentes en la distribución de artículos de
+           deporte en el sur del Perú.
+
+4.2.   Matriz FODA
+       El análisis FODA permitirá evaluar la situación interna y externa de
+       Textiles y Confecciones Atlas E.I.R.L. Esta herramienta ayudará a
+Diagnóstico Situacional – Textiles y Confecciones Atlas E.I.R.L.
+
+      identificar y destacar las áreas críticas que necesitan mejora en el ciclo de
+      comercialización, así como a reconocer las tendencias del mercado
+      deportivo que pueden ser aprovechadas y los riesgos competitivos que
+      deben ser gestionados de manera proactiva.
+
+
+
+
+                                 Ilustración 2 FODA
+
+4.2.1. Fortalezas (Factores Internos)
+      •   Liderazgo y Recordación de Marca: Con tantos años en el mercado,
+          la empresa no es una desconocida. En Arequipa, el nombre "Atlas" ya
+          está asociado a la indumentaria deportiva, lo que reduce el costo de
+          adquisición de clientes locales.
+
+      •   Ubicación Premium (Hub Comercial): Estar en la calle Deán Valdivia
+          no es solo tener un local; es estar en el epicentro donde los
+          compradores de provincias (Cusco, Puno, Moquegua) llegan
+          directamente a abastecerse. Es un canal de venta orgánica masiva.
+
+      •   Especialización Curada: Al no ser una tienda de ropa generalista, su
+          personal posee un "know-how" técnico sobre telas deportivas,
+Diagnóstico Situacional – Textiles y Confecciones Atlas E.I.R.L.
+
+          durabilidad de balones y especificaciones de trofeos, lo que ofrece una
+          asesoría que las grandes tiendas por departamento no tienen.
+
+4.2.2. Debilidades (Factores Internos)
+      •   Gestión de Inventario Empírica: Al usar Excel o registros manuales,
+          existe un alto riesgo de "quiebre de stock" (negar una venta porque no
+          se sabía que el producto se acabó) o de sobrestock (dinero
+          inmovilizado en productos que no rotan).
+
+      •   Desconexión entre Ventas y Almacén: La falta de un sistema
+          centralizado genera lentitud. Si un cliente consulta por 50 camisetas
+          desde otra provincia, el equipo debe verificar físicamente, perdiendo
+          agilidad y posibilidad de cierre de venta inmediato.
+
+      •   Dependencia del Capital Humano: Muchos procesos críticos están
+          "en la cabeza" de los fundadores o trabajadores antiguos. Sin
+          manuales digitales o sistemas, la operación se vuelve vulnerable si un
+          colaborador clave se retira.
+
+4.2.3. Oportunidades (Factores Externos)
+      •   Digitalización del Catálogo: El paso de una tienda física a tener un
+          catálogo digital permitiría a Atlas atender pedidos de todo el sur del
+          país sin esperar a que el cliente viaje a Arequipa.
+
+      •   Crecimiento del Deporte Amateur: El aumento de campeonatos de
+          instituciones públicas y privadas tras la pandemia ha reactivado la
+          necesidad de uniformes y trofeos, un mercado donde Atlas es
+          especialista.
+
+      •   Acceso a Fondos de Innovación: La categoría MYPE permite a la
+          empresa postular a fondos no reembolsables para modernizar su
+          software, algo que antes era un gasto y hoy puede ser una inversión
+          subvencionada.
+
+4.2.4. Amenazas (Factores Externos)
+      •   Precios de Importación Volátiles: Al ser comercializadora, Atlas
+          depende de terceros. Si el dólar sube o los fletes marítimos aumentan,
+Diagnóstico Situacional – Textiles y Confecciones Atlas E.I.R.L.
+
+           los márgenes de ganancia se reducen si no se cuenta con una
+           estrategia de compras eficiente.
+
+       •   Retail de Grandes Superficies: La apertura de más centros
+           comerciales en Arequipa con tiendas como Decathlon o Marathon
+           representa una amenaza para el cliente minorista que busca
+           "experiencia de compra" y tecnología en el punto de venta.
+
+       •   Mercado de Réplicas: La informalidad en zonas aledañas que
+           venden productos de baja calidad a mitad de precio obliga a Atlas a
+           esforzarse más en comunicar la calidad y durabilidad de sus
+           productos originales o de gama técnica.
+
+4.3.   Análisis PESTEL
+4.3.1. Factores Políticos
+       •   Inestabilidad Nacional y Regional: La incertidumbre política en el
+           Perú afecta directamente la confianza del consumidor en Arequipa,
+           postergando compras de equipamiento deportivo (bienes no
+           esenciales).
+
+       •   Conflictos Sociales y Paros: Al estar ubicada en la calle Deán
+           Valdivia, los paros regionales bloquean el acceso de clientes de
+           provincias (Puno, Cusco) y retrasan la llegada de mercadería desde
+           los proveedores en Lima o del extranjero.
+
+       •   Normativas de Seguridad (Defensa Civil): El cumplimiento de
+           estándares en el local físico (pozos a tierra, sistemas eléctricos) es
+           una exigencia legal que eleva el costo de operación frente a los
+           puestos ambulatorios o informales del sector.
+
+       •   Costo de la Formalidad: Como E.I.R.L. formal, Atlas asume cargas
+           fiscales   y   regulatorias   que   la   competencia   informal   evade,
+           permitiéndoles a estos últimos ofrecer precios artificialmente más
+           bajos.
+
+4.3.2. Factores Económicos
+       •   Competencia Global (Precios Bajos): La entrada masiva de
+           productos deportivos chinos a través de plataformas como Temu,
+Diagnóstico Situacional – Textiles y Confecciones Atlas E.I.R.L.
+
+          Alibaba o AliExpress presiona los márgenes de ganancia de Atlas, ya
+          que el consumidor ahora compara precios locales con precios de
+          fábrica internacional.
+
+      •   Poder Adquisitivo: La inflación y la desaceleración económica
+          obligan a las familias a priorizar el gasto en canasta básica, reduciendo
+          el presupuesto destinado a uniformes o implementos para clubes
+          deportivos aficionados.
+
+      •   Dependencia de la Importación: Al ser comercializadora, el precio
+          final de los balones, zapatillas y ropa técnica depende directamente de
+          la estabilidad del dólar y los costos de fletes internacionales.
+
+4.3.3. Factores Socioculturales
+      •   Hábitos de Consumo "Low-Cost": Existe una fuerte cultura de
+          búsqueda de ofertas sobre calidad, lo que dificulta la venta de artículos
+          deportivos técnicos o de alta gama.
+
+      •   Tendencia de Estilo de Vida Saludable: Una oportunidad clave es el
+          crecimiento de la cultura "fitness" en Arequipa, lo que aumenta la
+          demanda de ropa deportiva para uso diario (athleisure) y artículos para
+          entrenamiento en casa.
+
+      •   Gestión del Talento Generacional: Se observa un reto en la
+          retención de personal joven en la fuerza de ventas, quienes muestran
+          menor compromiso a largo plazo en comparación con el personal con
+          más años en la empresa.
+
+4.3.4. Factores Tecnológicos
+      •   Marketing Digital: El auge de las redes sociales es la oportunidad de
+          oro para que Atlas deje de depender solo del flujo físico de la calle
+          Deán Valdivia y empiece a vender a todo el sur del país.
+
+      •   Automatización Logística: La necesidad urgente de implementar
+          códigos de barras y sistemas de inventario para eliminar el error
+          humano en el conteo de existencias de las diversas tallas y modelos
+          deportivos.
+Diagnóstico Situacional – Textiles y Confecciones Atlas E.I.R.L.
+
+       •   Ciberseguridad: El uso de herramientas en la nube (Google Drive,
+           WhatsApp Business) para gestionar pedidos de provincias exige
+           protocolos de protección de datos de los clientes para evitar estafas o
+           pérdida de información comercial.
+
+4.3.5. Factores Ecológicos (Ambientales)
+       •   Sostenibilidad en el Retail: El sector textil es uno de los más
+           cuestionados     ambientalmente.    Existe    una    oportunidad    en
+           comercializar marcas que utilicen materiales reciclados o procesos
+           "eco-friendly", aunque el cliente local aún es reacio a pagar un
+           sobrecosto por ello.
+
+       •   Regulación de Plásticos: La normativa peruana que limita las bolsas
+           de plástico de un solo uso obliga a la empresa a invertir en empaques
+           de papel o bolsas reutilizables, lo cual debe integrarse en el costo
+           operativo de la tienda.
+
+4.3.6. Factores Legales
+       •   Protección al Consumidor (Indecopi): La gestión manual de
+           inventarios puede llevar a errores en la publicidad de precios o
+           disponibilidad de stock, exponiendo a la empresa a quejas legales por
+           parte de los clientes.
+
+       •   Propiedad Intelectual: Riesgo de copia de modelos exclusivos o
+           captación de base de datos de clientes por parte de ex-colaboradores
+           que deciden abrir negocios similares, lo que exige mejores contratos
+           de confidencialidad.
+
+       •   Seguridad y Salud en el Trabajo: Obligación de cumplir con las
+           evaluaciones de riesgos para los colaboradores que realizan labores
+           de almacén y despacho en el local de Arequipa.
+
+4.4.   Análisis GAP
+       El análisis GAP permite contrastar la situación actual de Textiles y
+       Confecciones Atlas E.I.R.L. con el estado ideal de una comercializadora
+       moderna, identificando las acciones necesarias para digitalizar la ruta del
+       producto desde el proveedor hasta el cliente final.
+Diagnóstico Situacional – Textiles y Confecciones Atlas E.I.R.L.
+
+4.4.1. Dimensión Logística y Control de Existencias
+      •   Estado Actual (As-Is): Gestión basada en "registros de memoria" y
+          soportes analógicos (cuadernos). Existe una opacidad de inventario
+          del 100% en sistemas digitales; el stock solo se conoce mediante
+          conteo físico visual. Esto genera "quiebres de stock" no detectados y
+          exceso de productos de baja rotación que inmovilizan el capital.
+
+      •   Estado Deseado (To-Be): Implementación de una Única Fuente de
+          Verdad (Single Source of Truth). Un sistema logístico en la nube
+          donde cada entrada de mercadería de proveedores y cada salida por
+          venta en mostrador se sincronice automáticamente.
+
+      •   Brecha (Gap): Ausencia de una base de datos relacional y falta de
+          herramientas de captura de datos en el punto de venta.
+
+
+
+
+                          Ilustración 3 Almacén desordenado
+
+4.4.2. Dimensión Comercial y Omnicanalidad
+      •   Estado Actual (As-Is): Desconexión entre la oferta física y la
+          demanda digital. El proceso de venta por WhatsApp para clientes de
+          provincias o distintos sectores es lento y propenso al error, ya que
+          depende de que el vendedor verifique físicamente la disponibilidad
+          antes de confirmar un pedido.
+
+      •   Estado Deseado (To-Be): Despliegue de un Catálogo Digital
+          Sincronizado. El sistema debe permitir que el catálogo mostrado en
+Diagnóstico Situacional – Textiles y Confecciones Atlas E.I.R.L.
+
+           redes sociales sea un reflejo fiel de las existencias reales, reduciendo
+           el tiempo de ciclo de venta de horas a minutos.
+
+       •   Brecha (Gap): Falta de una interfaz digital (Catálogo de productos en
+           plataforma) que interactúe con el inventario físico.
+
+4.4.3. Dimensión Administrativa y Toma de Decisiones
+       •   Estado Actual (As-Is): Gestión reactiva. La gerencia no cuenta con
+           reportes de Sell-Through (tasa de venta) ni de rentabilidad por
+           categoría. Las decisiones de compra se toman por intuición histórica.
+
+       •   Estado Deseado (To-Be): Gestión Proactiva basada en Business
+           Intelligence (BI) básico. Generación de reportes semanales
+           automáticos de "Artículos Estrella" y "Artículos de Lento Movimiento".
+
+       •   Brecha (Gap): Inexistencia de capacidad analítica de datos.
+
+4.4.4. Dimensión de Presencia Digital y Marketing
+       El análisis revela una desconexión absoluta entre el prestigio físico de la
+       marca (35 años en el mercado) y su existencia en el entorno digital, donde
+       la empresa es actualmente inexistente.
+
+4.4.4.1.   Estado Actual (As-Is): Invisibilidad y Marketing Pasivo
+           •   Presencia en Redes Sociales: Nula. La empresa no cuenta con
+               fanpages oficiales en Facebook, Instagram ni perfiles en TikTok.
+               Esto impide que el público objetivo (jóvenes deportistas,
+               organizadores de ligas) encuentre a la empresa en los canales
+               donde hoy se consume contenido deportivo.
+
+           •   Identidad Digital: Inexistente. Al no tener presencia en línea, la
+               marca está expuesta a que terceros creen perfiles no oficiales o
+               que la competencia absorba la demanda de búsqueda por términos
+               como "uniformes deportivos en Arequipa".
+
+           •   Canal de Ventas Remoto: Limitado a un uso reactivo de
+               WhatsApp personal. No existe un catálogo digital estructurado, lo
+               que obliga al personal a enviar fotos de baja calidad tomadas en el
+Diagnóstico Situacional – Textiles y Confecciones Atlas E.I.R.L.
+
+               momento, proyectando una imagen poco profesional y ralentizando
+               el cierre de ventas.
+
+4.4.4.2.   Estado Deseado (To-Be): Posicionamiento y Omnicanalidad
+           •   Ecosistema      Social    Media:      Canales    oficiales   activos   y
+               profesionalizados que funcionen como una vitrina 24/7.
+
+           •   Alcance Regional: Capacidad de impactar mediante pauta
+               segmentada a provincias donde Textiles Atlas ya tiene reputación,
+               pero no tiene llegada publicitaria.
+
+4.4.4.3.   Identificación de la Brecha (Gap): El "Silencio Digital"
+           La brecha es de alcance y comunicación. Textiles y Confecciones
+           Atlas tiene el producto y el stock, pero carece del "puente digital" para
+           comunicarlo. Esta brecha justifica técnicamente la contratación de
+           servicios de marketing digital para la creación desde cero de la
+           identidad online.
+
+4.4.5. Plan de Acción Estratégico
+       Para cerrar las brechas identificadas, Textiles y Confecciones Atlas
+       E.I.R.L. ejecutará una estrategia integral dividida en dos pilares
+       sinérgicos:
+
+4.4.5.1.   Pilar 1: Gestión de Inventarios y Logística Digital
+           Este pilar resuelve la brecha de "Gestión Analógica" y "Opacidad de
+           Inventario".
+
+           •   Migración y Sistematización de Existencias: Digitalización total
+               del inventario físico actual (prendas deportivas, balones y trofeos).
+               Se pasará de listas manuales a una base de datos estructurada en
+               la nube, permitiendo la consulta remota de stock desde cualquier
+               dispositivo autorizado.
+
+           •   Protocolo       de     Transaccionalidad        en   Tiempo       Real:
+               Implementación de la obligatoriedad de registro digital para cada
+               entrada (compras a proveedores) y salida (ventas en mostrador).
+               Esto garantiza que el sistema sea la "Única Fuente de Verdad",
+               eliminando la necesidad de conteos físicos diarios.
+Diagnóstico Situacional – Textiles y Confecciones Atlas E.I.R.L.
+
+
+           •   Automatización      de    Reposición     (Stock    de   Seguridad):
+               Configuración de alertas inteligentes para los "productos estrella".
+               El sistema notificará automáticamente cuándo realizar un nuevo
+               pedido al proveedor, evitando la pérdida de ventas por quiebres de
+               stock.
+
+4.4.5.2.   Pilar 2: Marketing, Posicionamiento y Presencia Online
+           Este pilar resuelve la brecha de "Invisibilidad Digital" y la falta de
+           canales de venta modernos.
+
+           •   Despliegue de Identidad Digital y Redes Sociales: Creación y
+               profesionalización de perfiles oficiales en Facebook, Instagram. El
+               objetivo es transformar el prestigio "boca a boca" de la tienda física
+               en una comunidad digital activa, generando contenido que resalte
+               la calidad de los implementos deportivos.
+
+           •   Estrategia de Segmentación y Pauta Digital: Ejecución de
+               campañas dirigidas específicamente a organizadores de ligas,
+               clubes deportivos y colegios. Se utilizarán herramientas de
+               geolocalización para captar la demanda en ciudades estratégicas
+               del sur del país donde Atlas ya es reconocido, pero no tiene
+               presencia publicitaria.
+
+4.4.6. KPIs para Medir el Éxito (Indicadores de Impacto)
+       Para validar la efectividad de la implementación y cumplir con las metas
+       del programa, se establecen los siguientes indicadores clave:
+       •   Índice de Exactitud de Inventario (ERI):
+               o   Fórmula: (Stock registrado en sistema / Stock físico real) x 100.
+
+               o   Meta: Alcanzar una coincidencia superior al 75%, eliminando el
+                   margen de error del cuaderno manual.
+
+       •   Crecimiento del Alcance Digital (Reach):
+               o   Definición: Incremento mensual en el número de impresiones y
+                   visualizaciones en las nuevas redes sociales oficiales.
+
+               o   Meta: Establecer una línea base de 0 a 2,000 impactos
+                   mensuales en el primer trimestre.
+Diagnóstico Situacional – Textiles y Confecciones Atlas E.I.R.L.
+
+
+       •   Tasa de Conversión de Canales Digitales:
+              o   Fórmula: (Ventas cerradas desde redes sociales/ Consultas
+                  totales recibidas).
+
+              o   Meta: Incrementar la efectividad del cierre de ventas en un 10%
+                  gracias a la respuesta inmediata que brinda el catálogo digital.
+
+       •   Reducción del Tiempo de Respuesta al Cliente:
+              o   Definición: Tiempo promedio transcurrido desde la consulta del
+                  cliente en provincia hasta la confirmación de stock.
+
+              o   Meta: Reducir el tiempo de espera de horas (verificación física)
+                  a segundos (verificación digital).
+
+4.5.   Flujograma de procesos
+       El mapa de procesos de Textiles y Confecciones Atlas E.I.R.L. describe
+       el flujo operativo desde la captación del cliente hasta la entrega del
+       artículo deportivo terminado. Al ser una comercializadora, el eje central no
+       es la fabricación, sino la gestión eficiente del stock y la rapidez en la
+       atención comercial.
+
+4.5.1. Procesos Estratégicos
+       •   Gestión Gerencial: Enfocada en la planificación de compras a
+           proveedores mayoristas y la supervisión financiera de la MYPE.
+
+       •   Gestión Comercial y Marketing: Encargada de posicionar la marca
+           Atlas en el mercado deportivo del sur del país y captar clientes a través
+           de canales físicos (tienda) y digitales (redes sociales).
+
+4.5.2. Procesos Operativos Principales (Ciclo de Venta)
+       El flujo operativo se divide en etapas diseñadas para garantizar que el
+       deportista reciba el producto exacto en el menor tiempo posible:
+
+       •   Atención y Recepción de Requerimientos: El área de Ventas recibe
+           las consultas (presenciales en la calle Deán Valdivia o vía WhatsApp).
+           Se identifican las necesidades: tipo de disciplina deportiva, tallas,
+           cantidades y accesorios necesarios.
+Diagnóstico Situacional – Textiles y Confecciones Atlas E.I.R.L.
+
+
+      •   Verificación de Disponibilidad (Stock): El vendedor consulta el
+          inventario. En el modelo actual, esta consulta es manual, lo que
+          representa el principal cuello de botella. Se valida si el producto (ej.
+          balones, camisetas de marca, trofeos) está disponible para entrega
+          inmediata.
+
+      •   Gestión de Adquisiciones (Solo si no hay stock): Si el producto
+          solicitado no está en almacén, se activa un proceso de pedido al
+          proveedor. La Gerencia aprueba la compra para reposición de stock.
+
+      •   Preparación de Pedido (Picking y Packing): Una vez confirmado el
+          stock, el personal de Almacén selecciona los artículos, verifica que
+          estén en óptimas condiciones (control de calidad de producto
+          terminado) y procede al empaquetado.
+
+      •   Facturación y Registro: Se emite el comprobante de pago y se
+          descarga (actualmente de forma manual) el artículo del inventario de
+          la empresa.
+
+      •   Despacho y Entrega Final: Se realiza la entrega en mostrador o se
+          gestiona el envío logístico para clientes de provincias como Puno o
+          Cusco.
+
+4.5.3. El Inventario como Eje del Servicio
+      En una comercializadora, el inventario deja de ser un depósito de
+      materiales para convertirse en el activo más crítico:
+
+      •   Viabilidad Comercial: Determina si una venta se cierra en el
+          momento o si el cliente se va a la competencia.
+
+      •   Eficiencia Financiera: Evita tener capital inmovilizado en artículos
+          deportivos que no tienen rotación estacional.
+
+      •   Satisfacción del Cliente: Garantiza que el precio informado y la
+          disponibilidad sean exactos, evitando reclamos por falta de stock.
+Diagnóstico Situacional – Textiles y Confecciones Atlas E.I.R.L.
+
+
+
+
+                              Ilustración 4 Flujograma de procesos
+
+4.6.   Benchmarking
+       El análisis de benchmarking permite comparar las capacidades de
+       Textiles y Confecciones Atlas E.I.R.L. frente a otros actores del mercado
+       deportivo y textil en Arequipa, identificando brechas en la gestión
+       comercial y el nivel de digitalización.
+
+4.6.1. Textiles y Confecciones Atlas E.I.R.L.
+       •   Modelo de Negocio: Comercialización y venta minorista/mayorista de
+           indumentaria e instrumentos deportivos de diversas marcas.
+
+       •   Fortalezas: Ubicación estratégica en la calle Deán Valdivia y una
+           trayectoria de 35 años que le otorga una alta recordación de marca en
+           el sur del país.
+
+       •   Brecha Identificada: Gestión de inventarios y stock totalmente
+           manual (cuadernos/Excel), lo que genera lentitud en la confirmación
+           de pedidos y errores en la información de precios.
+Diagnóstico Situacional – Textiles y Confecciones Atlas E.I.R.L.
+
+
+      •   Comunicación: Tradicional y directa (tienda física y WhatsApp), con
+          una presencia aún incipiente en estrategias de marketing digital y
+          redes sociales.
+
+4.6.2. Competidor La Fábrica
+      •   Enfoque: Venta masiva dirigida a un público familiar con estrategias
+          basadas en el volumen.
+
+      •   Estrategia Comercial: Uso agresivo de promociones estacionales
+          ("Shopping Days") y descuentos profundos para rotar inventario
+          rápidamente.
+
+      •   Diferencia con Atlas: Mientras Atlas se especializa en el nicho
+          deportivo técnico, este competidor destaca por captar clientes
+          mediante precios bajos y una comunicación muy activa y festiva en
+          redes sociales.
+
+4.6.3. Competidor Texfaser
+      •   Enfoque: Distribución de artículos deportivos (balones de marcas
+          globales como Adidas/Nike) y servicios de personalización.
+
+      •   Canales: Combina la tienda física con un uso eficiente de Facebook y
+          WhatsApp para mostrar catálogos y cerrar ventas rápidas.
+
+      •   Diferencia con Atlas: Su agilidad radica en una comunicación
+          informativa clara y una política de precios visible, lo que atrae al cliente
+          que busca respuestas inmediatas sin necesidad de visitar la tienda
+          física.
+
+4.6.4. Competidor J.E.M. Textiles
+      •   Enfoque:     Modelo     estrictamente    B2B     (negocio    a   negocio),
+          especializado en la venta al por mayor de textiles y calzado.
+
+      •   Estructura: Operación pequeña pero eficiente, centrada en clientes
+          corporativos y pedidos de gran volumen.
+
+      •   Diferencia con Atlas: Carece de visibilidad hacia el consumidor final
+          (B2C) y no utiliza redes sociales, confiando exclusivamente en la venta
+          directa y el correo electrónico. Atlas tiene la ventaja de manejar ambos
+Diagnóstico Situacional – Textiles y Confecciones Atlas E.I.R.L.
+
+           segmentos, pero requiere modernizar su logística interna para no
+           perder eficiencia frente a estructuras más ligeras.
+
+
+
+
+                               Ilustración 5 Benchmarking
+
+4.7.   Auditoría tecnológica
+       La auditoría tecnológica evalúa la infraestructura, sistemas y capacidades
+       digitales actuales de Textiles y Confecciones Atlas para identificar las
+       brechas que frenan su crecimiento como comercializadora moderna.
+
+4.7.1. Evaluación del Estado Actual
+4.7.1.1.   Infraestructura y Equipamiento
+           •   Hardware Limitado: La empresa cuenta únicamente con una
+               computadora, la cual está ubicada en el mostrador para uso directo
+               en ventas.
+
+           •   Dispositivos Móviles: Se dispone de un solo celular de la
+               empresa, el cual centraliza la comunicación con clientes y
+               proveedores vía WhatsApp.
+
+           •   Conectividad: La conexión a internet es adecuada en la sede de
+               la calle Deán Valdivia, aunque existen inestabilidades que
+               ralentizan el sistema de facturación en momentos críticos.
+Diagnóstico Situacional – Textiles y Confecciones Atlas E.I.R.L.
+
+
+           •   Respaldo de Información: El respaldo se realiza de forma manual
+               y parcial en la nube; sin embargo, persiste el uso de memorias USB
+               para documentos críticos, lo que representa un alto riesgo de
+               pérdida de datos.
+
+4.7.1.2.   Software y Procesos
+           •   Facturación Externa: La empresa no posee un sistema de
+               facturación integrado; los comprobantes válidos se emiten
+               directamente a través del portal de SUNAT y la gestión se coordina
+               de forma externa con la contadora.
+
+           •   Gestión de Inventario: Al no haber un sistema propio, el control
+               de stock y existencias se realiza de manera manual en cuadernos
+               o Excel, lo que genera errores frecuentes en la información de
+               productos disponibles.
+
+           •   Comunicación y Ventas: Se utilizan redes sociales (Facebook,
+               TikTok) y WhatsApp para la promoción, pero sin herramientas de
+               análisis de datos ni una plataforma transaccional propia.
+
+4.7.1.3.   Seguridad de Datos
+           •   Vulnerabilidad: No existen políticas de ciberseguridad, antivirus
+               corporativos ni planes de contingencia ante fallos del único equipo
+               informático disponible.
+
+           •   Riesgo de Continuidad: La operación administrativa depende
+               totalmente de la disponibilidad de la plataforma de SUNAT y la
+               asistencia de la contadora, sin autonomía digital interna.
+
+4.7.1.4.   Identificación de Problemas y Riesgos Críticos
+           •   Desconexión Operativa: La falta de un sistema interno propio
+               provoca que la información de ventas, inventarios y facturación esté
+               dispersa y no sea consistente para la toma de decisiones.
+
+           •   Punto Único de Falla: Al contar con una sola computadora,
+               cualquier desperfecto técnico detiene por completo la gestión
+               administrativa y la consulta de precios o stock.
+Diagnóstico Situacional – Textiles y Confecciones Atlas E.I.R.L.
+
+
+          •   Gestión de Clientes Limitada: No existe un registro centralizado
+              de clientes; toda la información de pedidos de provincias reside en
+              el celular corporativo, dificultando el seguimiento formal.
+
+4.7.2. Nivel de Madurez Tecnológica
+       Atlas se sitúa en un nivel básico de madurez digital. Su digitalización
+       actual es puramente operativa y externa (uso de redes sociales y portal
+       de SUNAT). La dependencia de procesos manuales para el control de
+       inventario y la falta de un ecosistema digital propio impiden que la
+       empresa escale su capacidad de comercialización de forma ordenada.
+
+5. Estado de madurez digital
+5.1.   Matriz de subdimensiones
+       La matriz empleada permite jerarquizar las necesidades de la empresa,
+       clasificando cada indicador según su nivel de urgencia para la
+       transformación digital. Para Atlas E.I.R.L., los resultados se agrupan de la
+       siguiente manera:
+
+                                 GRADO DE CRITICIDAD
+
+                              Este indicador no necesita ser implementado en
+                               el proceso de digitalización, pero posterior al
+               BAJO                      proyecto podría mejorarse.
+
+                              Indicador que es un potencial carácter para ser
+                              implementado, puede ser evaluado acorde a su
+                             porcentaje de criticidad y el nivel de relación con
+              MEDIO                   la funcionalidad para el negocio.
+
+                                Factor que necesita ser implementado, para
+               ALTO
+                                      poder mejorar el aspecto digital.
+
+                              METODOLOGÍA DE EVALUACIÓN
+
+                             La empresa no tiene conocimiento del indicador,
+                                  y no ha realizado actividades para poder
+                0%                      gestionar mejor el indicador
+Diagnóstico Situacional – Textiles y Confecciones Atlas E.I.R.L.
+
+
+                               El conocimiento de la empresa es mínimo, y
+                                 las actividades aplicadas requieren más
+              25%                       esfuerzo y mejor estructura
+
+                           La empresa tiene una metodología establecida
+                               para aplicar ciertas actividades, pero no se
+              50%         encuentra dentro del nivel de madurez requerido
+
+                          La empresa logra entender conocimientos digitales,
+
+              75%              responde a los indicadores de manera positiva
+
+                            La empresa está siendo realizada de manera
+                          efectiva, han obtenido resultados. Su metodología
+             100%                                   es viable
+
+5.1.1. Indicador de Evaluación General
+                       HERRAMIENTA METODOLÓGICA
+ N°        DIMENSIÓN      0% 25% 50% 75% 100% ALCANZADO ESPERADO
+      PRÁCTICAS DE
+  1                        1      4     4      5     0      48.21%        100%
+      GESTIÓN
+  2   CAPITAL HUMANO       0      2     3      3     1      58.33%        100%
+      INFRAESTRUCTURA Y
+  3                        0      6     3      4     0      46.15%        100%
+      SOFTWARE
+      COMERCIAL Y
+  4                        0      9     3      1     0      34.62%        100%
+      FINANCIERO
+      OPERACIONES Y
+  5   CADENA DE            0      9     0      0     0      25.00%        100%
+      SUMINISTRO
+           TOTAL           1     30    13      13    1               58
+                                 VALOR TOTAL
+                                      42.67%
+Diagnóstico Situacional – Textiles y Confecciones Atlas E.I.R.L.
+
+
+
+                 Valor Alcanzado por Dimensión
+      100.00%          100%        100%         100%         100%        100%
+       80.00%
+                                 58.33%
+       60.00%    48.21%                        46.15%
+       40.00%                                              34.62%
+                                                                        25.00%
+       20.00%
+        0.00%
+
+
+
+
+De acuerdo con la evaluación realizada mediante la herramienta metodológica,
+la empresa alcanza un promedio general de desempeño del 42.67%. Este
+resultado refleja un nivel de madurez digital moderado, pero con un alto potencial
+de crecimiento, lo que establece una base sólida para avanzar hacia procesos
+de transformación tecnológica más profundos.
+
+Se destacan fortalezas en Capital Humano (58.33%) y Prácticas de Gestión
+(48.21%), que evidencian tanto las competencias del personal como los
+fundamentos organizacionales necesarios para adoptar nuevas tecnologías con
+éxito. En contraste, dimensiones como Operaciones y Cadena de Suministro
+(25.00%) y Comercial y Financiero (34.62%) requieren fortalecimiento, lo que
+representa oportunidades estratégicas más que limitaciones, dado que existen
+las capacidades internas para implementar soluciones integrales.
+
+Asimismo, la dimensión de Infraestructura y Software (46.15%) muestra un nivel
+intermedio que indica la presencia de herramientas básicas, creando las
+condiciones adecuadas para una evolución hacia sistemas más avanzados.
+
+En este sentido, la empresa se encuentra en una posición estratégica favorable
+para avanzar hacia un estado superior de madurez digital, y la propuesta de
+“Optimización de Procesos e Implementación Digital para mejorar la
+Gestión de Inventarios y fortalecer la presencia comercial y digital” se
+perfila como la iniciativa clave. Esta estrategia permitirá modernizar la gestión
+operativa, consolidar el control de inventarios, expandir las ventas en línea y
+Diagnóstico Situacional – Textiles y Confecciones Atlas E.I.R.L.
+
+optimizar la eficiencia organizacional, asegurando la competitividad y
+sostenibilidad del negocio.
+
+5.1.2. Prácticas de Gestión
+
+                                 1. PRÁCTICAS DE GESTIÓN
+         N°     0% 25% 50% 75%                 100%      ALCANZADO           ESPERADO
+        1.1.    0    2          1        2       0             50.00%          100%
+        1.2.    1    1          1        2       0             45.00%          100%
+        1.3.    0    1          2        1       0             50.00%          100%
+      TOTAL     1    4          4        5       0                      14
+                                             VALOR TOTAL
+                                               48.21%
+
+
+
+
+                Dimensión 1 - Prácticas de Gestión
+      120.00%
+
+      100.00%
+
+       80.00%
+
+       60.00%
+                                50.00%                                                50.00%
+                                                               45.00%
+       40.00%
+
+       20.00%
+
+        0.00%
+                         1.1.                           1.2.                   1.3.
+
+
+
+
+La evaluación de la dimensión de Prácticas de Gestión refleja un nivel de
+desempeño de 48.21%, lo que indica que la empresa cuenta con una base inicial
+para avanzar hacia una gestión digital más sólida. Se han desarrollado
+elementos clave como la existencia de un plan estratégico digital con objetivos y
+presupuesto definidos, así como ciertos avances en la documentación de
+procesos y en la facturación electrónica, que aportan a la estandarización y
+trazabilidad de la información.
+Diagnóstico Situacional – Textiles y Confecciones Atlas E.I.R.L.
+
+Sin embargo, persisten importantes áreas de mejora: la ausencia de sistemas
+ERP o plataformas integradas mantiene los procesos de ventas, compras y
+gestión de inventarios de manera aislada y manual; el uso de indicadores
+estratégicos y dashboards es todavía incipiente, lo que limita la capacidad de
+tomar decisiones en tiempo real; y la centralización de la información sigue
+siendo incompleta, con datos dispersos entre papel, archivos digitales y nube.
+
+En conjunto, estos resultados muestran que, si bien la organización ya ha dado
+pasos hacia la digitalización, aún requiere fortalecer la integración de sistemas,
+formalizar roles digitales y mejorar el análisis de datos. La decisión de proyectar
+la implementación de soluciones más completas de gestión constituye una
+oportunidad        estratégica       que,        de     aprovecharse,    permitirá      elevar
+significativamente su madurez digital.
+
+5.1.3. Capital Humano
+                              2. CAPITAL HUMANO
+    N°        0% 25% 50% 75%            100%          ALCANZADO       ESPERADO
+    2.1.       0    0     2      2        1             70.00%          100%
+    2.2.       0    2     1      1        0             43.75%          100%
+  TOTAL        0    2     3      3        1                       9
+                                     VALOR TOTAL
+                                        58.33%
+
+
+
+
+                        Dimensión 2 - Capital Humano
+      120.00%
+
+      100.00%
+
+         80.00%
+                                        70.00%
+         60.00%
+
+         40.00%                                                                43.75%
+
+
+         20.00%
+
+           0.00%
+                                 1.1.                                   1.2.
+Diagnóstico Situacional – Textiles y Confecciones Atlas E.I.R.L.
+
+En la dimensión de Capital Humano, la empresa alcanza un 58.33%, reflejando
+un avance relevante hacia la construcción de una cultura organizacional con
+predisposición a la digitalización. Se evidencia un liderazgo activo de la alta
+dirección, que impulsa proyectos digitales y promueve valores como el
+aprendizaje a partir del error. Asimismo, el personal muestra aceptación
+moderada al cambio y utiliza herramientas básicas de comunicación digital
+(WhatsApp, llamadas) para mantener la coordinación, lo que constituye un
+primer paso hacia la colaboración en entornos virtuales.
+
+No obstante, aún se identifican desafíos significativos: la capacitación en
+herramientas digitales específicas es limitada, no existe un plan formal de
+formación en tecnologías emergentes, y las responsabilidades en gestión digital
+no están claramente definidas. Además, la resistencia pasiva del personal en
+algunos casos ralentiza la incorporación de nuevas prácticas.
+
+A pesar de estas brechas, el panorama general es positivo: la visión de la
+dirección, la disposición del talento humano y la apertura a la innovación
+constituyen fortalezas clave que sientan las bases para avanzar hacia un capital
+humano más digitalizado y resiliente, capaz de sostener la transformación
+tecnológica en el mediano plazo.
+
+5.1.4. Infraestructura Y Software
+                    3. INFRAESTRUCTURA Y SOFTWARE
+    N°     0% 25% 50% 75%        100%     ALCANZADO        ESPERADO
+    3.1.   0    2      0   2       0         50.00%          100%
+    3.2.   0    1      1   2       0         56.25%          100%
+    3.3.   0    3      2   0       0         35.00%          100%
+  TOTAL    0    6      3   4       0                  13
+                               VALOR TOTAL
+                                 46.15%
+Diagnóstico Situacional – Textiles y Confecciones Atlas E.I.R.L.
+
+
+
+           Dimensión 3 - Infraestructura y Software
+      120.00%
+
+      100.00%
+
+       80.00%
+
+       60.00%
+                                                    56.25%
+                               50.00%
+       40.00%
+                                                                          35.00%
+
+       20.00%
+
+        0.00%
+                        1.1.                 1.2.                  1.3.
+
+
+
+
+La evaluación de la dimensión de Infraestructura y Software refleja un nivel de
+desempeño del 46.15%, lo que evidencia que la empresa cuenta con bases
+tecnológicas iniciales, pero aún con amplias oportunidades de mejora. En cuanto
+a infraestructura física y conectividad, se dispone de equipos funcionales para
+las operaciones diarias además de mantenimientos periódicos, aunque no existe
+un plan formal de renovación tecnológica y se presentan limitaciones de
+conexión a internet que afectan procesos críticos. En el aspecto de plataformas
+y software, la organización utiliza programas básicos de ofimática, un sistema de
+facturación, almacenamiento en la nube y algunos programas especializados,
+aunque estos operan de manera aislada, sin integración ni procesos formales de
+actualización. Por su parte, la ciberseguridad muestra un nivel incipiente, ya que,
+si bien se emplean respaldos en la nube y se aplican prácticas básicas como
+contraseñas complejas y cierta concienciación del personal, no existen políticas
+definidas, planes de respuesta ante incidentes ni controles de acceso
+diferenciados por roles. En conjunto, los resultados evidencian que la empresa
+cuenta con un entorno tecnológico funcional pero fragmentado, y el siguiente
+paso estratégico debe centrarse en formalizar la planificación tecnológica,
+fortalecer la seguridad digital y avanzar hacia la integración de sistemas y
+procesos, con el fin de consolidar una infraestructura más estable, segura y
+preparada para sostener su transformación digital.
+Diagnóstico Situacional – Textiles y Confecciones Atlas E.I.R.L.
+
+5.1.5. Comercial y Financiero
+                         4. COMERCIAL Y FINANCIERO
+    N°        0% 25% 50% 75%              100%     ALCANZADO              ESPERADO
+    4.1.       0     3   1        0        0         31.25%                 100%
+    4.2.       0     4   1        0        0         30.00%                 100%
+    4.3.       0     2   1        1        0         43.75%                 100%
+  TOTAL        0     9   3        1        0                         13
+                                      VALOR TOTAL
+                                          34.62%
+
+
+
+
+                   Dimensión 4 - Comercial y Financiero
+      120.00%
+
+      100.00%
+
+         80.00%
+
+         60.00%
+
+         40.00%                                                                       43.75%
+                                 31.25%                     30.00%
+         20.00%
+
+           0.00%
+                          1.1.                       1.2.                      1.3.
+
+
+
+
+La evaluación arroja un nivel de desempeño del 34.62%, lo que refleja una
+madurez digital limitada en los procesos vinculados a ventas, marketing y gestión
+financiera, con amplias oportunidades de mejora. En cuanto a canales digitales
+y e-commerce, la empresa tiene presencia en redes sociales y utiliza WhatsApp
+para gestionar pedidos, pero no dispone de una plataforma transaccional
+funcional ni de procesos consistentes entre sus diferentes puntos de venta, lo
+que genera errores en precios, inventarios y pérdidas de ventas. En marketing
+digital y gestión de clientes, se reconoce el uso activo de Facebook y WhatsApp
+como principales medios de promoción y atención, así como prácticas básicas
+de publicidad digital; sin embargo, no existen herramientas avanzadas de
+análisis de datos, CRM ni campañas estructuradas que permitan personalizar la
+Diagnóstico Situacional – Textiles y Confecciones Atlas E.I.R.L.
+
+comunicación o fidelizar clientes. Por su parte, en operaciones financieras
+digitales, se observa un avance intermedio, dado que la empresa utiliza boletas
+y facturas electrónicas y acepta pagos digitales, aunque carece de procesos
+integrados para la gestión de gastos y de reportes financieros en tiempo real. En
+conjunto, estos resultados muestran que la empresa se encuentra en una etapa
+inicial de digitalización comercial, donde el paso estratégico inmediato consiste
+en implementar un sistema de gestión centralizado para ventas e inventarios,
+fortalecer el marketing digital con métricas claras y consolidar la digitalización de
+procesos financieros para incrementar la competitividad y eficiencia operativa.
+
+5.1.6. Operaciones Y Cadena De Suministro
+                 5. OPERACIONES Y CADENA DE SUMINISTRO
+    N°       0% 25% 50% 75%             100%     ALCANZADO             ESPERADO
+    5.1.     0    3    0         0       0         25.00%                100%
+    5.2.     0    3    0         0       0         25.00%                100%
+    5.3.     0    3    0         0       0         25.00%                100%
+  TOTAL      0    9    0         0       0                         9
+                                     VALOR TOTAL
+                                        25.00%
+
+
+
+
+     120.00%
+             Dimensión 5 - Operaciones y Cadena de
+                           Suministro
+     100.00%
+
+
+      80.00%
+
+
+      60.00%
+
+
+      40.00%
+
+                               25.00%                     25.00%                   25.00%
+      20.00%
+
+
+         0.00%
+                        1.1.                       1.2.                     1.3.
+
+
+
+
+La evaluación de la dimensión Operaciones y Cadena de Suministro alcanza un
+nivel de 25%, lo que refleja una gestión aún manual y con bajo aprovechamiento
+Diagnóstico Situacional – Textiles y Confecciones Atlas E.I.R.L.
+
+de herramientas digitales. Los procesos clave como el control de calidad,
+inventario y recepción se realizan sin soporte tecnológico, lo que reduce la
+eficiencia y aumenta el riesgo de errores. A esto se suma la ausencia de un
+sistema digital que permita dar trazabilidad a los productos o proyectar la
+demanda, lo que limita la planificación y la optimización de inventarios. La
+relación con proveedores también carece de integración, ya que los pedidos y la
+comunicación se gestionan mediante canales informales como WhatsApp, sin
+plataformas centralizadas ni métricas de evaluación. En conjunto, los resultados
+evidencian la necesidad de implementar un sistema integral que permita
+automatizar procesos, mejorar la gestión de inventarios y fortalecer la
+coordinación en toda la cadena de suministro.
+
+5.2.   Matriz de priorización
+       Esta herramienta estratégica permite evaluar las iniciativas tecnológicas
+       de Textiles y Confecciones Atlas E.I.R.L. bajo criterios objetivos,
+       estableciendo una secuencia lógica que maximice el retorno de inversión
+       y minimice la resistencia al cambio.
+
+5.2.1. Metodología de Evaluación
+       Se han valorado las propuestas en una escala del 1 al 5, basándose en
+       cinco criterios fundamentales:
+
+       •   Impacto Operativo: Capacidad de eliminar procesos manuales en el
+           mostrador.
+
+       •   Costo de Implementación: Inversión en software y la única
+           PC/Celular disponible.
+
+       •   Urgencia del Problema: Nivel de criticidad del descontrol de stock
+           actual.
+
+       •   Facilidad de Implementación: Curva de aprendizaje para el personal
+           de ventas.
+
+       •   Retorno de Inversión (ROI): Incremento de ventas por mejor
+           respuesta al cliente.
+Diagnóstico Situacional – Textiles y Confecciones Atlas E.I.R.L.
+
+
+
+
+5.2.2. Resultados y Ruta Estratégica
+       La priorización de las iniciativas se basa en la interdependencia técnica:
+       primero se digitaliza el control físico de la mercadería (Logística) y luego
+       se proyecta la oferta al mercado (Marketing). Esta secuencia garantiza
+       que la empresa nunca ofrezca en línea productos que no tiene en stock.
+
+       •   Sistema de Gestión Logística y Punto de Venta - POS (4.9 pts):
+           Prioridad Máxima e Inmediata. Es la solución directa a la brecha de
+           "Gestión Analógica" detectada en el diagnóstico. Este sistema
+           reemplazará los cuadernos y hojas de cálculo por una base de datos
+           centralizada en la nube. Permitirá que cada venta realizada en el
+           mostrador de la calle Deán Valdivia descuente el inventario al instante,
+           garantizando la integridad de los datos y eliminando los errores de
+           stock que hoy provocan ventas perdidas.
+
+       •   Programa de Marketing Digital y Catálogo Omnicanal (4.5 pts):
+           Prioridad Estratégica de Crecimiento. Una vez que el sistema
+           logístico actúe como "Única Fuente de Verdad", se activará la
+           presencia en línea. Esta iniciativa aborda la brecha de "Invisibilidad
+           Digital" mediante la creación de perfiles oficiales en redes sociales
+           (Facebook, Instagram) y las campañas digitales, permitiendo que los
+           clientes   de    provincias    visualicen     la   disponibilidad   real,
+           profesionalizando el ciclo de venta remota.
+
+5.3.   Análisis de interoperabilidad
+       El objetivo es asegurar que el nuevo Sistema de Gestión de Inventarios
+       se integre perfectamente con la computadora única de ventas y el flujo de
+       información hacia la contabilidad externa.
+Diagnóstico Situacional – Textiles y Confecciones Atlas E.I.R.L.
+
+5.3.1. Objetivo del análisis
+      Garantizar que la implementación tecnológica optimice la coordinación
+      entre la tienda física en la calle Deán Valdivia y los pedidos remotos de
+      provincias:
+
+      •   Eliminar la doble digitación: Que el vendedor no tenga que anotar
+          en un cuaderno y luego en el Excel.
+
+      •   Coherencia de datos: Que el stock, los precios y los pedidos
+          coincidan en el sistema y en el celular de la empresa.
+
+5.3.2. Resultado
+      La brecha crítica es la desconexión total entre lo que se vende en el
+      mostrador y la información que maneja la contadora. Actualmente, no hay
+      flujo de datos, solo documentos físicos o capturas de WhatsApp.
+
+5.3.3. Análisis
+      •   Inconsistencias: Si el sistema no se actualiza al momento de la venta
+          física, el stock mostrado en el celular para clientes de provincia será
+          falso.
+
+      •   Duplicidad: Riesgo de registrar una venta en el portal de SUNAT pero
+          olvidar descargarla del inventario interno.
+
+5.3.4. Plan de acción
+      •   Implementación Centralizada: Instalar un sistema que gestione en
+          tiempo real las existencias desde la PC de ventas.
+
+      •   Responsabilidad del Dato: Designar al encargado de ventas como
+          responsable de que cada salida de mercadería sea registrada
+          digitalmente en el acto.
+
+5.3.5. Impacto esperado
+      Se espera una reducción drástica de errores en los pedidos, la eliminación
+      de revisiones físicas innecesarias en el almacén y una mejora significativa
+      en la satisfacción del cliente, al ofrecer respuestas inmediatas y entregas
+      más rápidas a todo el sur del país.
+Diagnóstico Situacional – Textiles y Confecciones Atlas E.I.R.L.
+
+6. Resultados
+   El diagnóstico de Textiles y Confecciones Atlas E.I.R.L. revela un nivel de
+   madurez digital del 42.67%. La empresa se ubica en una etapa inicial de
+   transformación: posee un liderazgo con visión y una ubicación física
+   privilegiada, pero su operatividad interna depende de métodos analógicos
+   que limitan su escalabilidad en el mercado deportivo regional.
+
+6.1.   Capacidades Organizacionales
+       •   Liderazgo con Visión de Cambio: La gerencia general lidera el
+           proyecto de modernización con objetivos claros para pasar del registro
+           en cuadernos a un sistema de gestión digital integrado.
+
+       •   Talento Humano Adaptable: El personal posee competencias
+           digitales básicas y una actitud favorable hacia el aprendizaje, lo que
+           garantiza una baja resistencia a la implementación del nuevo software
+           de inventarios.
+
+       •   Infraestructura de Base: Se cuenta con el equipamiento esencial
+           (computadora de ventas y conectividad) que sirve como punto de
+           partida para la digitalización del mostrador.
+
+6.2.   Procesos Operativos
+       •   Trayectoria y Formalidad: Más de 35 años de presencia en el
+           Cercado de Arequipa y cumplimiento tributario (facturación vía portal
+           SUNAT), lo que otorga una reputación sólida ante clientes
+           institucionales.
+
+       •   Propuesta de Valor Especializada: A diferencia del retail masivo,
+           Atlas destaca por su conocimiento técnico en implementos deportivos
+           y su capacidad de ofrecer artículos personalizados para clubes y
+           delegaciones.
+
+       •   Alcance Geográfico: Capacidad instalada para atender a clientes en
+           Arequipa y provincias (Cusco, Puno), apoyándose en el flujo logístico
+           del sur del país.
+Diagnóstico Situacional – Textiles y Confecciones Atlas E.I.R.L.
+
+6.3.   Resultado de Brechas Críticas Detectadas
+       El análisis profundo de la operatividad de Textiles y Confecciones Atlas
+       E.I.R.L. revela que el descontrol del inventario y la ausencia de canales
+       digitales son los principales cuellos de botella que frenan el crecimiento.
+       Se han identificado las siguientes brechas críticas:
+
+       •   Brecha 1: Gestión Logística Analógica y Obsoleta: El uso de
+           cuadernos y registros manuales para el control de stock genera una
+           asimetría de información crítica. Esto provoca inexactitud en la
+           disponibilidad de productos, errores en la fijación de precios y,
+           fundamentalmente, ventas perdidas al no poder confirmar stock de
+           manera inmediata a clientes remotos o de provincias. Esta brecha
+           justifica la implementación obligatoria de un sistema POS e Inventarios
+           Cloud.
+
+       •   Brecha 2: Invisibilidad Digital y Marketing Pasivo: La empresa
+           carece de presencia oficial en el ecosistema digital (redes sociales).
+           Esta brecha de comunicación impide que el prestigio físico de la tienda
+           se traduzca en ventas digitales, limitando el alcance comercial a los
+           clientes que transitan por la calle Deán Valdivia. Esta brecha es el
+           fundamento para el despliegue del Programa de Marketing Digital.
+
+       •   Brecha 3: Fragmentación de Información Operativa: No existe una
+           conexión técnica entre las ventas en el mostrador, el stock en almacén
+           y los registros para contabilidad. Esta desconexión genera una
+           administración reactiva, donde la gerencia invierte el 70% de su tiempo
+           en tareas operativas de verificación física en lugar de planificación
+           estratégica.
+
+       •   Brecha 4: Vulnerabilidad Tecnológica y Riesgo de Continuidad:
+           La   operación   comercial   depende     críticamente   de   una   sola
+           computadora y un celular sin respaldo en la nube. Cualquier fallo
+           técnico o pérdida de equipo detiene por completo la facturación y la
+           atención al cliente, exponiendo la sostenibilidad del negocio.
+Diagnóstico Situacional – Textiles y Confecciones Atlas E.I.R.L.
+
+6.4.   Resultado del Análisis de Factores Externos
+       El entorno presenta oportunidades clave en la digitalización de las ventas
+       y el auge de la cultura saludable en Arequipa. No obstante, Atlas debe
+       blindarse ante:
+
+       •   La competencia de plataformas internacionales (Temu, Alibaba) que
+           ofrecen precios bajos.
+
+       •   La inestabilidad económica que reduce el gasto en artículos deportivos
+           no esenciales.
+
+       •   La informalidad en los alrededores de la calle Deán Valdivia que
+           compite con precios menores al no asumir costos de formalización.
+
+6.5.   Resultado del Análisis Comparativo
+       Atlas supera a sus competidores en experiencia técnica y ubicación física,
+       pero se encuentra en desventaja en agilidad digital. Mientras
+       competidores directos ya utilizan catálogos digitales actualizados y cierres
+       de venta automatizados, Atlas sigue dependiendo de la verificación física
+       en estantes para responder consultas, lo que ralentiza su ciclo de venta.
+
+6.6.   Conclusión
+       En conclusión, el diagnóstico integral de Textiles y Confecciones Atlas
+       E.I.R.L. dictamina que la empresa ha alcanzado su límite de eficiencia
+       operativa bajo el modelo analógico actual. Por lo tanto, es imperativo
+       priorizar la Digitalización del Control de Stock e Inventarios (4.2 puntos)
+       como el cimiento tecnológico de su transformación. Este paso no solo
+       eliminará el error humano crónico, sino que actuará como un catalizador
+       para liberar tiempo gerencial, permitiendo una transición de una "gestión
+       reactiva" a una "estrategia de crecimiento" basada en datos.
+
+       La hoja de ruta propuesta es técnica, escalonada y diseñada para
+       minimizar el riesgo operativo:
+
+       •   Fase 1: Estabilización Operativa (Semanas 1-12): Implementación
+           del Sistema de Gestión de Inventarios y Punto de Venta (POS) en la
+           nube. El objetivo es sanear la data, digitalizar el stock físico de la
+Diagnóstico Situacional – Textiles y Confecciones Atlas E.I.R.L.
+
+           tienda en la calle Deán Valdivia y establecer la "Única Fuente de
+           Verdad" para todas las existencias.
+
+       •   Fase 2: Expansión y Escalabilidad (Semanas 13-24): Lanzamiento
+           del Catálogo Digital Omnicanal y ejecución de estrategias de
+           Marketing Digital. Con un inventario real y confiable, la empresa podrá
+           proyectar su oferta de forma agresiva hacia los mercados de afuera,
+           garantizando una experiencia de compra profesional al cliente remoto.
+
+       Esta estrategia permitirá a Textiles y Confecciones Atlas E.I.R.L.
+       capitalizar sus 35 años de prestigio ininterrumpido, transformando su local
+       tradicional en un Hub de Distribución Digitalizado. Al cerrar la brecha
+       tecnológica actual, la empresa no solo asegura su permanencia en el
+       mercado,     sino   que     se    posiciona     para   consolidarse   como    la
+       comercializadora líder de artículos deportivos en todo el sur del Perú.
+
+7. Validación del autodiagnóstico
+   La validación del autodiagnóstico se realizó mediante la triangulación de
+   fuentes de información y la verificación cruzada de resultados obtenidos a
+   través de herramientas analíticas. Este enfoque garantiza que los hallazgos
+   sean precisos y representen fielmente la realidad operativa de Textiles y
+   Confecciones Atlas E.I.R.L.
+
+7.1.   Verificación Cruzada de Resultados
+       El análisis cruzado confirma la coherencia total entre las herramientas
+       aplicadas. La Matriz de Subdimensiones coincide con los hallazgos del
+       FODA y el GAP, al evidenciar que la gestión manual de inventarios es el
+       principal freno al crecimiento.
+
+       Esta consistencia se refuerza con la Matriz de Priorización, que sitúa al
+       Sistema de Gestión de Stock como la iniciativa más urgente (4.5 puntos),
+       validándose con el bajo desempeño detectado en el área de Operaciones
+       y   Cadena    de    Suministro      (25.00%).     Asimismo,   el   Análisis   de
+       Interoperabilidad converge con la Auditoría Tecnológica al confirmar que
+       la empresa, aunque posee una base funcional (una PC y conectividad),
+       sufre por la desconexión entre la venta de mostrador, el celular corporativo
+       y la facturación externa.
+Diagnóstico Situacional – Textiles y Confecciones Atlas E.I.R.L.
+
+Ilustración 6 verificación Cruzada
+
+
+
+
+7.2.     Contraste con los objetivos de la digitalización
+         La estrategia de la empresa responde directamente al objetivo central de
+         la transformación digital: Optimizar los procesos de control de existencias
+         y fortalecer la presencia comercial mediante herramientas tecnológicas.
+         Esta iniciativa es el eje que permitirá a Atlas escalar su modelo de
+         comercialización de artículos deportivos.
+
+         En este marco, los resultados esperados del proyecto se traducen en
+         metas concretas y medibles:
+
+         •   Visibilidad Total del Stock: Lograr el control de inventarios en tiempo
+             real, eliminando la dependencia de cuadernos y verificaciones físicas
+             en estantes.
+
+         •   Reducción de Errores Operativos: Disminuir en un 15% las
+             discrepancias de inventario y errores en precios mediante el registro
+             digital inmediato en el punto de venta.
+Diagnóstico Situacional – Textiles y Confecciones Atlas E.I.R.L.
+
+
+       •   Agilidad en el Ciclo de Venta: Mejorar los tiempos de respuesta a
+           pedidos de provincias en un 10%, gracias a la disponibilidad de
+           información inmediata en el sistema.
+
+       •   Fortalecimiento Comercial: Incrementar la capacidad de respuesta
+           y oferta constante en un 15%, asegurando que el stock físico coincida
+           siempre con el catálogo digital ofrecido en redes sociales.
+
+       La viabilidad de estos objetivos se sustenta en la coherencia con las
+       capacidades actuales: Atlas dispone de la infraestructura base necesaria,
+       un personal con alta adaptabilidad y un liderazgo comprometido con la
+       modernización. Esta convergencia garantiza que el proyecto es factible y
+       permitirá consolidar a la empresa como líder del sector deportivo en el sur
+       del Perú.
+
+7.3.   Conclusiones de la Validación
+7.3.1. Confiabilidad del Diagnóstico
+       El autodiagnóstico presenta una alta confiabilidad para Textiles y
+       Confecciones Atlas E.I.R.L. debido a:
+
+       •   Consistencia Multidimensional: Sincronía entre las herramientas de
+           análisis (FODA, PESTEL, GAP).
+
+       •   Triangulación de Fuentes: Verificación de datos entre la realidad del
+           mostrador, el celular corporativo y la gestión contable.
+
+       •   Alineación Estratégica: Los objetivos planteados coinciden con las
+           capacidades reales de inversión y adopción del personal.
+
+7.3.2. Precisión
+       Las recomendaciones están validadas por:
+
+       •   Matriz de Priorización: Basada en la urgencia de resolver el
+           descontrol de stock.
+
+       •   Análisis de Interoperabilidad: Que confirma la viabilidad de integrar
+           el sistema con la única PC de ventas disponible.
+Diagnóstico Situacional – Textiles y Confecciones Atlas E.I.R.L.
+
+
+       •   Benchmarking: Que respalda la oportunidad de ganar mercado en
+           provincias mediante agilidad digital.
+
+8. Matriz de consistencia
+   La matriz de consistencia alinea los objetivos estratégicos de Textiles y
+   Confecciones Atlas E.I.R.L. con las actividades clave y resultados medibles,
+   asegurando que cada inversión tecnológica resuelva una necesidad crítica
+   detectada.
+
+   •   Optimización de la Gestión de Inventarios: Se establece como el
+       objetivo crítico. La digitalización permitirá pasar de los cuadernos a un
+       control en tiempo real, eliminando errores de stock, pérdidas de ventas
+       por falta de información y la dependencia excesiva de la memoria del
+       personal.
+
+   •   Fortalecimiento de la Presencia Comercial y Digital: La integración del
+       inventario con los canales de venta (WhatsApp y Redes Sociales)
+       garantizará que la oferta mostrada a los clientes de provincias sea real y
+       disponible, permitiendo competir con empresas más tecnificadas.
+
+   •   Automatización de Reportes y Dashboards: Este objetivo busca
+       facilitar la toma de decisiones estratégicas (qué comprar y cuándo)
+       mediante reportes automáticos que reemplacen el análisis manual de
+       hojas de Excel aisladas.
+
+   •   Mejora en la Trazabilidad del Pedido: Responde a la necesidad de
+       seguimiento completo desde que el cliente de provincia realiza el depósito
+       hasta que la mercadería es despachada, optimizando los tiempos de
+       entrega y la satisfacción del cliente final.
+
+   En conjunto, estos objetivos configuran una hoja de ruta integral que no solo
+   resuelve el problema del registro manual, sino que sienta las bases para
+   consolidar a Textiles y Confecciones Atlas como la comercializadora líder de
+   artículos deportivos en el sur del Perú, con una operación eficiente, moderna
+   y escalable.
+Diagnóstico Situacional – Textiles y Confecciones Atlas E.I.R.L.
+
+9. Cronograma
+   El cronograma estructura las actividades críticas para la transformación
+   digital de Textiles y Confecciones Atlas E.I.R.L., asegurando una transición
+   ordenada de los registros manuales al sistema logístico digital.
+
+9.1.   Fase 1: Diagnóstico y Arquitectura (Mes 1)
+       Durante los dos primeros meses se ejecuta el levantamiento de
+       información técnica detallada y el mapeo de los procesos actuales de
+       ventas y almacén. Se define la arquitectura tecnológica necesaria para
+       integrar la computadora de ventas con el nuevo sistema de inventarios y
+       la coordinación contable.
+
+9.2.   Fase 2: Selección y Configuración (Mes 2)
+       En el tercer mes se selecciona la plataforma digital y se definen las
+       funcionalidades clave: control de stock en tiempo real, alertas de
+       reposición y base de datos de productos deportivos categorizada por
+       tallas y modelos.
+
+9.3.   Fase 3: Desarrollo e Integración Operativa (Mes 3)
+       Se desarrolla la interfaz de usuario adaptada a la rapidez que exige la
+       atención en el mostrador de la calle Deán Valdivia. Se configuran los
+       módulos de entrada de mercadería (compras a proveedores) y salida
+       (ventas minoristas y mayoristas), asegurando la carga inicial del inventario
+       digitalizado.
+
+9.4.   Fase 4: Sincronización y Pruebas (Mes 4)
+       Este mes se enfoca en la integración con el flujo de facturación y el
+       desarrollo de dashboards (tableros de control) que permitan a la gerencia
+       visualizar el movimiento de caja y stock en tiempo real. Se realizan
+       pruebas funcionales y de seguridad para garantizar que la información de
+       los clientes esté protegida.
+
+9.5.   Fase 5: Capacitación, Piloto y Lanzamiento (Mes 4)
+       Finalmente, se capacita al personal de ventas y almacén en el uso de la
+       plataforma, eliminando definitivamente el uso de cuadernos. Se lanza un
+       plan piloto con las líneas de productos más vendidas (ej. balones y
+       uniformes deportivos) para validar la funcionalidad, cerrando el mes 6 con
+Diagnóstico Situacional – Textiles y Confecciones Atlas E.I.R.L.
+
+      el lanzamiento oficial y el monitoreo de KPIs como la precisión de
+      inventarios y la velocidad de respuesta a pedidos de provincias.
+
+10. Anexos
+Diagnóstico Situacional – Textiles y Confecciones Atlas E.I.R.L.
+
+
+
+
+                                                                        ANEXO B
+  N°                                 PREGUNTAS                                          RESPUESTA          OBSERVACION        COMPROBACIÓN
+       ¿En su MIPYME o empresa, ¿usan celulares, Tablet, computadoras,
+  1                                                                                SI                                              ✔️
+       aplicaciones o internet para trabajar?
+                                                                                                         Esta pregunta se
+       ¿En el corto o mediano plazo, ¿considera utilizar celulares, Tablet,                              omite porque la
+  2                                                                                                                                ✔️
+       computadores, internet, para trabajar?                                                            respuesta anterior
+                                                                                                         fue "Sí".
+                                                                                   Somos entre 8 y 10
+  3    ¿Incluyéndose, ¿cuántas personas trabajan en su MIPYME?                                                                     ✔️
+                                                                                   personas
+                                                                                   Todos son
+       Los dispositivos tecnológicos (computadores, celulares, Tablet, etc.) que
+  4                                                                                propiedad de                                    ✔️
+       usan en su MIPYME son
+                                                                                   nuestra MIPYME
+                                                                                   Me interesan mucho
+  5    ¿Qué tanto interés tiene por las tecnologías digitales?                     las tecnologías                                 ✔️
+                                                                                   digitales
+                                                                                   Son muy
+       ¿Qué tan importantes son las tecnologías digitales para el                  importantes para el
+  6                                                                                                                                ✔️
+       funcionamiento de su MIPYME?                                                funcionamiento de
+                                                                                   nuestra MIPYME
+                                                                                   Los conozco, dado
+       ¿Conoce los beneficios que pueden ofrecer las tecnologías digitales a su    que los he
+  7                                                                                                                                ✔️
+       MIPYME?                                                                     experimentado en el
+                                                                                   día a día
+
+       ¿Están interesados en aumentar el nivel de digitalización de su MIPYME, Nos interesa y
+  8    implementando más tecnologías digitales o aprendiendo a utilizarlas     estamos empezando                                   ✔️
+       mejor?                                                                  a implementarlo
+
+       ¿Tiene alguna noción acerca de las tecnologías digitales que podría         Tenemos claridad      Por ejemplo, ha
+  9                                                                                                                                ✔️
+       implementar en su MIPYME?                                                   dado que ya las       escuchado sobre un
+Diagnóstico Situacional – Textiles y Confecciones Atlas E.I.R.L.
+
+
+                                                                                 estamos                 programa o
+                                                                                 implementando           aplicación que se
+                                                                                                         use en su rubro, o
+                                                                                                         de un dispositivo
+                                                                                                         digital que puede
+                                                                                                         servirle, ¿etc.?
+                                                                                 Implementaríamos
+                                                                                 tecnologías digitales
+       ¿Cómo actuaría si identificaran tecnologías digitales aplicables a su
+  10                                                                             de acuerdo a                                 ✔️
+       MIPYME.?
+                                                                                 nuestras
+                                                                                 necesidades
+                                                                                                         Pueden ser
+                                                                                                         inversiones en
+                                                                                 Ya hemos invertido      equipos
+       Considerando las necesidades y objetivos de su MIPYME, ¿qué tan           en tecnologías          tecnológicos,
+  11                                                                                                                          ✔️
+       factible sería invertir en tecnologías digitales?                         digitales y lo          programas y
+                                                                                 haríamos de nuevo       aplicaciones,
+                                                                                                         almacenamiento,
+                                                                                                         servicios, etc.
+                                                                                 Porque nos resulta
+  12   ¿Por qué se utilizan tecnologías digitales en su MIPYME?                  necesario y aumenta                          ✔️
+                                                                                 nuestra eficiencia
+                                                                                 Se aplican para
+                                                                                 darle otros usos a la
+                                                                                 información que
+       ¿Hasta qué nivel de profundidad se aplican las tecnologías digitales en
+  13                                                                             manejamos, por                               ✔️
+       su MIPYME?
+                                                                                 ejemplo, mediante
+                                                                                 su evaluación y/o
+                                                                                 análisis
+  14   ¿Utilizan algún programa o aplicación en su MIPYME?                       Sí                                           ✔️
+                                                                                 Programas o
+                                                                                 aplicaciones de
+                                                                                 oficina y al menos
+  15   ¿Qué tipo de programas o aplicaciones se usan en su MIPYME?                                                            ✔️
+                                                                                 un programa
+                                                                                 especializado, que
+                                                                                 apoye un aspecto de
+Diagnóstico Situacional – Textiles y Confecciones Atlas E.I.R.L.
+
+
+                                                                                 nuestra MIPYME o
+                                                                                 que resulta
+                                                                                 necesario para
+                                                                                 ofrecer un producto
+                                                                                 o servicio
+       ¿Con qué facilidad se desenvuelven en su MIPYME con el uso de las         Las usamos con
+  16                                                                                                                            ✔️
+       tecnologías digitales?                                                    mucha facilidad
+                                                                                 Contamos con
+                                                                                 recursos o contactos
+                                                                                 para facilitar nuestro
+  17   En su MIPYME, ¿se han educado o capacitado en temas digitales?            aprendizaje. Por                               ✔️
+                                                                                 ejemplo, saber a
+                                                                                 quién contactar para
+                                                                                 capacitarnos
+                                                                                 Presencialmente
+  18   ¿Qué canales usa para vender su producto o servicio?                      (local u oficina) y por                        ✔️
+                                                                                 medio de internet
+                                                                                 Pagan con efectivo,
+                                                                                 cheque, tarjetas
+                                                                                 (crédito o débito) y/o
+  19   Sus clientes, ¿cómo pagan por sus productos o servicios?                                                                 ✔️
+                                                                                 pago por internet o
+                                                                                 transferencias
+                                                                                 bancarias
+                                                                                                        Esto significa que
+                                                                                                        sus clientes puedan
+                                                                                                        conocer su
+                                                                                 Tenemos presencia
+                                                                                                        MIPYME, su
+                                                                                 en línea en redes
+  20   ¿Su MIPYME cuenta con presencia en línea?                                                        ubicación e             ✔️
+                                                                                 sociales o en un sitio
+                                                                                                        informarse de sus
+                                                                                 web
+                                                                                                        productos o
+                                                                                                        servicios a través de
+                                                                                                        internet.
+                                                                                 Nos promocionamos
+                                                                                                        Por ejemplo, para
+       ¿Utilizan medios digitales para promocionar los productos o servicios que usando solo redes
+  21                                                                                                    obtener nuevos          ✔️
+       ofrece?                                                                   sociales y/o un sitio
+                                                                                                        clientes, publicar
+                                                                                 web
+Diagnóstico Situacional – Textiles y Confecciones Atlas E.I.R.L.
+
+
+                                                                                                      ofertas, productos
+                                                                                                      disponibles, etc.
+                                                                                                      Por ejemplo,
+                                                                                                      subiendo fotos,
+                                                                                Actualizamos
+                                                                                                      publicando
+                                                                                nuestra presencia en
+  22   ¿Con qué frecuencia actualizan su sitio web o redes sociales?                                  productos,            ✔️
+                                                                                línea varias veces al
+                                                                                                      generando
+                                                                                día
+                                                                                                      contenidos e
+                                                                                                      informaciones, etc.
+                                                                                Manejamos un único
+                                                                                canal digital de
+  23   ¿Se comunican digitalmente con sus clientes?                                                                         ✔️
+                                                                                comunicación con
+                                                                                nuestros clientes
+                                                                                Hemos tomado
+                                                                                decisiones para
+                                                                                mejorar los canales
+       ¿En su MIPYME se han tomado decisiones para mejorar la comunicación
+  24                                                                            digitales de                                ✔️
+       digital con sus clientes?
+                                                                                comunicación y ya
+                                                                                se encuentran
+                                                                                implementadas
+                                                                                Hemos explorado el Por ejemplo, usar
+       ¿Utilizan herramientas o medios digitales para captar nuevos clientes y  uso de herramientas publicidad en redes
+  25                                                                                                                        ✔️
+       fidelizar a los existentes?                                              digitales para atraer sociales, ofrecer
+                                                                                nuevos clientes       descuentos, etc.
+                                                                                                      Por ejemplo: correo
+                                                                                Siempre se            electrónico,
+  26   ¿Sus trabajadores se comunican entre ellos a través de medios digitales? comunican por         WhatsApp,             ✔️
+                                                                                medios digitales      Messenger, Slack,
+                                                                                                      etc.
+                                                                                Mantenemos
+                                                                                nuestros contactos
+  27   ¿Cómo gestionan los contactos de sus clientes?                           por medios digitales                        ✔️
+                                                                                básicos, como Excel
+                                                                                o en el celular
+  28   ¿Su MIPYME mantiene contacto con proveedores?                            Sí                                          ✔️
+Diagnóstico Situacional – Textiles y Confecciones Atlas E.I.R.L.
+
+
+                                                                                   A veces
+                                                                                   mantenemos
+  29   ¿Se mantienen canales digitales de comunicación con sus proveedores?        contacto digital con                          ✔️
+                                                                                   nuestros
+                                                                                   proveedores
+                                                                                   Trabajamos tanto en
+       ¿El formato bajo el cual trabajan en su MIPYME es análogo (en papel) o
+  30                                                                               papel como de                                 ✔️
+       digital?
+                                                                                   manera digital
+                                                                                   En la nube
+                                                                                   (Dropbox, Google
+  31   ¿Cómo se almacena la información en su MIPYME?                                                                            ✔️
+                                                                                   Drive, OneDrive,
+                                                                                   iCloud, etc.)
+                                                                                   Hemos identificado a
+                                                                                   grandes rasgos
+       ¿El uso de tecnologías digitales ha permitido identificar quiénes son y/o
+  32                                                                               quiénes son y/o qué                           ✔️
+       qué buscan sus clientes?
+                                                                                   buscan nuestros
+                                                                                   clientes
+                                                                                   Los clientes evalúan   Por ejemplo, por
+                                                                                   nuestros productos o   correo electrónico,
+                                                                                   servicios mediante     encuesta en línea,
+  33   ¿Sus clientes pueden evaluar digitalmente sus productos o servicios?                                                      ✔️
+                                                                                   encuestas              reseñas en sitios
+                                                                                   presenciales o         web, comentarios en
+                                                                                   telefónicas            redes sociales, etc.
+                                                                                   Registramos
+                                                                                   digitalmente los
+       ¿Se recogen datos a partir de las actividades que se realizan en su
+  34                                                                               datos de las                                  ✔️
+       MIPYME?
+                                                                                   actividades que
+                                                                                   realizamos
+                                                                                                          Por ejemplo, datos
+                                                                              A veces nos                 proporcionados por
+       ¿Su MIPYME consulta datos externos para conocer las características de guiamos con datos           servicios como
+  35                                                                                                                             ✔️
+       sus clientes?                                                          provenientes de             Facebook,
+                                                                              otras fuentes               Instagram, estudios
+                                                                                                          de mercado, etc.
+       En su página web o redes sociales, ¿entregan información diferenciada       Personalizamos
+  36                                                                                                                             ✔️
+       según los perfiles de clientes?                                             contenidos según
+Diagnóstico Situacional – Textiles y Confecciones Atlas E.I.R.L.
+
+
+                                                                               los distintos perfiles
+                                                                               de clientela que
+                                                                               hemos identificado
+                                                                               Hemos realizado
+  37   ¿Se analizan los datos que se obtienen en su MIPYME?                    análisis de datos de                             ✔️
+                                                                               manera esporádica
+                                                                               Basamos nuestra
+                                                                               toma de decisiones
+       ¿En qué nivel las decisiones dentro de su MIPYME se basan y/o apoyan
+  38                                                                           según los datos que                              ✔️
+       en los datos que genera o analiza?
+                                                                               generamos o
+                                                                               analizamos
+                                                                               Hemos adaptado
+       ¿En su MIPYME, ¿se ha usado el análisis de datos para mejorar sus       algunos productos,
+  39                                                                                                                            ✔️
+       productos, servicios y/o procesos?                                      servicios o procesos
+                                                                               según los datos
+                                                                               Conocemos a
+                                                                               cabalidad sobre
+                                                                               medidas de
+       ¿Qué conocimientos tienen sobre privacidad, seguridad y transparencia   privacidad,
+  40                                                                                                                            ✔️
+       en el uso de datos de sus clientes?                                     seguridad y
+                                                                               transparencia en el
+                                                                               uso de datos de
+                                                                               nuestros clientes
+                                                                               Sería fácil
+                                                                               implementar los
+       En su MIPYME, ¿qué tan posible sería abrirse a los cambios que
+  41                                                                           cambios necesarios                               ✔️
+       deberían realizar para transformarse digitalmente?
+                                                                               para transformarnos
+                                                                               digitalmente
+                                                                               Nos interesa
+       ¿Qué tanto interés tienen en su MIPYME por digitalizar su forma de
+  42                                                                           cambiar nuestra                                  ✔️
+       trabajo?
+                                                                               forma de trabajo
+                                                                                                        Por ejemplo,
+                                                                               Hemos permitido
+       ¿En qué grado las tecnologías digitales han flexibilizado la forma de                            mediante
+  43                                                                           algunas                                          ✔️
+       trabajo de su negocio?                                                                           plataformas de
+                                                                               innovaciones en
+                                                                                                        trabajo colaborativo,
+Diagnóstico Situacional – Textiles y Confecciones Atlas E.I.R.L.
+
+
+                                                                              nuestro trabajo o         la comunicación a
+                                                                              planeamos hacerlo.        distancia o las nubes
+                                                                                                        de datos.
+                                                                              Se permiten en
+                                                                              algunas instancias
+  44   ¿Se permite en su MIPYME el trabajo remoto o "teletrabajo"?                                                              ✔️
+                                                                              las jornadas de
+                                                                              teletrabajo
+                                                                                                        Por ejemplo, el
+       Al momento de contratar personal para su MIPYME, ¿se consideran las    Se prefieren, pero        manejo de algún
+  45                                                                                                                            ✔️
+       habilidades digitales como un factor clave?                            no son excluyentes        programa o
+                                                                                                        aplicación.
+                                                                              Nuestra MIPYME
+  46   ¿Qué tanto depende su MIPYME de las tecnologías digitales?             depende del uso de                                ✔️
+                                                                              tecnologías digitales
+
+
+                                                                              Tenemos una
+                                                                              cantidad apropiada        Por ejemplo,
+       ¿Su MIPYME cuenta con equipos tecnológicos suficientes para realizar   de equipos                computadores,
+  47                                                                                                                            ✔️
+       su trabajo de manera digital?                                          tecnológicos para         celulares, routers
+                                                                              trabajar diariamente      Wifi, etc.
+                                                                              de manera digital
+
+
+                                                                              Nuestra MIPYME
+                                                                              posee la
+       ¿Cree que su MIPYME cuenta con infraestructura tecnológica apropiada   infraestructura digital
+  48                                                                                                                            ✔️
+       para la implementación de nuevas tecnologías digitales?                apropiada para
+                                                                              implementar nuevas
+                                                                              tecnologías
+       ¿Qué tan preparada considera que está su MIPYME para adaptar o
+  49   modificar su modelo de negocios a partir de las nuevas tecnologías     Estamos preparados                                ✔️
+       digitales?
+                                                                              No tenemos
+       ¿Existen personas dedicadas a cambiar la forma de funcionar de su
+  50                                                                          personal dedicado,                                ✔️
+       MIPYME a través del uso de tecnologías digitales?
+                                                                              pero de todas
+Diagnóstico Situacional – Textiles y Confecciones Atlas E.I.R.L.
+
+
+                                                                                     maneras se suple
+                                                                                     dicha función
+                                                                                     Hemos desarrollado
+       ¿Existe una estrategia para que su MIPYME empiece a sacar provecho            una estrategia, pero
+  51                                                                                                                                ✔️
+       de las tecnologías digitales?                                                 aún no ha sido
+                                                                                     implementada
+                                                                                     Estamos
+                                                                                     planificando adaptar
+       ¿Ha cambiado su modelo de negocios para aprovechar las nuevas                 nuestro modelo de
+  52                                                                                                                                ✔️
+       tecnologías?                                                                  negocios para
+                                                                                     aprovechar las
+                                                                                     nuevas tecnologías
+                                                                                     Nuestros
+                                                                                     trabajadores
+                                                                                     conocen los
+  53   ¿Cuánto conocen sus trabajadores la estrategia digital de su MIPYME?                                                         ✔️
+                                                                                     objetivos generales
+                                                                                     de nuestra
+                                                                                     estrategia digital
+                                                                                                              Por ejemplo, para
+                                                                                                              reducir costos,
+                                                                                     Tenemos
+                                                                                                              incrementar la
+                                                                                     considerado utilizar
+       ¿Han utilizado tecnologías digitales para agregar valor a sus productos o                              productividad,
+  54                                                                                 tecnologías digitales                          ✔️
+       servicios?                                                                                             mejorar la
+                                                                                     como medio de
+                                                                                                              experiencia del
+                                                                                     agregación de valor
+                                                                                                              cliente,
+                                                                                                              diferenciarse, etc.
+                                                                                     Nuestra estrategia
+       ¿Qué tan integrada está su estrategia digital con los objetivos principales   digital está integrada
+  55                                                                                                                                ✔️
+       de su MIPYME?                                                                 en algunos aspectos
+                                                                                     de nuestra MIPYME
+                                                                                     Sí, en nuestra
+       ¿Su MIPYME cuenta con las capacidades o conocimientos necesarios              MIPYME se cuenta
+  56                                                                                                                                ✔️
+       para solucionar los problemas relacionados a tecnologías digitales?           con habilidades
+                                                                                     básicas
+       ¿En su MIPYME, ¿se toman medidas de seguridad digital                         Utilizamos medidas
+  57                                                                                                                                ✔️
+       (ciberseguridad)?                                                             de seguridad como
+Diagnóstico Situacional – Textiles y Confecciones Atlas E.I.R.L.
+
+
+                                                                               encriptación de
+                                                                               datos, claves
+                                                                               complejas y
+                                                                               autenticación de
+                                                                               doble factor,
+                                                                               respaldo en la nube,
+                                                                               etc.
+                                                                               Existe una
+                                                                               conciencia
+       ¿Qué tan extendida está en su equipo la preocupación por la seguridad   compartida sobre la
+  58                                                                                                                          ✔️
+       digital de su MIPYME?                                                   seguridad digital y
+                                                                               nos apoyamos al
+                                                                               respecto
+                                                                                                       Por ejemplo,
+                                                                               Hemos digitalizado      servicios ofrecidos
+       En términos generales, ¿se han integrado tecnologías digitales para     solo algunos            en la web, comercio
+  59                                                                                                                          ✔️
+       apoyar los procesos de su MIPYME?                                       elementos de            electrónico, control
+                                                                               nuestros procesos       de calidad
+                                                                                                       digitalizado, etc.
+                                                                               Nos coordinamos
+       ¿En su MIPYME utilizan herramientas digitales para planificar sus       utilizando medios
+  60                                                                                                                          ✔️
+       proyectos o coordinar el trabajo?                                       digitales básicos,
+                                                                               como Excel
+                                                                               Usamos
+                                                                               herramientas
+                                                                               digitales básicas
+       ¿En su MIPYME se utilizan programas o aplicaciones para la gestión de
+  61                                                                           como Excel para                                ✔️
+       recursos o procesos?
+                                                                               asistir la gestión de
+                                                                               nuestros recursos o
+                                                                               procesos
+                                                                                                       Por ejemplo,
+                                                                               Algunas de las
+                                                                                                       respuestas
+                                                                               tareas que
+       ¿Se ha implementado algún grado de automatización a los procesos de                             automáticas a sus
+  62                                                                           realizamos en la                               ✔️
+       su MIPYME?                                                                                      clientes por los
+                                                                               MIPYME son
+                                                                                                       servicios o
+                                                                               asistidas por un bajo
+                                                                                                       productos ofertados.
+Diagnóstico Situacional – Textiles y Confecciones Atlas E.I.R.L.
+
+
+                                                                                     grado de
+                                                                                     automatización
+                                                                                                           Por ejemplo,
+                                                                                 Es posible consultar
+                                                                                                           averiguar por
+                                                                                 a otras personas por
+                                                                                                           internet en qué
+           ¿En su MIPYME se cuenta con la capacidad para informarse digitalmente el estado de los
+  63                                                                                                       estado se encuentra    ✔️
+           sobre el estado de un proceso de manera remota?                       procesos por medios
+                                                                                                           un pedido o registro
+                                                                                 digitales de
+                                                                                                           de solicitud por un
+                                                                                 comunicación
+                                                                                                           servicio.
+
+
+
+
+                                                                    ANEXO C
+
+                                                                                    RESPUESTA                      COMPROBACIÓN
+       N°                           PREGUNTAS
+                                                      Desarrollo de Prácticas de Gestión
+
+       1         ¿La empresa realiza la planificación estratégica                                                          ✔️
+                 anual?                                                SI
+
+
+
+                                                                       No contamos con alguna herramienta que
+       2                                                                                                                   ✔️
+                                                                       nos ayude a dar seguimiento, ya que este
+                                                                       aspecto lo manejamos de forma manual, y
+                 ¿Qué dificultades enfrenta su empresa para            eso complica bastante organizar bien el
+                 realizar una planificación estratégica anual?         trabajo.
+
+       3                                                                                                                   ✔️
+                 ¿Cuáles son las principales trabas para medir el      El proceso es manual y consume mucho
+                 desempeño de sus colaboradores?                       tiempo.
+
+       4         ¿La empresa implementa modelos de innovación                                                              ✔️
+                 para mejorar la productividad?                        SI
+Diagnóstico Situacional – Textiles y Confecciones Atlas E.I.R.L.
+
+
+
+    5
+           Promedio de número de trabajadores por año                                                   12   2024: 10
+                                                    Desarrollo Capital Humano
+                                                                Nos hace falta una herramienta que
+                                                                permita a todos los colaboradores estar
+                                                                más involucrados con el control del
+    7                                                                                                          ✔️
+                                                                inventario. Actualmente manejamos todo
+           ¿Qué dificultades enfrenta para involucrar a sus     de forma manual y solo algunas personas
+           colaboradores en el proceso de mejora continua?      manejan esa información.
+                                                                Nuestros trabajadores conocen lo básico,
+                                                                pero como aún no usamos herramientas
+    8                                                           digitales especificas en nuestras, no          ✔️
+           ¿Cuáles son las principales barreras para capacitar sabemos bien en qué deberíamos
+           en temas de digitalización a sus trabajadores?       capacitarnos.
+
+    9                                                                                                          ✔️
+           ¿La empresa cuenta con una política de seguridad
+           y salud acorde con la normatividad nacional?         SI
+
+    10     ¿En los últimos dos años, la empresa ha realizado                                                   ✔️
+           auditorias de ciberseguridad?                        NO
+
+           ¿Cuenta con un proceso para solicitar las ideas de
+    11                                                                                                         ✔️
+           mejora por parte de los trabajadores de
+           producción?                                          SI
+
+    12                                                                                                         ✔️
+           Si marca "Sí", seleccione de donde proviene la idea
+           de mejora durante el último año.                    Trabajadores de producción
+           ¿Cuántas horas de capacitación reciben en
+    13                                                                                                         ✔️
+           promedio por año los trabajadores de producción?                                            24
+
+    14                                                                                                         ✔️
+           La empresa implementa modelos de motivación y
+           fidelización personalizada con sus colaboradores     SI
+Diagnóstico Situacional – Textiles y Confecciones Atlas E.I.R.L.
+
+
+
+                                                        Desarrollo Informático
+
+    16     ¿Qué dificultades encuentra para gestionar la          No se cuenta con una herramienta para     ✔️
+           información de su empresa?                             centralizar y analizar datos.
+
+    17     ¿Qué problemas enfrenta al tomar decisiones            No se dispone de un sistema de            ✔️
+           basadas en datos?                                      visualización de datos.
+
+           ¿La empresa tiene implementado un modelo de
+    18                                                                                                      ✔️
+           gestión por indicadores financieros y no
+           financieros?                                           No
+           ¿La empresa cuenta con un proceso de acopio de
+    19     datos apropiado para migrarlos a informática y                                                   ✔️
+           pueda tomar decisiones efectivas?                      Sí
+           ¿El sistema de medición del desempeño del
+           personal de producción y administrativo, incluidos
+    20     los indicadores, puede adecuarse rápidamente,                                                    ✔️
+           frente a cambios inesperados, tanto internos como
+           externos?                                              Sí
+
+    21                                                                                                      ✔️
+           ¿La empresa tiene implementado un sistema que
+           mide la trazabilidad de su desempeño?                  Sí
+                                                                  Medimos el desempeño principalmente a
+                                                                  través del número de prendas producidas
+                                                                  en un periodo y los tiempos que se
+    22                                                                                                      ✔️
+                                                                  demoran en cada etapa del proceso.
+                                                                  También identificamos los errores más
+           Si marca "Sí", indique ¿cuál o cuáles son?             comunes en confección.
+
+    23     ¿Tiene implementado un sistema informático para                                                  ✔️
+           medir la productividad?                           No
+                                                   Comercial y Financiero
+
+    25     ¿Qué dificultades tiene la empresa para captar                                                   ✔️
+           nuevos clientes?                                       Estrategias comerciales poco definidas.
+Diagnóstico Situacional – Textiles y Confecciones Atlas E.I.R.L.
+
+
+
+           ¿Cuáles son los principales problemas que tiene la
+    26                                                                                                     ✔️
+           empresa para medir y mejorar la satisfacción de      Dificultades para identificar las
+           sus clientes?                                        necesidades de los clientes.
+
+    27     ¿La empresa mide mensualmente el EBITDA en su                                                   ✔️
+           gestión financiera?                            Sí
+                                                          Atendemos principalmente a empresas e
+                                                          instituciones que necesitan uniformes
+    28                                                    deportivos y corporativos, ya que nos            ✔️
+           ¿Cuál es el segmento de mercado que atiende la especializamos en la venta según los
+           empresa?                                       requerimientos del cliente.
+
+           ¿La empresa tiene un modelo de control para
+    29                                                                                                     ✔️
+           identificar las necesidades y satisfacción de los
+           clientes?                                            Sí
+
+
+
+    30                                                          Si, usamos encuestas y recogemos           ✔️
+                                                                información a través de mensajes de
+                                                                WhatsApp, esta información nos ayuda a
+           Si marca “Sí”, indique ¿cuál o cuáles son?           identificar mejoras que podamos aplicar.
+           ¿La empresa tiene implementado un modelo de
+    31                                                                                                     ✔️
+           gestión para incursionar en nuevos mercados?         Sí
+           ¿La empresa emplea métodos de marketing digital
+    32                                                                                                     ✔️
+           para captar y atender a sus clientes?                Sí
+           ¿La empresa tiene un sistema implementado para
+    33     gestionar oportunamente el grado de                                                             ✔️
+           apalancamiento financiero de la empresa?             No
+
+    34     ¿La empresa mide de forma mensual el nivel de                                                   ✔️
+           endeudamiento?                                       Sí
+
+    35                                                                                                     ✔️
+           ¿La empresa cuenta con un sistema de control que
+           mide el margen neto de utilidad?                 No
+Diagnóstico Situacional – Textiles y Confecciones Atlas E.I.R.L.
+
+
+
+                                                      Desarrollo Operacional
+
+
+                                                                Nos falta una herramienta digital que nos
+                                                                ayude a controlar tanto la producción
+                                                                como el inventario en tiempo real.
+                                                                Actualmente todo se hace de manera
+           ¿Qué trabas enfrenta en la gestión de los procesos   manual, con registros en Excel, lo que a
+    37                                                                                                                ✔️
+           productivos?                                         veces causa errores o demoras. Si
+                                                                tuviéramos un sistema integrado,
+                                                                podríamos planificar mejor las tareas y
+                                                                tener más control sobre lo que producimos
+                                                                y vendemos.
+
+
+           ¿Cuáles son las principales dificultades para
+    38                                                          La supervisión es manual y poco eficiente.            ✔️
+           controlar la calidad de sus productos o servicios?
+                                                                Recepción de materia prima, Corte de tela,     No coincide con lo
+           Detalle, ¿cuáles son los procesos del área de        Confección de prendas, Control de            indicado, se tuvo que
+    39
+           producción de la empresa?                            calidad, Almacenamiento, Preparación         mapear su verdadero
+                                                                para entrega.                                       proceso
+                                                                La empresa se dedica a la confección de
+                                                                prendas textiles. Se especializa en la
+                                                                elaboración de uniformes para
+                                                                instituciones públicas y privadas, con
+                                                                productos hechos a medida. Su trabajo
+                                                                abarca desde la recepción de materia
+           Precisar ¿qué oportunidad(es) la empresa desea       prima, corte, confección, hasta el control   No es la información
+    40     abordar?, ¿se requiere cambios en el área            de calidad y la entrega. La empresa tiene    correcta, la empresa
+           productiva?                                          dificultades para mantener un control             solo vende
+                                                                preciso del stock ya que el inventario se
+                                                                gestiona de forma manual. Esto causa
+                                                                retrasos en las entregas, confusión con
+                                                                productos disponibles y poca visibilidad.
+                                                                Quieren implementar un sistema digital
+                                                                para gestionar los inventarios con mayor
+Diagnóstico Situacional – Textiles y Confecciones Atlas E.I.R.L.
+
+
+                                                                eficiencia, utilizando códigos de barras
+                                                                para registrar cada modelo. También
+                                                                buscan fortalecer su presencia digital con
+                                                                un portal web y mejor posicionamiento en
+                                                                línea para llegar a más clientes.
+
+
+
+
+                                                                1. Recepción de materia prima: No hay
+                                                                información en tiempo real, lo que afecta
+                                                                los registros de inventario y producción.2.
+                                                                Almacenamiento: No tienen un inventario
+                                                                digital para saber el stock con exactitud, lo   No es lo correcto, la
+           Identifica tres principales trabas en los procesos
+    41                                                          que dificulta saber cuántos productos              empresa no
+           señalados en la pregunta C.5.3.
+                                                                terminados hay y cuándo se finalizó un             confecciona
+                                                                pedido. 3. Confección de prendas: No hay
+                                                                una forma clara de saber en qué etapa del
+                                                                proceso está un pedido, lo que complica
+                                                                dar información al cliente.
+
+                                                                El proceso inicia al recibir un pedido por
+                                                                WhatsApp. Se revisa la disponibilidad de
+                                                                materiales y se asignan las tareas al
+                                                                personal. Se organiza en hojas de cálculo
+           ¿Cómo se programa el trabajo del área de
+    44                                                          simples, sin un software específico. La                 ✔️
+           producción?
+                                                                facturación se realiza con un sistema
+                                                                básico, no conectado a ningún registro. La
+                                                                presencia en redes se maneja con una
+                                                                página de Facebook.
+Diagnóstico Situacional – Textiles y Confecciones Atlas E.I.R.L.
+
+
+                                                                Se realiza mantenimiento a las máquinas
+                                                                de costura cada tres meses. El
+           ¿Qué medidas se toman para evitar que las
+                                                                mantenimiento de los equipos de cómputo
+    45     máquinas/equipos se averíen, que funcionen mal o                                                            ✔️
+                                                                es cada 6 meses, consistente en una
+           afecten la seguridad?
+                                                                limpieza. Cuentan con un técnico de
+                                                                confianza para cualquier inconveniente.
+
+    46     ¿Cuál es el porcentaje de productos defectuosos?                                             5%             ✔️
+
+
+           ¿Los trabajadores de producción necesitan de
+    47                                                         No.                                                     ✔️
+           alguna autoridad para parar la línea de producción?
+
+                                                                Insumos: Sí Procesos: Sí Productos
+    48     La empresa cuenta con el control de calidad para:                                                           ✔️
+                                                                finales: Sí
+                                                               1. Falta de control de inventarios
+                                                               automatizado: Genera gestión ineficiente
+                                                               de materias primas e insumos y causa
+                                                               retrasos en entregas. 2. Digitalización de
+                                                               procesos operativos y productivos: La falta
+           ¿Cuáles considera que son los tres principales
+                                                               de automatización en procesos manuales
+    51     desafíos que enfrenta actualmente su empresa                                                                   ✔️
+                                                               genera retrasos en la coordinación y
+           para crecer?
+                                                               dificulta la detección de fallas. 3. Falta de
+                                                               análisis de tendencias: Limita la
+                                                               planificación de la demanda y el diseño de
+                                                               campañas de marketing efectivas,
+                                                               afectando la competitividad.
+                                                           Objetivos
+                                                                Objetivo General: Implementar un sistema
+                                                                digital de gestión de inventarios y control
+                                                                                                                Resultados Finales:
+                                                                  de producción para optimizar procesos
+                                                                                                               - Mejorar el control y
+    55          Objetivo general y resultados del proyecto         manuales, mejorar la trazabilidad de
+                                                                                                                 visibilidad de los
+                                                                    productos y aumentar la eficiencia
+                                                                                                              inventarios en tiempo
+                                                                 operativa en la producción y gestión de
+                                                                                                             real, permitiendo tomar
+                                                                stock, y contribuir al fortalecimiento de la
+Diagnóstico Situacional – Textiles y Confecciones Atlas E.I.R.L.
+
+
+                                                           presencia comercial a través de una          decisiones más
+                                                        gestión más ágil de la oferta de productos.          rápidas.
+                                                                                                     - Reducir los errores
+                                                            De acuerdo a lo presentado por la           en la gestión de
+                                                         empresa, se debe de reformular y estar    inventarios en un 15%.
+                                                        orientado a la comercialización, ya que es       - Optimizar los
+                                                               su único giro de la empresa.                procesos de
+                                                                                                     producción con una
+                                                                                                     mejora en los plazos
+                                                                                                   de entrega en hasta un
+                                                                                                               10%
+                                                                                                         - Fortalecer la
+                                                                                                   presencia comercial en
+                                                                                                   un 15% asegurando la
+                                                                                                       oferta constante.
+
+
+
+                                            HERRAMIENTA METODOLÓGICA DIGITAL
+                       NIVEL DE                                                                                              GRADO
+                    CUMPLIMIENTO                                                                                               DE
+  DIMENSIONES                                                                   EVIDENCIA
+                 0 25 50 75                                                                                                  CRITICID
+                                100%
+                 % % % %                                                                                                       AD
+ 1. PRÁCTICAS DE GESTIÓN
+ 1.1. ESTRATEGIA Y GOBIERNO DIGITAL
+ ¿La empresa
+ posee un plan
+ estratégico
+ formal con
+ objetivos,
+                             x                                                                                                BAJO
+ presupuesto y
+ responsables
+ para la
+ transformación                        La empresa ha desarrollado un plan estratégico digital con objetivos, presupuesto y
+ digital                               responsables para la implementación, aunque no está completamente implementado.
+Diagnóstico Situacional – Textiles y Confecciones Atlas E.I.R.L.
+
+
+
+ ¿La gerencia
+ utiliza
+ dashboards,
+ reportes o KPIs
+ generados por
+                     x                                                                                                               ALTO
+ sistemas
+ digitales para la
+ toma de
+ decisiones                            No disponen de sistema de visualización de datos ni modelo de gestión por indicadores. El
+ estratégicas?                         análisis de datos es esporádico, dificultando decisiones estratégicas.
+ ¿Existe un
+ presupuesto
+ definido y
+ recurrente para
+                         x                                                                                                           MEDIO
+ la adquisición,
+ mantenimiento y                       Existe presupuesto para un proyecto digital y realizan mantenimiento. Sin embargo, no se
+ actualización de                      detalla un presupuesto recurrente formal para la adquisición y actualización tecnológica
+ tecnología?                           continua.
+ ¿Están
+ claramente
+ definidos los
+ roles para la
+ gestión de
+ iniciativas
+ digitales                   x                                                                                                       BAJO
+ (responsable de
+ redes, de un
+ sistema interna,
+ página web,
+ ciberseguridad,                       La empresa no tiene personal dedicado a la gestión de iniciativas digitales, aunque las
+ etc)?                                 funciones se suplen. Existe un interés en implementar un área de marketing y ventas online.
+ ¿La empresa
+ mide o intenta
+ medir el retorno    x                 La empresa no posee un modelo de gestión por indicadores financieros y no financieros, ni     ALTO
+ de la inversión                       un sistema de visualización de datos para la toma de decisiones, aunque el proyecto actual
+ (ROI) o el                            establece objetivos medibles.
+Diagnóstico Situacional – Textiles y Confecciones Atlas E.I.R.L.
+
+
+
+ impacto en el
+ negocio de sus
+ principales
+ proyectos
+ tecnológicos?
+ TOTAL 1.1.         0 2 1  2    0
+ 1.2. AUTOMATIZACIÓN DE PROCESOS Y SISTEMAS DE GESTIÓN
+ ¿La empresa
+ utiliza un sistema
+ ERP (Enterprise
+ Resource
+ Planning) o
+ sistemas que
+                        x                                                                                                        MEDIO
+ integran varias
+ áreas
+ (contabilidad,
+ ventas,
+ operaciones,                         La empresa utiliza un sistema básico de facturación y un servidor de cámaras, pero los
+ logística, etc)?                     procesos no están conectados, operando de forma aislada y manual.
+ ¿Se han
+ automatizado
+ flujos de trabajo
+ o tareas
+ manuales y           x                                                                                                          ALTO
+ repetitivas en
+ áreas
+ administrativas o                    Algunas tareas tienen un bajo grado de automatización, pero la mayoría de los procesos
+ de gestión?                          clave de gestión e inventario son manuales o utilizan herramientas básicas como Excel.
+ ¿Procesos como
+ la gestión de
+ compras,
+ recursos
+                           x                                                                                                     BAJO
+ humanos u
+ operaciones se
+ gestionan de                         La gestión de compras se realiza vía WhatsApp, y los procesos de recursos humanos y
+ forma nativa en                      operaciones son principalmente manuales o asistidos por herramientas básicas como Excel.
+Diagnóstico Situacional – Textiles y Confecciones Atlas E.I.R.L.
+
+
+
+ plataformas
+ digitales?
+ ¿Los procesos
+ de trabajo están
+ documentados o
+ diagramados
+ para estandarizar          x                                                                                                        BAJO
+ la operación y
+ facilitar la
+ inducción o                          Existen diagramas de flujo de procesos y del sistema de planificación y control, así como
+ capacitación?                        roles y funciones detalladas, y se capacita sobre estándares de calidad.
+ ¿Los diferentes
+ sistemas de
+ software que
+ utiliza la empresa
+ se comunican       x                                                                                                                ALTO
+ entre si para
+ evitar la doble                      Los sistemas de software de la empresa, como el de facturación, no están conectados a
+ digitación de                        otros registros; todo se gestiona por separado, lo que implica aislamiento y potencial doble
+ datos?                               digitación de datos.
+ TOTAL 1.2.         1 1  1  2     0
+ 1.3. GESTIÓN DE LA INFORMACIÓN Y DOCUMENTACIÓN
+ ¿La información
+ crítica de la
+ empresa está
+ centralizada en
+ un repositorio
+ digital único y
+ accesible            x                                                                                                              ALTO
+ (servidor físico o
+ en la nube) en
+ lugar de estar en
+ diferentes
+ equipos                              La empresa utiliza la nube para almacenar información, pero no tiene una herramienta para
+ individuales?                        centralizar y analizar todos los datos críticos, operando de forma aislada
+Diagnóstico Situacional – Textiles y Confecciones Atlas E.I.R.L.
+
+
+
+ ¿La
+ documentación
+ física importante
+ (contratos,
+ facturas,
+ comprobantes de
+ compra) se
+                             x                                                                                                               MEDIO
+ escanea y
+ gestiona de
+ forma digital con
+ algún sistema de
+ control de                              La empresa utiliza facturación electrónica, pero aún trabaja tanto en papel como de manera
+ versiones o                             digital, y el deseo de digitalizar más sugiere la falta de un sistema formal de gestión y control
+ archivo?                                de versiones para la documentación física importante
+ ¿Existen
+ permisos
+ definidos sobre
+ quién puede
+ acceder,
+                                 x                                                                                                           BAJO
+ modificar o
+ eliminar la
+ información                             Se utilizan medidas de seguridad digital como encriptación y autenticación de doble factor,
+ crítica de la                           pero no se especifican permisos granulares para el acceso, modificación o eliminación de
+ empresa?                                información crítica
+ ¿Se realizan
+ revisiones
+ periódicas para
+ asegurar que los
+ datos en los                x                                                                                                               MEDIO
+ sistemas
+ principales son
+ correctos y están                       Los procesos de inventario son manuales, causando errores y retrasos, y no se dispone de
+ actualizados?                           información en tiempo real, lo que dificulta la actualización constante de los datos
+ TOTAL 1.3.          0   1   2   1   0
+Diagnóstico Situacional – Textiles y Confecciones Atlas E.I.R.L.
+
+
+
+ TOTAL 1 -
+ PRÁCTICAS DE 1      4  4   5     0
+ GESTIÓN
+ 2. CAPITAL HUMANO
+ 2.1. CULTURA Y LIDERAZGO DIGITAL
+ ¿La alta
+ dirección lidera
+ activamente,
+ comunica la
+                            x                                                                                                       BAJO
+ importancia y
+ realiza en los
+ proyectos de                          La alta dirección lidera activamente la identificación de necesidades digitales y busca
+ digitalización?                       implementar sistemas, y tiene una estrategia aunque no está completamente implementada.
+ ¿Cuál es el nivel
+ general de
+ aceptación vs
+ resistencia del
+ personal para          x                                                                                                           MEDIO
+ adoptar nuevas
+ herramientas y
+ procesos                              Aunque la empresa cree que sería fácil implementar cambios, la gerente percibe falta de
+ digitales?                            proactividad en el personal para mejorar y adoptar nuevas herramientas.
+ ¿Se utilizan
+ herramientas de
+ colaboración
+ digital (Microsoft
+ Teams, Slack,
+ Google                 x                                                                                                           MEDIO
+ Workspace) de
+ forma efectiva
+ para la                               Los trabajadores siempre se comunican digitalmente usando medios básicos como
+ comunicación                          WhatsApp y llamadas telefónicas, pero no se mencionan herramientas de colaboración digital
+ interna?                              avanzada.
+ ¿Se fomenta que
+ los empleados              x           La empresa tiene un proceso para solicitar ideas de mejora de los trabajadores de y apoya   BAJO
+ propongan                             con beneficios la presentación de ideas innovadoras.
+Diagnóstico Situacional – Textiles y Confecciones Atlas E.I.R.L.
+
+
+
+ nuevas ideas o
+ mejoras a los
+ procesos
+ utilizando la
+ tecnología?
+ ¿La cultura de la
+ empresa trata los
+ errores derivados
+ de la
+ experimientación
+ con nuevas
+                                x                                                                                                   BAJO
+ tecnologías
+ como
+ oportunidades de
+ aprendizaje en
+ lugar de como                       Uno de los valores fundamentales de la empresa es "Aprender del fracaso", fomentando que
+ fracasos?                           los colaboradores se levanten y aprendan de sus errores.
+ TOTAL 2.1.        0 0  2  2    1
+ 2.2. COMPETENCIAS Y DESARROLLO DEL TALENTO
+ ¿La empresa
+ ofrece formación
+ continua a sus
+ empleados sobre           x         La empresa cuenta con recursos o contactos para facilitar el aprendizaje, y sus trabajadores   BAJO
+ las herramientas                    conocen lo básico, pero como aún no utilizan herramientas digitales específicas en áreas
+ digitales que                       clave como inventario, no han identificado necesidades de capacitación concretas en estas
+ utiliza?                            áreas.
+ ¿Existe un plan
+ para explorar y
+ formar al
+ personal clave
+                     x                                                                                                              ALTO
+ en tecnologías
+ emergentes                          No existe un plan para explorar y formar al personal en tecnologías emergentes; de hecho, la
+ relevantes para                     empresa reconoce que sus trabajadores conocen lo básico y aún no saben en qué deberían
+ el sector?                          capacitarse en relación con herramientas digitales específicas para sus áreas.
+ ¿La empresa            x            Al momento de contratar personal, las habilidades digitales son consideradas y preferidas,     MEDIO
+ busca                               pero no son un factor excluyente o clave para la contratación.
+Diagnóstico Situacional – Textiles y Confecciones Atlas E.I.R.L.
+
+
+
+ activamente
+ perfiles con
+ competencias
+ digitales en sus
+ procesos de
+ contratación?
+ Aunque una
+ persona cumpla
+ varias funciones,
+ ¿Están
+ claramente
+ definidas las        x                                                                                                              ALTO
+ responsabilidade
+ s relacionadas
+ con la gestión de                    La empresa no cuenta con personal dedicado exclusivamente a la gestión de iniciativas
+ herramientas                         digitales, aunque las funciones se suplen. Las responsabilidades de gestión digital no están
+ digitales?                           formalmente definidas o asignadas a roles específicos.
+ TOTAL 2.2.         0 2 1   1     0
+ TOTAL 2 -
+ COMPETENCIA
+ SY                 0 2 3   3     1
+ DESARROLLO
+ DEL TALENTO
+ 3. INFRAESTRUCTURA Y SOFTWARE
+ 3.1. INFRAESTRUCTURA FÍSICA Y CONECTIVIDAD
+ ¿Los equipos de
+ los usuarios
+ finales (PCs,
+ laptops) son
+                            x                                                                                                        BAJO
+ adecuados para
+ sus funciones y                      La empresa considera que posee una cantidad apropiada de equipos tecnológicos para el
+ tienen un plan de                    trabajo diario digital. Sin embargo, se expresa un deseo de renovar las computadoras
+ renovación?                          existentes, y no se menciona un plan formal de renovación.
+ ¿La                                  La empresa utiliza medidas de seguridad digital como encriptación de datos y autenticación
+ infraestructura de         x         de doble factor, y realiza mantenimiento a los equipos de cómputo cada seis meses con un       BAJO
+ red interna y los                    técnico de confianza. Además, cuenta con un servidor específico para las cámaras de
+Diagnóstico Situacional – Textiles y Confecciones Atlas E.I.R.L.
+
+
+
+ servidores son                        seguridad que graba por 30 días, aunque no se detalla un servidor interno para la gestión
+ estables,                             general de la empresa.
+ seguros y
+ reciben
+ mantenimiento?
+ ¿El ancho de
+ banda y la
+ fiabilidad de la
+ conexión a
+ internet son
+ suficientes para
+                      x                                                                                                              ALTO
+ soportar las
+ operaciones
+ críticas                              Aunque la empresa vende sus productos tanto presencialmente como por internet, y utiliza la
+ (videollamadas,                       nube para almacenar información, se han reportado problemas de conexión en una de las
+ software en la                        tiendas, donde el sistema "se cuelga o no entra", lo que puede afectar la fluidez de las
+ nube, etc)?                           operaciones críticas.
+ ¿La
+ infraestructura de
+ la empresa
+ permite el trabajo
+ remoto de forma
+ eficiente y          x                                                                                                              ALTO
+ segura?
+ (Considera VPN,                       Aunque la empresa permite el teletrabajo en algunas instancias, se menciona explícitamente
+ acceso a                              que no se puede realizar trabajo remoto para roles operativos o de ventas presenciales, ya
+ sistemas en la                        que estos son considerados "totalmente presenciales". No se detallan herramientas
+ nube, etc)                            específicas como VPNs para soportar eficientemente el trabajo a distancia.
+ TOTAL 3.1.         0 2 0 2       0
+ 3.2. PLATAFORMAS Y SOFTWARE
+ ¿El software de
+ ofimática y los
+ sistemas                 x                                                                                                          BAJO
+ operativos están                      La empresa utiliza programas o aplicaciones de oficina, como hojas de cálculo simples
+ debidamente                           (Excel), y un sistema básico de facturación
+Diagnóstico Situacional – Textiles y Confecciones Atlas E.I.R.L.
+
+
+
+ licenciados y
+ actualizados?
+ ¿La empresa
+ invierte y utiliza
+ software
+ específico para
+                          x                                                                                                           MEDIO
+ su sector
+ (AutoCad,
+ Ilustrator,                           La empresa utiliza al menos un programa especializado que apoya un aspecto de su
+ Audaces, etc)?                        actividad o es necesario para ofrecer un producto o servicio
+ ¿La empresa ha
+ migrado a
+ servicios a la
+ nube (correo,
+ almacenamiento,
+ software como
+                              x                                                                                                       BAJO
+ servicio) para
+ mejorar la
+ accesibilidad y
+ reducir la carga
+ de                                    La empresa almacena su información en la nube, utilizando servicios como Dropbox, Google
+ mantenimiento?                        Drive, OneDrive o iCloud
+ ¿Existe un
+ proceso definido
+ para evaluar y
+ seleccionar
+ nuevo software,
+                      x                                                                                                               ALTO
+ considerando las
+ necesidades del
+ negocio, la                           La empresa identifica la necesidad de implementar nuevas tecnologías digitales,
+ compatibilidad y                      especialmente un sistema de gestión de inventarios para optimizar procesos y eliminar tareas
+ el soporte?                           manuales
+ TOTAL 3.2.         0 1   1   2   0
+ 3.3. CIBERSEGURIDAD
+Diagnóstico Situacional – Textiles y Confecciones Atlas E.I.R.L.
+
+
+
+ ¿Existen
+ políticas claras y
+ herramientas
+ implementadas
+                           x                                                                                                          MEDIO
+ para la seguridad
+ (antivirus,
+ firewall, políticas                    La empresa utiliza medidas de seguridad digital como encriptación de datos, claves
+ de contraseñas?                       complejas y autenticación de doble factor, además de realizar respaldo en la nube
+ ¿Se realizan
+ copias de
+ seguridad
+ automáticas y
+ periódicas de la          x                                                                                                          MEDIO
+ información
+ crítica, y se ha
+ probado su                            La empresa realiza respaldo de información en la nube (Dropbox, Google Drive, OneDrive,
+ restauración?                         iCloud, etc.) como una de sus medidas de seguridad digital
+ ¿Se capacita a
+ los empleados
+ sobre buenas
+ prácticas de          x                                                                                                              ALTO
+ ciberseguridad
+ (Ransonware,
+ Phishing, etc?                        Existe una conciencia compartida sobre la seguridad digital entre los trabajadores
+ ¿Los empleados
+ solo tienen
+ acceso a la
+ información y
+                       x                                                                                                              ALTO
+ sistemas                              Las fuentes no especifican claramente si existen sistemas digitales con control de acceso
+ estrictamente                         basado en roles. Dada la descripción de los procesos de trabajo y la gestión, donde la
+ necesarios para                       Gerente General tiene un conocimiento profundo de todas las áreas y busca "sistematizar" el
+ su función?                           negocio, y la falta de un sistema integrado de inventarios
+ ¿Existe un plan                        Las fuentes no contienen información sobre la existencia de un plan básico de acción a
+ básico de acción      x               seguir en caso de un incidente de seguridad. La falta de auditorías de ciberseguridad en los   ALTO
+ a seguir en caso                      últimos dos años
+Diagnóstico Situacional – Textiles y Confecciones Atlas E.I.R.L.
+
+
+
+ de un incidente
+ de seguridad?
+ TOTAL 3.3.       0  3   2   0   0
+ TOTAL 3 -
+ INFRAESTRUCT
+                  0  6   3   4   0
+ URA Y
+ SOFTWARE
+ 4. COMERCIAL Y FINANCIERO
+ 4.1. CANALES DIGITALES Y E-COMMERCE
+ ¿La empresa
+ cuenta con una
+ plataforma de e-
+ commerce            x                                                                                                                 ALTO
+ transaccional
+ funcional y                            Aunque la empresa vende sus productos tanto presencialmente como por internet [B.1.14], y
+ actualizada?                          tiene presencia en línea a través de redes sociales o un sitio web
+ ¿Se utilizan
+ activamente
+ marketplaces o
+ las funciones de
+ tiendas de redes
+                         x                                                                                                             MEDIO
+ sociales para la
+ promoción y
+ venta de
+ productos o                           La empresa utiliza activamente Facebook para tener presencia en redes, subir fotos de
+ servicios?                            nuevos diseños y trabajos terminados, y responder a consultas de clientes
+ ¿La información,                      Existe una alta inconsistencia en la información y los precios entre los diferentes puntos de
+ precios y                             venta y canales de comunicación. Se ha identificado que el proceso de inventario es manual
+ promociones son                       y tedioso, lo que puede llevar a errores en la disponibilidad de productos y la fijación de
+ consistentes                          precios. La empresa vende el mismo producto de una marca con diferentes calidades y
+ entre los           x                 precios en sus distintas tiendas (por ejemplo, una pelota de fútbol de $180 en una tienda y     ALTO
+ diferentes                            $120 en otra, de la misma marca pero diferente calidad). Además, la falta de un sistema
+ canales de venta                      centralizado permite que los vendedores puedan dar "precios erróneos" o que el stock no sea
+ (tienda física,                       conocido con exactitud, lo que lleva a la pérdida de ventas. Esto sugiere que la consistencia
+ web, redes                            es un problema significativo.
+Diagnóstico Situacional – Textiles y Confecciones Atlas E.I.R.L.
+
+
+
+ sociales,
+ WhatsApp?
+
+ ¿El proceso de
+ compra online es
+ claro, fácil y
+ rápido para el
+ cliente, desde      x                                                                                                                 ALTO
+ que encuentra el
+ producto o
+ servicio hasta                         Dada la ausencia de una plataforma de e-commerce transaccional funcional y la
+ que paga?                              dependencia de WhatsApp y Facebook para gestionar pedidos y consultas
+ TOTAL 4.1.        0 3   1   0     0
+ 4.2. MARKETING DIGITAL Y GESTIÓN DE CLIENTES
+ ¿Se ejecutan
+ campañas de
+ marketing digital
+ (Google Ads,
+                     x                                                                                                                 ALTO
+ Meta Ads) con
+ objetivos y
+ métricas                               La empresa emplea métodos de marketing digital para captar y atender a sus clientes [C.4.7],
+ definidas?                             y se promociona utilizando redes sociales y/o un sitio web
+ ¿Se utiliza un
+ sistema CRM
+ para gestionar el
+ ciclo de vida del   x                                                                                                                 ALTO
+ cliente, desde el
+ prospecto hasta                        La empresa mantiene los contactos de sus clientes por medios digitales básicos, como Excel
+ la post-venta?                         o en el celular
+ ¿Se miden y
+ analizan datos
+ del
+ comportamiento      x                                                                                                                 ALTO
+ de los usuarios
+ en la web o de
+ las interacciones                       Las tecnologías digitales han permitido identificar a grandes rasgos
+Diagnóstico Situacional – Textiles y Confecciones Atlas E.I.R.L.
+
+
+
+ con los clientes
+ para obtener
+ insights?
+ ¿Se utilizan
+ activamente los
+ canales digitales
+ para solicitar y       x                                                                                                               MEDIO
+ recolectar
+ feedback de los
+ clientes?                              La empresa recoge información a través de mensajes de WhatsApp para identificar mejoras
+ ¿Se utiliza
+ herramientas
+ digitales para
+ centralizar la
+ comunicación de     x                                                                                                                  ALTO
+ los clientes y
+ personalizar la
+ comunicación de                        La empresa maneja un único canal digital de comunicación con nuestros clientes, que
+ las ofertas?                           consiste en WhatsApp para pedidos y la página de Facebook para consultas
+ TOTAL 4.2.        0 4  1  0      0
+ 4.3. OPERACIONES FINANCIERAS DIGITAL
+ ¿Se ofrecen
+ múltiples
+ opciones de
+ pago digital
+                        x                                                                                                               MEDIO
+ seguras e
+ integradas en los
+ canales de                             Los clientes de la empresa pueden pagar por sus productos o servicios utilizando pago por
+ venta?                                 internet o transferencias bancarias, además de efectivo, cheque y tarjetas
+ ¿El proceso de
+ emisión de
+ comprobantes de
+                           x                                                                                                            BAJO
+ pago y el
+ seguimiento de                          La empresa utiliza boletas y facturas electrónicas, y un "sistema básico" de facturación que
+ cobranzas está                         les permite emitir comprobantes de pago y llevar un control de ventas
+Diagnóstico Situacional – Textiles y Confecciones Atlas E.I.R.L.
+
+
+
+ completamente
+ digitalizado?
+ ¿Se utilizan
+ herramientas
+ digitales para
+ generar reportes     x                                                                                                             ALTO
+ financieros en
+ tiempo real o con
+ alta frecuencia?
+ ¿El proceso de
+ registro y
+ aprobación de
+ gastos de la
+                      x                                                                                                             ALTO
+ empresa (caja                         Las fuentes proporcionadas no contienen información específica sobre la digitalización del
+ chica viáticos,                      proceso de registro y aprobación de gastos como caja chica o viáticos. Sin embargo, en un
+ etc) está                            contexto más amplio, la empresa menciona que no cuenta con herramientas para dar
+ digitalizado?                        seguimiento a la planificación estratégica
+ TOTAL 4.3.        0  2   1  1    0
+ TOTAL 4 -
+ COMERCIAL Y       0  9   3  1    0
+ FINANCIERO
+ 5. OPERACIONES Y CADENA DE SUMINISTRO
+ 5.1. DIGITALIZACIÓN DEL PROCESO CORE
+ ¿Se han
+ automatizado
+ etapas clave del
+ proceso
+ productivo o de      x                                                                                                             ALTO
+ la presentación
+ del servicio para
+ reducir errores y                    Muchos procesos operativos y productivos se ejecutan de forma manual o con hojas de
+ tiempos?                             cálculo, sin una herramienta digital para control de inventario en tiempo real.
+ ¿Se utilizan
+ herramientas         x               La supervisión de la calidad es manual y poco eficiente, y la empresa no cuenta con una       ALTO
+ digitales para                       herramienta para centralizar o analizar los datos de control.
+Diagnóstico Situacional – Textiles y Confecciones Atlas E.I.R.L.
+
+
+
+ registrar y
+ analizar los
+ controles de
+ calidad en el
+ proceso producto
+ o de servicio?
+ ¿La gestión del
+ mantenimiento
+ de maquinaria y
+ equipos críticos
+                       x                                                                                                             ALTO
+ se planifica y
+ registra
+ utilizando algún                       No hay mención de un sistema digital para planificar o registrar el mantenimiento de la
+ sistema digital?                       maquinaria y equipos, lo que sugiere una gestión manual.
+ TOTAL 5.1.          0 3 0    0    0
+ 5.2. LOGÍSTICA INTELIGENTE Y GESTIÓN DE INVENTARIO
+ ¿El inventario se
+ gestiona con un
+ software que
+ contra entradas,
+                       x                                                                                                             ALTO
+ salidas,
+ ubicaciones y                          La empresa carece de una herramienta digital para controlar el inventario en tiempo real,
+ stock en tiempo                        gestionándolo manualmente con registros en Excel o cuadernos, lo que causa errores y
+ real?                                  demoras.
+ ¿Se puede hacer
+ seguimiento
+ digital del lote de
+                       x                                                                                                             ALTO
+ un producto a lo
+ largo de toda la
+ cadena?                                No ya que la empresa no realiza producción, solo la venta y comercialización.
+ ¿Se utiliza data
+ histórica de
+ ventas o alguna
+                       x                                                                                                             ALTO
+ herramienta
+ digital para                           La empresa carece de análisis de tendencias de ventas y estacionalidades, lo que limita la
+ pronosticar la                         planificación de la demanda y una gestión proactiva del inventario.
+Diagnóstico Situacional – Textiles y Confecciones Atlas E.I.R.L.
+
+
+
+ demanda futura y
+ optimizar los
+ niveles de
+ inventario?
+ TOTAL 5.2.        0 3   0  0     0
+ 5.3. INTEGRACIÓN DE LA CADENA DE SUMINISTRO
+ ¿La gestión de
+ órdenes de
+ compra y la
+ comunicación
+ con proveedores     x                                                                                                               ALTO
+ está centralizada
+ en una
+ plataforma                            Los pedidos a proveedores se hacen a través de WhatsApp, y la comunicación digital no es
+ digital?                             constante ni centralizada en una plataforma.
+ ¿La empresa
+ realizar
+ proyecciones de
+ compra y venta
+ venta para
+                     x                                                                                                               ALTO
+ mejorar la
+ planificación de
+ insumos y evitar
+ quiebres de                          Existe una falta de análisis de tendencias de ventas y estacionalidades, lo que limita la
+ stock?                               planificación de la demanda futura y la gestión proactiva del inventario.
+ ¿Se utilizan
+ datos para medir
+ y evaluar el
+                     x                                                                                                               ALTO
+ desempeño de
+ los proveedores                       Aunque se realiza una revisión periódica de la calidad de los proveedores, no se especifica
+ clave?                               el uso de datos digitales para medir o evaluar su desempeño.
+ TOTAL 5.3.        0 3   0  0     0
+ TOTAL 5 -
+ OPERACIONES
+                   0 9   0  0     0
+ Y CADENA DE
+ SUMINISTRO
+Diagnóstico Situacional – Textiles y Confecciones Atlas E.I.R.L.
+
+11. Evidencia Fotográfica
+
+
+
+
+                            Ilustración 7 Fachada tienda
+
+
+
+
+                               Ilustración 8 Facturas
+Diagnóstico Situacional – Textiles y Confecciones Atlas E.I.R.L.
+
+
+
+
+                          Ilustración 9 Boleta electrónica
+Diagnóstico Situacional – Textiles y Confecciones Atlas E.I.R.L.
+
+
+
+
+                         Ilustración 10 Mostrador de ventas
+Diagnóstico Situacional – Textiles y Confecciones Atlas E.I.R.L.
+
+
+
+
+                             Ilustración 11 Proforma
+
+
+
+
+                             Ilustración 12 Almacén
+Diagnóstico Situacional – Textiles y Confecciones Atlas E.I.R.L.
+
+
+
+
+                              Ilustración 13 Tienda
+
+
+
+
+                            Ilustración 14 Mostrador
+Diagnóstico Situacional – Textiles y Confecciones Atlas E.I.R.L.
+
+
+
+
+                            Ilustración 15 Acta de visitas
+
+                 https://drive.google.com/drive/folders/1jIyuf-
+              lID_NWwRhoeQpSHpZl13OFzu23?usp=sharing
+
