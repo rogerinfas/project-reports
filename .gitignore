@@ -1,4 +1,4 @@
-# LaTeX
+# ── LaTeX ──────────────────────────────────────────────────────────────────
 *.aux
 *.log
 *.out
@@ -22,5 +22,36 @@
 *.mtc
 *.mtc0
 *.pyg
+texput.log
 
+# ── PDFs generados ──────────────────────────────────────────────────────────
+# Ignorar todos los PDFs excepto los entregables finales
+*.pdf
+
+# ── Credenciales ────────────────────────────────────────────────────────────
+credentials.md
+credentials.txt
+*.env
+.env*
+secrets.*
+
+# ── Node.js / Playwright ─────────────────────────────────────────────────────
+node_modules/
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+playwright-report/
+test-results/
+
+# ── Editores e IDEs ─────────────────────────────────────────────────────────
+.vscode/
+.idea/
+.cursor/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# ── Carpetas de entregables internos ────────────────────────────────────────
 entregables/
