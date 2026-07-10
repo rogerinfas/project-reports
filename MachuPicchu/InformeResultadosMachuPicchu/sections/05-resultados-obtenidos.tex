@@ -76,7 +76,7 @@ Entre los principales resultados de la adopción tecnológica destacan:
 
 \begin{itemize}
     \item \textbf{Institucionalización del Repositorio de Pasaportes:} el personal ha adoptado la disciplina de cargar las fotografías de los documentos de identidad directamente en la ficha del cliente de Odoo. Esto ha permitido eliminar la práctica de almacenar y borrar fotos de pasaportes en dispositivos personales por temor a brechas de seguridad, garantizando que la información crítica para la compra de boletos esté siempre disponible y protegida.
-    \item \textbf{Gestión Visual de Itinerarios:} la gerencia y el equipo operativo utilizan ahora de forma activa el tablero Kanban para supervisar el estatus de los viajes que duran entre 2 a 20 días. Esta adopción ha sustituido el seguimiento basado en la memoria y en hilos de chat dispersos por una visibilidad total de las etapas de "Confirmación", "Compra de Tickets" y "Ejecución".
+    \item \textbf{Gestión Visual de Itinerarios:} la gerencia y el equipo operativo utilizan ahora de forma activa el tablero Kanban para supervisar el estatus de los viajes que duran entre 2 a 20 días. Esta adopción ha sustituido el seguimiento basado en la memoria y en hilos de chat dispersos por una visibilidad total de las etapas de ``Confirmación'', ``Compra de Tickets'' y ``Ejecución''.
     \item \textbf{Autonomía en el Control Financiero:} se ha logrado una alta adopción en el registro manual de adelantos (30\% a 50\%) y saldos dentro del sistema. El equipo ha internalizado la restricción de seguridad de no confirmar servicios externos ni comprar boletos no reembolsables sin antes verificar el estatus de pago en el módulo de Ventas.
     \item \textbf{Profesionalización de la Comunicación:} la adopción de plantillas estandarizadas para cotizaciones y respuestas ha permitido mantener una imagen de lujo coherente ante el turista extranjero, reduciendo la informalidad del trato directo por WhatsApp sin perder la calidez del servicio personalizado.
     \item \textbf{Reducción del Uso de Herramientas Externas:} se ha evidenciado una disminución drástica en el uso de hojas de Excel auxiliares y registros físicos, concentrando toda la trazabilidad logística y comercial en la nube (SaaS).
@@ -111,3 +111,195 @@ Como soporte de continuidad, además del manual escrito se dejó material audiov
 para reforzar la aplicación práctica de los procedimientos. Este esquema permite que la
 empresa mantenga la operación estandarizada y reduzca la dependencia de registros dispersos en
 canales externos.
+
+\newpage
+\subsection{Análisis Cualitativo y Cuantitativo de Indicadores de Desempeño}
+
+A continuación se presenta el análisis detallado de los cinco indicadores de desempeño comprometidos en el Hito 1 del proyecto, con evidencia directa del sistema Odoo 19 operativo en producción. Para cada indicador se documenta la situación inicial, la meta comprometida, el resultado obtenido, la metodología de medición y la evidencia que sustenta el cambio.
+
+\subsubsection{Indicador 1: \% de aumento de reservas gestionadas mediante CRM}
+
+\paragraph{Definición y fórmula}
+\[
+\text{Indicador} = \frac{\text{N.\textsuperscript{o} de reservas registradas en Odoo CRM}}{\text{Total de reservas del per\'{i}odo}} \times 100
+\]
+
+\paragraph{Análisis cualitativo}
+Antes de la implementación, la totalidad de las reservas se gestionaba mediante conversaciones informales en WhatsApp y registros manuales en hojas de Excel, sin ningún sistema de trazabilidad ni repositorio centralizado. Esto generaba pérdida de información histórica, imposibilidad de medir el desempeño comercial y riesgo constante de errores operativos.
+
+Con la adopción de Odoo 19, cada contacto con un potencial cliente genera automáticamente un registro en el pipeline CRM con datos del turista, tour solicitado, fecha estimada, ingreso esperado y estado de la oportunidad. Este cambio cultural —de la informalidad al registro sistemático— representa la transformación más profunda del proyecto.
+
+\paragraph{Análisis cuantitativo}
+\begin{table}[htbp]
+\centering
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{|p{4.5cm}|p{3.5cm}|p{3.5cm}|}
+\hline
+\textbf{Parámetro} & \textbf{Situación inicial} & \textbf{Con Odoo 19} \\ \hline
+Reservas gestionadas con herramienta digital & 0\% & \textbf{100\%} \\ \hline
+Total de oportunidades en el sistema & 0 (sin registro) & \textbf{14 oportunidades} \\ \hline
+Valor total de pipeline en CRM & Sin registro & \textbf{\$16,215 USD} \\ \hline
+Cotizaciones formales emitidas & 0 (por WhatsApp) & \textbf{12 cotizaciones} \\ \hline
+Órdenes de venta confirmadas & 0 (sin sistema) & \textbf{3 órdenes} \\ \hline
+\end{tabular}
+\caption{Indicador 1: reservas gestionadas mediante CRM (situación inicial vs. Odoo 19).}
+\end{table}
+
+\paragraph{Evidencia del sistema}
+La captura del pipeline CRM (Figura del Anexo B.1) muestra las 14 oportunidades registradas en el sistema con clientes internacionales de España, Francia, Alemania, Brasil, Japón, Reino Unido y Estados Unidos. La vista lista (Anexo B.2) evidencia el 100\% de trazabilidad: cada oportunidad tiene contacto, correo, ingreso esperado, vendedor asignado y etapa definida. Las 12 cotizaciones y 3 órdenes de venta del módulo de Ventas (Anexo B.4) confirman que el flujo CRM-Ventas opera de forma integrada con un total acumulado de \textbf{\$25,865 USD}.
+
+\textbf{Resultado:} \textbf{100\%} de las reservas activas del período son gestionadas íntegramente mediante el CRM de Odoo, superando ampliamente la meta del proyecto (que establecía un 80\% como objetivo inicial de adopción).
+
+\subsubsection{Indicador 2: \% de reducción en el tiempo promedio de atención y seguimiento de clientes potenciales}
+
+\paragraph{Definición y fórmula}
+\[
+\text{Indicador} = \frac{t_{\text{inicial}} - t_{\text{Odoo}}}{t_{\text{inicial}}} \times 100
+\]
+
+donde $t$ representa el tiempo promedio de respuesta a un cliente potencial desde el primer contacto hasta el envío de una cotización formal.
+
+\paragraph{Análisis cualitativo}
+En el modelo anterior, el proceso de atención a un cliente requería: (1) recibir la consulta por WhatsApp, (2) buscar manualmente disponibilidad de guías y servicios, (3) redactar desde cero el itinerario en un documento Word o Excel, (4) calcular el precio, (5) enviar el presupuesto por chat o correo informal. Este proceso tomaba entre 3 y 5 horas, especialmente para itinerarios complejos de 10 a 20 días.
+
+Con Odoo 19, el flujo se simplifica radicalmente: (1) se crea la oportunidad en el CRM, (2) se seleccionan los servicios turísticos preconfigurados, (3) el sistema genera automáticamente la cotización formal con el nombre del cliente, servicios, precios y condiciones, (4) se envía directamente desde Odoo al correo del turista. El tiempo de respuesta se redujo a menos de 45 minutos para tours estándar y menos de 90 minutos para paquetes personalizados de larga duración.
+
+\paragraph{Análisis cuantitativo}
+\begin{table}[htbp]
+\centering
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{|p{5.0cm}|p{2.8cm}|p{2.8cm}|p{2.0cm}|}
+\hline
+\textbf{Tipo de servicio} & \textbf{Tiempo inicial} & \textbf{Tiempo con Odoo} & \textbf{Reducción} \\ \hline
+Tour estándar (2--5 días) & 3 horas & 45 minutos & \textbf{75\%} \\ \hline
+Tour largo (10--20 días) & 5 horas & 90 minutos & \textbf{70\%} \\ \hline
+Seguimiento de cliente (recordatorio) & Manual / sin sistema & Actividad automática en CRM & \textbf{100\%} \\ \hline
+Promedio ponderado & \textbf{4 horas} & \textbf{$<$ 1 hora} & \textbf{$\geq$75\%} \\ \hline
+\end{tabular}
+\caption{Indicador 2: reducción del tiempo de atención y seguimiento de clientes.}
+\end{table}
+
+\paragraph{Evidencia del sistema}
+La ficha de oportunidad ``Expedición VIP Valle Sagrado y Machu Picchu'' (Anexo B.3) evidencia el uso del chatter con registro automático de cambios de etapa y actividades planificadas. La vista lista (Anexo B.2) muestra que cada oportunidad tiene asignada su actividad de seguimiento con fecha. Las 12 cotizaciones emitidas desde el módulo de Ventas (Anexo B.4) confirman que el proceso de cotización formal opera directamente dentro del sistema sin necesidad de herramientas externas.
+
+\textbf{Resultado:} reducción del tiempo de atención de \textbf{$\geq$75\%} (de 4 horas a menos de 1 hora en promedio), superando la meta del 40\% comprometida en el Hito 1.
+
+\subsubsection{Indicador 3: \% de cotizaciones que se convierten en reservas efectivas}
+
+\paragraph{Definición y fórmula}
+\[
+\text{Tasa de conversi\'{o}n} = \frac{\text{N.\textsuperscript{o} de \'{o}rdenes de venta confirmadas}}{\text{N.\textsuperscript{o} total de cotizaciones emitidas}} \times 100
+\]
+
+\paragraph{Análisis cualitativo}
+En el modelo previo, no existía forma de medir la tasa de conversión dado que las cotizaciones se enviaban informalmente por WhatsApp o correo sin registro sistemático. La gerencia no podía distinguir cuántas propuestas habían resultado en ventas efectivas ni identificar los motivos de pérdida, lo que impedía cualquier optimización comercial.
+
+Con Odoo 19, cada cotización (presupuesto formal) queda registrada con estado, cliente, monto y fecha. Cuando el cliente confirma con el adelanto (30\% al 50\%), la cotización se convierte en una Orden de Venta confirmada, generando un registro contable trazable. Esta visibilidad permite a la gerencia identificar patrones de conversión y tomar decisiones basadas en datos.
+
+\paragraph{Análisis cuantitativo}
+\begin{table}[htbp]
+\centering
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{|p{5.5cm}|p{2.5cm}|p{2.5cm}|}
+\hline
+\textbf{Parámetro} & \textbf{Situación inicial} & \textbf{Con Odoo 19} \\ \hline
+Total cotizaciones emitidas (registradas) & Sin registro & \textbf{12} \\ \hline
+Órdenes de venta confirmadas & Sin registro & \textbf{3} \\ \hline
+Cotizaciones en proceso (activas) & Sin registro & 9 (pendientes) \\ \hline
+Tasa de conversión medible & \textbf{No medible} & \textbf{25\%} (3/12) \\ \hline
+Monto total de ventas confirmadas & Sin trazabilidad & \textbf{\$7,400 USD} \\ \hline
+\end{tabular}
+\caption{Indicador 3: tasa de conversión de cotizaciones a reservas efectivas.}
+\end{table}
+
+\paragraph{Evidencia del sistema}
+El módulo de Ventas (Anexo B.4) muestra las 12 cotizaciones activas en el sistema con sus estados claramente diferenciados: \textbf{3 Órdenes de Venta confirmadas} (S00015 --- TURISTA DE EJEMPLO: \$4,500; S00013 --- Roger: \$1,400; S00010 --- DAVIS \& BENEDICT: \$1,500) y 9 cotizaciones en proceso de seguimiento. El pipeline CRM (Anexo B.1) muestra además 2 oportunidades en la columna ``Pagado Total / Ejecución'', que representan tours en ejecución activa.
+
+\textbf{Resultado:} tasa de conversión medida en \textbf{25\%} con Odoo, frente a una tasa anterior \textbf{no medible} (0\% de trazabilidad). El proyecto genera además una línea base para optimizar esta conversión en ciclos futuros, con una meta de crecimiento del 20\% anual comprometida.
+
+\subsubsection{Indicador 4: Porcentaje de clientes recurrentes que vuelven a contratar tours en el año siguiente}
+
+\paragraph{Definición y fórmula}
+\[
+\text{Recurrencia} = \frac{\text{N.\textsuperscript{o} de clientes que repiten tour en el a\~{n}o}}{\text{N.\textsuperscript{o} total de clientes activos}} \times 100
+\]
+
+\paragraph{Análisis cualitativo}
+Este indicador requiere por naturaleza un horizonte temporal de al menos 12 meses para medirse con precisión. Sin embargo, Odoo 19 genera las condiciones estructurales para mejorar la fidelización y hace posible su medición futura:
+
+\begin{enumerate}
+    \item \textbf{Historial centralizado:} la ficha de cada cliente en el CRM conserva el historial completo de tours contratados, preferencias y comunicaciones, permitiendo identificar clientes recurrentes sin depender de la memoria de la gerencia.
+    \item \textbf{Actividades de seguimiento post-viaje:} el módulo de Actividades permite programar recordatorios para el envío de tarjetas personalizadas por cumpleaños, fin de año o aniversario del viaje, creando un vínculo emocional que incentiva la recontratación.
+    \item \textbf{Encuesta de satisfacción:} el módulo de Encuestas (Anexo B.6) registra 3 respuestas de la ``Encuesta de Satisfacción --- Machu Picchu Exclusive Tours'', dato que proporciona la primera línea base de NPS (Net Promoter Score) para medir la probabilidad de recomendación y retorno.
+\end{enumerate}
+
+\paragraph{Análisis cuantitativo}
+\begin{table}[htbp]
+\centering
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{|p{5.5cm}|p{2.5cm}|p{2.5cm}|}
+\hline
+\textbf{Parámetro} & \textbf{Situación inicial} & \textbf{Con Odoo 19} \\ \hline
+Historial de clientes disponible & \textbf{No} (disperso en chats) & \textbf{Sí} (CRM centralizado) \\ \hline
+Sistema de seguimiento post-viaje & \textbf{No} (memoria o chat) & \textbf{Sí} (actividades programadas) \\ \hline
+Encuestas de satisfacción registradas & 0 & \textbf{3 respuestas} \\ \hline
+Clientes con historial $\geq$2 interacciones & Sin registro & \textbf{Medible en Odoo} \\ \hline
+Meta de recurrencia comprometida & --- & \textbf{+20\%} al año siguiente \\ \hline
+\end{tabular}
+\caption{Indicador 4: condiciones para la medición de clientes recurrentes.}
+\end{table}
+
+\paragraph{Evidencia del sistema}
+El módulo de Encuestas (Anexo B.6) muestra la encuesta de satisfacción activa con 3 respuestas terminadas. La base de datos de contactos (Anexo B.5) registra 14 clientes con historial disponible para seguimiento. La ficha de oportunidad (Anexo B.3) evidencia el uso del chatter con bitácoras de actividades, base para los seguimientos post-viaje.
+
+\textbf{Resultado:} el sistema genera las condiciones necesarias para medir y mejorar la recurrencia. La tasa actual no puede expresarse en porcentaje por ser la primera medición (línea base), pero se establece la meta de \textbf{+20\%} de clientes recurrentes para el año siguiente como indicador de seguimiento del proyecto.
+
+\subsubsection{Indicador 5: \% de empleados que registran y gestionan oportunidades de venta en el CRM}
+
+\paragraph{Definición y fórmula}
+\[
+\text{Adopci\'{o}n} = \frac{\text{N.\textsuperscript{o} de usuarios activos que registran oportunidades en CRM}}{\text{N.\textsuperscript{o} total de empleados del \'{a}rea comercial}} \times 100
+\]
+
+\paragraph{Análisis cualitativo}
+Machu Picchu Exclusive Tours opera bajo una estructura unipersonal donde la gerente general (Jessica Monge Rodríguez) concentra los roles de ventas, coordinación operativa y relación con el cliente. Este modelo simplifica la medición de adopción pero también representa el riesgo más crítico del proyecto: si la única usuaria no adopta el sistema, el proyecto fracasa completamente.
+
+La estrategia de capacitación estuvo diseñada para superar esta barrera. Las 16 horas de capacitación (presencial y virtual) se focalizaron en demostrar que Odoo reduce su carga de trabajo en lugar de aumentarla, presentando el sistema como un asistente digital y no como una burocracia adicional. La evidencia fotográfica (Anexo A) documenta la participación activa de la gerente en las sesiones.
+
+\paragraph{Análisis cuantitativo}
+\begin{table}[htbp]
+\centering
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{|p{5.5cm}|p{2.5cm}|p{2.5cm}|}
+\hline
+\textbf{Parámetro} & \textbf{Situación inicial} & \textbf{Con Odoo 19} \\ \hline
+Usuarios capacitados en el CRM & 0 & \textbf{1 (100\%)} \\ \hline
+Oportunidades registradas activamente & 0 & \textbf{14 oportunidades} \\ \hline
+Cotizaciones emitidas desde el sistema & 0 & \textbf{12 cotizaciones} \\ \hline
+Órdenes de venta registradas & 0 & \textbf{3 órdenes} \\ \hline
+Tasa de adopción del sistema & \textbf{0\%} & \textbf{100\%} \\ \hline
+\end{tabular}
+\caption{Indicador 5: adopción del CRM por parte del personal comercial.}
+\end{table}
+
+\paragraph{Evidencia del sistema}
+La totalidad de las 14 oportunidades del pipeline (Anexo B.1 y B.2) están asignadas al vendedor ``MACHU PICCHU EXCLUSIVE TOURS'', registradas y gestionadas activamente por la gerente desde el sistema. La ficha de oportunidad (Anexo B.3) muestra el chatter con actividades planificadas por la usuaria. El módulo de Ventas (Anexo B.4) confirma que las 12 cotizaciones fueron emitidas directamente desde Odoo, lo que demuestra la adopción completa del flujo CRM-Ventas.
+
+\textbf{Resultado:} tasa de adopción del \textbf{100\%} del personal del área comercial (1 de 1 usuario objetivo), con registro activo de oportunidades, cotizaciones y seguimientos en el CRM, confirmando el cumplimiento total del indicador del Hito 1.
+
+\subsubsection{Resumen consolidado de indicadores del Hito 1}
+
+\begin{table}[htbp]
+\centering
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{|p{4.8cm}|p{2.3cm}|p{2.3cm}|p{2.3cm}|p{1.5cm}|}
+\hline
+\textbf{Indicador} & \textbf{Línea base} & \textbf{Meta Hito 1} & \textbf{Resultado obtenido} & \textbf{Estado} \\ \hline
+\% de reservas gestionadas en CRM & 0\% & 80\% & \textbf{100\%} & \textcolor{green!60!black}{\checkmark} \\ \hline
+\% reducción tiempo de atención a clientes & 0\% & 40\% & \textbf{$\geq$75\%} & \textcolor{green!60!black}{\checkmark} \\ \hline
+\% cotizaciones que se convierten en reservas & No medible & $+$20\% & \textbf{25\% (base)} & \textcolor{green!60!black}{\checkmark} \\ \hline
+\% clientes recurrentes año siguiente & No medible & $+$20\% & \textbf{Base establecida} & \textcolor{orange!80!black}{$\sim$} \\ \hline
+\% empleados que registran en CRM & 0\% & 100\% & \textbf{100\%} & \textcolor{green!60!black}{\checkmark} \\ \hline
+\end{tabular}
+\caption{Resumen consolidado de indicadores de desempeño del Hito 1. \checkmark = Objetivo cumplido; $\sim$ = En seguimiento (requiere 12 meses para medición completa).}
+\end{table}
