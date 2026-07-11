@@ -43,6 +43,22 @@ El módulo de Contactos centraliza la cartera de clientes (clubes, colegios, con
 \subsection{Fase 3: Carga de Datos y Despliegue del Punto de Venta (POS)}
 Se llevó a cabo la tarea de "saneamiento y migración de datos", trasladando todo el inventario físico al sistema y generando, por primera vez, el catálogo digital interno. Inmediatamente después, se habilitó la interfaz de Ventas (Punto de Venta o POS) en la computadora del mostrador de la calle Deán Valdivia. La integración de este módulo permitió que cada transacción ejecutada agilizara el proceso comercial de los vendedores y, simultáneamente, descargara el stock en tiempo real, garantizando la sincronicidad entre las entradas y las salidas de almacén.
 
+\subsubsection{Saneamiento y Carga Manual de Datos}
+El primer paso consistió en realizar un exhaustivo inventario físico de todos los artículos (conteo de cuadernos de campo). Esta información fue posteriormente transcrita, codificada y estructurada en hojas de cálculo para su carga masiva al sistema, eliminando errores de conteo y preparando la base de datos limpia para el ERP.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.45\textwidth]{assets/carga_cuaderno1.jpg}
+    \includegraphics[width=0.45\textwidth]{assets/carga_cuaderno2.jpg}
+    \caption{Evidencia del inventariado físico inicial, registrado manualmente en cuadernos de campo.}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.95\textwidth]{assets/carga_excel.png}
+    \caption{Saneamiento y codificación del catálogo en hoja de cálculo, previo a la importación al sistema Odoo.}
+\end{figure}
+
 \subsubsection{Gestión de Inventario}
 El Módulo de Inventario es el núcleo operativo de la solución. Permite supervisar los ingresos, salidas y traslados internos mediante un tablero centralizado. Cada artículo del catálogo digital cuenta con una ficha técnica detallada que consolida información sobre precios, costos, variantes (tallas y colores) e impuestos, posibilitando un control de stock preciso y automatizado en tiempo real.
 
