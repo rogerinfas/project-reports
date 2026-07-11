@@ -1,1 +1,24 @@
 \section{Desafíos y Oportunidades}
+
+La transformación digital de Textiles y Confecciones Atlas E.I.R.L. supuso un cambio de paradigma integral. Durante el proceso de adopción tecnológica, se identificaron y superaron diversas barreras operativas y culturales, las cuales han sentado las bases para un crecimiento sostenido y la futura escalabilidad del negocio.
+
+\subsection{Desafíos y Barreras Superadas}
+
+\begin{itemize}
+    \item \textbf{Calidad de Datos y Saneamiento de Información:} Al iniciar la transición, la información comercial se encontraba altamente fragmentada y "sucia". Ante la ausencia de un tarifario digital centralizado, la fijación de precios y el conocimiento del stock dependían de apuntes informales y de la memoria de los vendedores. Esta carencia generaba fuertes asimetrías; por ejemplo, un mismo modelo de pelota de fútbol podía venderse a diferentes precios según la sucursal o el empleado que atendiera. Para solucionar esta desconexión, la fase de desarrollo exigió un inventariado físico final estricto, depurando toda la información y estructurándola en una base de datos relacional estandarizada por categorías, modelos y variantes (talla y color).
+    \item \textbf{Infraestructura Física y Tecnológica:} La empresa operaba bajo un evidente "Punto Único de Falla", ya que toda la facturación y administración dependía de una sola computadora en el mostrador y de un único celular corporativo. Además, la conexión a internet en la tienda sufría inestabilidades que a menudo colgaban el portal de SUNAT durante momentos críticos de atención. Para superar esta limitación sin incurrir en grandes inversiones de \textit{hardware} local, se optó por la arquitectura \textit{Cloud} (SaaS) de Odoo, que permite ejecutar el sistema de forma ligera y ágil en los equipos existentes. Como directiva estratégica, se estableció la obligatoriedad de estabilizar la red local para evitar recaídas en procesos manuales.
+    \item \textbf{Resistencia Cultural del Personal:} La fuerza de ventas, compuesta por un equipo máximo de 5 colaboradores, arrastraba una natural resistencia pasiva al cambio debido al hábito histórico de controlar el inventario "de memoria". Con competencias digitales básicas, existía temor a cometer errores operativos en un nuevo sistema. Este desafío se mitigó bajo dos frentes: primero, designando al Encargado de Ventas y Almacén como el garante del escaneo obligatorio de códigos de barras para cada salida; y segundo, mediante un liderazgo activo de la Gerencia General, quien fomentó una cultura organizacional de "aprender del error" para infundir confianza en los trabajadores.
+\end{itemize}
+
+\subsection{Oportunidades de Mejora Continua (Proyección a 1-2 años)}
+
+\begin{itemize}
+    \item \textbf{Integración de la Facturación Electrónica:} Actualmente, la emisión de comprobantes fiscales se realiza de forma externa ingresando directamente al portal web de SUNAT, forzando a los vendedores a una doble digitación con el riesgo inherente de olvidar descargar el producto del inventario interno. La principal oportunidad a corto plazo es integrar la facturación electrónica nativa dentro de Odoo, logrando que cada emisión fiscal descuente el stock automáticamente y genere coherencia absoluta en la data contable.
+    \item \textbf{Implementación de Nuevos Módulos:} Con la gestión física del almacén y el POS completamente estabilizados, la empresa cuenta con la infraestructura base para habilitar nuevos módulos de gestión estratégica:
+    \begin{itemize}
+        \item \textbf{Módulo de Compras (Abastecimiento Inteligente):} Reemplazará la coordinación informal por WhatsApp, permitiendo automatizar órdenes de compra y configurar alertas de stock de seguridad para productos estrella.
+        \item \textbf{Módulo de Contabilidad:} Para centralizar compras, gastos de caja chica y conectarse directamente con la contabilidad externa.
+        \item \textbf{Módulo CRM:} Para gestionar de forma profesional el ciclo de vida de los clientes B2B (colegios y clubes de provincias).
+    \end{itemize}
+    \item \textbf{Escalabilidad hacia el Comercio Electrónico (E-Commerce):} En la priorización inicial, el E-commerce B2C/B2B fue relegado temporalmente debido a la inviabilidad operativa de vender en línea sin conocer el stock real. Hoy, con Odoo operando como la "Única Fuente de Verdad", Atlas queda técnicamente habilitada para lanzar una tienda en línea completamente integrada al sistema, garantizando que el inventario mostrado en la web sea un reflejo 100\% fiel de las existencias físicas en Arequipa.
+\end{itemize}

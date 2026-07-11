@@ -1,1 +1,48 @@
 \section{Resultados Esperados}
+
+Antes de iniciar la implementación tecnológica, la gerencia de Textiles y Confecciones Atlas E.I.R.L. estableció metas claras para erradicar el desorden logístico y comercial de su modelo analógico. Estas expectativas se estructuraron bajo tres dimensiones fundamentales, culminando en una matriz de indicadores (KPIs) proyectados.
+
+\subsection{Expectativas de Control y Operación}
+El objetivo central a nivel operativo era recuperar el control del negocio y agilizar el ciclo de atención:
+\begin{itemize}
+    \item \textbf{Establecer una Única Fuente de Verdad:} Migrar el control empírico de inventarios (registros en cuadernos y hojas de Excel aisladas) hacia una base de datos relacional y unificada en la nube.
+    \item \textbf{Sincronización en Tiempo Real:} Lograr que cada compra a proveedores (entrada) y cada venta en el mostrador (salida) se sincronizara automáticamente en el sistema, eliminando la necesidad de realizar conteos físicos constantes.
+    \item \textbf{Eliminar Quiebres de Stock y Errores de Precios:} Evitar la pérdida de ventas provocada por el desconocimiento de la disponibilidad real de las prendas, erradicando la duplicidad de tareas del vendedor (anotar en papel y luego digitar).
+    \item \textbf{Agilidad en el Mostrador:} Proveer al personal de un acceso instantáneo a tarifas y existencias exactas desde la PC de caja, acelerando significativamente la atención presencial.
+\end{itemize}
+
+\subsection{Expectativas sobre el Personal (Adopción)}
+Considerando que el equipo humano, conformado por un máximo de 5 colaboradores (incluyendo gerencia), poseía competencias digitales básicas, las expectativas sobre la curva de aprendizaje fueron:
+\begin{itemize}
+    \item \textbf{Erradicación Absoluta del Papel:} Se esperaba un reemplazo total y definitivo de los cuadernos de control de stock por el software POS desde el día de lanzamiento oficial.
+    \item \textbf{Capacitación de Adopción Rápida:} Lograr que la fuerza de ventas operara con soltura e instintivamente el escaneo por códigos de barras, el registro de almacén y la consulta de stock.
+    \item \textbf{Superación de la Resistencia al Cambio:} Mitigar la resistencia pasiva natural (por la costumbre de operar de memoria) mediante el liderazgo cercano de la gerencia y una cultura interna de "aprender del error".
+\end{itemize}
+
+\subsection{Expectativas Comerciales y de Crecimiento}
+Frente a la nula presencia digital que contrastaba con sus 35 años de prestigio, las metas comerciales trazadas fueron:
+\begin{itemize}
+    \item \textbf{Transformar la Tienda en un Hub de Distribución:} Trascender la dependencia de clientes de paso presenciales y proyectar activamente la oferta hacia todo el sur del Perú (Arequipa, Cusco y Puno).
+    \item \textbf{Profesionalizar la Venta Remota:} Sustituir el envío de fotos informales por WhatsApp por un Catálogo Digital dinámico, asegurando que lo ofrecido coincidiera al 100\% con el stock del almacén.
+    \item \textbf{Aceleración de Ventas B2B:} Mejorar radicalmente el tiempo de respuesta al emitir proformas y cotizaciones para colegios y clubes deportivos.
+\end{itemize}
+
+\subsection{Matriz de KPIs y Metas del Plan de Implementación}
+Para consolidar estas expectativas, se definieron las siguientes metas proyectadas (valores esperados) al inicio del proyecto, las cuales sirven de base para la evaluación de resultados:
+
+\begin{table}[H]
+\centering
+\renewcommand{\arraystretch}{1.3}
+\setlength{\tabcolsep}{4pt}
+\scriptsize
+\begin{tabular}{|p{2.5cm}|p{2.8cm}|p{2.8cm}|p{3.2cm}|p{3.2cm}|}
+\hline
+\rowcolor{gray!20}
+\textbf{Objetivo Estratégico} & \textbf{Indicador (KPI)} & \textbf{Línea Base (Abr 2026)} & \textbf{Meta Proyectada (Jun 2026)} & \textbf{Fuente de Verificación} \\ \hline
+\textbf{Optimización de Inventario} & \textbf{Exactitud de Inventario:} Coincidencia entre sistema y almacén físico. & 0\% (Registro manual en cuadernos). & \textbf{75\%} de coincidencia inicial. & Reporte comparativo de cierre de stock del POS. \\ \hline
+\textbf{Agilización de Ventas} & \textbf{Tiempo de Respuesta:} Atención a consultas de provincias. & 45 - 60 Minutos (Conteo visual físico). & \textbf{< 5 Minutos} (Consulta en base de datos cloud). & Logs de atención y capturas de pantalla de la plataforma. \\ \hline
+\textbf{Expansión Omnicanal} & \textbf{Omnicanalidad:} Canales digitales oficiales activos. & 0 Canales (Sin perfiles profesionales). & \textbf{2 Canales oficiales} (Facebook e Instagram). & Enlaces directos a perfiles integrados. \\ \hline
+\textbf{Crecimiento de Alcance} & \textbf{Alcance B2B:} Consultas efectivas a través del catálogo. & < 0 consultas/mes (Atención reactiva). & \textbf{> 5 consultas/mes} en el primer trimestre. & Métricas de Meta Business Suite y WhatsApp. \\ \hline
+\textbf{Reportabilidad} & \textbf{Análisis:} Frecuencia de revisión automatizada de rotación. & Nula / Empírica (Memoria visual). & \textbf{Reporte Semanal Automático} de alta/baja rotación. & Tableros de control (dashboards) de Odoo. \\ \hline
+\end{tabular}
+\end{table}
