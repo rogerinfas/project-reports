@@ -1,0 +1,36 @@
+\documentclass[12pt]{article}
+\input{preamble/packages}
+\input{preamble/metadata}
+
+% Paquetes adicionales para este informe
+\usepackage{amsmath}     % Para \text en modo matemático
+\usepackage{float}       % Para [H] en figuras
+\usepackage{longtable}   % Para tablas largas en los anexos
+\usepackage[dvipsnames,table]{xcolor} % Para colores en la tabla de indicadores
+\usepackage{amssymb}     % Para el símbolo \checkmark
+
+\begin{document}
+
+\input{frontmatter/cover}
+\input{frontmatter/titlepage}
+
+\tableofcontents
+\newpage
+
+\input{sections/01-introduccion}
+\newpage
+\input{sections/02-objetivo-del-informe}
+\newpage
+\input{sections/03-metodologia-de-evaluacion}
+\newpage
+\input{sections/04-resultados-esperados}
+\newpage
+\input{sections/05-resultados-obtenidos}
+\newpage
+\input{sections/06-desafios-y-oportunidades}
+\newpage
+\input{sections/07-conclusion}
+\newpage
+\input{sections/08-anexos}
+
+\end{document}
