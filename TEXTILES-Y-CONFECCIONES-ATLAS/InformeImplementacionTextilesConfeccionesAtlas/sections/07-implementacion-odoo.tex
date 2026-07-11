@@ -10,8 +10,92 @@ Durante el primer mes, se procedió con la tarea crítica del mapeo detallado de
 \subsection{Fase 2: Selección y Configuración de Odoo SaaS}
 Con la estructura clara, se aprovisionó el entorno en la nube de Odoo. Se configuró exhaustivamente el Módulo de Inventario para soportar la centralización del stock y se establecieron reglas de reabastecimiento (puntos de pedido). Paralelamente, se parametrizó la base de datos de clientes mediante la aplicación de Contactos y CRM de Odoo. Esta acción unificó y centralizó los datos de contacto y ventas que históricamente residían dispersos de manera informal en el celular corporativo (WhatsApp) de la gerencia, transformándolos en un directorio comercial estructurado.
 
+\subsubsection{Acceso y Tablero de Control}
+El acceso al sistema se realiza de forma segura mediante autenticación de credenciales, lo que permite auditar las acciones de cada usuario. Al ingresar, el Tablero Principal proporciona una visión general y acceso inmediato a todos los módulos operativos (Inventario, Punto de Venta, Contactos) desplegados para la empresa.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.65\textwidth]{assets/login.png}
+    \caption{Pantalla de inicio de sesión habilitada para Atlas E.I.R.L.}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.95\textwidth]{assets/dashboard.png}
+    \caption{Tablero principal de Odoo con los módulos aprovisionados.}
+\end{figure}
+
+\subsubsection{Directorio Digital de Contactos (CRM)}
+El módulo de Contactos centraliza la cartera de clientes (clubes, colegios, consumidores finales) y proveedores. La plataforma permite la visualización rápida en formato de lista o Kanban y brinda un expediente detallado por cada contacto, facilitando el seguimiento de sus transacciones y optimizando el servicio al cliente.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.95\textwidth]{assets/contactos_lista.png}
+    \caption{Directorio digital (Vista de lista) de clientes en el módulo de Contactos.}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.95\textwidth]{assets/contactos_detalle.png}
+    \caption{Detalle de un contacto registrado, centralizando su información comercial.}
+\end{figure}
+
 \subsection{Fase 3: Carga de Datos y Despliegue del Punto de Venta (POS)}
 Se llevó a cabo la tarea de "saneamiento y migración de datos", trasladando todo el inventario físico al sistema y generando, por primera vez, el catálogo digital interno. Inmediatamente después, se habilitó la interfaz de Ventas (Punto de Venta o POS) en la computadora del mostrador de la calle Deán Valdivia. La integración de este módulo permitió que cada transacción ejecutada agilizara el proceso comercial de los vendedores y, simultáneamente, descargara el stock en tiempo real, garantizando la sincronicidad entre las entradas y las salidas de almacén.
+
+\subsubsection{Gestión de Inventario}
+El Módulo de Inventario es el núcleo operativo de la solución. Permite supervisar los ingresos, salidas y traslados internos mediante un tablero centralizado. Cada artículo del catálogo digital cuenta con una ficha técnica detallada que consolida información sobre precios, costos, variantes (tallas y colores) e impuestos, posibilitando un control de stock preciso y automatizado en tiempo real.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.95\textwidth]{assets/inv_dashboard.png}
+    \caption{Tablero de control de flujos logísticos y operaciones de inventario.}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.95\textwidth]{assets/inv_productos.png}
+    \caption{Catálogo digitalizado de artículos deportivos con su stock actualizado en tiempo real.}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.95\textwidth]{assets/inv_detalle.png}
+    \caption{Ficha técnica de un producto, que consolida reglas de abastecimiento, costo, precio e impuestos.}
+\end{figure}
+
+\subsubsection{Punto de Venta (POS) y Caja}
+La interfaz del Punto de Venta se ha optimizado para ofrecer una experiencia de usuario altamente intuitiva en el mostrador. Diseñada para agilizar las operaciones de venta diaria, integra la selección visual de productos (y sus respectivas variantes) con un módulo robusto de métodos de pago. Al completarse la transacción, el sistema procesa el pago de inmediato, actualiza los saldos de caja e imprime (o envía) el recibo electrónico, reduciendo drásticamente los tiempos de espera del cliente final.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.95\textwidth]{assets/pos_dashboard.png}
+    \caption{Panel de inicio del Punto de Venta (POS) habilitado para las cajas de la tienda física.}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.95\textwidth]{assets/pos_general.png}
+    \caption{Interfaz general del POS, optimizada para facturación ágil y selección gráfica de productos.}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.95\textwidth]{assets/pos_variantes.png}
+    \caption{Pop-up de selección de variantes (ej. Tallas S, M, L, XL) al agregar un producto complejo al ticket.}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.95\textwidth]{assets/pos_pago.png}
+    \caption{Pantalla de métodos de pago, vinculada directamente al libro de caja y comprobantes.}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.95\textwidth]{assets/pos_procesando.png}
+    \caption{Pantalla de procesamiento final del pago y generación del ticket electrónico (Recibo de Venta).}
+\end{figure}
 
 \subsection{Fase 4: Ecosistema Omnicanal y Estrategia de Marketing Digital}
 Validada la operación logística interna, se procedió a habilitar los canales digitales (Complemento Estratégico). El Pack Trimestral de Marketing Digital estructuró el ecosistema en Meta: se profesionalizó la presencia en redes sociales (Facebook, Instagram y TikTok) diseñando y redactando publicaciones mensuales, y se activó el Catálogo Digital de productos en WhatsApp Business. A través de Meta Business Suite, se implementó la gestión de pauta y administración de campañas publicitarias estacionales orientadas específicamente a captar clientes B2B e institucionales en el sur del país (provincias). 
