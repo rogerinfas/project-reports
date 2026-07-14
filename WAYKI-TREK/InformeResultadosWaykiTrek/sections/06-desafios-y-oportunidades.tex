@@ -1,0 +1,15 @@
+\section{Desafíos y Oportunidades}
+
+\subsection{Desafíos Superados}
+El proyecto enfrentó retos técnicos de alta complejidad, derivados de las limitaciones del sistema ERP base:
+
+\begin{itemize}
+    \item \textbf{Rigidez del Modelo de Ventas Estándar:} Odoo nativo no soporta la complejidad de venta de paquetes turísticos (donde el costo grupal debe prorratearse entre pasajeros y existen lógicas tributarias especiales). Este desafío fue superado en su totalidad mediante la creación desde cero de la aplicación \textit{WTK Custom Quote Wizard} y su ecosistema de datos maestros.
+    \item \textbf{Integración Push de Correos en SaaS:} Al no disponer de conectores bidireccionales nativos (\textit{WebSockets}), el refresco de bandeja de entrada sufría de retrasos en la nube. Se optimizó el proceso mediante llamadas periódicas seguras (REST/IMAP), logrando reducir la latencia de recepción a tan solo 2 minutos.
+\end{itemize}
+
+\subsection{Oportunidades Futuras}
+\begin{itemize}
+    \item \textbf{Integración Contable:} Ahora que la rentabilidad (Profit) se controla en preventa, existe una oportunidad para conectar estos cálculos directamente con el módulo de Contabilidad y facturación electrónica local.
+    \item \textbf{Expansión de Reglas de Auto-Seguimiento:} Analizando el rendimiento histórico de los \textit{Cold Leads}, se pueden afinar algoritmos y correos masivos automatizados orientados a clientes inactivos por más de 6 meses.
+\end{itemize}
