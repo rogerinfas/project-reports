@@ -43,14 +43,25 @@ El formato de venta de servicios turísticos exige un nivel de detalle contable 
     \caption{Interfaz del WTK Custom Quote Wizard, mostrando el desglose dinámico y cálculos en tiempo real.}
 \end{figure}
 
-\subsubsection*{Estructura de Modelos y Campos Creados}
-La arquitectura de la aplicación se integró directamente al modelo \textit{sale.order} estándar, creando cuatro nuevos modelos en base de datos:
+\subsubsection*{Estructura de Modelos y Modal Secundario (CRUD)}
+La arquitectura de la aplicación se integró directamente al modelo \textit{sale.order} estándar, creando cuatro nuevos modelos en base de datos interconectados:
 \begin{itemize}[leftmargin=*]
     \item \textbf{Wizard Maestro (\textit{x\_wtk\_custom\_quote\_wizard}):} Contenedor principal de la propuesta. Captura datos como "Nombre de la cotización" (\textit{x\_quote\_name}), "Tipo de servicio" (Privado/Grupal), y "Cantidad de pasajeros".
-    \item \textbf{Líneas de Agrupación (\textit{x\_wtk\_custom\_quote\_wizard\_line}):} Permite separar la cotización por días o paquetes. Hereda dinámicamente la cantidad de pasajeros.
-    \item \textbf{Servicios Incluidos (\textit{x\_wtk\_custom\_quote\_wizard\_service\_line}):} Desglosa cada ítem (ticket, guía, comida). Incluye un interruptor booleano para definir si el servicio es "¿Grupal?" (\textit{x\_is\_group}), lo cual altera matemáticamente cómo se divide su precio entre los pasajeros.
-    \item \textbf{Plantillas de Servicio (\textit{x\_wtk\_custom\_service\_template}):} Un catálogo maestro paralelo para autocompletar rápidamente servicios recurrentes (ej. un tipo de ticket de tren) con su nombre y precio por defecto.
+    \item \textbf{Líneas de Agrupación (\textit{x\_wtk\_custom\_quote\_wizard\_line}):} Permite separar la cotización por días o paquetes. Al agregar una línea desde el Wizard Maestro, \textbf{se despliega dinámicamente un Wizard Secundario (Modal)}.
+    \item \textbf{CRUD de Servicios Incluidos (\textit{x\_wtk\_custom\_quote\_wizard\_service\_line}):} Dentro de este Wizard Secundario, el vendedor accede a un entorno de \textbf{CRUD completo (Crear, Leer, Actualizar, Eliminar)} para gestionar los servicios de ese día en específico (tickets, guías, comidas). Al agregar un servicio, se activa una lógica relacional que incluye un interruptor booleano "¿Grupal?" (\textit{x\_is\_group}), el cual altera matemáticamente cómo se divide el precio total de ese ítem entre los pasajeros del grupo.
+    \item \textbf{Ecosistema Relacional de Servicios (Catálogo Maestro):} Para nutrir el CRUD del cotizador con datos estandarizados, se desarrolló un ecosistema de datos maestros de tres niveles, accesible desde el menú de Ventas:
+    \begin{itemize}[leftmargin=*]
+        \item \textbf{Categorías de Servicio (\textit{x\_wtk\_service\_category}):} Clasificación macro (ej. Transporte, Alojamiento, Tickets).
+        \item \textbf{Tipos de Servicio (\textit{x\_wtk\_service\_type}):} Especificación de calidad o formato (ej. Ejecutivo, Turista, Privado).
+        \item \textbf{Plantillas de Servicio - Servicios Incluidos (\textit{x\_wtk\_custom\_service\_template}):} Es el nivel final que se integra al CRUD del modal. Vincula la Categoría, el Tipo, la Capacidad (N° PAX) y el precio base. Además, cuenta con una \textbf{automatización inteligente inyectada} (\textit{base.automation} + Server Action) que autocompone el nombre oficial del servicio concatenando sus atributos (ej. "Transporte - Bus Turístico - Ejecutivo - 20 PAX"). Esto garantiza uniformidad absoluta en la base de datos y previene errores tipográficos de los vendedores.
+    \end{itemize}
 \end{itemize}
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=0.9\textwidth]{assets/wizard_modal_lineas.png}
+    \caption{Modal secundario desplegado: Entorno CRUD para gestionar los servicios incluidos de un día/paquete específico.}
+\end{figure}
 
 \subsubsection*{Cálculos Dinámicos y Lógica de Automatización (Interfaz Segura)}
 Para asegurar que los cálculos se realicen en tiempo real mientras el vendedor construye la propuesta, se implementaron acciones de servidor (\textit{ir.actions.server}) que se disparan \textit{al cambio de la interfaz de usuario} (on\_change) utilizando reglas \textit{base.automation}. 
