@@ -1,53 +1,87 @@
 \begin{titlepage}
-    \centering
+    \begin{tikzpicture}[remember picture, overlay]
+        % --- BACKGROUND SHAPES ---
+        
+        % Bottom Left Blob - Layer 1 (Gold)
+        \fill[waykigold] (current page.south west) -- ([yshift=12cm]current page.south west) 
+            .. controls ([xshift=4cm,yshift=9cm]current page.south west) and ([xshift=5cm,yshift=5cm]current page.south west) ..
+            ([xshift=7cm,yshift=0cm]current page.south west) -- cycle;
+            
+        % Bottom Left Blob - Layer 2 (Green)
+        \fill[waykigreen] (current page.south west) -- ([yshift=8cm]current page.south west) 
+            .. controls ([xshift=3cm,yshift=6cm]current page.south west) and ([xshift=6cm,yshift=4cm]current page.south west) ..
+            ([xshift=10cm,yshift=0cm]current page.south west) -- cycle;
 
-    \hfill
-    \begin{minipage}{0.6\textwidth}
-        \raggedleft
-        \footnotesize
-        \textit{Informe de Implementación - WAYKI TREK}\\
-        \textit{Contrato: [NÚMERO DE CONTRATO AQUÍ]}
-    \end{minipage}
+        % Top Right Blob - Layer 1 (Gold)
+        \fill[waykigold] (current page.north east) -- ([xshift=-4cm]current page.north east)
+            .. controls ([xshift=-3cm,yshift=-2cm]current page.north east) and ([xshift=-1cm,yshift=-5cm]current page.north east) .. 
+            ([yshift=-6cm]current page.north east) -- cycle;
+            
+        % Top Right Blob - Layer 2 (Green)
+        \fill[waykigreen] (current page.north east) -- ([xshift=-7cm]current page.north east)
+            .. controls ([xshift=-5cm,yshift=-1cm]current page.north east) and ([xshift=-3cm,yshift=-3cm]current page.north east) .. 
+            ([yshift=-4cm]current page.north east) -- cycle;
 
-    \vspace{1cm}
-    {\Large\bfseries INFORME DE IMPLEMENTACIÓN\par}
-    \vspace{0.5cm}
+        % --- DECORATIVE DOTS ---
+        
+        % Dots Top Left
+        \foreach \x in {2.5, 3.0} {
+            \foreach \y in {-5, -5.5, -6.0, -6.5, -7.0, -7.5, -8.0, -8.5} {
+                \fill[waykigreen!40] ([xshift=\x cm, yshift=\y cm]current page.north west) circle (0.1cm);
+            }
+        }
 
-    {\small\bfseries
-    IMPLEMENTACIÓN DEL SISTEMA ODOO PARA LA MEJORA DE LA EFICIENCIA OPERATIVA, GESTIÓN COMERCIAL Y CONTROL DE PROCESOS EN LA EMPRESA WAYKI TREK\par}
+        % Dots Bottom Right
+        \foreach \x in {-2.5, -3.0} {
+            \foreach \y in {3, 3.5, 4.0, 4.5, 5.0, 5.5, 6.0, 6.5} {
+                \fill[waykigreen!40] ([xshift=\x cm, yshift=\y cm]current page.south east) circle (0.1cm);
+            }
+        }
 
-    \vspace{1cm}
-    % Aquí irá el logo cuando lo tengamos: \includegraphics[width=0.3\textwidth]{assets/logo-wayki.png}
-    \vspace{2cm}
+        % --- LOGO ---
+        \node[anchor=north west] at ([xshift=2cm, yshift=-2cm]current page.north west) {
+            \includegraphics[width=6.5cm]{assets/logo.png}
+        };
 
-    \renewcommand{\arraystretch}{1.5}
-    \begin{tabular}{|l|p{8cm}|}
-        \hline
-        \textbf{EMPRESA BENEFICIARIA} & WAYKI TREK \\ \hline
-        \textbf{RUC} & [RUC DE LA EMPRESA] \\ \hline
-        \textbf{CONTRATO} & [NÚMERO DE CONTRATO] \\ \hline
-        \textbf{FECHA} & [FECHAS DE IMPLEMENTACIÓN] \\ \hline
-    \end{tabular}
+        % --- TEXT CONTENT (Right Aligned) ---
+        
+        % Year
+        \node[anchor=east] at ([xshift=-2cm, yshift=4cm]current page.east) {
+            {\Huge\sffamily\color{darkgray}\textbf{2026}}
+        };
+        
+        % Main Title Line 1
+        \node[anchor=east] at ([xshift=-2cm, yshift=2.5cm]current page.east) {
+            {\Huge\sffamily\color{waykigreen}\textbf{INFORME TÉCNICO}}
+        };
+        
+        % Main Title Line 2
+        \node[anchor=east] at ([xshift=-2cm, yshift=1.2cm]current page.east) {
+            {\Huge\sffamily\color{waykigold}\textbf{DE IMPLEMENTACIÓN}}
+        };
+        
+        % Vertical Line & Subtitle
+        \draw[waykigreen, line width=3pt] ([xshift=-1.8cm, yshift=-1cm]current page.east) -- ([xshift=-1.8cm, yshift=-3cm]current page.east);
+        
+        \node[anchor=east, text width=8cm, align=right] at ([xshift=-2.2cm, yshift=-2cm]current page.east) {
+            {\large\sffamily\color{darkgray} Registro y documentación interna del desarrollo e implementación del sistema \textbf{Odoo} en \textbf{WAYKI TREK S.A.C.}}
+        };
 
-    \vspace{2.5cm}
-    \begin{minipage}{0.45\textwidth}
-        \centering
-        \rule{6cm}{0.5pt}\\
-        \vspace{0.2cm}
-        \textbf{[NOMBRE DEL COORDINADOR]}\\
-        \small Coordinador general del proyecto
-    \end{minipage}
-    \hfill
-    \begin{minipage}{0.45\textwidth}
-        \centering
-        \rule{6cm}{0.5pt}\\
-        \vspace{0.2cm}
-        \textbf{[NOMBRE DEL CONSULTOR]}\\
-        \small Consultor de proyecto
-    \end{minipage}
+        % Company Details
+        \node[anchor=east, text width=10cm, align=right] at ([xshift=-2cm, yshift=-4.5cm]current page.east) {
+            {\sffamily\color{darkgray}
+            \textbf{WAYKI TREK S.A.C.} \\
+            \faMapMarker \ Cusco, Perú \ \ \faIdCard \ RUC: 20450643441
+            }
+        };
 
-    \vfill
-    {\large \textbf{CUSCO -- PERÚ}\par}
-    {\large \textbf{2026}\par}
-    \vspace{0.3cm}
+        % Developer Info
+        \node[anchor=east, text width=10cm, align=right] at ([xshift=-2cm, yshift=-6.5cm]current page.east) {
+            {\sffamily\color{darkgray}
+            \textbf{Roger Infa Sanchez} \\
+            Desarrollador Odoo -- Documentación Técnica Interna
+            }
+        };
+
+    \end{tikzpicture}
 \end{titlepage}
