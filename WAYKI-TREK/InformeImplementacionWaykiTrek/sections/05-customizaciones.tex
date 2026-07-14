@@ -1,0 +1,66 @@
+\section{Desarrollos y Personalizaciones (Customizaciones)}
+
+Con el objetivo de adaptar la plataforma a las particularidades operativas de Wayki Trek y superar las limitaciones del modelo genérico de Odoo, se realizaron configuraciones avanzadas, desarrollos a medida y automatizaciones clave.
+
+\subsection{Automatizaciones en el CRM y Marketing}
+El manejo manual de prospectos suele generar embudos lentos. Para mitigar esto, se implementaron flujos de trabajo automatizados, diseñados para optimizar el seguimiento y reducir la carga operativa del equipo de ventas:
+
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Campaña de Prueba Social (Social Proof) y Acompañamiento:} 
+    Se construyó una automatización avanzada utilizando el motor de \textit{Automatización de Marketing} integrada al CRM. Cuando un Lead avanza a la etapa crítica de "Negociación / Cotización", el sistema inicia una cuenta regresiva invisible. Si el prospecto no confirma su compra en 2 días, Odoo dispara de forma autónoma un mensaje por WhatsApp con un video institucional y métricas de validación (ej. calificaciones de TripAdvisor). 
+    \item \textbf{Impacto de la Automatización:} Esta lógica evita que el prospecto "se enfríe" por inercia o silencio, fomentando la confianza del cliente y registrando la acción en el historial (\textit{Chatter}) para que el vendedor retome la venta sin haber ejercido presión comercial directa.
+\end{itemize}
+
+\subsubsection*{Reglas de Automatización Base (Acciones Automáticas)}
+Además de las campañas de marketing, se programaron reglas de automatización base en el sistema (\textit{base.automation}) para reducir clics y ejecutar tareas de fondo de forma inmediata:
+
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Asignación Equitativa de Leads (Round Robin):} Asigna de forma automática y secuencial los nuevos prospectos (Leads) que ingresan al CRM entre los miembros del equipo de ventas, asegurando una distribución justa del trabajo.
+    \item \textbf{Validación de Leads sin Respuesta o Estancados:} Reglas de tiempo que detectan si un Lead lleva más de 3 días sin interacción ("Auto Seguimiento tras 3 días" y "Lead No Respondido"), moviéndolos de etapa o alertando al vendedor para evitar que se pierdan en el embudo.
+\end{itemize}
+
+\subsection{Desarrollo de Cotizaciones Personalizadas (WTK Custom Quote Wizard)}
+El formato de venta de servicios turísticos exige un nivel de detalle contable y operativo que el módulo estándar de Odoo no provee. Para solventar esto, se programó una aplicación a medida llamada \textbf{WTK Custom Quote Wizard}, compuesta por una serie de modelos relacionales, campos propios y lógicas de cálculo financiero en tiempo real.
+
+\subsubsection*{Estructura de Modelos y Campos Creados}
+La arquitectura de la aplicación se integró directamente al modelo \textit{sale.order} estándar, creando cuatro nuevos modelos en base de datos:
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Wizard Maestro (\textit{x\_wtk\_custom\_quote\_wizard}):} Contenedor principal de la propuesta. Captura datos como "Nombre de la cotización" (\textit{x\_quote\_name}), "Tipo de servicio" (Privado/Grupal), y "Cantidad de pasajeros".
+    \item \textbf{Líneas de Agrupación (\textit{x\_wtk\_custom\_quote\_wizard\_line}):} Permite separar la cotización por días o paquetes. Hereda dinámicamente la cantidad de pasajeros.
+    \item \textbf{Servicios Incluidos (\textit{x\_wtk\_custom\_quote\_wizard\_service\_line}):} Desglosa cada ítem (ticket, guía, comida). Incluye un interruptor booleano para definir si el servicio es "¿Grupal?" (\textit{x\_is\_group}), lo cual altera matemáticamente cómo se divide su precio entre los pasajeros.
+    \item \textbf{Plantillas de Servicio (\textit{x\_wtk\_custom\_service\_template}):} Un catálogo maestro paralelo para autocompletar rápidamente servicios recurrentes (ej. un tipo de ticket de tren) con su nombre y precio por defecto.
+\end{itemize}
+
+\subsubsection*{Cálculos Dinámicos y Lógica de Automatización (Interfaz Segura)}
+Para asegurar que los cálculos se realicen en tiempo real mientras el vendedor construye la propuesta, se implementaron acciones de servidor (\textit{ir.actions.server}) que se disparan \textit{al cambio de la interfaz de usuario} (on\_change) utilizando reglas \textit{base.automation}. 
+Esto convierte al Wizard en una calculadora instantánea que realiza las siguientes operaciones autónomas:
+
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Sincronización de Pasajeros y Autocompletado:} Al cambiar la cantidad de pasajeros en el Wizard, el sistema recalcula en cascada el precio individual (\textit{x\_price\_pax}) de todos los servicios incluidos. Asimismo, al elegir una Plantilla de Servicio, autocompleta instantáneamente su nombre y precio.
+    \item \textbf{Cálculo de Costo Operativo (op\_cost):} Suma en tiempo real todos los precios por pasajero (\textit{x\_price\_pax}) de los servicios, y le añade el "Costo Fijo" y "Costo Variable" para hallar el "Costo Total" base.
+    \item \textbf{Cálculo de Rentabilidad (Profit):} Al ingresar un porcentaje de "Utilidad" (ej. 20\%), el Wizard halla el monto en USD y calcula el Subtotal proyectado.
+    \item \textbf{Impuestos Excluyentes (IGV vs Renta):} Se habilitaron opciones booleanas de \textit{Aplicar IGV} y \textit{Aplicar Renta}. Se implementó una lógica de exclusión ("WTK - Exclusivo IGV" y "WTK - Exclusivo Renta"): si el usuario marca una, el sistema desmarca la otra de forma automática, aplicando luego el 18\% o el 3\% respectivamente sobre el Subtotal.
+    \item \textbf{Comisión por Pasarela de Pago:} Se suma un porcentaje dinámico por el cobro con tarjeta, obteniendo el "Precio final (USD)" por pasajero y el "Precio final total" por el grupo entero.
+    \item \textbf{Sincronización Bidireccional de Nombres:} Una regla sincroniza en tiempo real el \textit{x\_quote\_name} del Wizard con el \textit{x\_package\_name} de la Orden de Venta.
+\end{itemize}
+
+\subsubsection*{Plantillas PDF Dinámicas desde Cero (QWeb)}
+Para presentar estas cotizaciones de forma profesional, se desarrollaron desde cero dos plantillas PDF utilizando el lenguaje de renderizado \textit{QWeb} de Odoo, adaptadas a los colores y la marca de Wayki Trek. Estas reemplazan el formato de venta estándar:
+\begin{itemize}[leftmargin=*]
+    \item \textbf{PDF Interno (Uso Administrativo):} Es un reporte financiero completo. Muestra la tabla del itinerario desglosando el precio exacto de cada servicio incluido, si el servicio es grupal o no, y cuánto le cuesta a cada pasajero (Precio PAX). Al final de la página, renderiza una tabla de "Resumen Financiero" que expone abiertamente los márgenes, utilidades, costos fijos y variables.
+    \item \textbf{PDF Cliente (Uso Comercial):} Es la versión purgada para enviar al turista. Mantiene el mismo diseño corporativo de cabecera y el itinerario detallado, pero \textbf{oculta} todas las columnas de precios individuales y elimina el resumen financiero. Solo muestra el itinerario limpio, los "Servicios no incluidos" y el "Precio Final" acordado.
+    \item \textbf{Generación Automática:} Mediante acciones de servidor (\textit{ir.actions.server}), al presionar "Imprimir" en el Wizard, el sistema genera el archivo PDF correspondiente y lo adjunta automáticamente al historial (\textit{Chatter}) de la Orden de Venta, listo para ser enviado por correo.
+\end{itemize}
+
+\subsection{Atributos y Variantes en el Catálogo de Productos}
+Para el módulo de Ventas y Productos, se estructuró una categorización profunda utilizando la funcionalidad nativa pero altamente parametrizada de Atributos y Variantes.
+Esto significa que en lugar de crear cientos de tours sueltos, el sistema puede cotizar un paquete matriz (ej. Camino Inca) y ajustarlo a las variantes del pasajero (ej. tipo de acomodación en hotel, idioma del guía, complementos como Huayna Picchu). Es una personalización milimétrica que facilita el control del inventario y la precisión de los precios.
+
+\subsection{Infraestructura de Comunicaciones (Correo y WhatsApp)}
+Para garantizar que toda la empresa se comunique desde un solo sistema central:
+
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Servidor de Correos Corporativos:} Se configuró, validó y levantó con éxito el servidor de correos entrantes y salientes (SMTP/IMAP). De esta forma, los 4 usuarios (Administrador, Ventas, Post-Ventas y Marketing) cuentan con su bandeja completamente operativa dentro de Odoo. Cualquier cotización enviada o correo recibido llega al sistema con los sellos y firmas corporativas correspondientes.
+    \item \textbf{Integración Oficial de WhatsApp (Meta Suite):} La configuración del canal de chat no se hizo por intermediarios genéricos. Toda la gestión se realizó a nivel de infraestructura directamente desde \textbf{Meta for Developers} (Facebook). Se configuraron los casos de uso, el ambiente de pruebas, la vinculación del número oficial y la validación de la empresa.
+    \item \textbf{Plantillas Base de WhatsApp:} En el entorno de Meta se elaboraron y aprobaron plantillas base (\textit{templates}), las cuales ahora sirven de apoyo al equipo de ventas para iniciar o retomar conversaciones de forma estandarizada y segura ante las políticas de Meta.
+\end{itemize}
