@@ -12,10 +12,22 @@ Con el objetivo de adaptar la plataforma a las particularidades operativas de la
 \subsection{Arquitectura SaaS-Native y Automatizaciones CRM (Wayki Odoo CLI)}
 Gran parte del éxito operativo actual del CRM de Wayki Trek se fundamenta en el desarrollo de un orquestador remoto denominado \textbf{Wayki Odoo CLI}. Dado que el entorno en la nube de Odoo restringe el acceso profundo al código del servidor, se construyó este ecosistema local en Python para interactuar directamente vía API XML-RPC/JSON-RPC. Este CLI actúa como motor de despliegue: inyecta campos, vistas QWeb y, lo más crítico, inyecta \textbf{código Python (Server Actions)} que se ejecuta nativamente en el servidor en la nube de Odoo.
 
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=0.9\textwidth]{assets/crm_kanban.png}
+    \caption{Vista Kanban del CRM con las etapas personalizadas y el flujo de ventas.}
+\end{figure}
+
 De esta avanzada arquitectura tecnológica nacen las automatizaciones principales que a día de hoy sostienen la operativa inteligente del CRM:
 
 \begin{itemize}[leftmargin=*]
     \item \textbf{Enrutador Universal y Sincronización Nativa:} El sistema escucha la llegada de JSONs crudos provenientes de formularios web. Mediante una acción interceptora inyectada (\textit{native\_sync}), Odoo escanea el JSON: si es una solicitud de reserva (\textit{wayki\_reserve\_tour}), parsea los pasajeros y hoteles para armar un itinerario enriquecido en HTML dentro del Lead. Si es un pago (\textit{wayki\_payment\_tour}) desde WeTravel, captura el ID de transacción, añade la nota contable y traslada el Lead automáticamente a la etapa "Ganado".
+    
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=0.85\textwidth]{assets/lead_chatter_html.png}
+    \caption{Itinerario HTML inyectado automáticamente en el historial del Lead.}
+\end{figure}
     \item \textbf{Consolidación e Higiene de Datos (Anti-Duplicados y Auto-Link):} Para evitar bases de datos basura por envíos repetidos, el CLI desplegó reglas que se disparan \textit{on\_create} en los Leads. Si un prospecto ingresa con un correo que ya tiene una oportunidad abierta, la automatización los fusiona y añade notas internas. Además, si el correo existe en el historial histórico de la empresa, enlaza instantáneamente el Lead a la ficha del Contacto maestro (\textit{res.partner}), manteniendo todo centralizado sin requerir complejos flujos externos.
     \item \textbf{Validación Omnicanal de WhatsApp y Auto-Seguimiento:} Código Python inyectado rastrea los historiales de chat en tiempo real (\textit{discuss.channel}). Si un Lead entra a "Primer mensaje" y no se le contacta por WhatsApp, o si se le envió un mensaje oficial y el turista no responde en 3 días, la regla de automatización traslada el Lead de forma autónoma a "Seguimiento", garantizando que ningún prospecto se estanque en el embudo.
     \item \textbf{Campaña de Prueba Social (Social Proof):} Al llegar un Lead a la etapa de "Cotización", inicia una cuenta regresiva. Si no hay confirmación en 2 días, el sistema dispara automáticamente un mensaje de WhatsApp con un video institucional del equipo en los campamentos y métricas de validación (ej. calificaciones de TripAdvisor). Esto genera confianza sin presión comercial directa, registrando la acción en el \textit{Chatter} del vendedor.
@@ -24,6 +36,12 @@ De esta avanzada arquitectura tecnológica nacen las automatizaciones principale
 
 \subsection{Desarrollo de Cotizaciones Personalizadas (WTK Custom Quote Wizard)}
 El formato de venta de servicios turísticos exige un nivel de detalle contable y operativo que el módulo estándar de Odoo no provee. Para solventar esto, se programó una aplicación a medida llamada \textbf{WTK Custom Quote Wizard}, compuesta por una serie de modelos relacionales, campos propios y lógicas de cálculo financiero en tiempo real.
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=0.95\textwidth]{assets/wizard_interfaz.png}
+    \caption{Interfaz del WTK Custom Quote Wizard, mostrando el desglose dinámico y cálculos en tiempo real.}
+\end{figure}
 
 \subsubsection*{Estructura de Modelos y Campos Creados}
 La arquitectura de la aplicación se integró directamente al modelo \textit{sale.order} estándar, creando cuatro nuevos modelos en base de datos:
@@ -49,6 +67,20 @@ Esto convierte al Wizard en una calculadora instantánea que realiza las siguien
 
 \subsubsection*{Plantillas PDF Dinámicas desde Cero (QWeb)}
 Para presentar estas cotizaciones de forma profesional, se desarrollaron desde cero dos plantillas PDF utilizando el lenguaje de renderizado \textit{QWeb} de Odoo, adaptadas a los colores y la marca de Wayki Trek. Estas reemplazan el formato de venta estándar:
+
+\begin{figure}[!ht]
+    \centering
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{assets/pdf_interno.png}
+        \caption{Plantilla de PDF Interno (Reporte Financiero).}
+    \end{minipage}\hfill
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{assets/pdf_cliente.png}
+        \caption{Plantilla de PDF Cliente (Vista Comercial).}
+    \end{minipage}
+\end{figure}
 \begin{itemize}[leftmargin=*]
     \item \textbf{PDF Interno (Uso Administrativo):} Es un reporte financiero completo. Muestra la tabla del itinerario desglosando el precio exacto de cada servicio incluido, si el servicio es grupal o no, y cuánto le cuesta a cada pasajero (Precio PAX). Al final de la página, renderiza una tabla de "Resumen Financiero" que expone abiertamente los márgenes, utilidades, costos fijos y variables.
     \item \textbf{PDF Cliente (Uso Comercial):} Es la versión purgada para enviar al turista. Mantiene el mismo diseño corporativo de cabecera y el itinerario detallado, pero \textbf{oculta} todas las columnas de precios individuales y elimina el resumen financiero. Solo muestra el itinerario limpio, los "Servicios no incluidos" y el "Precio Final" acordado.
@@ -59,8 +91,28 @@ Para presentar estas cotizaciones de forma profesional, se desarrollaron desde c
 Para el módulo de Ventas y Productos, se estructuró una categorización profunda utilizando la funcionalidad nativa pero altamente parametrizada de Atributos y Variantes.
 Esto significa que en lugar de crear cientos de tours sueltos, el sistema puede cotizar un paquete matriz (ej. Camino Inca) y ajustarlo a las variantes del pasajero (ej. tipo de acomodación en hotel, idioma del guía, complementos como Huayna Picchu). Es una personalización milimétrica que facilita el control del inventario y la precisión de los precios.
 
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=0.9\textwidth]{assets/tour_config_tab.png}
+    \caption{Pestaña personalizada "Configuración de Tour" en la ficha del producto, mostrando tablas dinámicas y Addons.}
+\end{figure}
+
 \subsection{Infraestructura de Comunicaciones (Correo y WhatsApp)}
 Para garantizar que toda la empresa se comunique desde un solo sistema central:
+
+\begin{figure}[!ht]
+    \centering
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{assets/meta_whatsapp.png}
+        \caption{Configuración oficial del canal en Meta for Developers.}
+    \end{minipage}\hfill
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{assets/meta_whatsapp_2.png}
+        \caption{Validación de plantillas (Templates) de WhatsApp.}
+    \end{minipage}
+\end{figure}
 
 \begin{itemize}[leftmargin=*]
     \item \textbf{Servidor de Correos Corporativos:} Se configuró, validó y levantó con éxito el servidor de correos entrantes y salientes (SMTP/IMAP). De esta forma, los 4 usuarios (Administrador, Ventas, Post-Ventas y Marketing) cuentan con su bandeja completamente operativa dentro de Odoo. Cualquier cotización enviada o correo recibido llega al sistema con los sellos y firmas corporativas correspondientes.
