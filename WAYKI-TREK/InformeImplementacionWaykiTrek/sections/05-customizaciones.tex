@@ -1,22 +1,25 @@
 \section{Desarrollos y Personalizaciones (Customizaciones)}
 
-Con el objetivo de adaptar la plataforma a las particularidades operativas de Wayki Trek y superar las limitaciones del modelo genérico de Odoo, se realizaron configuraciones avanzadas, desarrollos a medida y automatizaciones clave.
+\begin{tcolorbox}[enhanced, attach boxed title to top center={yshift=-3mm,yshifttext=-1mm},
+  colback=red!5!white,colframe=red!75!black,colbacktitle=red!80!black,
+  title=Nota de Exclusividad,fonttitle=\bfseries,
+  boxed title style={size=small,colframe=red!50!black} ]
+  \textbf{IMPORTANTE:} Es fundamental aclarar que todas las personalizaciones, modelos, interfaces y lógicas financieras descritas en esta sección \textbf{fueron desarrolladas exclusivamente desde cero para este proyecto}. Odoo, en su versión estándar (por defecto), \textbf{no incluye} estas funcionalidades. Todo lo presentado a continuación representa un esfuerzo de ingeniería a medida para adaptar la plataforma a la realidad operativa y comercial de Wayki Trek.
+\end{tcolorbox}
 
-\subsection{Automatizaciones en el CRM y Marketing}
-El manejo manual de prospectos suele generar embudos lentos. Para mitigar esto, se implementaron flujos de trabajo automatizados, diseñados para optimizar el seguimiento y reducir la carga operativa del equipo de ventas:
+Con el objetivo de adaptar la plataforma a las particularidades operativas de la empresa y superar las severas limitaciones del modelo de ventas genérico de Odoo, se realizaron configuraciones avanzadas, desarrollos a medida y automatizaciones clave.
+
+\subsection{Arquitectura SaaS-Native y Automatizaciones CRM (Wayki Odoo CLI)}
+Gran parte del éxito operativo actual del CRM de Wayki Trek se fundamenta en el desarrollo de un orquestador remoto denominado \textbf{Wayki Odoo CLI}. Dado que el entorno en la nube de Odoo restringe el acceso profundo al código del servidor, se construyó este ecosistema local en Python para interactuar directamente vía API XML-RPC/JSON-RPC. Este CLI actúa como motor de despliegue: inyecta campos, vistas QWeb y, lo más crítico, inyecta \textbf{código Python (Server Actions)} que se ejecuta nativamente en el servidor en la nube de Odoo.
+
+De esta avanzada arquitectura tecnológica nacen las automatizaciones principales que a día de hoy sostienen la operativa inteligente del CRM:
 
 \begin{itemize}[leftmargin=*]
-    \item \textbf{Campaña de Prueba Social (Social Proof) y Acompañamiento:} 
-    Se construyó una automatización avanzada utilizando el motor de \textit{Automatización de Marketing} integrada al CRM. Cuando un Lead avanza a la etapa crítica de "Negociación / Cotización", el sistema inicia una cuenta regresiva invisible. Si el prospecto no confirma su compra en 2 días, Odoo dispara de forma autónoma un mensaje por WhatsApp con un video institucional y métricas de validación (ej. calificaciones de TripAdvisor). 
-    \item \textbf{Impacto de la Automatización:} Esta lógica evita que el prospecto "se enfríe" por inercia o silencio, fomentando la confianza del cliente y registrando la acción en el historial (\textit{Chatter}) para que el vendedor retome la venta sin haber ejercido presión comercial directa.
-\end{itemize}
-
-\subsubsection*{Reglas de Automatización Base (Acciones Automáticas)}
-Además de las campañas de marketing, se programaron reglas de automatización base en el sistema (\textit{base.automation}) para reducir clics y ejecutar tareas de fondo de forma inmediata:
-
-\begin{itemize}[leftmargin=*]
-    \item \textbf{Asignación Equitativa de Leads (Round Robin):} Asigna de forma automática y secuencial los nuevos prospectos (Leads) que ingresan al CRM entre los miembros del equipo de ventas, asegurando una distribución justa del trabajo.
-    \item \textbf{Validación de Leads sin Respuesta o Estancados:} Reglas de tiempo que detectan si un Lead lleva más de 3 días sin interacción ("Auto Seguimiento tras 3 días" y "Lead No Respondido"), moviéndolos de etapa o alertando al vendedor para evitar que se pierdan en el embudo.
+    \item \textbf{Enrutador Universal y Sincronización Nativa:} El sistema escucha la llegada de JSONs crudos provenientes de formularios web. Mediante una acción interceptora inyectada (\textit{native\_sync}), Odoo escanea el JSON: si es una solicitud de reserva (\textit{wayki\_reserve\_tour}), parsea los pasajeros y hoteles para armar un itinerario enriquecido en HTML dentro del Lead. Si es un pago (\textit{wayki\_payment\_tour}) desde WeTravel, captura el ID de transacción, añade la nota contable y traslada el Lead automáticamente a la etapa "Ganado".
+    \item \textbf{Consolidación e Higiene de Datos (Anti-Duplicados y Auto-Link):} Para evitar bases de datos basura por envíos repetidos, el CLI desplegó reglas que se disparan \textit{on\_create} en los Leads. Si un prospecto ingresa con un correo que ya tiene una oportunidad abierta, la automatización los fusiona y añade notas internas. Además, si el correo existe en el historial histórico de la empresa, enlaza instantáneamente el Lead a la ficha del Contacto maestro (\textit{res.partner}), manteniendo todo centralizado sin requerir complejos flujos externos.
+    \item \textbf{Validación Omnicanal de WhatsApp y Auto-Seguimiento:} Código Python inyectado rastrea los historiales de chat en tiempo real (\textit{discuss.channel}). Si un Lead entra a "Primer mensaje" y no se le contacta por WhatsApp, o si se le envió un mensaje oficial y el turista no responde en 3 días, la regla de automatización traslada el Lead de forma autónoma a "Seguimiento", garantizando que ningún prospecto se estanque en el embudo.
+    \item \textbf{Campaña de Prueba Social (Social Proof):} Al llegar un Lead a la etapa de "Cotización", inicia una cuenta regresiva. Si no hay confirmación en 2 días, el sistema dispara automáticamente un mensaje de WhatsApp con un video institucional del equipo en los campamentos y métricas de validación (ej. calificaciones de TripAdvisor). Esto genera confianza sin presión comercial directa, registrando la acción en el \textit{Chatter} del vendedor.
+    \item \textbf{Campañas de Rescate (Cold Leads) y Round Robin:} Se configuraron rutinas para reactivar Leads en etapa "Perdido" con más de 30 días de inactividad, enviando correos de reconexión. Además, los prospectos nuevos se distribuyen equitativamente entre los vendedores mediante algoritmos de asignación secuencial (Round Robin).
 \end{itemize}
 
 \subsection{Desarrollo de Cotizaciones Personalizadas (WTK Custom Quote Wizard)}

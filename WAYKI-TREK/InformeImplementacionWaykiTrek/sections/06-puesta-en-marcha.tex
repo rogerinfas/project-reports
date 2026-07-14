@@ -1,0 +1,28 @@
+\section{Carga de Datos y Puesta en Marcha}
+
+La fase final de la implementación consistió en la preparación del entorno productivo para asegurar que el equipo de Wayki Trek pueda operar el sistema de inmediato. Se estableció una división clara de responsabilidades respecto a la migración de datos.
+
+\subsection{Carga del Catálogo Base (Tours y Tarifario)}
+Como parte de los compromisos de implementación, el equipo técnico se encargó de configurar integralmente el núcleo operativo del negocio:
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Migración de Tours y Precios:} Se extrajo, estructuró y cargó toda la información de los tours disponibles en la página web oficial de Wayki Trek.
+    \item \textbf{Configuración de Variantes:} Todos los servicios fueron ingresados utilizando la lógica de atributos y variantes desarrollada. Cada paquete cuenta con sus respectivos precios base, recargos por variaciones (ej. tipo de acomodación, días extra) y configuración lista para ser usada en las cotizaciones personalizadas.
+    \item \textbf{Estado:} El módulo de Inventario y Ventas se entrega \textbf{100\% operativo} en cuanto al catálogo de servicios.
+\end{itemize}
+
+\subsection{Gestión de Base de Datos de Clientes y CRM}
+\begin{tcolorbox}[enhanced, attach boxed title to top center={yshift=-3mm,yshifttext=-1mm},
+  colback=orange!5!white,colframe=orange!75!black,colbacktitle=orange!80!black,
+  title=Aclaración sobre Datos Históricos,fonttitle=\bfseries,
+  boxed title style={size=small,colframe=orange!50!black} ]
+  \textbf{NOTA:} La carga masiva de la cartera histórica de clientes y el pipeline de ventas previo no forma parte del alcance técnico de este despliegue. El entorno se entrega completamente habilitado para que la empresa gestione directamente la transición de sus registros.
+\end{tcolorbox}
+
+Como consecuencia, se define el siguiente flujo para el inicio de operaciones comerciales:
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Carga Manual y Progresiva:} El equipo de ventas y operaciones de Wayki Trek ingresará de forma progresiva a sus clientes históricos a medida que retomen contacto con ellos o gestionen nuevas cotizaciones en el sistema.
+    \item \textbf{Nuevos Prospectos:} Cualquier nuevo Lead que ingrese a partir del despliegue del sistema (vía correo o integraciones futuras) se registrará correctamente bajo la nueva infraestructura.
+\end{itemize}
+
+\subsection{Entrega del Sistema}
+Con el entorno SaaS aprovisionado, los módulos instalados, los tableros analíticos diseñados, las customizaciones exclusivas (WTK Custom Quote Wizard) funcionales y el tarifario cargado, el sistema Odoo ERP se declara oficialmente implementado y en fase de \textbf{Puesta en Marcha}.
