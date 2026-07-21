@@ -1,0 +1,310 @@
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage{geometry}
+\geometry{a4paper, top=2.1cm, bottom=1.9cm, left=2cm, right=2cm, headheight=26pt}
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage{parskip}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{colortbl}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{hyperref}
+
+\definecolor{waykigreen}{HTML}{136437}
+\definecolor{waykigold}{HTML}{E2B84D}
+\definecolor{waykirow}{HTML}{F3F8F5}
+\definecolor{waykiheader}{HTML}{E7F0EA}
+\definecolor{waykitext}{HTML}{222222}
+\definecolor{waykigray}{HTML}{555555}
+
+\hypersetup{
+  colorlinks=false,
+  pdfborder={0 0 0},
+  pdfauthor={QOQAW S.A.C.},
+  pdftitle={Acta de Cierre de Proyecto -- Wayki Trek / Odoo SaaS 19.2},
+}
+
+\setstretch{1.05}
+\setlist[itemize]{leftmargin=1.3em, itemsep=0.08em, topsep=0.15em}
+\setlist[enumerate]{leftmargin=1.5em, itemsep=0.2em, topsep=0.2em}
+
+\titleformat{\section}
+  {\normalfont\normalsize\bfseries\color{waykigreen}}
+  {\thesection.}{0.45em}{}
+  [\vspace{-0.3em}{\color{waykigold}\titlerule[1pt]}\vspace{0.3em}]
+\titleformat{\subsection}
+  {\normalfont\small\bfseries\color{waykigreen}}
+  {\thesubsection.}{0.35em}{}
+\titlespacing*{\section}{0pt}{0.85em}{0.35em}
+\titlespacing*{\subsection}{0pt}{0.55em}{0.2em}
+
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\newcolumntype{G}{>{\columncolor{waykiheader}\bfseries\color{waykigreen}\raggedright\arraybackslash}p{4.1cm}}
+\newcolumntype{H}{>{\columncolor{waykiheader}\bfseries\color{waykigreen}\centering\arraybackslash}p{3.1cm}}
+
+\renewcommand{\arraystretch}{1.15}
+\arrayrulecolor{waykigreen!40}
+\setlength{\parskip}{0.35em}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0.35pt}
+\renewcommand{\headrule}{\hbox to\headwidth{\color{waykigreen}\leaders\hrule height \headrulewidth\hfill}}
+\renewcommand{\footrule}{\hbox to\headwidth{\color{waykigreen!40}\leaders\hrule height \footrulewidth\hfill}}
+\fancyhead[L]{\footnotesize\color{waykigreen}\textbf{Acta de Cierre} -- Wayki Trek}
+\fancyhead[R]{\footnotesize\color{waykigray}N° 827-PROINNOVATE-IMTEMD-2025}
+\fancyfoot[L]{\scriptsize\color{waykigray}QOQAW S.A.C.\ /\ WAYKI TREK TRANSPORTES TURÍSTICOS S.A.C.}
+\fancyfoot[R]{\footnotesize\color{waykigreen}\textbf{\thepage}}
+
+\newcommand{\placeholder}[1]{\textbf{[#1]}}
+
+\begin{document}
+
+\begin{center}
+  \includegraphics[width=3cm]{assets/logo.png}\\[0.15em]
+  {\color{waykigreen}\rule{\linewidth}{1.2pt}}\\[-0.08em]
+  {\color{waykigold}\rule{\linewidth}{0.5pt}}\\[0.3em]
+  {\large\bfseries\color{waykigreen}ACTA DE CIERRE DE PROYECTO Y CONFORMIDAD DE ENTREGA}\\[0.15em]
+  {\small Sistema ERP Odoo SaaS (v19.2) -- Wayki Trek}\\[0.08em]
+  {\footnotesize\color{waykigreen}\textbf{PROINNOVATE N° 827-PROINNOVATE-IMTEMD-2025}
+  \textcolor{waykigray}{\quad|\quad Cusco, Perú \quad|\quad 21 de julio de 2026}}
+\end{center}
+
+\section{Datos Generales de las Partes}
+
+En Cusco, Perú, se formaliza el cierre y la entrega a entera conformidad del proyecto indicado:
+
+\vspace{0.2em}
+\noindent
+\begin{tabularx}{\linewidth}{|G|Y|}
+\hline
+\rowcolor{waykiheader}
+\multicolumn{2}{|c|}{\bfseries\color{waykigreen}Identificación de las partes y del proyecto} \\
+\hline
+Nombre del Proyecto &
+Modernización digital y fortalecimiento del ciclo comercial de Wayki Trek Transportes (conversión y postventa). \\
+\hline
+Código PROINNOVATE &
+Contrato N° 827-PROINNOVATE-IMTEMD-2025 \\
+\hline
+Cliente &
+WAYKI TREK TRANSPORTES TURÍSTICOS S.A.C.\ (RUC 20450643441), Cusco, Perú \\
+\hline
+Coordinador del Cliente &
+Leonidas Cusi Loaiza \\
+\hline
+Proveedor &
+QOQAW S.A.C.\ (RUC 20603486855) \\
+\hline
+Consultor del Proyecto &
+Marco Rosendo Mejía Miranda \\
+\hline
+Consultor Técnico / Desarrollador &
+Roger Infa Sánchez \\
+\hline
+Plataforma &
+Odoo ERP SaaS (saas-19.2) \\
+\hline
+Fecha de Firma &
+21 de julio de 2026 \\
+\hline
+\end{tabularx}
+
+\section{Objeto del Acta}
+
+El presente documento certifica la conclusión de la implementación, personalización, carga base y entrega del material de capacitación del Sistema ERP Odoo SaaS (v19.2), configurado por QOQAW S.A.C.\ para centralizar CRM, ventas, comunicación, marketing y control analítico de WAYKI TREK S.A.C., conforme a lo acordado.
+
+\section{Entregables Confirmados}
+
+WAYKI TREK S.A.C.\ recibe a entera conformidad el entorno de producción y los entregables siguientes.
+
+\subsection{Accesos al sistema}
+
+\noindent
+\begin{tabularx}{\linewidth}{|G|Y|}
+\hline
+URL de producción &
+\url{https://wayki-trek.odoo.com/odoo} (instancia pagada / operativa) \\
+\hline
+\end{tabularx}
+
+\vspace{0.25em}
+\noindent
+\begin{tabularx}{\linewidth}{|H|Y|Y|}
+\hline
+\rowcolor{waykiheader}
+\bfseries\color{waykigreen}Usuario &
+\bfseries\color{waykigreen}Correo &
+\bfseries\color{waykigreen}Contraseña inicial \\
+\hline
+Administrador & \texttt{leocusi@waykitrek.net} & \texttt{usuario123} \\
+\hline
+\rowcolor{waykirow}
+Ventas & \texttt{sales@waykitrek.net} & \texttt{usuario123} \\
+\hline
+Coordinador / Post-Ventas & \texttt{coordinator@waykitrek.net} & \texttt{usuario123} \\
+\hline
+\rowcolor{waykirow}
+Marketing (network) & \texttt{network@waykitrek.net} & \texttt{RB5vwr5582fg} \\
+\hline
+\end{tabularx}
+
+\vspace{0.2em}
+{\small\textbf{Advertencia:} la cuenta \texttt{network@waykitrek.net} interviene en automatizaciones; cambiar su contraseña sin cuidado puede romperlas. Las demás claves pueden rotarse bajo responsabilidad del Cliente.}
+
+\subsection{Módulos implementados}
+
+\noindent
+\begin{tabularx}{\linewidth}{|H|Y|}
+\hline
+\rowcolor{waykiheader}
+\bfseries\color{waykigreen}Módulo &
+\bfseries\color{waykigreen}Alcance \\
+\hline
+CRM & Embudo Kanban y etapas personalizadas. \\
+\hline
+\rowcolor{waykirow}
+Ventas & Cotizaciones, tarifas y cierre de reservas. \\
+\hline
+Contactos & Base unificada de pasajeros, agencias y proveedores. \\
+\hline
+\rowcolor{waykirow}
+Calendario & Citas y seguimiento. \\
+\hline
+Tableros & Reportes de Ventas, Leads, Pipeline y Marketing. \\
+\hline
+\rowcolor{waykirow}
+Marketing por correo & Boletines y flujos de información. \\
+\hline
+Automatización de Marketing & Nutrición y seguimiento de prospectos. \\
+\hline
+\rowcolor{waykirow}
+Redes Sociales & Monitoreo y programación desde Odoo. \\
+\hline
+WhatsApp (Meta Suite) & Canal integrado y plantillas validadas. \\
+\hline
+\end{tabularx}
+
+\subsection{Personalizaciones exclusivas}
+
+\noindent
+\begin{tabularx}{\linewidth}{|H|Y|}
+\hline
+\rowcolor{waykiheader}
+\bfseries\color{waykigreen}Componente &
+\bfseries\color{waykigreen}Detalle \\
+\hline
+WTK Custom Quote Wizard &
+Cotizador dinámico: costo operativo, rentabilidad, IGV/Renta excluyentes y comisiones por pasarela. \\
+\hline
+\rowcolor{waykirow}
+Plantillas PDF (QWeb) &
+PDF Interno (administrativo) y PDF Cliente (itinerario comercial). \\
+\hline
+Automatizaciones CRM (Wayki Odoo CLI) &
+Sync web/WeTravel (etapa ``Ganado''); anti-duplicados; flujo ``Seguimiento''; ``Prueba Social'' en Cotización. \\
+\hline
+\rowcolor{waykirow}
+Datos Maestros &
+Categoría, Tipo y Plantillas de Servicio con autocomposición de nombres. \\
+\hline
+\end{tabularx}
+
+\subsection{Material de capacitación}
+
+Carpeta compartida:
+{\small\url{https://drive.google.com/drive/folders/1AiiSo7Ibd5lsT8_ZIcgjqa6hFie_P9lZ?usp=drive_link}}
+
+\begin{itemize}
+  \item \textbf{Videos:} CRM, Conversaciones, Calendario, Contactos, Redes sociales, Marketing por correo, WhatsApp, Ventas y presentación general.
+  \item \textbf{Documentos:} Guía de filtros personalizados (marketing por correo) y matriz de roles/permisos.
+\end{itemize}
+
+\section{Periodo de Soporte (3 meses) y Alcance}
+
+\vspace{0.15em}
+\noindent
+\begin{tabularx}{\linewidth}{|G|Y|}
+\hline
+\rowcolor{waykiheader}
+\multicolumn{2}{|c|}{\bfseries\color{waykigreen}Soporte y garantía de estabilización} \\
+\hline
+Inicio & 21 de julio de 2026 \\
+\hline
+Fin & 21 de octubre de 2026 \\
+\hline
+Duración & Tres (3) meses calendario \\
+\hline
+Fecha de corte & 22 de octubre de 2026 \\
+\hline
+\end{tabularx}
+
+\vspace{0.25em}
+Durante ese periodo, QOQAW S.A.C.\ solo corregirá \textbf{fallas atribuibles a lo ya implementado} (Sección~3). \textbf{No se aceptan adicionales de ninguna naturaleza} ---desarrollos, mejoras, campos, reportes, automatizaciones, cambios de flujo o de plantillas--- \textbf{aunque sean simples}, por haberse agotado la etapa de implementación para plantearlos. Vencido el 21/10/2026, el soporte gratuito queda cerrado.
+
+\section{Conformidad, Deslinde y Exclusiones}
+
+\begin{enumerate}[label=\textbf{\arabic*.}]
+  \item \textbf{Conformidad.} WAYKI TREK S.A.C.\ declara haber recibido a entera conformidad los entregables pactados.
+  \item \textbf{Corte de responsabilidad.} Desde el \textbf{22 de octubre de 2026}, QOQAW S.A.C.\ queda liberada de monitoreo, mantenimiento, soporte y corrección sobre el software objeto de esta Acta.
+  \item \textbf{Exclusiones.} Fuera del alcance (salvo contrato independiente): adicionales o mejoras (aunque simples); fallas por mal uso o pérdida de credenciales; incidencias del hosting Odoo SaaS; cambios hechos por el Cliente/terceros o vía Odoo Studio; migración masiva de datos históricos (a cargo progresivo de Wayki Trek).
+  \item \textbf{``Paz y Salvo'' recíproco.} Las partes se otorgan el más amplio paz y salvo. El Cliente renuncia a acciones legales, administrativas o retenciones derivadas de la implementación, integración y material de capacitación.
+\end{enumerate}
+
+\section{Responsabilidad y Confidencialidad}
+
+WAYKI TREK S.A.C.\ asume la responsabilidad sobre accesos, WhatsApp (Meta Business Suite), privacidad de pasajeros y gestión de la base de datos. QOQAW S.A.C.\ reafirma la confidencialidad de la información comercial tratada durante el proyecto.
+
+\newpage
+\section{Firmas}
+
+Las partes firman la presente Acta por duplicado, en señal de conformidad.
+
+\vspace{0.4em}
+\noindent
+\begin{tabularx}{\linewidth}{|Y|Y|}
+\hline
+\rowcolor{waykiheader}
+\centering\arraybackslash\bfseries\color{waykigreen}Por el Cliente\newline(WAYKI TREK S.A.C.) &
+\centering\arraybackslash\bfseries\color{waykigreen}Por el Proveedor\newline(QOQAW S.A.C.) \\
+\hline
+\centering\arraybackslash\rule{0pt}{1.7cm}\textit{\small (Firma y sello)} &
+\centering\arraybackslash\rule{0pt}{1.7cm}\textit{\small (Firma y sello)} \\
+\hline
+Nombre: Leonidas Cusi Loaiza &
+Nombre: Marco Rosendo Mejía Miranda \\
+\hline
+Cargo: Coordinador General del Proyecto &
+Cargo: Consultor del Proyecto \\
+\hline
+\end{tabularx}
+
+\vspace{0.45em}
+\noindent
+\begin{tabularx}{\linewidth}{|Y|}
+\hline
+\rowcolor{waykiheader}
+\centering\arraybackslash\bfseries\color{waykigreen}Por el Equipo Técnico de Implementación \\
+\hline
+\centering\arraybackslash\rule{0pt}{1.5cm}\textit{\small (Firma)} \\
+\hline
+Nombre: Roger Infa Sánchez \quad|\quad Cargo: Consultor Técnico / Desarrollador Odoo \\
+\hline
+\end{tabularx}
+
+\vspace{0.5em}
+\begin{center}
+{\footnotesize\color{waykigray}
+Suscrita en Cusco, Perú, a los veintiún (21) días del mes de julio de 2026.\\
+PROINNOVATE N° 827-PROINNOVATE-IMTEMD-2025.}
+\end{center}
+
+\end{document}
